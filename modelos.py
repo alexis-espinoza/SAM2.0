@@ -75,6 +75,11 @@ class Pelicula:
         self.reacciones =  pelicula_db["reacciones"]
         self.manga_visto= pelicula_db["manga_visto"]
 
+    def mostrar_min(self):
+        salida = f'[{self.get_indice()}]-{self.get_nombre()}\n'
+        print(salida)
+
+
     def set_indice(self, indice):
         self.indice = indice
     
