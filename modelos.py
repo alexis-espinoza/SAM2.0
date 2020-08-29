@@ -5,10 +5,23 @@ class Serie:
         self.posicion = serie_db["posicion"]
         self.nombre = serie_db["nombre"]
         self.estado =  serie_db["estado"]
-        self.dia_emision = serie_db[""]
+        self.dia_emision = serie_db["dia_emision"]
         self.generos = serie_db["generos"]
         self.peliculas = serie_db["peliculas"]
         self.manga_visto= serie_db["manga_visto"]
+
+    def mostrar_det(self):
+        dia_emision = '' if self.get_dia_emision()=='' else f'\nDia de emisión: {self.get_dia_emision()}\n'
+        generos = '' if len(self.get_generos())==0 else f'\nGeneros: {"-".join(self.get_dia_emision())}\n'
+        
+        salida = f"""Posicion: {self.get_posicion()}\nNombre: {self.nombre}
+        Estado: {self.estado}\n
+        """
+
+    def mostrar_min(self):
+        salida = f'[{self.get_posicion()}]-{self.get_nombre()}'
+
+
     
     def set_posicion(self, posicion):
         self.posicion = posicion
@@ -37,7 +50,7 @@ class Serie:
     def set_generos(self, generos):
         self.generos = generos
     
-    def get_dia_generos(self):
+    def get_generos(self):
         return self.generos
 
     def set_peliculas(self, peliculas):

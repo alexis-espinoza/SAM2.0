@@ -1,2608 +1,2955 @@
 {
    "series": [
       {
-         "indice": "1",
+         "posicion": "1",
          "nombre": "Zero no tsukaima",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "2",
+         "posicion": "2",
          "nombre": "Plastic Memories",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "3",
+         "posicion": "3",
          "nombre": "Toradora",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "4",
-         "nombre": "lannad",
+         "posicion": "4",
+         "nombre": "Clannad",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "5",
+         "posicion": "5",
          "nombre": "Grisaia",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "6",
+         "posicion": "6",
          "nombre": "Kotoura",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "7",
+         "posicion": "7",
          "nombre": "Seto no Hanayome",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "8",
+         "posicion": "8",
          "nombre": "Sakurasau no pet na kanojo",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "9",
+         "posicion": "9",
          "nombre": "Itazura na Kiss",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "10",
-         "nombre": "huunibyou demo Koi ga Shitai!",
+         "posicion": "10",
+         "nombre": "Chuunibyou demo Koi ga Shitai!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "11",
+         "posicion": "11",
          "nombre": "Sukitte Iinayo",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "12",
+         "posicion": "12",
          "nombre": "Darling in the franxx",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "13",
+         "posicion": "13",
          "nombre": "Re:Zero kara Hajimeru Isekai Seikatsu",
          "estado": "en proceso",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "14",
+         "posicion": "14",
          "nombre": "Shigatsu Wa Kimi no Uso",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "15",
+         "posicion": "15",
          "nombre": "Tsuki ga Kirei",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "16",
+         "posicion": "16",
          "nombre": "Tasogare Otome x Amnesia",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "17",
+         "posicion": "17",
          "nombre": "Nazo no Kanojo X",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "18",
+         "posicion": "18",
          "nombre": "Papa no Iukoto o Kikinasai!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "19",
+         "posicion": "19",
          "nombre": "Kaichou wa Maid Sama",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "20",
-         "nombre": "ode:Realize: Sousei no Himegimi",
+         "posicion": "20",
+         "nombre": "Code:Realize: Sousei no Himegimi",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "21",
+         "posicion": "21",
          "nombre": "Kyoukai no kanata",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "22",
+         "posicion": "22",
          "nombre": "Inu x Boku SS",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "23",
-         "nombre": "harlotte",
+         "posicion": "23",
+         "nombre": "Charlotte",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "24",
+         "posicion": "24",
          "nombre": "Tada",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "25",
+         "posicion": "25",
          "nombre": "Koi Kaze",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "26",
+         "posicion": "26",
          "nombre": "Momokuri",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "27",
+         "posicion": "27",
          "nombre": "No game no life",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "28",
+         "posicion": "28",
          "nombre": "Soredemo Sekai wa Utsukushii",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "29",
+         "posicion": "29",
          "nombre": "Itsudatte Bokura no Koi wa 10 cm Datta",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "30",
+         "posicion": "30",
          "nombre": "Kono Subarashii Sekai Ni Shukufuku Wo",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "31",
+         "posicion": "31",
          "nombre": "Shakugan no Shana",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "32",
+         "posicion": "32",
          "nombre": "Junketu no Maria",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "33",
+         "posicion": "33",
          "nombre": "Rakudai kishi no cavalry",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "34",
+         "posicion": "34",
          "nombre": "Nogizaka Haruka No Himitsu",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "35",
+         "posicion": "35",
          "nombre": "Sword Art Online (SAO)",
          "estado": "en proceso",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "36",
+         "posicion": "36",
          "nombre": "Absolute Duo",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "37",
+         "posicion": "37",
          "nombre": "Full metal panic",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "38",
+         "posicion": "38",
          "nombre": "Nanatsu No Taizai",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "39",
+         "posicion": "39",
          "nombre": "(Oreimo) Ore no Imoto ga Konna ni Kawaii Wake ga Nai",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "40",
+         "posicion": "40",
          "nombre": "Golden time",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "41",
+         "posicion": "41",
          "nombre": "Nisekoi",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "42",
+         "posicion": "42",
          "nombre": "Ryuuou no Oshigoto!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "43",
+         "posicion": "43",
          "nombre": "Infinite Stratos",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "44",
+         "posicion": "44",
          "nombre": "Sousei no Onmyouji",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "45",
+         "posicion": "45",
          "nombre": "Sora no otoshimono",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "46",
+         "posicion": "46",
          "nombre": "Trinity Seven",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "47",
+         "posicion": "47",
          "nombre": "Rokudenashi Majutsu Koushi to Akashic Records",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "48",
+         "posicion": "48",
          "nombre": "Tonari no Kaibutsu",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "49",
+         "posicion": "49",
          "nombre": "Fairy Tail",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "50",
+         "posicion": "50",
          "nombre": "Eromanga Sensei",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "51",
+         "posicion": "51",
          "nombre": "Mayo Chiki!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "52",
+         "posicion": "52",
          "nombre": "Yamada",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "53",
+         "posicion": "53",
          "nombre": "Boku wa Tomodachi ga Sukunai",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "54",
+         "posicion": "54",
          "nombre": "Isekai Wa Smartphone To Tomo Ni",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "55",
+         "posicion": "55",
          "nombre": "To Love Ru",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "56",
+         "posicion": "56",
          "nombre": "Kill la kill",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "57",
+         "posicion": "57",
          "nombre": "Karakai jouzu no takagi",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "58",
+         "posicion": "58",
          "nombre": "To aru majutsu no index",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "59",
+         "posicion": "59",
          "nombre": "Mikakunin de Shinkoukei",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "60",
+         "posicion": "60",
          "nombre": "Kodomo no Jikan",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "61",
+         "posicion": "61",
          "nombre": "Ore, twintails ni narimasu",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "62",
+         "posicion": "62",
          "nombre": "High School DxD",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "63",
+         "posicion": "63",
          "nombre": "Nagi no Asukara",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "64",
+         "posicion": "64",
          "nombre": "Masamune Kun no revenge",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "65",
+         "posicion": "65",
          "nombre": "Rewrite",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "66",
+         "posicion": "66",
          "nombre": "Shimoneta to Iu Gainen ga Sonzai Shinai Taikutsu na Sekai",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "67",
+         "posicion": "67",
          "nombre": "Hundred",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "68",
+         "posicion": "68",
          "nombre": "Koi to Uso",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "69",
+         "posicion": "69",
          "nombre": "Date a Live",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "70",
+         "posicion": "70",
          "nombre": "Black Bullet",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "71",
+         "posicion": "71",
          "nombre": "Angel Beats",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "72",
+         "posicion": "72",
          "nombre": "Akane iro somaru saka",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "73",
+         "posicion": "73",
          "nombre": "Yosuga no Sora",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "74",
+         "posicion": "74",
          "nombre": "Kampfer",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "75",
+         "posicion": "75",
          "nombre": "Mashiro iro symphony",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "76",
+         "posicion": "76",
          "nombre": "Shinmai Maou No Testament",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "77",
+         "posicion": "77",
          "nombre": "(Yuushibu) Yusha ni Narenakatta Ore wa Shibushibu Shushoku o Ketsui Shimashita",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "78",
+         "posicion": "78",
          "nombre": "Astarotte no Omocha!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "79",
+         "posicion": "79",
          "nombre": "Tamako Market",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "80",
+         "posicion": "80",
          "nombre": "(OniAi) Onii",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "81",
+         "posicion": "81",
          "nombre": "Tenshi no 3P!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "82",
+         "posicion": "82",
          "nombre": "Hoshizora e Kakaru Hashi",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "83",
+         "posicion": "83",
          "nombre": "(Noucome) Ore no Nonai Sentakushi ga, Gakuen Love Come o Zenryoku de Jama Shiteiru",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "84",
+         "posicion": "84",
          "nombre": "Blend S",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "85",
+         "posicion": "85",
          "nombre": "Boku No Hero Academia",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "86",
+         "posicion": "86",
          "nombre": "Shingeki No Kyojin",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "87",
+         "posicion": "87",
          "nombre": "(AnoHana) Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "88",
+         "posicion": "88",
          "nombre": "(DANMACHI) Dungeon ni Deai o Motomeru no wa Machigatteiru Daro Ka",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "89",
+         "posicion": "89",
          "nombre": "Koi to Senkyo to Chocolate",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "90",
+         "posicion": "90",
          "nombre": "Death note",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "91",
+         "posicion": "91",
          "nombre": "Kobayashi",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "92",
+         "posicion": "92",
          "nombre": "Gabriel dropOut",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "93",
+         "posicion": "93",
          "nombre": "One puch man",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "94",
+         "posicion": "94",
          "nombre": "KissXsis",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "95",
+         "posicion": "95",
          "nombre": "Tsuredure Children",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "96",
+         "posicion": "96",
          "nombre": "Omiai Aite wa Oshiego,Tsuyokina,Mondaiji",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "97",
+         "posicion": "97",
          "nombre": "Imouto sae Ireba Ii",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "98",
-         "nombre": "lockwork Planet",
+         "posicion": "98",
+         "nombre": "Clockwork Planet",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "99",
+         "posicion": "99",
          "nombre": "Netoge no yome wa onnanoko ja nai to omotta (video juegos)",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "100",
+         "posicion": "100",
          "nombre": "Okusama ga Seitokaichou",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "101",
+         "posicion": "101",
          "nombre": "Mayoi neko overrun",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "102",
+         "posicion": "102",
          "nombre": "Kanokon",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "103",
+         "posicion": "103",
          "nombre": "Mangaka",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "104",
+         "posicion": "104",
          "nombre": "Ranma y 1/2",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "105",
+         "posicion": "105",
          "nombre": "Inuyasha",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "106",
+         "posicion": "106",
          "nombre": "Boku no kanojo ga majime sugiru shojo bitch na ken",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "107",
+         "posicion": "107",
          "nombre": "Dragon ball",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "108",
+         "posicion": "108",
          "nombre": "Sakura card captor",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "109",
+         "posicion": "109",
          "nombre": "Digimon",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "110",
+         "posicion": "110",
          "nombre": "Gochuumon wa usagi desu ka?",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "111",
+         "posicion": "111",
          "nombre": "(Oregairu) Yahari ore no seishun love come wa machigatteiru",
          "estado": "en proceso",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "112",
+         "posicion": "112",
          "nombre": "(Saekano) Saenai Heroine no Sodatekata",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "113",
+         "posicion": "113",
          "nombre": "Noragami",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "114",
+         "posicion": "114",
          "nombre": "Tengen Toppa Gurren",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "115",
+         "posicion": "115",
          "nombre": "Haiyore! Nyaruko",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "116",
+         "posicion": "116",
          "nombre": "Yuragi",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "117",
+         "posicion": "117",
          "nombre": "Hidan no Aria",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "118",
+         "posicion": "118",
          "nombre": "Mirai Nikki",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "119",
+         "posicion": "119",
          "nombre": "Akame ga Kill!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "120",
+         "posicion": "120",
          "nombre": "High Score Girl",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "121",
+         "posicion": "121",
          "nombre": "Dimension W",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "122",
+         "posicion": "122",
          "nombre": "Evangelion",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "123",
+         "posicion": "123",
          "nombre": "Island",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "124",
-         "nombre": "hio",
+         "posicion": "124",
+         "nombre": "Chio",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "125",
+         "posicion": "125",
          "nombre": "Jashin",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "126",
+         "posicion": "126",
          "nombre": "Hentai Ouji to Warawanai Neko",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "127",
+         "posicion": "127",
          "nombre": "Aho Girl",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "128",
+         "posicion": "128",
          "nombre": "(Konobi) Kono Bijutsubu ni wa Mondai ga Aru!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "129",
+         "posicion": "129",
          "nombre": "(Oreshura) Ore no Kanojo to Osananajimi ga Shuraba Sugiru",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "130",
+         "posicion": "130",
          "nombre": "Gamers!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "131",
+         "posicion": "131",
          "nombre": "Gekkan Shoujo Nozaki",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "132",
+         "posicion": "132",
          "nombre": "Frame Arms Girl",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "133",
+         "posicion": "133",
          "nombre": "(ImoCho) Saikin imouto yousaSaikin, Imouto no Yousu ga Chotto Okashiinda ga",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "134",
+         "posicion": "134",
          "nombre": "Shokugeki no Souma",
          "estado": "en proceso",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "135",
+         "posicion": "135",
          "nombre": "Kokoro Connect",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "136",
+         "posicion": "136",
          "nombre": "Daitoshokan no Hitsujikai",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "137",
+         "posicion": "137",
          "nombre": "Ore ga Suki nano wa Imouto dakedo Imouto ja Nai",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "138",
+         "posicion": "138",
          "nombre": "Irozuku sekai no ashita kara",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "139",
+         "posicion": "139",
          "nombre": "Kishuku Gakkou no Juliet",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "140",
+         "posicion": "140",
          "nombre": "Beelzebub",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "141",
+         "posicion": "141",
          "nombre": "Uchi no Maid ga Uzasugiru!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "142",
+         "posicion": "142",
          "nombre": "Goblin Slayer",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "143",
+         "posicion": "143",
          "nombre": "Ulysses: Jeanne d'Arc to Renkin no Kishi",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "144",
+         "posicion": "144",
          "nombre": "Tokyo Ravens",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "145",
+         "posicion": "145",
          "nombre": "Seitokai Yakuindomo",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "146",
+         "posicion": "146",
          "nombre": "Monster Musume no Iru Nichijou",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "147",
+         "posicion": "147",
          "nombre": "Iya na Kao sare nagara Opantsu Misete Moraitai",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "148",
+         "posicion": "148",
          "nombre": "(SukaSuka) Shuumatsu Nani Shitemasu ka? Isogashi desu ka? Sukutte Morate Li desu ka?",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "149",
+         "posicion": "149",
          "nombre": "Acchi Kocchi",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "150",
+         "posicion": "150",
          "nombre": "Omamori Himari",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "151",
+         "posicion": "151",
          "nombre": "School Days",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "152",
+         "posicion": "152",
          "nombre": "Sabagebu!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "153",
+         "posicion": "153",
          "nombre": "Ladies vs Butlers!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "154",
+         "posicion": "154",
          "nombre": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "155",
+         "posicion": "155",
          "nombre": "Rosario + Vampire",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "156",
+         "posicion": "156",
          "nombre": "MM!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "157",
+         "posicion": "157",
          "nombre": "Bungaku Shoujo",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "158",
+         "posicion": "158",
          "nombre": "Busou Shoujo Machiavellism",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "159",
+         "posicion": "159",
          "nombre": "Lucky Star",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "160",
+         "posicion": "160",
          "nombre": "Witch Craft Works",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "161",
+         "posicion": "161",
          "nombre": "Final Approach",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "162",
+         "posicion": "162",
          "nombre": "Dakara Boku wa, H ga Dekinai",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "163",
+         "posicion": "163",
          "nombre": "kyou no Asuka Show",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "164",
+         "posicion": "164",
          "nombre": "Aki",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "165",
+         "posicion": "165",
          "nombre": "Inou",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "166",
+         "posicion": "166",
          "nombre": "Seiren",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "167",
+         "posicion": "167",
          "nombre": "Tsugumomo",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "168",
+         "posicion": "168",
          "nombre": "Ueno",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "169",
+         "posicion": "169",
          "nombre": "Kaguya",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "170",
+         "posicion": "170",
          "nombre": "Watashi ni Tenshi ga Maiorita!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "171",
+         "posicion": "171",
          "nombre": "Net",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "172",
+         "posicion": "172",
          "nombre": "True Tears",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "173",
+         "posicion": "173",
          "nombre": "Konohana Kitan",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "174",
+         "posicion": "174",
          "nombre": "Blood Lad",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "175",
+         "posicion": "175",
          "nombre": "Domestic na Kanojo",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "176",
+         "posicion": "176",
          "nombre": "High school Of The Dead",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "177",
+         "posicion": "177",
          "nombre": "(Watamote) Watashi ga Motenai no wa Dou Kangaetemo Omaera ga Warui!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "178",
+         "posicion": "178",
          "nombre": "Ano Natsu de Matteru",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "179",
+         "posicion": "179",
          "nombre": "Suzumiya Haruhi no Yuutsu",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "180",
+         "posicion": "180",
          "nombre": "Mob Psycho 100",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "181",
+         "posicion": "181",
          "nombre": "Suzuka",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "182",
+         "posicion": "182",
          "nombre": "Nande Koko ni Sensei ga!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "183",
+         "posicion": "183",
          "nombre": "Nobunaga",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "184",
+         "posicion": "184",
          "nombre": "Midara na Ao",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "185",
+         "posicion": "185",
          "nombre": "Joshi Kausei",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "186",
+         "posicion": "186",
          "nombre": "Senryuu Shoujo",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "187",
+         "posicion": "187",
          "nombre": "Ookami Shoujo to Kuro Ouji",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "188",
+         "posicion": "188",
          "nombre": "Egao no Daika",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "189",
+         "posicion": "189",
          "nombre": "Kaze no Stigma",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "190",
+         "posicion": "190",
          "nombre": "Just Because!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "191",
+         "posicion": "191",
          "nombre": "Amnesia",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "192",
+         "posicion": "192",
          "nombre": "Elfen Lied",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "193",
+         "posicion": "193",
          "nombre": "Danchigai",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "194",
+         "posicion": "194",
          "nombre": "Kage Kara Mamoru",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "195",
+         "posicion": "195",
          "nombre": "Beatless",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "196",
+         "posicion": "196",
          "nombre": "Fortune Arterial: Akai Yakusoku",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "197",
-         "nombre": "ampione!",
+         "posicion": "197",
+         "nombre": "Campione!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "198",
+         "posicion": "198",
          "nombre": "Fuuka",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "199",
+         "posicion": "199",
          "nombre": "Bokura ga Ita",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "200",
+         "posicion": "200",
          "nombre": "Ao Haru Ride",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "201",
+         "posicion": "201",
          "nombre": "Kimi ni Todoke",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "202",
+         "posicion": "202",
          "nombre": "Nozo x Kimi",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "203",
+         "posicion": "203",
          "nombre": "Special A",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "204",
+         "posicion": "204",
          "nombre": "Bokura wa Minna Kawaisou",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "205",
+         "posicion": "205",
          "nombre": "Hatsukoi Monster",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "206",
+         "posicion": "206",
          "nombre": "Ookami",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "207",
+         "posicion": "207",
          "nombre": "kimetsu no Yaiba",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "208",
+         "posicion": "208",
          "nombre": "Onegai Teacher!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "209",
-         "nombre": "hikku Nee",
+         "posicion": "209",
+         "nombre": "Chikku Nee",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "210",
+         "posicion": "210",
          "nombre": "Ajimu Kaigan Monogatari",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "211",
+         "posicion": "211",
          "nombre": "Boku Wa Imouto ni Koi wo Suru",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "212",
+         "posicion": "212",
          "nombre": "Kimi ni Iru Machi",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "213",
+         "posicion": "213",
          "nombre": "Kagaku na Yatsura",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "214",
+         "posicion": "214",
          "nombre": "Gosick",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "215",
+         "posicion": "215",
          "nombre": "25",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "216",
+         "posicion": "216",
          "nombre": "EF",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "217",
+         "posicion": "217",
          "nombre": "Kamisama Hajimemashita",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "218",
+         "posicion": "218",
          "nombre": "Okusama wa Joshikousei",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "219",
+         "posicion": "219",
          "nombre": "Futari Ecchi",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "220",
+         "posicion": "220",
          "nombre": "Wotaku ni Koi wa Muzukashii",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "221",
+         "posicion": "221",
          "nombre": "Getsuyoubi no Tawawa",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "222",
+         "posicion": "222",
          "nombre": "Iketeru Futari",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "223",
+         "posicion": "223",
          "nombre": "Danna ga Nani wo Itteiru ka Wakaranai Ken",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "224",
+         "posicion": "224",
          "nombre": "Mahoutsukai no Yome",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "225",
+         "posicion": "225",
          "nombre": "Danshi Koukousei no Nichijou",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "226",
+         "posicion": "226",
          "nombre": "Urara Meirochou",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "227",
+         "posicion": "227",
          "nombre": "Tonari no Seki",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "228",
+         "posicion": "228",
          "nombre": "Hataraku Maou",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "229",
+         "posicion": "229",
          "nombre": "Miru Tights",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "230",
+         "posicion": "230",
          "nombre": "B Gata H Kei",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "231",
+         "posicion": "231",
          "nombre": "Amagami SS",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "232",
+         "posicion": "232",
          "nombre": "Akkun to Kanojo",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "233",
+         "posicion": "233",
          "nombre": "Oneechan ga Kita",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "234",
+         "posicion": "234",
          "nombre": "Ichiban Ushiro no Daimaou",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "235",
+         "posicion": "235",
          "nombre": "Denpa Onna to Seishun Otoko",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "236",
+         "posicion": "236",
          "nombre": "Kamisama no Memo chou",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "237",
+         "posicion": "237",
          "nombre": "Soul Link",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "238",
+         "posicion": "238",
          "nombre": "Osake wa Fuufu Natte Kara",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "239",
+         "posicion": "239",
          "nombre": "Ane Log: Moyako Neesan no Tomaranai Monologue",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "240",
+         "posicion": "240",
          "nombre": "Sankarea",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "241",
+         "posicion": "241",
          "nombre": "Kyokou Suiri",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "242",
+         "posicion": "242",
          "nombre": "Murenase! Seton Gakuen",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "243",
+         "posicion": "243",
          "nombre": "School Rumble",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "244",
+         "posicion": "244",
          "nombre": "ID:Invaded",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "245",
+         "posicion": "245",
          "nombre": "Another",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "246",
+         "posicion": "246",
          "nombre": "Amagi Brilliant Park",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "247",
+         "posicion": "247",
          "nombre": "Gleipnir",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "248",
+         "posicion": "248",
          "nombre": "Houkago Teibou Nisshi",
          "estado": "en proceso",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "249",
-         "nombre": "(Hamefura) Otome Game no Hametsu Flag shika Nai Akuyaku Reijou ni Tensei shiteshimatta",
+         "posicion": "249",
+         "nombre": "(Hamefura) Otome Game no Hametsu Flag shika Nai Akuyaku Reijou ni Tensei shiteshimatta..",
          "estado": "en espera",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "250",
+         "posicion": "250",
          "nombre": "Nami yo Kiite kure",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "251",
+         "posicion": "251",
          "nombre": "Kakushigoto",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "252",
+         "posicion": "252",
          "nombre": "Tamayomi",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "253",
+         "posicion": "253",
          "nombre": "Onegai Twins!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "254",
+         "posicion": "254",
          "nombre": "Arabu Kisetsu no Otome",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "255",
+         "posicion": "255",
          "nombre": "Sailor Moon",
          "estado": "en proceso",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "256",
+         "posicion": "256",
          "nombre": "Rail Wars!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "257",
+         "posicion": "257",
          "nombre": "Isekai Maou to Shoukan Shoujo no Dorei Majutsu",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "258",
+         "posicion": "258",
          "nombre": "Jibaku Shounen Hanako",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "259",
+         "posicion": "259",
          "nombre": "(Hensuki) Kawaikereba Hentai demo Suki ni Natte Kuremasu ka?",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "260",
+         "posicion": "260",
          "nombre": "(Nakaimo) Kono Naka ni Hitori, Imouto ga Iru!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "261",
+         "posicion": "261",
          "nombre": "Sewayaki Kitsune no Senko",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "262",
+         "posicion": "262",
          "nombre": "Koe de Oshigoto!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "263",
+         "posicion": "263",
          "nombre": "Higashi no Eden",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "264",
+         "posicion": "264",
          "nombre": "Another World",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "265",
+         "posicion": "265",
          "nombre": "Nichijou",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "266",
+         "posicion": "266",
          "nombre": "Kareshi Kanojo no Jijou",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "267",
+         "posicion": "267",
          "nombre": "Btooom!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "268",
-         "nombre": "yclops Shoujo Saipu",
+         "posicion": "268",
+         "nombre": "Cyclops Shoujo Saipu",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "269",
+         "posicion": "269",
          "nombre": "Girlfriend (Kari)",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "270",
+         "posicion": "270",
          "nombre": "Kujibiki <3 Unbalance",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "271",
+         "posicion": "271",
          "nombre": "Hiyokoi",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "272",
+         "posicion": "272",
          "nombre": "Planetarian: Chiisana Hoshi no Yume",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "273",
+         "posicion": "273",
          "nombre": "RahXephon",
          "estado": "en proceso",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "274",
+         "posicion": "274",
          "nombre": "Kimi ga Nozomu Eien",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "275",
-         "nombre": "upid's Chocolates",
+         "posicion": "275",
+         "nombre": "Cupid's Chocolates",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "276",
+         "posicion": "276",
          "nombre": "Sekirei",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "277",
+         "posicion": "277",
          "nombre": "Koi wa Ameagari no You ni",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "278",
+         "posicion": "278",
          "nombre": "Hitsugi no Chaika",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "279",
+         "posicion": "279",
          "nombre": "Dagashi Kashi",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "280",
+         "posicion": "280",
          "nombre": "Mondaiji",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "281",
+         "posicion": "281",
          "nombre": "Kanojo Okarishimasu",
          "estado": "en proceso",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "282",
+         "posicion": "282",
          "nombre": "Uzaki",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "283",
+         "posicion": "283",
          "nombre": "Monster Musume No Oisha",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "284",
+         "posicion": "284",
          "nombre": "Norn9: Norn+Nonet",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "285",
+         "posicion": "285",
          "nombre": "Nourin",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "286",
+         "posicion": "286",
          "nombre": "Koi to Producer: EVOL�LOVE",
          "estado": "en proceso",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "287",
+         "posicion": "287",
          "nombre": "Akagami no Shirayuki",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "288",
+         "posicion": "288",
          "nombre": "Mahouka Koukou no Rettousei",
          "estado": "en proceso",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "289",
+         "posicion": "289",
          "nombre": "Sounan Desu ka?",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "290",
+         "posicion": "290",
          "nombre": "Rescue Me!",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "291",
+         "posicion": "291",
          "nombre": "Sumomomo Momomo",
          "estado": "en proceso",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "292",
+         "posicion": "292",
          "nombre": "Aiura",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "293",
+         "posicion": "293",
          "nombre": "One room",
          "estado": "finalizada",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       },
       {
-         "indice": "294",
+         "posicion": "294",
          "nombre": "Mangirl!",
          "estado": "en proceso",
          "dia_emision": null,
          "generos": [],
-         "peliculas": []
+         "peliculas": [],
+         "manga_visto": false
       }
    ],
    "peliculas": [
       {
          "indice": "1",
          "nombre": "Boku no Hero Academia the Movie 2: Heroes:Rising.",
-         "reacciones": ":o :)"
+         "reacciones": ":o :)",
+         "manga_visto": false
       },
       {
          "indice": "2",
          "nombre": "Nakitai Watashi wa Neko o Kaburu.",
-         "reacciones": ":v :/ <3"
+         "reacciones": ":v :/ <3",
+         "manga_visto": false
       },
       {
          "indice": "3",
          "nombre": "Planetarian: Hoshi no Hito.",
-         "reacciones": ":'3"
+         "reacciones": ":'3",
+         "manga_visto": false
       },
       {
          "indice": "4",
          "nombre": "Higashi no Eden Movie II: Paradise Lost.",
-         "reacciones": ":/"
+         "reacciones": ":/",
+         "manga_visto": false
       },
       {
          "indice": "5",
          "nombre": "Higashi no Eden Movie I: The King of Eden.",
-         "reacciones": ":o :3"
+         "reacciones": ":o :3",
+         "manga_visto": false
       },
       {
          "indice": "6",
          "nombre": "Hello World.",
-         "reacciones": ":o <3"
+         "reacciones": ":o <3",
+         "manga_visto": false
       },
       {
          "indice": "7",
          "nombre": "Tenki No Ko (Weathering with You).",
-         "reacciones": ":) <3"
+         "reacciones": ":) <3",
+         "manga_visto": false
       },
       {
          "indice": "8",
          "nombre": "Ookami Kodomo no Ame to Yuki (Wolf Children).",
-         "reacciones": ":3 :/ :)"
+         "reacciones": ":3 :/ :)",
+         "manga_visto": false
       },
       {
          "indice": "9",
          "nombre": "Nerawareta Gakuen.",
-         "reacciones": ":/ :o :)"
+         "reacciones": ":/ :o :)",
+         "manga_visto": false
       },
       {
          "indice": "10",
          "nombre": "Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu.",
-         "reacciones": ":o :v :)"
+         "reacciones": ":o :v :)",
+         "manga_visto": false
       },
       {
          "indice": "11",
          "nombre": "Shiki iriori.",
-         "reacciones": ":/ :( :3"
+         "reacciones": ":/ :( :3",
+         "manga_visto": false
       },
       {
          "indice": "12",
          "nombre": "Kimi to, Nami ni Noretara (Ride your wave).",
-         "reacciones": ":3 :( <3"
+         "reacciones": ":3 :( <3",
+         "manga_visto": false
       },
       {
          "indice": "13",
          "nombre": "Re:Zero kara Hajimeru Isekai Seikatsu .",
-         "reacciones": null
+         "reacciones": null,
+         "manga_visto": false
       },
       {
          "indice": "14",
          "nombre": "Trinity Seven Movie 2: Tenkuu Toshokan to Shinku no Maou.",
-         "reacciones": ":v :o 7u7"
+         "reacciones": ":v :o 7u7",
+         "manga_visto": false
       },
       {
          "indice": "15",
          "nombre": "Trinity Seven Movie: Eternity Library to Alchemic Girl.",
-         "reacciones": ":3 :o"
+         "reacciones": ":3 :o",
+         "manga_visto": false
       },
       {
          "indice": "16",
          "nombre": "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka Movie: Orion no Ya.",
-         "reacciones": ":v :o"
+         "reacciones": ":v :o",
+         "manga_visto": false
       },
       {
          "indice": "17",
          "nombre": "Neon genesis evangelion the end of evangelion.",
-         "reacciones": ":o :/"
+         "reacciones": ":o :/",
+         "manga_visto": false
       },
       {
          "indice": "18",
          "nombre": "Neon genesis evangelion death and rebirth.",
-         "reacciones": null
+         "reacciones": null,
+         "manga_visto": false
       },
       {
          "indice": "19",
          "nombre": "Gekijouban Shakugan no Shana.",
-         "reacciones": null
+         "reacciones": null,
+         "manga_visto": false
       },
       {
          "indice": "20",
          "nombre": "Suzumiya Haruhi no Shoushitsu.",
-         "reacciones": ":o :3"
+         "reacciones": ":o :3",
+         "manga_visto": false
       },
       {
          "indice": "21",
          "nombre": "Pokemon the Movie: I Choose You!.",
-         "reacciones": ":)"
+         "reacciones": ":)",
+         "manga_visto": false
       },
       {
          "indice": "22",
          "nombre": "Toki Wo Kakeru Shoujo.",
-         "reacciones": ":o :/"
+         "reacciones": ":o :/",
+         "manga_visto": false
       },
       {
          "indice": "23",
          "nombre": "Boku no Hero Academia the Movie Futari no Hero.",
-         "reacciones": ":O"
+         "reacciones": ":O",
+         "manga_visto": false
       },
       {
          "indice": "24",
          "nombre": "Nanatsu no Taizai Movie: Tenkuu no Torawarebito.",
-         "reacciones": ":O :v"
+         "reacciones": ":O :v",
+         "manga_visto": false
       },
       {
          "indice": "25",
          "nombre": "Kotonoha no Niwa.",
-         "reacciones": "<3 </3 :|"
+         "reacciones": "<3 </3 :|",
+         "manga_visto": false
       },
       {
          "indice": "26",
          "nombre": "Kokoro ga Sakebitagatterunda.",
-         "reacciones": ":( :/"
+         "reacciones": ":( :/",
+         "manga_visto": false
       },
       {
          "indice": "27",
          "nombre": "Seitokai Yakuindomo the Movie.",
-         "reacciones": ":v :)"
+         "reacciones": ":v :)",
+         "manga_visto": false
       },
       {
          "indice": "28",
          "nombre": "Bungaku Shoujo.",
-         "reacciones": ":o <3"
+         "reacciones": ":o <3",
+         "manga_visto": false
       },
       {
          "indice": "29",
          "nombre": "Gekijoban Tengen Toppa Guren Ragan Guren Hen.",
-         "reacciones": ":)"
+         "reacciones": ":)",
+         "manga_visto": false
       },
       {
          "indice": "30",
          "nombre": "Gekijoban Tengen Toppa Guren Ragan Ragan Hen.",
-         "reacciones": ":o :v <3"
+         "reacciones": ":o :v <3",
+         "manga_visto": false
       },
       {
          "indice": "31",
          "nombre": "Zutto Mae kara Suki deshita Kokuhaku Jikkou Iinkai.",
-         "reacciones": ":) :D <3"
+         "reacciones": ":) :D <3",
+         "manga_visto": false
       },
       {
          "indice": "32",
          "nombre": "Suki ni Naru Sono Shunkan wo Kokuhaku Jikkou Iinkai.",
-         "reacciones": ":) </3"
+         "reacciones": ":) </3",
+         "manga_visto": false
       },
       {
          "indice": "33",
          "nombre": "Hotarubi no Mori e.",
-         "reacciones": ":D <3 </3"
+         "reacciones": ":D <3 </3",
+         "manga_visto": false
       },
       {
          "indice": "34",
          "nombre": "To Aru Majutsu no Index Endymion no Kiseki.",
-         "reacciones": ":)"
+         "reacciones": ":)",
+         "manga_visto": false
       },
       {
          "indice": "35",
          "nombre": "Yousoku 5 Centimeter.",
-         "reacciones": "</3"
+         "reacciones": "</3",
+         "manga_visto": false
       },
       {
          "indice": "36",
          "nombre": "Chuunibyou demo Koi ga Shitai! Movie Take On Me.",
-         "reacciones": ":v :3 <3"
+         "reacciones": ":v :3 <3",
+         "manga_visto": false
       },
       {
          "indice": "37",
          "nombre": "Gochuumon Usagi Desu Ka Dear my sister.",
-         "reacciones": ":3"
+         "reacciones": ":3",
+         "manga_visto": false
       },
       {
          "indice": "38",
          "nombre": "Uchiage Hanabi?, Shita Kara Miru Ka Yoko Kara Miru Ka? (Fireworks).",
-         "reacciones": "<3"
+         "reacciones": "<3",
+         "manga_visto": false
       },
       {
          "indice": "39",
          "nombre": "Sora no otoshimono final eien no watashi no torikago.",
-         "reacciones": null
+         "reacciones": null,
+         "manga_visto": false
       },
       {
          "indice": "40",
          "nombre": "Sora no otoshimono: tokei jikake no angeloid.",
-         "reacciones": null
+         "reacciones": null,
+         "manga_visto": false
       },
       {
          "indice": "41",
          "nombre": "Kimi No Na Wa (Your name).",
-         "reacciones": ":v <3"
+         "reacciones": ":v <3",
+         "manga_visto": false
       },
       {
          "indice": "42",
          "nombre": "Kyoukai no kanata I'll Be Here Mirai.",
-         "reacciones": null
+         "reacciones": null,
+         "manga_visto": false
       },
       {
          "indice": "43",
          "nombre": "Tamako love history.",
-         "reacciones": ":) :D <3"
+         "reacciones": ":) :D <3",
+         "manga_visto": false
       },
       {
          "indice": "44",
          "nombre": "Sword Art Online Ordinal Scale.",
-         "reacciones": ":D :) <3"
+         "reacciones": ":D :) <3",
+         "manga_visto": false
       },
       {
          "indice": "45",
          "nombre": "Koe no Katachi.",
-         "reacciones": ":( :v"
+         "reacciones": ":( :v",
+         "manga_visto": false
       },
       {
          "indice": "46",
          "nombre": "AnoHana la pelicula.",
-         "reacciones": null
+         "reacciones": null,
+         "manga_visto": false
       },
       {
          "indice": "47",
          "nombre": "Sakura card captors.",
-         "reacciones": null
+         "reacciones": null,
+         "manga_visto": false
       },
       {
          "indice": "48",
          "nombre": "Sakura card captors: La carta sellada.",
-         "reacciones": null
+         "reacciones": null,
+         "manga_visto": false
       },
       {
          "indice": "49",
          "nombre": "Date A Live Movie: Mayuri Judgment.",
-         "reacciones": null
+         "reacciones": null,
+         "manga_visto": false
       },
       {
          "indice": "50",
          "nombre": "No game no life zero.",
-         "reacciones": ":) :v :3 <3 </3"
+         "reacciones": ":) :v :3 <3 </3",
+         "manga_visto": false
       }
+   ],
+   "mangas": [
    ]
+
 }

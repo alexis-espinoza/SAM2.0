@@ -30,7 +30,7 @@ class Acceso_a_datos:
         return lista_pelicuas
 
 
-    def obtener_magas(self):
+    def obtener_mangas(self):
         lista_mangas = []
         with open(str(getcwd())+'\\DATA\\series_peliculas.json') as archivo:
             data_json = json.load(archivo)
