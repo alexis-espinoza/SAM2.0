@@ -3,7 +3,7 @@ from modelos import Serie, Pelicula, Manga
 from os import getcwd
 
 
-class Acceso_a_datos:
+class Gestor_de_series:
 
     def obtener_registros(self):
         lista_series = []
