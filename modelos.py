@@ -21,8 +21,8 @@ class Serie:
         
 
     def mostrar_min(self):
-        salida = f'[{self.get_posicion()}]-{self.get_nombre()}\n'
-        print(salida)
+        return f'[{self.get_posicion()}]-{self.get_nombre()}\n'
+        #print(salida)
 
     
     def set_posicion(self, posicion):
@@ -76,8 +76,8 @@ class Pelicula:
         self.manga_visto= pelicula_db["manga_visto"]
 
     def mostrar_min(self):
-        salida = f'[{self.get_indice()}]-{self.get_nombre()}\n'
-        print(salida)
+        return f'[{self.get_indice()}]-{self.get_nombre()}\n'
+        #print(salida)
 
 
     def set_indice(self, indice):

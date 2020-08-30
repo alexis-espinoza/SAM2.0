@@ -30,13 +30,17 @@ class Principal:
     def listar_registros(self):
         #listados = '1)-Listar todas\n2)-Listar series\n3)-Listar series en proceso\n4)-Listar series en espera\n5)-Listar series por rango\n6)-Listar peliculas\nSeleccione una opción: '
         system('cls')
-        opcion_seleccionada = int(input('1)-Listar todas\n2)-Listar series\n3)-Listar series en proceso\n4)-Listar series en espera\n5)-Listar series por rango\n6)-Listar peliculas\nSeleccione una opción: '))
-        registros = Coordinador_de_series().listado_general(opcion_seleccionada)
-        if(registros[0]):
-            for registro in registros[0]:
-                registro.mostrar_min()
-            if(registros[1]):
-                print(f'Cantidad de registros [{registros[1]}]: {len(registros[0])}\n')
+        print(Coordinador_de_series().listar_series_del_dia())
+        opcion_seleccionada = int(input('----------Opciones de listado----------\n1)-Listar todas\n2)-Listar series\n3)-Listar series en proceso\n4)-Listar series en espera\n5)-Listar series por rango\n6)-Listar peliculas\n7)-Listar por dia de emisión\nSeleccione una opción: '))
+        if(opcion_seleccionada<7):
+            registros = Coordinador_de_series().listado_general(opcion_seleccionada)
+            if(registros[0]):
+                for registro in registros[0]:
+                    print(registro.mostrar_min())
+                if(registros[1]):
+                    print(f'Cantidad de registros [{registros[1]}]: {len(registros[0])}\n')
+        else:
+            print(Coordinador_de_series().listar_series_por_emision())
 
     def filtrar_lista(self):
         print('filtrar')
