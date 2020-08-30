@@ -8,6 +8,7 @@ class Principal:
     def menu(self):
         while True:
             #try:
+                print(Coordinador_de_series().generar_dashboard())
                 principal=Principal()
                 opciones = '''0)- Getión de proceso\n1)- Agregar nuevo\n2)- Mostrar lista\n3)- Filtrar lista\n4)- Seleccionar registro\n5)- Consultar bitácora\n6)- Cerrar\nDigite una opción: '''
                 opcion_seleccionada = str(input(opciones)) 
@@ -43,10 +44,21 @@ class Principal:
             print(Coordinador_de_series().listar_series_por_emision())
 
     def filtrar_lista(self):
-        print('filtrar')
+        nombre_a_buscar = str(input('¿Digite el nombre de la serie (completo o parcial)?: '))
+        series_coincidentes = Coordinador_de_series().filtrar_series(nombre_a_buscar.lower())
+        
+        if(len(series_coincidentes)>0):
+            for serie in series_coincidentes:
+                print(serie.mostrar_min())
+        else:
+            print('\n¡No se encontraron coincidencias!')
 
     def seleccionar_registro(self):
-        print('seleccionar')
+        
+        indice = int(input('¿Digite el indice de la serie?: '))
+        registro_seleccionado = Coordinador_de_series().seleccionar_serie(indice)
+        print(registro_seleccionado.mostrar_det())
+        #print('seleccionar')
 
     def consultar_bitacora(self):
         print('consultar')

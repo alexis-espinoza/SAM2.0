@@ -1797,7 +1797,7 @@
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
-         "generos": [],
+         "generos": ["escolares","roamce","comedia"],
          "peliculas": []
       },
       {

@@ -12,12 +12,12 @@ class Serie:
 
 
     def mostrar_det(self):
-        dia_emision = '' if self.get_dia_emision()=='' else f'\nDia de emisión: {self.get_dia_emision()}\n'
-        manga = f'\nManga: No leído\n' if self.manga_visto() == False else f'\nManga: Leído\n'
-        generos = '' if len(self.get_generos())==0 else f'\nGeneros: {"-".join(self.get_dia_emision())}\n'
-        
-        
-        datos_generales = f'Posicion: {self.get_posicion()}\nNombre: {self.nombre}Estado: {self.estado}\n'
+        dia_emision = '' if self.get_dia_emision()==None else f'\nDia de emisión: {self.get_dia_emision()}'
+        manga = f'\nManga: no leído' if self.get_manga_visto() == False else f'\nManga: leído'
+        generos = '' if len(self.get_generos())==0 else f'\nGeneros: {", ".join(self.get_generos())}'
+        datos_generales = f'Posicion: {self.get_posicion()}\nNombre: {self.nombre}\nEstado: {self.estado}'
+
+        return datos_generales+dia_emision+manga+generos
         
 
     def mostrar_min(self):
