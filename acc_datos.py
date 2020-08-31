@@ -39,8 +39,8 @@ class Gestor_de_series:
         return lista_mangas
 
     
-    def actualizar_registros(self, dicc_datos):
-        with open(str(getcwd())+'\\DATA\\series_peliculas.json') as archivo:
+    def guardar_cambios(self, dicc_datos):
+        with open(str(getcwd())+'\\DATA\\series_peliculas.json','w') as archivo:
             json.dump(dicc_datos, archivo, indent=3, ensure_ascii=False)
 
         

@@ -8,6 +8,7 @@ class Principal:
     def menu(self):
         while True:
             #try:
+
                 print(Coordinador_de_series().generar_dashboard())
                 principal=Principal()
                 opciones = '''0)- Getión de proceso\n1)- Agregar nuevo\n2)- Mostrar lista\n3)- Filtrar lista\n4)- Seleccionar registro\n5)- Consultar bitácora\n6)- Cerrar\nDigite una opción: '''
@@ -21,6 +22,7 @@ class Principal:
                     '6': principal.cerrar_sistema
                     }
                 dicc_menu.get(opcion_seleccionada)()
+      
             #except Exception:
              #   os.system('cls')
               #  print('\n¡Retornando al menú principal!') 
@@ -55,10 +57,17 @@ class Principal:
 
     def seleccionar_registro(self):
         
-        indice = int(input('¿Digite el indice de la serie?: '))
-        registro_seleccionado = Coordinador_de_series().seleccionar_serie(indice)
+        system('cls')
+        print('Indique el tipo de registro e indice, p=pelicula a=anime [ejemplo a-10]')
+        datos_registro = input('¿Digite su selección?: ')
+        registro_seleccionado = Coordinador_de_series().seleccionar_registro(datos_registro)
         print(registro_seleccionado.mostrar_det())
-        #print('seleccionar')
+        
+        actualizar = str(input('\n¿Desea actualizar el registro[s/n]?: '))
+
+        if(actualizar.lower()=='s'):
+            Coordinador_de_series().actualizar_registro(registro_seleccionado)
+        
 
     def consultar_bitacora(self):
         print('consultar')

@@ -15,7 +15,11 @@
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
-         "generos": [],
+         "generos": [
+            "drama",
+            "comedia",
+            "romance"
+         ],
          "peliculas": []
       },
       {
@@ -38,12 +42,19 @@
       },
       {
          "posicion": 5,
-         "nombre": "Grisaia",
-         "estado": "en espera",
+         "nombre": "Grisai no kajitsu",
+         "estado": "finalizada",
          "dia_emision": null,
-         "manga_visto": false,
-         "generos": [],
-         "peliculas": []
+         "manga_visto": true,
+         "generos": [
+            "accion",
+            "shounen",
+            "comedia"
+         ],
+         "peliculas": [
+            "50",
+            "25"
+         ]
       },
       {
          "posicion": 6,
@@ -283,7 +294,7 @@
          "posicion": 32,
          "nombre": "Junketu no Maria",
          "estado": "finalizada",
-         "dia_emision": null,
+         "dia_emision": "Domingo",
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -1797,7 +1808,11 @@
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
-         "generos": ["escolares","roamce","comedia"],
+         "generos": [
+            "escolares",
+            "roamce",
+            "comedia"
+         ],
          "peliculas": []
       },
       {
@@ -2949,6 +2964,5 @@
          "manga_visto": false
       }
    ],
-   "mangas": [
-   ]
+   "mangas": []
 }

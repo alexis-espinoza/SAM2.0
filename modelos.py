@@ -9,13 +9,14 @@ class Serie:
         self.manga_visto= serie_db["manga_visto"]
         self.generos = serie_db["generos"]
         self.peliculas = serie_db["peliculas"]
+       # self.obj_pelicula = Pelicula()
 
 
     def mostrar_det(self):
+        datos_generales = f'Posicion: {self.get_posicion()}\nNombre: {self.nombre}\nEstado: {self.estado}'
         dia_emision = '' if self.get_dia_emision()==None else f'\nDia de emisión: {self.get_dia_emision()}'
         manga = f'\nManga: no leído' if self.get_manga_visto() == False else f'\nManga: leído'
         generos = '' if len(self.get_generos())==0 else f'\nGeneros: {", ".join(self.get_generos())}'
-        datos_generales = f'Posicion: {self.get_posicion()}\nNombre: {self.nombre}\nEstado: {self.estado}'
 
         return datos_generales+dia_emision+manga+generos
         
@@ -23,7 +24,16 @@ class Serie:
     def mostrar_min(self):
         return f'[{self.get_posicion()}]-{self.get_nombre()}\n'
         #print(salida)
-
+    def obj_to_dicc(self):
+        return {
+         "posicion": self.get_posicion(),
+         "nombre": self.get_nombre(),
+         "estado": self.get_estado(),
+         "dia_emision": self.get_dia_emision(),
+         "manga_visto": self.get_manga_visto(),
+         "generos": self.get_generos(),
+         "peliculas": self.get_peliculas()
+      }
     
     def set_posicion(self, posicion):
         self.posicion = posicion
@@ -79,6 +89,16 @@ class Pelicula:
         return f'[{self.get_indice()}]-{self.get_nombre()}\n'
         #print(salida)
 
+    def mostrar_det(self):
+        manga = '' if self.get_manga_visto() == False else f'\nManga: leído'
+        reacciones = '' if self.get_reacciones() == None else f'\nReacciones: {self.get_reacciones()}'
+        salida=f'Indice: {self.get_indice()}\nNombre: {self.get_nombre()}'
+        salida+=reacciones
+        salida+=manga
+
+        return salida
+
+        
 
     def set_indice(self, indice):
         self.indice = indice
