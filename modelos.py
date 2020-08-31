@@ -86,7 +86,7 @@ class Pelicula:
         self.manga_visto= pelicula_db["manga_visto"]
 
     def mostrar_min(self):
-        return f'[{self.get_indice()}]-{self.get_nombre()}\n'
+        return f'\n[{self.get_indice()}]-{self.get_nombre()}'
         #print(salida)
 
     def mostrar_det(self):

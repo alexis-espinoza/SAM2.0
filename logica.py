@@ -212,6 +212,13 @@ class Coordinador_de_series:
     def listar_peliculas(self):
         return (Gestor_de_series().obtener_peliculas(),False)
     
+    def listar_peliculas_por_indice(self, lista_indices):
+        try:
+            return list(filter(lambda Pelicula: str(Pelicula.get_indice()) in lista_indices, Gestor_de_series().obtener_peliculas()))
+        except Exception:
+            return ''
+
+    
     def listar_mangas(self):
         return Gestor_de_series.obtener_mangas()    
 

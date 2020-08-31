@@ -7,7 +7,7 @@ class Principal:
 
     def menu(self):
         while True:
-            try:
+            #try:
 
                 print(Coordinador_de_series().generar_dashboard())
                 principal=Principal()
@@ -23,18 +23,19 @@ class Principal:
                     '6': principal.consultar_bitacora,
                     '7': principal.cerrar_sistema
                     }
+                system('cls')
                 dicc_menu.get(opcion_seleccionada)()
-      
-            except Exception:
-                os.system('cls')
-                print('\n¡Retornando al menú principal!') 
+                #system('cls')
+            #except Exception:
+              #  os.system('cls')
+             #   print('\n¡Retornando al menú principal!') 
 
     def abrir_diario(self):
         print('diario')
 
     #-----------------------------------------------------------------#
     def listar_registros(self):
-        system('cls')
+        #system('cls')
         print(Coordinador_de_series().listar_series_del_dia())
         opcion_seleccionada = int(input('----------Opciones de listado----------\n1)-Listar todas\n2)-Listar series\n3)-Listar series en proceso\n4)-Listar series en espera\n5)-Listar series por rango\n6)-Listar peliculas\n7)-Listar por dia de emisión\nSeleccione una opción: '))
         if(opcion_seleccionada<7):
@@ -55,15 +56,22 @@ class Principal:
         if(len(series_coincidentes)>0):
             for serie in series_coincidentes:
                 print(serie.mostrar_min())
+            print(f'\n{"-"*75}\nSi desea seleccionar un registro de la lista prosiga, sino presione [Intro]\n↓{" "*36}↓{" "*36}↓')
+            self.seleccionar_serie()
+
         else:
             print('\n¡No se encontraron coincidencias!')
 
     #-----------------------------------------------------------------#
     def seleccionar_serie(self):
-        system('cls')
-        indice = int(input('¿Digite el indice de la serie?: '))
+        #system('cls')
+        indice = int(input('\n¿Digite el indice de la serie?: '))
         serie_seleccionada = Coordinador_de_series().obtener_serie(indice)
         print(serie_seleccionada.mostrar_det())
+        if(len(serie_seleccionada.get_peliculas())>0):
+            print('\n<<Peliculas>>:')
+            for pelicula in Coordinador_de_series().listar_peliculas_por_indice(serie_seleccionada.get_peliculas()):
+                print(pelicula.mostrar_min())
         
         actualizar = str(input('\n¿Desea actualizar el registro[s/n]?: '))
 
@@ -74,7 +82,7 @@ class Principal:
     #-----------------------------------------------------------------#}
     def seleccionar_pelicula(self):
         system('cls')
-        indice = int(input('¿Digite el indice de la pelicula?: '))
+        indice = int(input('\n¿Digite el indice de la pelicula?: '))
         pelicula_seleccionada = Coordinador_de_series().obtener_pelicula(indice)
         print(pelicula_seleccionada.mostrar_det())
         
