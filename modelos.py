@@ -97,8 +97,15 @@ class Pelicula:
         salida+=manga
 
         return salida
-
-        
+          
+    def obj_to_dicc(self):
+        return {
+            "indice": self.get_indice(),
+            "nombre": self.get_nombre(),
+            "reacciones": self.get_reacciones(),
+            "manga_visto": self.get_manga_visto()
+            }
+            
 
     def set_indice(self, indice):
         self.indice = indice
