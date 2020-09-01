@@ -114,7 +114,8 @@ class Coordinador_de_series:
                     print('¡Operación no confirmada!')
         else:
             print('¡Operación no confirmada!')
-                
+    
+    #-----------------------------------------------------------------#
     def actualizar_pelicula(self, pelicula_a_actualizar):
         print()
         flag_cambio=False
@@ -139,11 +140,13 @@ class Coordinador_de_series:
         #text=str(registro_a_actualizar.obj_to_dicc())
         #pyperclip.copy(text)  # now the clipboard content will be string "abc"
         #text = clipboard.paste() 
-        #inp = input('pegue: ')  
-    
+        #inp = input('pegue: ') 
+
+    #-----------------------------------------------------------------#
     def cambiar_posicion(self):
         return True
 
+    #-----------------------------------------------------------------#
     def generar_dashboard(self):
 
         todos_los_registros = Gestor_de_series().obtener_registros()
@@ -176,7 +179,8 @@ class Coordinador_de_series:
         informe = formato.format(series, peliculas, mangas, finalizadas, en_proceso, en_espera, en_emision)
 
         return f' {separador_uno}\n{informe}\n {separador_dos}'
-    
+
+    #-----------------------------------------------------------------#  
     def listado_general(self, opcion_de_listado):
         #try:
             system('cls')
@@ -193,35 +197,51 @@ class Coordinador_de_series:
         #except Exception:
          #   print('\n¡No se seleccionó una opción de listado válida!')
           #  return False
-
+    #-----------------------------------------------------------------#
     def listar_todos(self):
         return True
-
+    #-----------------------------------------------------------------#
     def listar_series(self):
         return (Gestor_de_series().obtener_series(), False)
 
+    #-----------------------------------------------------------------#
     def listar_series_en_proceso(self):
         return (list(filter(lambda Serie: Serie.get_estado()=='en proceso', Gestor_de_series().obtener_series())),'en proceso')
-    
+        
+    #-----------------------------------------------------------------#
     def listar_series_en_espera(self):
         return (list(filter(lambda Serie: Serie.get_estado()=='en espera', Gestor_de_series().obtener_series())), 'en espera')
 
+    #-----------------------------------------------------------------#
     def listar_series_por_rango(self):
-        return True
-
+        try:
+            rango = str(input('\nIndique el rango de series a mostrar con el formato [inicio-final]: ' ))
+            print()
+            inicio = int(rango.split('-')[0])
+            final = int(rango.split('-')[1])
+            if(inicio>final):
+                f=final
+                final=inicio
+                inicio=f
+            return (list(filter(lambda Serie: Serie.get_posicion()>=inicio and Serie.get_posicion()<=final, Gestor_de_series().obtener_series())), False)
+        except Exception:
+            print()
+    #-----------------------------------------------------------------#
     def listar_peliculas(self):
         return (Gestor_de_series().obtener_peliculas(),False)
-    
+
+    #-----------------------------------------------------------------#
     def listar_peliculas_por_indice(self, lista_indices):
         try:
             return list(filter(lambda Pelicula: str(Pelicula.get_indice()) in lista_indices, Gestor_de_series().obtener_peliculas()))
         except Exception:
             return ''
 
-    
+    #-----------------------------------------------------------------# 
     def listar_mangas(self):
         return Gestor_de_series.obtener_mangas()    
 
+    #-----------------------------------------------------------------#
     def listar_series_del_dia(self):
 
         lista_de_registros = Gestor_de_series().obtener_series()
@@ -237,6 +257,7 @@ class Coordinador_de_series:
         else:
             return ''
 
+    #-----------------------------------------------------------------#
     def listar_series_por_emision(self):
 
         lista_de_registros =Gestor_de_series().obtener_series()
@@ -262,5 +283,28 @@ class Coordinador_de_series:
                 return('\n¡No existen registros!')
     
 
+    def consultar_bitacora(self, busqueda):
+        print()
+        registros_de_bitacora = list(filter(lambda linea: linea.find(busqueda.lower())!=-1, Gestor_de_series().obtener_logs()))
+        registro_actual = 0
+        total_de_registros=len(registros_de_bitacora)
+        formato = '\nMostrando {0} de {1} registros, ¿mostrar más? [s/n]: '
+        
+        while(registro_actual<total_de_registros):        
+            if((registro_actual%10)==0 and registro_actual!=0):           
+                mas_datos = input(formato.format(registro_actual,total_de_registros))
+                if(mas_datos != 's'):
+                    system('cls')
+                    return
+                else:
+                    print('')#Se salta un línea
+            print(registros_de_bitacora[registro_actual])
+            registro_actual+=1
+        if(len(registros_de_bitacora)==0):
+            system('cls')
+            print('\n¡No se encontraron coincidencias!')
+            return
+        salirDeBitacora = str(input('\nPresione [Intro] para salir de la bitácora'))
+        system('cls')                  
 
     

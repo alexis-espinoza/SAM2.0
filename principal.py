@@ -40,17 +40,20 @@ class Principal:
         opcion_seleccionada = int(input('----------Opciones de listado----------\n1)-Listar todas\n2)-Listar series\n3)-Listar series en proceso\n4)-Listar series en espera\n5)-Listar series por rango\n6)-Listar peliculas\n7)-Listar por dia de emisión\nSeleccione una opción: '))
         if(opcion_seleccionada<7):
             registros = Coordinador_de_series().listado_general(opcion_seleccionada)
-            if(registros[0]):
+            if(str(type(registros)) != "<class 'NoneType'>"):
                 for registro in registros[0]:
                     print(registro.mostrar_min())
                 if(registros[1]):
                     print(f'Cantidad de registros [{registros[1]}]: {len(registros[0])}\n')
+            else:
+                system('cls')
+                print('\n¡No se encontraron resultados!')
         else:
             print(Coordinador_de_series().listar_series_por_emision())
 
     #-----------------------------------------------------------------#
     def filtrar_lista(self):
-        nombre_a_buscar = str(input('¿Digite el nombre de la serie (completo o parcial)?: '))
+        nombre_a_buscar = str(input('¿\nDigite el nombre de la serie (completo o parcial)?: '))
         series_coincidentes = Coordinador_de_series().filtrar_series(nombre_a_buscar.lower())
         
         if(len(series_coincidentes)>0):
@@ -92,7 +95,9 @@ class Principal:
 
     #-----------------------------------------------------------------#}
     def consultar_bitacora(self):
-        print('consultar')
+        print('\nBúsqueda en bitácora (ej. de entradas válidas ["26/04/20" - "96" - "Zero" - "en espera"])')
+        busqueda = str(input('Ingrese un parámetro de búsqueda: '))
+        Coordinador_de_series().consultar_bitacora(busqueda)
 
 
     #-----------------------------------------------------------------#}
