@@ -153,19 +153,10 @@ class Coordinador_de_series:
         series= len(todos_los_registros["series"])
         peliculas = len(todos_los_registros["peliculas"])
         mangas = len(todos_los_registros["mangas"])
-        en_proceso=0
-        en_espera=0
-        en_emision=0
-        finalizadas=0
-        for serie in Gestor_de_series().obtener_series():
-            if(serie.get_estado()=="finalizada"):
-                finalizadas+=1
-            elif (serie.get_estado()=="en espera"):
-                en_espera+=1        
-            elif (serie.get_estado()=="en proceso"):
-                en_proceso+=1
-            if(serie.get_dia_emision()!=None):
-                en_emision+=1
+        en_proceso=len(self.listar_series_en_proceso()[0])
+        en_espera=len(self.listar_series_en_espera()[0])
+        en_emision=len(list(filter(lambda Serie: Serie.get_dia_emision()!=None, Gestor_de_series().obtener_series())))
+        finalizadas=len(list(filter(lambda Serie: Serie.get_estado()=='finalizada', Gestor_de_series().obtener_series())))
         separador_uno = ''
         separador_dos = ''
         #animes                      #peliculas
