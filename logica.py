@@ -231,22 +231,18 @@ class Coordinador_de_series:
 
     #-----------------------------------------------------------------#
     def listar_series_por_emision(self):
-
         lista_de_registros =Gestor_de_series().obtener_series()
         registros_en_dia_actual=''
         salida=''
         registros_en_emision=0
         for dia in list(self.dicc_dias.keys()):
-            for registro_actual in lista_de_registros:
-                                        
+            for registro_actual in lista_de_registros:                                   
                 if (registro_actual.get_dia_emision() == self.dicc_dias.get(dia)):
                     registros_en_dia_actual+=registro_actual.mostrar_min()
                     registros_en_emision+=1
-
             if(registros_en_dia_actual!=''):
                     salida+=self.dicc_dias.get(dia)+':\n'+registros_en_dia_actual+'\n'
                     registros_en_dia_actual=''
-
         if(salida!=''):
                 conteo='\nCantidad de registros [en emisión]: '+str(registros_en_emision)
                 return(salida+conteo)
@@ -276,7 +272,7 @@ class Coordinador_de_series:
             system('cls')
             print('\n¡No se encontraron coincidencias!')
             return
-        salirDeBitacora = str(input('\nPresione [Intro] para salir de la bitácora'))
+        cerrar_bitacora = str(input('\nPresione [Intro] para salir de la bitácora'))
         system('cls')                  
 
     
