@@ -185,23 +185,6 @@ class Coordinador_de_series:
 
         return f' {separador_uno}\n{informe}\n {separador_dos}'
 
-    #-----------------------------------------------------------------#  
-    def listado_general(self, opcion_de_listado):
-        #try:
-            system('cls')
-            coordinador = Coordinador_de_series()
-            dicc_listados = {
-            1: coordinador.listar_todos,
-            2: coordinador.listar_series,
-            3: coordinador.listar_series_en_proceso,
-            4: coordinador.listar_series_en_espera,
-            5: coordinador.listar_series_por_rango,
-            6: coordinador.listar_peliculas}
-
-            return dicc_listados.get(opcion_de_listado)()
-        #except Exception:
-         #   print('\n¡No se seleccionó una opción de listado válida!')
-          #  return False
     #-----------------------------------------------------------------#
     def listar_todos(self):
         return True

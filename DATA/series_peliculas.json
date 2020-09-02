@@ -130,7 +130,7 @@
          "posicion": 15,
          "nombre": "Kotoura",
          "estado": "finalizada",
-         "dia_emision": null,
+         "dia_emision": "Martes",
          "manga_visto": false,
          "generos": [],
          "peliculas": []

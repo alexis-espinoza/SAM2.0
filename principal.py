@@ -38,18 +38,25 @@ class Principal:
         #system('cls')
         print(Coordinador_de_series().listar_series_del_dia())
         opcion_seleccionada = int(input('----------Opciones de listado----------\n1)-Listar todas\n2)-Listar series\n3)-Listar series en proceso\n4)-Listar series en espera\n5)-Listar series por rango\n6)-Listar peliculas\n7)-Listar por dia de emisión\nSeleccione una opción: '))
-        if(opcion_seleccionada<7):
-            registros = Coordinador_de_series().listado_general(opcion_seleccionada)
-            if(str(type(registros)) != "<class 'NoneType'>"):
+        coordinador = Coordinador_de_series()
+        dicc_listados = {
+        1: coordinador.listar_todos,
+        2: coordinador.listar_series,
+        3: coordinador.listar_series_en_proceso,
+        4: coordinador.listar_series_en_espera,
+        5: coordinador.listar_series_por_rango,
+        6: coordinador.listar_peliculas,
+        7:coordinador.listar_series_por_emision}
+        registros = dicc_listados.get(opcion_seleccionada, lambda: 'NA')()
+        if(registros!='NA'):
+           # Coordinador_de_series().listado_general(opcion_seleccionada)
+            if(opcion_seleccionada<=6):#str(type(registros)) != "<class 'NoneType'>"):
                 for registro in registros[0]:
                     print(registro.mostrar_min())
                 if(registros[1]):
                     print(f'Cantidad de registros [{registros[1]}]: {len(registros[0])}\n')
             else:
-                system('cls')
-                print('\n¡No se encontraron resultados!')
-        else:
-            print(Coordinador_de_series().listar_series_por_emision())
+                print(Coordinador_de_series().listar_series_por_emision())
 
     #-----------------------------------------------------------------#
     def filtrar_lista(self):
@@ -76,11 +83,13 @@ class Principal:
             for pelicula in Coordinador_de_series().listar_peliculas_por_indice(serie_seleccionada.get_peliculas()):
                 print(pelicula.mostrar_min())
         
-        actualizar = str(input('\n¿Desea actualizar el registro[s/n]?: '))
 
-        if(actualizar.lower()=='s'):
-            Coordinador_de_series().actualizar_serie(serie_seleccionada)
-    
+    def actualizar_serie(self):
+        se_actualiza = str(input('\n¿Desea actualizar el registro[s/n]?: '))
+        if(se_actualiza.lower()=='s'):
+            Coordinador_de_series().actualizar_serie(se_actualiza)
+
+
     
     #-----------------------------------------------------------------#}
     def seleccionar_pelicula(self):
