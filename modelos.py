@@ -23,6 +23,16 @@ class Serie:
     def __gt__(self, Serie):
         return self.posicion > Serie.posicion
 
+    def __ne__(self, Serie):
+        return bool(self.posicion != Serie.posicion 
+        or self.nombre != Serie.nombre 
+        or self.estado != Serie.estado 
+        or self.dia_emision != Serie.dia_emision 
+        or self.manga_visto != Serie.manga_visto 
+        or self.generos != Serie.generos 
+        or self.peliculas != Serie.peliculas)
+
+
     def mostrar_min(self):
         return f'[{self.get_posicion()}]-{self.get_nombre()}\n'
 
