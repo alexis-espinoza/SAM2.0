@@ -20,10 +20,12 @@ class Serie:
 
         return datos_generales+dia_emision+manga+generos
         
+    def __gt__(self, Serie):
+        return self.posicion > Serie.posicion
 
     def mostrar_min(self):
         return f'[{self.get_posicion()}]-{self.get_nombre()}\n'
-        #print(salida)
+
     def obj_to_dicc(self):
         return {
          "posicion": self.get_posicion(),

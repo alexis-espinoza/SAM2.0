@@ -15,11 +15,7 @@
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
-         "generos": [
-            "drama",
-            "comedia",
-            "romance"
-         ],
+         "generos": [],
          "peliculas": []
       },
       {
@@ -42,31 +38,15 @@
       },
       {
          "posicion": 5,
-         "nombre": "Grisai no kajitsu",
-         "estado": "finalizada",
-         "dia_emision": null,
-         "manga_visto": true,
-         "generos": [
-            "accion",
-            "shounen",
-            "comedia"
-         ],
-         "peliculas": [
-            "50",
-            "25"
-         ]
-      },
-      {
-         "posicion": 6,
-         "nombre": "Kotoura",
-         "estado": "finalizada",
+         "nombre": "Grisaia",
+         "estado": "en espera",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
          "peliculas": []
       },
       {
-         "posicion": 7,
+         "posicion": 6,
          "nombre": "Seto no Hanayome",
          "estado": "finalizada",
          "dia_emision": null,
@@ -75,7 +55,7 @@
          "peliculas": []
       },
       {
-         "posicion": 8,
+         "posicion": 7,
          "nombre": "Sakurasau no pet na kanojo",
          "estado": "finalizada",
          "dia_emision": null,
@@ -84,7 +64,7 @@
          "peliculas": []
       },
       {
-         "posicion": 9,
+         "posicion": 8,
          "nombre": "Itazura na Kiss",
          "estado": "finalizada",
          "dia_emision": null,
@@ -93,8 +73,17 @@
          "peliculas": []
       },
       {
-         "posicion": 10,
+         "posicion": 9,
          "nombre": "Chuunibyou demo Koi ga Shitai!",
+         "estado": "finalizada",
+         "dia_emision": null,
+         "manga_visto": false,
+         "generos": [],
+         "peliculas": []
+      },
+      {
+         "posicion": 10,
+         "nombre": "Tsuki ga Kirei",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -139,7 +128,7 @@
       },
       {
          "posicion": 15,
-         "nombre": "Tsuki ga Kirei",
+         "nombre": "Kotoura",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -186,7 +175,7 @@
          "posicion": 20,
          "nombre": "Code:Realize: Sousei no Himegimi",
          "estado": "finalizada",
-         "dia_emision": "Viernes",
+         "dia_emision": null,
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -195,7 +184,7 @@
          "posicion": 21,
          "nombre": "Kyoukai no kanata",
          "estado": "finalizada",
-         "dia_emision": "Sabado",
+         "dia_emision": null,
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -249,7 +238,7 @@
          "posicion": 27,
          "nombre": "No game no life",
          "estado": "finalizada",
-         "dia_emision": "Lunes",
+         "dia_emision": null,
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -294,7 +283,7 @@
          "posicion": 32,
          "nombre": "Junketu no Maria",
          "estado": "finalizada",
-         "dia_emision": "Domingo",
+         "dia_emision": null,
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -303,7 +292,7 @@
          "posicion": 33,
          "nombre": "Rakudai kishi no cavalry",
          "estado": "finalizada",
-         "dia_emision": "Martes",
+         "dia_emision": null,
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -375,7 +364,7 @@
          "posicion": 41,
          "nombre": "Nisekoi",
          "estado": "finalizada",
-         "dia_emision": "Viernes",
+         "dia_emision": null,
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -384,7 +373,7 @@
          "posicion": 42,
          "nombre": "Ryuuou no Oshigoto!",
          "estado": "finalizada",
-         "dia_emision": "Domingo",
+         "dia_emision": null,
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -393,7 +382,7 @@
          "posicion": 43,
          "nombre": "Infinite Stratos",
          "estado": "finalizada",
-         "dia_emision": "Domingo",
+         "dia_emision": null,
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -1808,11 +1797,7 @@
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
-         "generos": [
-            "escolares",
-            "romance",
-            "comedia"
-         ],
+         "generos": [],
          "peliculas": []
       },
       {
@@ -2811,7 +2796,7 @@
          "indice": 25,
          "nombre": "Kotonoha no Niwa.",
          "reacciones": "<3 </3 :|",
-         "manga_visto": true
+         "manga_visto": false
       },
       {
          "indice": 26,

@@ -143,9 +143,23 @@ class Coordinador_de_series:
         #inp = input('pegue: ') 
 
     #-----------------------------------------------------------------#
-    def cambiar_posicion(self):
-        return True
+    def cambiar_posicion(self, la_serie_a_desplazar):
 
+        listaDeSeriesRegistradas = Gestor_de_series().obtener_series()
+        posicion_actual = la_serie_a_desplazar.get_posicion()-1
+        nueva_posicion = int(input('\n¿Digite la nueva posisición de la serie?: '))-1
+
+        temporal = listaDeSeriesRegistradas[nueva_posicion]
+        listaDeSeriesRegistradas[nueva_posicion] = listaDeSeriesRegistradas[posicion_actual]
+        pos_act =  listaDeSeriesRegistradas[nueva_posicion].get_posicion()
+        listaDeSeriesRegistradas[nueva_posicion].set_posicion(temporal.get_posicion())
+        listaDeSeriesRegistradas[posicion_actual] = temporal
+        listaDeSeriesRegistradas[posicion_actual].set_posicion(pos_act)
+                 
+
+        data_actual = Gestor_de_series().obtener_registros()
+        data_actual["series"] = list(map(lambda Serie: Serie.obj_to_dicc(),sorted(listaDeSeriesRegistradas)))#[pelicula_a_actualizar.get_indice()-1]=pelicula_a_actualizar.obj_to_dicc()
+        Gestor_de_series().guardar_cambios(data_actual)
     #-----------------------------------------------------------------#
     def generar_dashboard(self):
 
