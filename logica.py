@@ -16,6 +16,10 @@ class Coordinador_de_series:
      #-----------------------------------------------------------------#
     def insertar_serie(self):
          pass
+    
+         #-----------------------------------------------------------------#
+    def insertar_pelicula(self):
+         pass
 
     #-----------------------------------------------------------------#
     def filtrar_series(self, nombre_a_buscar):
