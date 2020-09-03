@@ -21,7 +21,6 @@ class Coordinador_de_series:
     #-----------------------------------------------------------------#
     def obtener_serie(self, indice):
         try:
-                print()
                 lista_de_series = Gestor_de_series().obtener_series()
                 return lista_de_series[indice-1]
 
@@ -215,7 +214,6 @@ class Coordinador_de_series:
 
     #-----------------------------------------------------------------#
     def listar_series_del_dia(self):
-
         lista_de_registros = Gestor_de_series().obtener_series()
         dia_de_hoy=time.strftime("%A",time.localtime())
         series_del_dia=''

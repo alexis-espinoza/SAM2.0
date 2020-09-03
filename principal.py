@@ -30,22 +30,24 @@ class Principal:
     def listar_registros(self):
         #system('cls')
         print(Coordinador_de_series().listar_series_del_dia())
-        opcion_seleccionada = int(input('----------Opciones de listado----------\n1)-Listar todas\n2)-Listar series\n3)-Listar series en proceso\n4)-Listar series en espera\n5)-Listar series por rango\n6)-Listar peliculas\n7)-Listar por dia de emisión\nSeleccione una opción: '))
+        opcion_seleccionada = str(input(f'{"-"*10}Opciones de listado{"-"*10}\n1)-Listar todas\n2)-Listar series\n3)-Listar series en proceso\n4)-Listar series en espera\n5)-Listar series por rango\n6)-Listar peliculas\n7)-Listar por dia de emisión\nSeleccione una opción: '))
         coordinador = Coordinador_de_series()
-        dicc_listados = {
-        1: coordinador.listar_todos,2: coordinador.listar_series,3: coordinador.listar_series_en_proceso,
-        4: coordinador.listar_series_en_espera,5: coordinador.listar_series_por_rango, 6: coordinador.listar_peliculas,
-        7:coordinador.listar_series_por_emision}
+        dicc_listados = {'1': coordinador.listar_todos,'2': coordinador.listar_series,'3': coordinador.listar_series_en_proceso,
+        '4': coordinador.listar_series_en_espera,'5': coordinador.listar_series_por_rango,'6': coordinador.listar_peliculas,
+        '7':coordinador.listar_series_por_emision}
         registros = dicc_listados.get(opcion_seleccionada, lambda: 'NA')()
         if(registros!='NA'):
-           # Coordinador_de_series().listado_general(opcion_seleccionada)
-            if(opcion_seleccionada<=6):#str(type(registros)) != "<class 'NoneType'>"):
+            system('cls')
+            if(int(opcion_seleccionada)<=6):
                 for registro in registros[0]:
                     print(registro.mostrar_min())
                 if(registros[1]):
                     print(f'Cantidad de registros [{registros[1]}]: {len(registros[0])}\n')
             else:
                 print(Coordinador_de_series().listar_series_por_emision())
+        else:
+            system('cls')
+            print('\n¡No seleccionó una opción válida!')
 
     #-----------------------------------------------------------------#
     def filtrar_lista(self):
@@ -57,49 +59,56 @@ class Principal:
                 print(serie.mostrar_min())
             print(f'\n{"-"*75}\nSi desea seleccionar un registro de la lista prosiga, sino presione [Intro]\n↓{" "*36}↓{" "*36}↓')
             self.seleccionar_serie()
-
         else:
+            system('cls')
             print('\n¡No se encontraron coincidencias!')
 
     #-----------------------------------------------------------------#
     def seleccionar_serie(self):
-        #system('cls')
+
         indice = int(input('\n¿Digite el indice de la serie?: '))
+        system('cls')
         serie_seleccionada = Coordinador_de_series().obtener_serie(indice)
         print(serie_seleccionada.mostrar_det())
         if(len(serie_seleccionada.get_peliculas())>0):
-            print('\n<<Peliculas>>:')
+            print('\n♦♦Peliculas♦♦:')
             for pelicula in Coordinador_de_series().listar_peliculas_por_indice(serie_seleccionada.get_peliculas()):
                 print(pelicula.mostrar_min())
         
         self.actualizar_serie(serie_seleccionada)
 
-
-        
-
     def actualizar_serie(self,la_serie_a_modficar):
         se_actualiza = str(input('\n¿Desea actualizar el registro[s/n]?: '))
-        if(se_actualiza.lower()=='s'):
-            #Coordinador_de_series().actualizar_serie(se_actualiza)
-            opcion_cambio=int(input('\n1)-Cambiar posicion\n2)-Modificar registro\n3)-Cambiar estado\n4)-Agregar dia de emision\nSeleccione: '))
-            coordinador = Coordinador_de_series()
-            dicc_actualizaciones = {
-            1: coordinador.cambiar_posicion,
-            2: coordinador.modificar_datos,
-            3: coordinador.cambiar_estado,
-            4: coordinador.agregar_dia_emision}
-            dicc_actualizaciones.get(opcion_cambio, lambda: 'NA')(la_serie_a_modficar)
+        system('cls')
+        if(se_actualiza.lower()!='s'):
+            return
+        print(la_serie_a_modficar.mostrar_det())
+        opcion_cambio=str(input(f'\n{"-"*5}Opciones de actualización{"-"*5}\n1)-Cambiar posicion\n2)-Modificar registro\n3)-Cambiar estado\n4)-Agregar dia de emision\nSeleccione: '))
+        coordinador = Coordinador_de_series()
+        dicc_actualizaciones = {
+        '1': coordinador.cambiar_posicion,
+        '2': coordinador.modificar_datos,
+        '3': coordinador.cambiar_estado,
+        '4': coordinador.agregar_dia_emision}
+
+        opcion_modificar=dicc_actualizaciones.get(opcion_cambio, lambda serie:  'NA')(la_serie_a_modficar)
+        if(opcion_modificar=="NA"):
+            system('cls')
+            print('\n¡No seleccionó una opción válida!')
+
     
     #-----------------------------------------------------------------#}
     def seleccionar_pelicula(self):
-        system('cls')
         indice = int(input('\n¿Digite el indice de la pelicula?: '))
         pelicula_seleccionada = Coordinador_de_series().obtener_pelicula(indice)
         print(pelicula_seleccionada.mostrar_det())
         
         se_actualiza = str(input('\n¿Desea actualizar el registro[s/n]?: '))
-        if(se_actualiza.lower()=='s'):
-            Coordinador_de_series().actualizar_pelicula(pelicula_seleccionada)
+        if(se_actualiza.lower()!='s'):
+            system('cls')
+            return
+        Coordinador_de_series().actualizar_pelicula(pelicula_seleccionada)
+
 
     #-----------------------------------------------------------------#}
     def consultar_bitacora(self):

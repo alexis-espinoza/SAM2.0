@@ -972,8 +972,8 @@
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
-         "generos": [],
-         "peliculas": []
+         "generos": ["fantasia","aventura","romance"],
+         "peliculas": ["47","48"]
       },
       {
          "posicion": 109,
