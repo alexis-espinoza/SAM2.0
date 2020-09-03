@@ -12,7 +12,11 @@ class Coordinador_de_series:
     
     def listar_registos(self):
         return Gestor_de_series.obtener_registros()
-    
+
+     #-----------------------------------------------------------------#
+    def insertar_serie(self):
+         pass
+
     #-----------------------------------------------------------------#
     def filtrar_series(self, nombre_a_buscar):
         print()
