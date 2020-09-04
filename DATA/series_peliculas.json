@@ -972,8 +972,15 @@
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
-         "generos": ["fantasia","aventura","romance"],
-         "peliculas": ["47","48"]
+         "generos": [
+            "fantasia",
+            "aventura",
+            "romance"
+         ],
+         "peliculas": [
+            "47",
+            "48"
+         ]
       },
       {
          "posicion": 109,
@@ -2645,6 +2652,35 @@
          "nombre": "Mangirl!",
          "estado": "en proceso",
          "dia_emision": null,
+         "manga_visto": false,
+         "generos": [],
+         "peliculas": []
+      },
+      {
+         "posicion": 295,
+         "nombre": "one piece",
+         "estado": "en proceso",
+         "dia_emision": "Jueves",
+         "manga_visto": false,
+         "generos": [
+            "shounen"
+         ],
+         "peliculas": []
+      },
+      {
+         "posicion": 296,
+         "nombre": "Hunter x hunter",
+         "estado": "en proceso",
+         "dia_emision": null,
+         "manga_visto": false,
+         "generos": [],
+         "peliculas": []
+      },
+      {
+         "posicion": 297,
+         "nombre": "Bleach",
+         "estado": "finalizada",
+         "dia_emision": "Jueves",
          "manga_visto": false,
          "generos": [],
          "peliculas": []

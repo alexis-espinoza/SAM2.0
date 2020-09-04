@@ -9,16 +9,67 @@ class Coordinador_de_series:
 
     def __init__(self):
          self.dicc_dias = {'Monday':'Lunes', 'Tuesday':'Martes', 'Wednesday':'Miercoles', 'Thursday':'Jueves','Friday':'Viernes', 'Saturday':'Sabado', 'Sunday':'Domingo'}
+         self.dias_validos=['1','2','3','4','5','6','7']
+         self.dicc_estados = {'1':'finalizada','2':'en proceso','3':'en espera'}
     
     def listar_registos(self):
         return Gestor_de_series.obtener_registros()
 
+    def agregar_generos(self):
+        list_generos=[]
+        genero='ninguno'
+        while(genero!=''):
+            genero = str(input('Ingrese un género o [Intro] para finalizar:'))
+            if(genero!=''):
+                list_generos.append(genero)
+        return list_generos
+
+    def agregar_peliculas(self):
+        list_peliculas=[]
+        pelicula='ninguno'
+        while(pelicula!=''):
+            pelicula = str(input('Ingrese un indice de pelicula o [Intro] para finalizar:'))
+            if(pelicula!=''):
+                list_peliculas.append(pelicula)
+        return list_peliculas
+
+    def listar_opciones_de_emision(self,la_serie):
+        text_emision= f'¿Día de emisión de la serie [{la_serie.get_nombre()}]'
+        valor=1
+        for dia in list(self.dicc_dias.values()):
+            text_emision+=f'\n{list(self.dicc_dias.values()).index(dia)+1} = {dia}'
+            valor+=1
+        text_emision+="\nSeleccione: "
+        return text_emision
      #-----------------------------------------------------------------#
     def insertar_serie(self):
-         pass
+        nueva_serie = Serie()
+        nueva_serie.set_nombre(input("Digite el nombre de la nueva_serie: "))
+        opcion_estado = str(input('Seleccione el nuevo estado para la serie:\n1)-Finalizada\n2)-En proceso\n3)-En espera\nDigite una opción: '))
+        nueva_serie.set_estado(self.dicc_estados.get(opcion_estado,'en proceso'))
+        indice_dia = str(input(self.listar_opciones_de_emision(nueva_serie)))
+        nueva_serie.set_dia_emision(list(self.dicc_dias.values())[(int(indice_dia)-1)] if indice_dia in self.dias_validos else None)
+        nueva_serie.set_manga_visto(True if str(input('Manga visto[s/n]: ')).lower()=='s' else False)
+        nueva_serie.set_generos(self.agregar_generos())
+        nueva_serie.set_peliculas(self.agregar_peliculas())
+         
+        if(nueva_serie.get_nombre()!=''):
+            data_actual = Gestor_de_series().obtener_registros()
+            posicion = len(Gestor_de_series().obtener_series())+1
+            nueva_serie.set_posicion(posicion)
+            data_actual["series"].append(nueva_serie.obj_to_dicc())
+            Gestor_de_series().guardar_cambios(data_actual)
+
+            print(nueva_serie.mostrar_det())
+
     
          #-----------------------------------------------------------------#
     def insertar_pelicula(self):
+
+         pass
+         #-----------------------------------------------------------------#
+    def insertar_manga(self):
+
          pass
 
     #-----------------------------------------------------------------#
@@ -52,19 +103,9 @@ class Coordinador_de_series:
             print('\nPara dejar los valores sin cambios presione [enter]')
             nombre = str(input('Digite el nuevo nombre: '))
             serie_a_actualizar.set_nombre(nombre if nombre!='' else serie_a_actualizar.get_nombre())
-            generos=[]
-            genero='ninguno'
-            while(genero!=''):
-                genero = str(input('Ingrese un género o [Intro] para finalizar:'))
-                if(genero!=''):
-                    generos.append(genero)
+            generos=self.agregar_generos()
             serie_a_actualizar.set_generos(generos if len(generos)!=0 else serie_a_actualizar.get_generos())
-            peliculas=[]
-            pelicula='ninguno'
-            while(pelicula!=''):
-                pelicula = str(input('Ingrese un indice de pelicula o [Intro] para finalizar:'))
-                if(pelicula!=''):
-                    peliculas.append(pelicula)
+            peliculas=self.agregar_peliculas()
             serie_a_actualizar.set_peliculas(peliculas if len(peliculas)!=0 else serie_a_actualizar.get_peliculas())
             manga = str(input('Manga visto[s/n]: ')).lower()
             serie_a_actualizar.set_manga_visto(True if manga=='s' else serie_a_actualizar.get_manga_visto())
@@ -78,9 +119,9 @@ class Coordinador_de_series:
 
     #-----------------------------------------------------------------#
     def cambiar_estado(self,serie_a_actualizar):
-        estados = dicc_estados = {1:'finalizada',2:'en proceso',3:'en espera'}
-        opcion_estado = int(input('\nSeleccione el nuevo estado para la serie:\n1)-Finalizada\n2)-En proceso\n3)-En espera\nDigite una opción: '))
-        nuevo_estado= dicc_estados.get(opcion_estado,'NA')
+
+        opcion_estado = str(input('\nSeleccione el nuevo estado para la serie:\n1)-Finalizada\n2)-En proceso\n3)-En espera\nDigite una opción: '))
+        nuevo_estado = self.dicc_estados.get(opcion_estado,'NA')
         print(nuevo_estado)
         if(serie_a_actualizar.get_estado()==nuevo_estado or nuevo_estado == 'NA'):
             print('¡No se ejecutó el cambio de estado!')
@@ -92,20 +133,16 @@ class Coordinador_de_series:
     
     #-----------------------------------------------------------------#
     def agregar_dia_emision(self,serie_a_actualizar):
-        text_emision= f'\n¿Día de emisión de la serie [{serie_a_actualizar.get_nombre()}]'
-        valor=1
-        for dia in list(self.dicc_dias.values()):
-            text_emision+=f'\n{list(self.dicc_dias.values()).index(dia)+1} = {dia}'
-            valor+=1
-        text_emision+="\nSeleccione: "
-        indice_dia = int(input(text_emision))
-        if(indice_dia>1 and indice_dia<8):
-            dia_emision =  list(self.dicc_dias.values())[indice_dia-1]
+        print()
+        indice_dia = str(input(self.listar_opciones_de_emision(serie_a_actualizar)))
+        if(indice_dia in self.dias_validos):
+            dia_emision =  list(self.dicc_dias.values())[int(indice_dia)-1]
             serie_a_actualizar.set_dia_emision(dia_emision)
             data_actual = Gestor_de_series().obtener_registros()
             data_actual["series"][serie_a_actualizar.get_posicion()-1]=serie_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
         else:
+            system('cls')
             print('¡Operación no confirmada!')
     
     #-----------------------------------------------------------------#

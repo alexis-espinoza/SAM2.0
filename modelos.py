@@ -1,7 +1,8 @@
 
 class Serie:
 
-    def __init__(self, serie_db):
+    def __init__(self, serie_db={"posicion": "","nombre": "","estado": "","dia_emision": None,"manga_visto": False,"generos": [],"peliculas": []}):
+
         self.posicion = serie_db["posicion"]
         self.nombre = serie_db["nombre"]
         self.estado =  serie_db["estado"]
@@ -10,7 +11,7 @@ class Serie:
         self.generos = serie_db["generos"]
         self.peliculas = serie_db["peliculas"]
        # self.obj_pelicula = Pelicula()
-
+    
 
     def mostrar_det(self):
         datos_generales = f'\n{"•"*12}Serie{"•"*12}\n\nPosicion: {self.get_posicion()}\nNombre: {self.nombre}\nEstado: {self.estado}'

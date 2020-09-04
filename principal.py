@@ -13,7 +13,7 @@ class Principal:
                 opciones = '''0)- Getión de proceso\n1)- Agregar nuevo\n2)- Mostrar lista\n3)- Filtrar lista\n4)- Seleccionar serie\n5)- Seleccionar película\n6)- Consultar bitácora\n7)- Cerrar\nDigite una opción: '''
                 opcion_seleccionada = str(input(opciones)) 
                 dicc_menu = {
-                    '0': principal.abrir_diario,'1': principal.abrir_diario,'2': principal.listar_registros,
+                    '0': principal.abrir_diario,'1': principal.agregar_registro,'2': principal.listar_registros,
                     '3': principal.filtrar_lista,'4': principal.seleccionar_serie,'5': principal.seleccionar_pelicula,
                     '6': principal.consultar_bitacora,'7': principal.cerrar_sistema}
                 system('cls')
@@ -25,6 +25,15 @@ class Principal:
 
     def abrir_diario(self):
         print('diario')
+
+    def agregar_registro(self):
+        opcion_ingreso =  str(input(f'\n{"-"*10}Opciones de registro{"-"*10}\n1)-Anime\n2)-Pelicula\n3)-Manga\nSeleccione una opción: '))
+        coordinador = Coordinador_de_series()
+        dicc_inserciones = {'1': coordinador.insertar_serie,'2': coordinador.insertar_pelicula,'3': coordinador.insertar_manga}
+        opcion_agregar=dicc_inserciones.get(opcion_ingreso, lambda:  'NA')()
+        if(opcion_agregar=='NA'):
+            system('cls')
+            print('\n¡No seleccionó una opción válida!')
 
     #-----------------------------------------------------------------#
     def listar_registros(self):
@@ -90,7 +99,6 @@ class Principal:
         '2': coordinador.modificar_datos,
         '3': coordinador.cambiar_estado,
         '4': coordinador.agregar_dia_emision}
-
         opcion_modificar=dicc_actualizaciones.get(opcion_cambio, lambda serie:  'NA')(la_serie_a_modficar)
         if(opcion_modificar=="NA"):
             system('cls')
