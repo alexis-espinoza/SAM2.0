@@ -1,9 +1,18 @@
 import json
 from modelos import Serie, Pelicula, Manga
+#from logica import Coordinador_de_alertas as alertas
 from os import getcwd, system
 
 
 class Gestor_de_series:
+
+    def obtener_avance_diario(self):
+        try:
+            system.startfile(str(getcwd())+'\\DATA\\proceso en series vistas.txt')
+            system('cls')
+        except Exception:
+            return
+           #alertas().mostrar_mensaje('no_ok')
 
     def obtener_registros(self):
         lista_series = []
@@ -35,7 +44,7 @@ class Gestor_de_series:
         with open(str(getcwd())+'\\DATA\\series_peliculas.json') as archivo:
             data_json = json.load(archivo)
             for manga_actual in data_json["mangas"]:
-                lista_mangas.append(Pelicula(manga_actual))
+                lista_mangas.append(Manga(manga_actual))
         return lista_mangas
 
 
@@ -43,7 +52,7 @@ class Gestor_de_series:
         with open(str(getcwd())+'\\DATA\\series_peliculas.json','w') as archivo:
             json.dump(dicc_datos, archivo, indent=3, ensure_ascii=False)
 
-    #Agregar mensajes customizados para estas clases
+
     def obtener_logs(self):
 
         try:
@@ -51,8 +60,8 @@ class Gestor_de_series:
 	            list_registros_log =  list(filter(lambda linea: linea!='\n', archivo_de_logs.readlines()))
             return list_registros_log[3:]
         except Exception:
-                system('cls')
-                print('\n¡La opeación en curso produjo errores!')    
+            return
+                   # alertas().mostrar_mensaje('no_ok')   
 
 
     def actualizar_logs(self, lista_de_logs):
@@ -62,5 +71,5 @@ class Gestor_de_series:
                 archivo_de_logs.write(encabezado)
                 archivo_de_logs.writelines(lista_de_logs)    
         except Exception:
-                  system('cls')
-                  print('\n¡La opeación en curso produjo errores!')  
+            return
+            #alertas().mostrar_mensaje('no_ok')

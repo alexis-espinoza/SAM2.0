@@ -14,11 +14,10 @@ class Serie:
     
 
     def mostrar_det(self):
-        datos_generales = f'\n{"•"*12}Serie{"•"*12}\n\nPosicion: {self.get_posicion()}\nNombre: {self.nombre}\nEstado: {self.estado}'
+        datos_generales = f'\n{"•"*12}Serie{"•"*12}\n\nPosicion: {self.get_posicion()}\nNombre: {self.get_nombre()}\nEstado: {self.get_estado()}'
         dia_emision = '' if self.get_dia_emision()==None else f'\nEmisión: {self.get_dia_emision()}'
         manga = f'\nManga: no leído/no aplica' if self.get_manga_visto() == False else f'\nManga: leído'
         generos = '' if len(self.get_generos())==0 else f'\nGéneros: {", ".join(self.get_generos())}'
-
         return datos_generales+manga+dia_emision+generos
         
     def __gt__(self, Serie):
@@ -35,7 +34,7 @@ class Serie:
 
 
     def mostrar_min(self):
-        return f'[{self.get_posicion()}]-{self.get_nombre()}\n'
+        return f'\n[{self.get_posicion()}]-{self.get_nombre()}'
 
     def obj_to_dicc(self):
         return {
@@ -101,10 +100,10 @@ class Pelicula:
     def mostrar_min(self):
         return f'\n[{self.get_indice()}]-{self.get_nombre()}'
 
-    def mostrar_det(self):
+    def mostrar_det(self): 
         manga = '' if self.get_manga_visto() == False else f'\nManga: leído'
         reacciones = '' if self.get_reacciones() == None else f'\nReacciones: {self.get_reacciones()}'
-        salida=f'Indice: {self.get_indice()}\nNombre: {self.get_nombre()}'
+        salida=f'{"♦"*12}Película{"♦"*12}\n\nIndice: {self.get_indice()}\nNombre: {self.get_nombre()}'
         salida+=reacciones
         salida+=manga
         return salida
@@ -113,7 +112,7 @@ class Pelicula:
         return self.indice > Pelicula.indice
 
     def __ne__(self, Pelicula):
-        return bool(self.posicion != Pelicula.posicion 
+        return bool(self.indice != Pelicula.indice 
         or self.nombre != Pelicula.nombre 
         or self.reacciones != Pelicula.reacciones
         or self.manga_visto != Pelicula.manga_visto )
@@ -153,10 +152,31 @@ class Pelicula:
 
 class Manga:
     
-    def __init__(self, manga_db):
+    def __init__(self, manga_db= {"indice": "","nombre":"", "generos":[]}):
         self.indice = manga_db["indice"]
         self.nombre = manga_db["nombre"]
         self.generos = manga_db["generos"]
+
+    def mostrar_min(self):
+        return f'\n[{self.get_indice()}]-{self.get_nombre()}'
+
+    def mostrar_det(self):
+        datos_generales = f'{"»"*12}Manga{"«"*12}\n\nIndice: {self.get_indice()}\nNombre: {self.get_nombre()}'
+        generos = '' if len(self.get_generos())==0 else f'\nGéneros: {", ".join(self.get_generos())}'
+        return datos_generales+generos
+   
+
+    def obj_to_dicc(self):
+        return {
+            "indice": self.get_indice(),
+            "nombre": self.get_nombre(),
+            "generos": self.get_generos()
+            }
+
+    def __ne__(self, Manga):
+        return bool(self.indice != Manga.indice 
+        or self.nombre != Manga.nombre 
+        or self.generos != Manga.generos)
 
     def set_indice(self, indice):
         self.indice = indice
@@ -173,5 +193,5 @@ class Manga:
     def set_generos(self, generos):
         self.generos = generos
     
-    def get_dia_generos(self):
+    def get_generos(self):
         return self.generos

@@ -552,3 +552,11 @@
 [05/09/20] <-> Inserciï¿½n del registro de tipo['anine']: prueba insert anime 
 [05/09/20] <-> Modificaciï¿½n de estado del registro: prueba insert anime de [en proceso] a [finalizada]
 [05/09/20] <-> Desplazamiento del registro: prueba insert anime del puesto [300] al puesto [299]
+[05/09/20] <-> Desplazamiento del registro: prueba insert anime del puesto [300] al puesto [301]
+[05/09/20] <-> Modificación de datos del registro: prueba insert anime
+[05/09/20] <-> Modificación del dia de emision a [Martes] para el registro: prueba insert anime
+[05/09/20] <-> Inserción del registro de tipo['película']: prueba insert peli
+[05/09/20] <-> Modificación de datos del registro: prueba insert peli
+[05/09/20] <-> Inserción del registro de tipo ['manga']: The goods lie
+[05/09/20] <-> Inserción del registro de tipo ['manga']: Wolf children
+[05/09/20] <-> Modificación de datos del registro: Niños lobo

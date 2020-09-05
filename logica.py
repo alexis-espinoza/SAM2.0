@@ -1,5 +1,5 @@
 from acc_datos import Gestor_de_series
-from modelos import Serie, Pelicula
+from modelos import Serie, Pelicula, Manga
 from os import system
 import time
 import pyperclip
@@ -19,11 +19,20 @@ class Coordinador_de_series():
         return Gestor_de_series.obtener_registros()
 
 #-----------------------------------------------------------------#
+    def mostrar_diario(self):
+        Gestor_de_series().obtener_avance_diario()
+
+#-----------------------------------------------------------------#
+    def copiar_nombre_del_registro(self,registro_actual):
+            text=registro_actual.get_nombre()
+            pyperclip.copy(text)  # now the clipboard content will be string "abc"
+
+#-----------------------------------------------------------------#
     def agregar_generos(self):
         list_generos=[]
         genero='ninguno'
         while(genero!=''):
-            genero = str(input('Ingrese un género o [Intro] para finalizar:'))
+            genero = str(input('Ingrese un género o [Intro] para finalizar: '))
             if(genero!=''):
                 list_generos.append(genero)
         return list_generos
@@ -33,7 +42,7 @@ class Coordinador_de_series():
         list_peliculas=[]
         pelicula='ninguno'
         while(pelicula!=''):
-            pelicula = str(input('Ingrese un indice de pelicula o [Intro] para finalizar:'))
+            pelicula = str(input('Ingrese un indice de pelicula o [Intro] para finalizar: '))
             if(pelicula!=''):
                 list_peliculas.append(pelicula)
         return list_peliculas
@@ -95,9 +104,22 @@ class Coordinador_de_series():
 
          #-----------------------------------------------------------------#
     def insertar_manga(self):
-
-         pass
- 
+        system('cls')
+        print('\nNuevo registro de tipo (manga) presione [Intro] para omitir algún campo')
+        nuevo_manga = Manga()
+        nuevo_manga.set_nombre(input("\nDigite el nombre de la nueva serie: "))
+        nuevo_manga.set_generos(self.agregar_generos())
+        if(nuevo_manga.get_nombre()!=''):
+            data_actual = Gestor_de_series().obtener_registros()
+            indice = len(Gestor_de_series().obtener_mangas())+1
+            nuevo_manga.set_indice(indice)
+            data_actual["mangas"].append(nuevo_manga.obj_to_dicc())
+            Gestor_de_series().guardar_cambios(data_actual)
+            self.alertas.mostrar_mensaje('ok_in')
+            self.actualizar_bitacora('insert',['manga',nuevo_manga.get_nombre()])
+        else:
+            self.alertas.mostrar_mensaje('no_conf')
+     
      #-----------------------------------------------------------------#
     def actualizar_pelicula(self, pelicula_a_actualizar):
         system('cls')
@@ -110,14 +132,34 @@ class Coordinador_de_series():
         pelicula_a_actualizar.set_manga_visto(True if manga=='s' else pelicula_a_actualizar.get_manga_visto())
         
         data_actual = Gestor_de_series().obtener_registros()
-        pelicula_sin_cambios = Serie(data_actual["peliculas"][pelicula_a_actualizar.get_indice()-1])
+        pelicula_sin_cambios = Pelicula(data_actual["peliculas"][pelicula_a_actualizar.get_indice()-1])
         if(pelicula_sin_cambios!= pelicula_a_actualizar):
-            data_actual["series"][serie_a_actualizar.get_indice()-1] = pelicula_a_actualizar.obj_to_dicc()
+            data_actual["peliculas"][pelicula_a_actualizar.get_indice()-1] = pelicula_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_up')
             self.actualizar_bitacora('up_dt',[pelicula_a_actualizar.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
+
+     #-----------------------------------------------------------------#  
+    def actualizar_manga(self, manga_a_actualizar):
+        system('cls')
+        print(manga_a_actualizar.mostrar_det())
+        print('\nPresione [enter] para dejar los valores sin cambios')
+        nombre = str(input('Digite el nuevo nombre: '))
+        manga_a_actualizar.set_nombre(nombre if nombre!='' else manga_a_actualizar.get_nombre())
+        generos=self.agregar_generos()
+        manga_a_actualizar.set_generos(generos if len(generos)!=0 else manga_a_actualizar.get_generos())
+        data_actual = Gestor_de_series().obtener_registros()
+        manga_sin_cambios = Manga(data_actual["mangas"][manga_a_actualizar.get_indice()-1])
+        if(manga_sin_cambios!= manga_a_actualizar):
+            data_actual["mangas"][manga_a_actualizar.get_indice()-1] = manga_a_actualizar.obj_to_dicc()
+            Gestor_de_series().guardar_cambios(data_actual)
+            self.alertas.mostrar_mensaje('ok_up')
+            self.actualizar_bitacora('up_dt',[manga_a_actualizar.get_nombre()])
+        else:
+            self.alertas.mostrar_mensaje('no_conf')
+
 
     #-----------------------------------------------------------------#     
     def actualizar_serie(self,serie_a_actualizar):
@@ -232,6 +274,7 @@ class Coordinador_de_series():
     def obtener_serie(self, indice):
         try:
                 lista_de_series = Gestor_de_series().obtener_series()
+                self.copiar_nombre_del_registro(lista_de_series[indice-1])
                 return lista_de_series[indice-1]
         except Exception:
             self.alertas.mostrar_mensaje('no_sel')
@@ -242,7 +285,18 @@ class Coordinador_de_series():
         try:
                 print()
                 lista_de_peliculas = Gestor_de_series().obtener_peliculas()
+                self.copiar_nombre_del_registro(lista_de_peliculas[indice-1])
                 return lista_de_peliculas[indice-1]
+        except Exception:
+            self.alertas.mostrar_mensaje('no_sel')
+            return False
+
+        #-----------------------------------------------------------------#    
+    def obtener_manga(self, indice):
+        try:
+                print()
+                lista_de_mangas = Gestor_de_series().obtener_mangas()
+                return lista_de_mangas[indice-1]
         except Exception:
             self.alertas.mostrar_mensaje('no_sel')
             return False
@@ -289,7 +343,7 @@ class Coordinador_de_series():
 
     #-----------------------------------------------------------------# 
     def listar_mangas(self):
-        return Gestor_de_series.obtener_mangas()    
+        return (Gestor_de_series().obtener_mangas(), False)
 
     #-----------------------------------------------------------------#
     def listar_series_del_dia(self):
@@ -349,12 +403,12 @@ class Coordinador_de_series():
         #Coordinador_de_series().actualizar_bitacora([])
     
     def actualizar_bitacora(self, tipo_log, cambios):
-        cambios=cambios+(['']*2)
+        cambios=cambios+(['']*2)#Se agregan 2 campos extra para los casos donde solo viaja un parámetro
         dicc_cambios = {
-        'insert': f'Inserción del registro de tipo{[cambios[0]]}: {cambios[1]}',
+        'insert': f'Inserción del registro de tipo {cambios[0]}: {cambios[1]}',
         'up_st': f'Modificación de estado del registro: {cambios[0]} de [{cambios[1]}] a [{cambios[2]}]',
         'up_dt': f'Modificación de datos del registro: {cambios[0]}',
-        'up_em': f'Modificación del dia de emision a [{cambios[0]}] para el registro: {cambios[1]}',
+        'up_em': f'Modificación del dia de emision [{cambios[0]}] para el registro: {cambios[1]}',
         'up_ps': f'Desplazamiento del registro: {cambios[0]} del puesto [{cambios[1]}] al puesto [{cambios[2]}]'
         }
         lista_de_logs = Gestor_de_series().obtener_logs()
@@ -363,14 +417,14 @@ class Coordinador_de_series():
         Gestor_de_series().actualizar_logs(lista_de_logs)
 
 
-class Coordinador_de_alertas():
+class Coordinador_de_alertas:
     def __init__(self):
         self.dicc_mensajes = {
             'def':'\n¡Retornando al menú principal!',
             'ok_in':'\n¡Se agregó exitosamente!',
             'ok_up':'\n¡Se modificó exitosamente!',
             'no_conf':'\n¡La operación no produjo cambios!',
-            'no_ok':'\n¡La operación no fue ejecutada!',
+            'no_ok':'\n¡La operación tuvo errores al ejecutarse!',
             'no_ext':'\n¡No se encontraron coincidencias!',
             'no_sel':'\n¡No se encontró el registro indicado!',
             'no_val':'\n¡No seleccionó una opción válida!'
