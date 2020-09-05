@@ -237,17 +237,19 @@ class Coordinador_de_series():
     #-----------------------------------------------------------------#
     def listar_series_por_rango(self):
         try:
+            system('cls')
             rango = str(input('\nIndique el rango de series a mostrar con el formato [inicio-final]: ' ))
-            print()
             inicio = int(rango.split('-')[0])
             final = int(rango.split('-')[1])
             if(inicio>final):
                 f=final
                 final=inicio
                 inicio=f
+            print()
             return (list(filter(lambda Serie: Serie.get_posicion()>=inicio and Serie.get_posicion()<=final, Gestor_de_series().obtener_series())), False)
         except Exception:
-            print()
+            self.alertas.mostrar_mensaje('def')
+            return False
 
     #-----------------------------------------------------------------#
     def listar_peliculas(self):
@@ -293,10 +295,10 @@ class Coordinador_de_series():
                     registros_en_dia_actual=''
         if(salida!=''):
                 conteo='Cantidad de registros [en emisión]: '+str(registros_en_emision)
-                print(f'\n{salida}\n{conteo}')
+                return f'\n{salida}\n{conteo}'
         else:
             self.alertas.mostrar_mensaje('no_ext')
-            return
+            return 
     
 
     def consultar_bitacora(self, busqueda):

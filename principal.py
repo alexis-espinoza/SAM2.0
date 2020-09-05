@@ -36,22 +36,22 @@ class Principal:
     #-----------------------------------------------------------------#
     def listar_registros(self):
         print(Coordinador_de_series().listar_series_del_dia())
-        opcion_seleccionada = str(input(f'{"-"*10}Opciones de listado{"-"*10}\n1)-Listar series\n2)-Listar series en proceso\n3)-Listar series en espera\n4)-Listar series por rango\n5)-Listar peliculas\n6)-Listar por dia de emisión\nSeleccione una opción: '))
+        opcion_seleccionada = str(input(f'{"-"*10}Opciones de listado{"-"*10}\n1)-Listar series\n2)-Listar series en proceso\n3)-Listar series en espera\n4)-Listar series por rango\n5)-Listar por dia de emisión\n6)-Listar peliculas\nSeleccione una opción: '))
         coordinador = Coordinador_de_series()
         dicc_listados = {'1': coordinador.listar_series,'2': coordinador.listar_series_en_proceso,'3': coordinador.listar_series_en_espera,
-        '4': coordinador.listar_series_por_rango,'5': coordinador.listar_peliculas,'6':coordinador.listar_series_por_emision}
-        registros = dicc_listados.get(opcion_seleccionada, lambda: 'NA')()
-        if(registros!='NA'):
+        '4': coordinador.listar_series_por_rango,'6': coordinador.listar_peliculas,'5':coordinador.listar_series_por_emision}
+        registros = dicc_listados.get(opcion_seleccionada,  lambda: alertas().mostrar_mensaje('no_val'))()
+        if(str(type(registros)) == "<class 'tuple'>"):
             system('cls')
-            if(int(opcion_seleccionada)<=5):
-                for registro in registros[0]:
-                    print(registro.mostrar_min())
-                if(registros[1]):
-                    print(f'Cantidad de registros [{registros[1]}]: {len(registros[0])}\n')
-            else:
-                Coordinador_de_series().listar_series_por_emision()
-        else:
-            alertas().mostrar_mensaje('no_val')
+            for registro in registros[0]:
+                print(registro.mostrar_min())
+            if(registros[1]):
+                print(f'Cantidad de registros [{registros[1]}]: {len(registros[0])}\n')
+
+        if(str(type(registros)) == "<class 'str'>"):
+            system('cls')
+            print(Coordinador_de_series().listar_series_por_emision())
+             
 
     #-----------------------------------------------------------------#
     def filtrar_lista(self):

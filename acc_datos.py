@@ -49,7 +49,6 @@ class Gestor_de_series:
         try:
             with open(str(getcwd())+'\\LOGS\\historial.txt','r') as archivo_de_logs:
 	            list_registros_log =  list(filter(lambda linea: linea!='\n', archivo_de_logs.readlines()))
-            print(list_registros_log[3:4])
             return list_registros_log[3:]
         except Exception:
                 system('cls')

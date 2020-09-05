@@ -25,7 +25,7 @@
       {
          "posicion": 3,
          "nombre": "Toradora",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [
@@ -55,7 +55,7 @@
       {
          "posicion": 6,
          "nombre": "Seto no Hanayome",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -118,7 +118,7 @@
       {
          "posicion": 13,
          "nombre": "Re:Zero kara Hajimeru Isekai Seikatsu",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -316,7 +316,7 @@
       {
          "posicion": 35,
          "nombre": "Sword Art Online (SAO)",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -1007,7 +1007,7 @@
       {
          "posicion": 111,
          "nombre": "(Oregairu) Yahari ore no seishun love come wa machigatteiru",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -1214,7 +1214,7 @@
       {
          "posicion": 134,
          "nombre": "Shokugeki no Souma",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -2240,7 +2240,7 @@
       {
          "posicion": 248,
          "nombre": "Houkago Teibou Nisshi",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -2303,7 +2303,7 @@
       {
          "posicion": 255,
          "nombre": "Sailor Moon",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -2465,7 +2465,7 @@
       {
          "posicion": 273,
          "nombre": "RahXephon",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -2537,7 +2537,7 @@
       {
          "posicion": 281,
          "nombre": "Kanojo Okarishimasu",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -2582,7 +2582,7 @@
       {
          "posicion": 286,
          "nombre": "Koi to Producer: EVOL�LOVE",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -2600,7 +2600,7 @@
       {
          "posicion": 288,
          "nombre": "Mahouka Koukou no Rettousei",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -2627,7 +2627,7 @@
       {
          "posicion": 291,
          "nombre": "Sumomomo Momomo",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -2654,7 +2654,7 @@
       {
          "posicion": 294,
          "nombre": "Mangirl!",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -2663,7 +2663,7 @@
       {
          "posicion": 295,
          "nombre": "one piece",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [
@@ -2674,7 +2674,7 @@
       {
          "posicion": 296,
          "nombre": "Hunter x hunter",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -2692,7 +2692,7 @@
       {
          "posicion": 298,
          "nombre": "Doraemon",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
