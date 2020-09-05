@@ -21,7 +21,7 @@
       {
          "posicion": 3,
          "nombre": "Toradora",
-         "estado": "finalizada",
+         "estado": "en proceso",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [
@@ -51,7 +51,7 @@
       {
          "posicion": 6,
          "nombre": "Seto no Hanayome",
-         "estado": "finalizada",
+         "estado": "en proceso",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],

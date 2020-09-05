@@ -15,11 +15,11 @@ class Serie:
 
     def mostrar_det(self):
         datos_generales = f'\n{"•"*12}Serie{"•"*12}\n\nPosicion: {self.get_posicion()}\nNombre: {self.nombre}\nEstado: {self.estado}'
-        dia_emision = '' if self.get_dia_emision()==None else f'\nDia de emisión: {self.get_dia_emision()}'
+        dia_emision = '' if self.get_dia_emision()==None else f'\nEmisión: {self.get_dia_emision()}'
         manga = f'\nManga: no leído' if self.get_manga_visto() == False else f'\nManga: leído'
         generos = '' if len(self.get_generos())==0 else f'\nGeneros: {", ".join(self.get_generos())}'
 
-        return datos_generales+dia_emision+manga+generos
+        return datos_generales+manga+dia_emision+generos
         
     def __gt__(self, Serie):
         return self.posicion > Serie.posicion
@@ -108,8 +108,13 @@ class Pelicula:
         salida=f'Indice: {self.get_indice()}\nNombre: {self.get_nombre()}'
         salida+=reacciones
         salida+=manga
-
         return salida
+
+    def __ne__(self, Pelicula):
+        return bool(self.posicion != Pelicula.posicion 
+        or self.nombre != Pelicula.nombre 
+        or self.reacciones != Pelicula.reacciones
+        or self.manga_visto != Pelicula.manga_visto )
           
     def obj_to_dicc(self):
         return {
