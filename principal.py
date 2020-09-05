@@ -8,7 +8,7 @@ class Principal:
 
     def menu(self):
         while True:
-            try:
+            #try:
                 print(Coordinador_de_series().generar_dashboard())
                 principal=Principal()
                 opciones = '''0)- Getión de proceso\n1)- Agregar nuevo\n2)- Mostrar lista\n3)- Filtrar lista\n4)- Seleccionar serie\n5)- Seleccionar película\n6)- Consultar bitácora\n7)- Cerrar\nDigite una opción: '''
@@ -19,8 +19,9 @@ class Principal:
                     '6': principal.consultar_bitacora,'7': principal.cerrar_sistema}
                 system('cls')
                 dicc_menu.get(opcion_seleccionada)()
-            except Exception:
-                alertas.mostrar_mensaje('def')
+            #except Exception:
+             #   alertas().mostrar_mensaje('def')
+
     def abrir_diario(self):
         print('diario')
 
@@ -35,21 +36,20 @@ class Principal:
     #-----------------------------------------------------------------#
     def listar_registros(self):
         print(Coordinador_de_series().listar_series_del_dia())
-        opcion_seleccionada = str(input(f'{"-"*10}Opciones de listado{"-"*10}\n1)-Listar todas\n2)-Listar series\n3)-Listar series en proceso\n4)-Listar series en espera\n5)-Listar series por rango\n6)-Listar peliculas\n7)-Listar por dia de emisión\nSeleccione una opción: '))
+        opcion_seleccionada = str(input(f'{"-"*10}Opciones de listado{"-"*10}\n1)-Listar series\n2)-Listar series en proceso\n3)-Listar series en espera\n4)-Listar series por rango\n5)-Listar peliculas\n6)-Listar por dia de emisión\nSeleccione una opción: '))
         coordinador = Coordinador_de_series()
-        dicc_listados = {'1': coordinador.listar_todos,'2': coordinador.listar_series,'3': coordinador.listar_series_en_proceso,
-        '4': coordinador.listar_series_en_espera,'5': coordinador.listar_series_por_rango,'6': coordinador.listar_peliculas,
-        '7':coordinador.listar_series_por_emision}
+        dicc_listados = {'1': coordinador.listar_series,'2': coordinador.listar_series_en_proceso,'3': coordinador.listar_series_en_espera,
+        '4': coordinador.listar_series_por_rango,'5': coordinador.listar_peliculas,'6':coordinador.listar_series_por_emision}
         registros = dicc_listados.get(opcion_seleccionada, lambda: 'NA')()
         if(registros!='NA'):
             system('cls')
-            if(int(opcion_seleccionada)<=6):
+            if(int(opcion_seleccionada)<=5):
                 for registro in registros[0]:
                     print(registro.mostrar_min())
                 if(registros[1]):
                     print(f'Cantidad de registros [{registros[1]}]: {len(registros[0])}\n')
             else:
-                print(Coordinador_de_series().listar_series_por_emision())
+                Coordinador_de_series().listar_series_por_emision()
         else:
             alertas().mostrar_mensaje('no_val')
 
@@ -78,14 +78,15 @@ class Principal:
                 for pelicula in Coordinador_de_series().listar_peliculas_por_indice(serie_seleccionada.get_peliculas()):
                     print(pelicula.mostrar_min())
             self.actualizar_serie(serie_seleccionada)
-
+    
+    #-----------------------------------------------------------------# 
     def actualizar_serie(self,la_serie_a_modficar):
         se_actualiza = str(input('\n¿Desea actualizar el registro[s/n]?: '))
         system('cls')
         if(se_actualiza.lower()!='s'):
             return
         print(la_serie_a_modficar.mostrar_det())
-        opcion_cambio=str(input(f'\n{"-"*5}Opciones de actualización{"-"*5}\n1)-Cambiar estado\n2)-Cambiar posicion\n3)-Modificar registro\n4)-Agregar dia de emision\nSeleccione: '))
+        opcion_cambio=str(input(f'\n{"-"*5}Opciones de actualización{"-"*5}\n1)-Cambiar estado\n2)-Cambiar posicion\n3)-Modificar serie\n4)-Agregar dia emision\nSeleccione: '))
         coordinador = Coordinador_de_series()
         dicc_actualizaciones = {
         '1': coordinador.cambiar_estado,
@@ -112,6 +113,7 @@ class Principal:
 
     #-----------------------------------------------------------------#}
     def consultar_bitacora(self):
+        
         print('\nBúsqueda en bitácora (ej. de entradas válidas ["26/04/20" - "96" - "Zero" - "en espera"])')
         busqueda = str(input('Ingrese un parámetro de búsqueda: '))
         Coordinador_de_series().consultar_bitacora(busqueda)

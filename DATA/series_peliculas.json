@@ -15,7 +15,11 @@
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
-         "generos": [],
+         "generos": [
+            "drama",
+            "romace",
+            "ciencia ficci�n"
+         ],
          "peliculas": []
       },
       {
@@ -42,7 +46,7 @@
       {
          "posicion": 5,
          "nombre": "Grisaia",
-         "estado": "en espera",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -133,7 +137,7 @@
          "posicion": 15,
          "nombre": "Kotoura",
          "estado": "finalizada",
-         "dia_emision": "Martes",
+         "dia_emision": null,
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -2660,7 +2664,7 @@
          "posicion": 295,
          "nombre": "one piece",
          "estado": "en proceso",
-         "dia_emision": "Jueves",
+         "dia_emision": null,
          "manga_visto": false,
          "generos": [
             "shounen"
@@ -2680,7 +2684,16 @@
          "posicion": 297,
          "nombre": "Bleach",
          "estado": "finalizada",
-         "dia_emision": "Jueves",
+         "dia_emision": null,
+         "manga_visto": false,
+         "generos": [],
+         "peliculas": []
+      },
+      {
+         "posicion": 298,
+         "nombre": "Doraemon",
+         "estado": "en proceso",
+         "dia_emision": null,
          "manga_visto": false,
          "generos": [],
          "peliculas": []

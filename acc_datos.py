@@ -43,22 +43,25 @@ class Gestor_de_series:
         with open(str(getcwd())+'\\DATA\\series_peliculas.json','w') as archivo:
             json.dump(dicc_datos, archivo, indent=3, ensure_ascii=False)
 
-
+    #Agregar mensajes customizados para estas clases
     def obtener_logs(self):
 
         try:
             with open(str(getcwd())+'\\LOGS\\historial.txt','r') as archivo_de_logs:
 	            list_registros_log =  list(filter(lambda linea: linea!='\n', archivo_de_logs.readlines()))
-
-            return list_registros_log[1:]
-            """
-            for linea in archivo_de_logs:
-                if(linea.lower().find(datoABuscar.lower()) != -1 and linea.find('|ACCIÓN REALIZADA|')==-1):
-                    list_registros_log.append(linea.split('\n')[0])
-
-      
-            """
-
+            print(list_registros_log[3:4])
+            return list_registros_log[3:]
         except Exception:
                 system('cls')
                 print('\n¡La opeación en curso produjo errores!')    
+
+
+    def actualizar_logs(self, lista_de_logs):
+        try:
+            with open(str(getcwd())+'\\LOGS\\historial.txt','w') as archivo_de_logs:
+                encabezado =" _____         ________________\n|FECHA|       |ACCIÓN REALIZADA|\n'''''''       ''''''''''''''''''\n"
+                archivo_de_logs.write(encabezado)
+                archivo_de_logs.writelines(lista_de_logs)    
+        except Exception:
+                  system('cls')
+                  print('\n¡La opeación en curso produjo errores!')  

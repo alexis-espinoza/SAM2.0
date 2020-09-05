@@ -40,7 +40,7 @@ class Coordinador_de_series():
 
 #-----------------------------------------------------------------#
     def listar_opciones_de_emision(self,la_serie):
-        text_emision= f'¿Día de emisión de la serie [{la_serie.get_nombre()}]'
+        text_emision= f'\n¿Día de emisión de la serie [{la_serie.get_nombre()}]?'
         valor=1
         for dia in list(self.dicc_dias.values()):
             text_emision+=f'\n{list(self.dicc_dias.values()).index(dia)+1} = {dia}'
@@ -50,8 +50,10 @@ class Coordinador_de_series():
      
      #-----------------------------------------------------------------#
     def insertar_serie(self):
+        system('cls')
+        print('\nNuevo registro de tipo (anime) presione [Intro] para omitir algún campo')
         nueva_serie = Serie()
-        nueva_serie.set_nombre(input("Digite el nombre de la nueva_serie: "))
+        nueva_serie.set_nombre(input("\nDigite el nombre de la nueva serie: "))
         opcion_estado = str(input('Seleccione el nuevo estado para la serie:\n1)-Finalizada\n2)-En proceso\n3)-En espera\nDigite una opción: '))
         nueva_serie.set_estado(self.dicc_estados.get(opcion_estado,'en proceso'))
         indice_dia = str(input(self.listar_opciones_de_emision(nueva_serie)))
@@ -65,7 +67,7 @@ class Coordinador_de_series():
             nueva_serie.set_posicion(posicion)
             data_actual["series"].append(nueva_serie.obj_to_dicc())
             Gestor_de_series().guardar_cambios(data_actual)
-            self.alertas.mostrar_mensaje('ok')
+            self.alertas.mostrar_mensaje('ok_in')
         else:
             self.alertas.mostrar_mensaje('no_conf')
     #-----------------------------------------------------------------#
@@ -93,7 +95,7 @@ class Coordinador_de_series():
         if(pelicula_sin_cambios!= pelicula_a_actualizar):
             data_actual["series"][serie_a_actualizar.get_posicion()-1] = pelicula_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
-            self.alertas.mostrar_mensaje('ok')
+            self.alertas.mostrar_mensaje('ok_up')
         else:
             self.alertas.mostrar_mensaje('no_conf')
 
@@ -116,7 +118,7 @@ class Coordinador_de_series():
         if(serie_sin_cambios!= serie_a_actualizar):
             data_actual["series"][serie_a_actualizar.get_posicion()-1] = serie_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
-            self.alertas.mostrar_mensaje('ok')
+            self.alertas.mostrar_mensaje('ok_up')
         else:
             self.alertas.mostrar_mensaje('no_conf')
 
@@ -134,7 +136,7 @@ class Coordinador_de_series():
             data_actual = Gestor_de_series().obtener_registros()
             data_actual["series"][serie_a_actualizar.get_posicion()-1]=serie_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
-            self.alertas.mostrar_mensaje('ok')
+            self.alertas.mostrar_mensaje('ok_up')
     
     #-----------------------------------------------------------------#
     def agregar_dia_emision(self,serie_a_actualizar):
@@ -147,7 +149,7 @@ class Coordinador_de_series():
             data_actual = Gestor_de_series().obtener_registros()
             data_actual["series"][serie_a_actualizar.get_posicion()-1]=serie_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
-            self.alertas.mostrar_mensaje('ok')
+            self.alertas.mostrar_mensaje('ok_in')
         else:
             self.alertas.mostrar_mensaje('no_conf')
     
@@ -199,7 +201,7 @@ class Coordinador_de_series():
     #-----------------------------------------------------------------#
     def filtrar_series(self, nombre_a_buscar):
         print()
-        return list(filter(lambda Serie: Serie.get_nombre().lower().find(nombre_a_buscar)!=-1, Gestor_de_series().obtener_series()))
+        return list(filter(lambda Serie: Serie.get_nombre().lower().find(nombre_a_buscar)!=-1 and nombre_a_buscar!='', Gestor_de_series().obtener_series()))
 
     #-----------------------------------------------------------------#
     def obtener_serie(self, indice):
@@ -219,9 +221,7 @@ class Coordinador_de_series():
         except Exception:
             self.alertas.mostrar_mensaje('no_sel')
             return False
-    #-----------------------------------------------------------------#
-    def listar_todos(self):
-        return True
+
     #-----------------------------------------------------------------#
     def listar_series(self):
         return (Gestor_de_series().obtener_series(), False)
@@ -274,7 +274,7 @@ class Coordinador_de_series():
             if (registro_actual.get_dia_emision() == self.dicc_dias.get(dia_de_hoy)):
                 series_del_dia+=registro_actual.mostrar_min()
         if(series_del_dia!=''):
-                series_del_dia+=encabezado
+                series_del_dia= encabezado+series_del_dia
         return series_del_dia
 
     #-----------------------------------------------------------------#
@@ -292,25 +292,26 @@ class Coordinador_de_series():
                     salida+=self.dicc_dias.get(dia)+':\n'+registros_en_dia_actual+'\n'
                     registros_en_dia_actual=''
         if(salida!=''):
-                conteo='\nCantidad de registros [en emisión]: '+str(registros_en_emision)
-                return(salida+conteo)
+                conteo='Cantidad de registros [en emisión]: '+str(registros_en_emision)
+                print(f'\n{salida}\n{conteo}')
+        else:
+            self.alertas.mostrar_mensaje('no_ext')
+            return
     
 
     def consultar_bitacora(self, busqueda):
         print()
-        registros_de_bitacora = list(filter(lambda linea: linea.find(busqueda.lower())!=-1, Gestor_de_series().obtener_logs()))
+        registros_de_bitacora = list(filter(lambda linea: linea.lower().find(busqueda.lower())!=-1 and busqueda!='', Gestor_de_series().obtener_logs()))
         registro_actual = 0
         total_de_registros=len(registros_de_bitacora)
-        formato = '\nMostrando {0} de {1} registros, ¿mostrar más? [s/n]: '
-        
+        formato = 'Mostrando [{0}] de [{1}] registros, ¿mostrar más? [s/n]: '
         while(registro_actual<total_de_registros):        
             if((registro_actual%10)==0 and registro_actual!=0):           
                 mas_datos = input(formato.format(registro_actual,total_de_registros))
                 if(mas_datos != 's'):
                     system('cls')
-                    return
-                else:
-                    print('')#Se salta un línea
+                    return                
+                print('')#Se salta un línea
             print(registros_de_bitacora[registro_actual])
             registro_actual+=1
         if(len(registros_de_bitacora)==0):
@@ -318,13 +319,21 @@ class Coordinador_de_series():
             return
         cerrar_bitacora = str(input('\nPresione [Intro] para salir de la bitácora'))
         system('cls')                  
-
+        #Coordinador_de_series().actualizar_bitacora([])
+    
+    def actualizar_bitacora(self, ls_cambios={}):
+        lista_de_logs = Gestor_de_series().obtener_logs()
+        nuevo_log = '[10/06/18] <-> Inserción del registro de tipo [prueba]: Prueba.\n\n'
+        lista_de_logs.append(nuevo_log)
+        Gestor_de_series().actualizar_logs(lista_de_logs)
+        
 
 class Coordinador_de_alertas():
     def __init__(self):
         self.dicc_mensajes = {
             'def':'\n¡Retornando al menú principal!',
-            'ok':'\n¡Operación ejecutada exitosamente!',
+            'ok_in':'\n¡Se agregó exitosamente!',
+            'ok_up':'\n¡Se modificó exitosamente!',
             'no_conf':'\n¡La operación no produjo cambios!',
             'no_ok':'\n¡La operación no fue ejecutada!',
             'no_ext':'\n¡No se encontraron coincidencias!',

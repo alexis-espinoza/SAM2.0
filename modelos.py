@@ -16,8 +16,8 @@ class Serie:
     def mostrar_det(self):
         datos_generales = f'\n{"•"*12}Serie{"•"*12}\n\nPosicion: {self.get_posicion()}\nNombre: {self.nombre}\nEstado: {self.estado}'
         dia_emision = '' if self.get_dia_emision()==None else f'\nEmisión: {self.get_dia_emision()}'
-        manga = f'\nManga: no leído' if self.get_manga_visto() == False else f'\nManga: leído'
-        generos = '' if len(self.get_generos())==0 else f'\nGeneros: {", ".join(self.get_generos())}'
+        manga = f'\nManga: no leído/no aplica' if self.get_manga_visto() == False else f'\nManga: leído'
+        generos = '' if len(self.get_generos())==0 else f'\nGéneros: {", ".join(self.get_generos())}'
 
         return datos_generales+manga+dia_emision+generos
         
