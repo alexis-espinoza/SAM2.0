@@ -1,6 +1,6 @@
- _____        _________________
-|FECHA|       |ACCIï¿½N REALIZADA|
-'''''''	       '''''''''''''''''''
+ _____         ________________
+|FECHA|       |ACCIÓN REALIZADA|
+'''''''       ''''''''''''''''''
 [09/06/18] <-> Inserciï¿½n del registro de tipo [pelï¿½cula]: Sora no Otoshimono: Tokei Jikake no Angeloid.
 [10/06/18] <-> Inserciï¿½n del registro de tipo [pelï¿½cula]: Sora no Otoshimono Final Eien No Watashi No Torikago.
 [10/06/18] <-> Modificaciï¿½n de estado del registro: Sora no otoshimono de [en proceso] a [finalizado].
@@ -549,3 +549,6 @@
 [04/07/20] <-> Modificaciï¿½n de estado del registro: Shokugeki no Souma de [en espera] a [en proceso].
 [04/07/20] <-> Modificaciï¿½n de estado del registro: Sword Art Online (SAO) de [en espera] a [en proceso].
 [10/06/18] <-> Inserciï¿½n del registro de tipo [prueba]: Prueba.
+[05/09/20] <-> Inserciï¿½n del registro de tipo['anine']: prueba insert anime 
+[05/09/20] <-> Modificaciï¿½n de estado del registro: prueba insert anime de [en proceso] a [finalizada]
+[05/09/20] <-> Desplazamiento del registro: prueba insert anime del puesto [300] al puesto [299]

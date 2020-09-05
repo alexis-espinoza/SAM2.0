@@ -92,7 +92,7 @@ class Serie:
 
 class Pelicula:
 
-    def __init__(self, pelicula_db):
+    def __init__(self, pelicula_db={"indice": 1,"nombre": "","reacciones": None,"manga_visto": False}):
         self.indice = pelicula_db["indice"]
         self.nombre = pelicula_db["nombre"]
         self.reacciones =  pelicula_db["reacciones"]
@@ -100,7 +100,6 @@ class Pelicula:
 
     def mostrar_min(self):
         return f'\n[{self.get_indice()}]-{self.get_nombre()}'
-        #print(salida)
 
     def mostrar_det(self):
         manga = '' if self.get_manga_visto() == False else f'\nManga: leído'
@@ -109,6 +108,9 @@ class Pelicula:
         salida+=reacciones
         salida+=manga
         return salida
+
+    def __gt__(self, Pelicula):
+        return self.indice > Pelicula.indice
 
     def __ne__(self, Pelicula):
         return bool(self.posicion != Pelicula.posicion 

@@ -121,8 +121,15 @@
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
-         "generos": [],
-         "peliculas": []
+         "generos": [
+            "drama",
+            "fantasia",
+            "psicologico",
+            "suspenso"
+         ],
+         "peliculas": [
+            "13"
+         ]
       },
       {
          "posicion": 14,
@@ -2697,305 +2704,344 @@
          "manga_visto": false,
          "generos": [],
          "peliculas": []
+      },
+      {
+         "posicion": 299,
+         "nombre": "prueba insert",
+         "estado": "en proceso",
+         "dia_emision": null,
+         "manga_visto": false,
+         "generos": [],
+         "peliculas": []
+      },
+      {
+         "posicion": 300,
+         "nombre": "prueba insert anime",
+         "estado": "finalizada",
+         "dia_emision": null,
+         "manga_visto": false,
+         "generos": [],
+         "peliculas": []
+      },
+      {
+         "posicion": 301,
+         "nombre": "prueba insert2",
+         "estado": "en proceso",
+         "dia_emision": null,
+         "manga_visto": false,
+         "generos": [],
+         "peliculas": []
       }
    ],
    "peliculas": [
       {
          "indice": 1,
+         "nombre": "prueba2",
+         "reacciones": "qa",
+         "manga_visto": true
+      },
+      {
+         "indice": 2,
+         "nombre": "prueba",
+         "reacciones": null,
+         "manga_visto": false
+      },
+      {
+         "indice": 3,
          "nombre": "Boku no Hero Academia the Movie 2: Heroes:Rising.",
          "reacciones": ":o :)",
          "manga_visto": false
       },
       {
-         "indice": 2,
+         "indice": 4,
          "nombre": "Nakitai Watashi wa Neko o Kaburu.",
          "reacciones": ":v :/ <3",
          "manga_visto": false
       },
       {
-         "indice": 3,
+         "indice": 5,
          "nombre": "Planetarian: Hoshi no Hito.",
          "reacciones": ":'3",
          "manga_visto": false
       },
       {
-         "indice": 4,
+         "indice": 6,
          "nombre": "Higashi no Eden Movie II: Paradise Lost.",
          "reacciones": ":/",
          "manga_visto": false
       },
       {
-         "indice": 5,
+         "indice": 7,
          "nombre": "Higashi no Eden Movie I: The King of Eden.",
          "reacciones": ":o :3",
          "manga_visto": false
       },
       {
-         "indice": 6,
+         "indice": 8,
          "nombre": "Hello World.",
          "reacciones": ":o <3",
          "manga_visto": false
       },
       {
-         "indice": 7,
+         "indice": 9,
          "nombre": "Tenki No Ko (Weathering with You).",
          "reacciones": ":) <3",
          "manga_visto": false
       },
       {
-         "indice": 8,
+         "indice": 10,
          "nombre": "Ookami Kodomo no Ame to Yuki (Wolf Children).",
          "reacciones": ":3 :/ :)",
          "manga_visto": false
       },
       {
-         "indice": 9,
+         "indice": 11,
          "nombre": "Nerawareta Gakuen.",
          "reacciones": ":/ :o :)",
          "manga_visto": false
       },
       {
-         "indice": 10,
+         "indice": 12,
          "nombre": "Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu.",
          "reacciones": ":o :v :)",
          "manga_visto": false
       },
       {
-         "indice": 11,
+         "indice": 13,
          "nombre": "Shiki iriori.",
          "reacciones": ":/ :( :3",
          "manga_visto": false
       },
       {
-         "indice": 12,
+         "indice": 14,
          "nombre": "Kimi to, Nami ni Noretara (Ride your wave).",
          "reacciones": ":3 :( <3",
          "manga_visto": false
       },
       {
-         "indice": 13,
-         "nombre": "Re:Zero kara Hajimeru Isekai Seikatsu .",
+         "indice": 15,
+         "nombre": "Re:Zero kara Hajimeru Isekai Seikatsu - Memory Snow.",
          "reacciones": null,
          "manga_visto": false
       },
       {
-         "indice": 14,
+         "indice": 16,
          "nombre": "Trinity Seven Movie 2: Tenkuu Toshokan to Shinku no Maou.",
          "reacciones": ":v :o 7u7",
          "manga_visto": false
       },
       {
-         "indice": 15,
+         "indice": 17,
          "nombre": "Trinity Seven Movie: Eternity Library to Alchemic Girl.",
          "reacciones": ":3 :o",
          "manga_visto": false
       },
       {
-         "indice": 16,
+         "indice": 18,
          "nombre": "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka Movie: Orion no Ya.",
          "reacciones": ":v :o",
          "manga_visto": false
       },
       {
-         "indice": 17,
+         "indice": 19,
          "nombre": "Neon genesis evangelion the end of evangelion.",
          "reacciones": ":o :/",
          "manga_visto": false
       },
       {
-         "indice": 18,
+         "indice": 20,
          "nombre": "Neon genesis evangelion death and rebirth.",
          "reacciones": null,
          "manga_visto": false
       },
       {
-         "indice": 19,
+         "indice": 21,
          "nombre": "Gekijouban Shakugan no Shana.",
          "reacciones": null,
          "manga_visto": false
       },
       {
-         "indice": 20,
+         "indice": 22,
          "nombre": "Suzumiya Haruhi no Shoushitsu.",
          "reacciones": ":o :3",
          "manga_visto": false
       },
       {
-         "indice": 21,
+         "indice": 23,
          "nombre": "Pokemon the Movie: I Choose You!.",
          "reacciones": ":)",
          "manga_visto": false
       },
       {
-         "indice": 22,
+         "indice": 24,
          "nombre": "Toki Wo Kakeru Shoujo.",
          "reacciones": ":o :/",
          "manga_visto": false
       },
       {
-         "indice": 23,
+         "indice": 25,
          "nombre": "Boku no Hero Academia the Movie Futari no Hero.",
          "reacciones": ":O",
          "manga_visto": false
       },
       {
-         "indice": 24,
+         "indice": 26,
          "nombre": "Nanatsu no Taizai Movie: Tenkuu no Torawarebito.",
          "reacciones": ":O :v",
          "manga_visto": false
       },
       {
-         "indice": 25,
+         "indice": 27,
          "nombre": "Kotonoha no Niwa.",
          "reacciones": "<3 </3 :|",
          "manga_visto": false
       },
       {
-         "indice": 26,
+         "indice": 28,
          "nombre": "Kokoro ga Sakebitagatterunda.",
          "reacciones": ":( :/",
          "manga_visto": false
       },
       {
-         "indice": 27,
+         "indice": 29,
          "nombre": "Seitokai Yakuindomo the Movie.",
          "reacciones": ":v :)",
          "manga_visto": false
       },
       {
-         "indice": 28,
+         "indice": 30,
          "nombre": "Bungaku Shoujo.",
          "reacciones": ":o <3",
          "manga_visto": false
       },
       {
-         "indice": 29,
+         "indice": 31,
          "nombre": "Gekijoban Tengen Toppa Guren Ragan Guren Hen.",
          "reacciones": ":)",
          "manga_visto": false
       },
       {
-         "indice": 30,
+         "indice": 32,
          "nombre": "Gekijoban Tengen Toppa Guren Ragan Ragan Hen.",
          "reacciones": ":o :v <3",
          "manga_visto": false
       },
       {
-         "indice": 31,
+         "indice": 33,
          "nombre": "Zutto Mae kara Suki deshita Kokuhaku Jikkou Iinkai.",
          "reacciones": ":) :D <3",
          "manga_visto": false
       },
       {
-         "indice": 32,
+         "indice": 34,
          "nombre": "Suki ni Naru Sono Shunkan wo Kokuhaku Jikkou Iinkai.",
          "reacciones": ":) </3",
          "manga_visto": false
       },
       {
-         "indice": 33,
+         "indice": 35,
          "nombre": "Hotarubi no Mori e.",
          "reacciones": ":D <3 </3",
          "manga_visto": false
       },
       {
-         "indice": 34,
+         "indice": 36,
          "nombre": "To Aru Majutsu no Index Endymion no Kiseki.",
          "reacciones": ":)",
          "manga_visto": false
       },
       {
-         "indice": 35,
+         "indice": 37,
          "nombre": "Yousoku 5 Centimeter.",
          "reacciones": "</3",
          "manga_visto": false
       },
       {
-         "indice": 36,
+         "indice": 38,
          "nombre": "Chuunibyou demo Koi ga Shitai! Movie Take On Me.",
          "reacciones": ":v :3 <3",
          "manga_visto": false
       },
       {
-         "indice": 37,
+         "indice": 39,
          "nombre": "Gochuumon Usagi Desu Ka Dear my sister.",
          "reacciones": ":3",
          "manga_visto": false
       },
       {
-         "indice": 38,
+         "indice": 40,
          "nombre": "Uchiage Hanabi?, Shita Kara Miru Ka Yoko Kara Miru Ka? (Fireworks).",
          "reacciones": "<3",
          "manga_visto": false
       },
       {
-         "indice": 39,
+         "indice": 41,
          "nombre": "Sora no otoshimono final eien no watashi no torikago.",
          "reacciones": null,
          "manga_visto": false
       },
       {
-         "indice": 40,
+         "indice": 42,
          "nombre": "Sora no otoshimono: tokei jikake no angeloid.",
          "reacciones": null,
          "manga_visto": false
       },
       {
-         "indice": 41,
+         "indice": 43,
          "nombre": "Kimi No Na Wa (Your name).",
          "reacciones": ":v <3",
          "manga_visto": false
       },
       {
-         "indice": 42,
+         "indice": 44,
          "nombre": "Kyoukai no kanata I'll Be Here Mirai.",
          "reacciones": null,
          "manga_visto": false
       },
       {
-         "indice": 43,
+         "indice": 45,
          "nombre": "Tamako love history.",
          "reacciones": ":) :D <3",
          "manga_visto": false
       },
       {
-         "indice": 44,
+         "indice": 46,
          "nombre": "Sword Art Online Ordinal Scale.",
          "reacciones": ":D :) <3",
          "manga_visto": false
       },
       {
-         "indice": 45,
+         "indice": 47,
          "nombre": "Koe no Katachi.",
          "reacciones": ":( :v",
          "manga_visto": false
       },
       {
-         "indice": 46,
+         "indice": 48,
          "nombre": "AnoHana la pelicula.",
          "reacciones": null,
          "manga_visto": false
       },
       {
-         "indice": 47,
+         "indice": 49,
          "nombre": "Sakura card captors.",
          "reacciones": null,
          "manga_visto": false
       },
       {
-         "indice": 48,
+         "indice": 50,
          "nombre": "Sakura card captors: La carta sellada.",
          "reacciones": null,
          "manga_visto": false
       },
       {
-         "indice": 49,
+         "indice": 51,
          "nombre": "Date A Live Movie: Mayuri Judgment.",
          "reacciones": null,
          "manga_visto": false
       },
       {
-         "indice": 50,
+         "indice": 52,
          "nombre": "No game no life zero.",
          "reacciones": ":) :v :3 <3 </3",
          "manga_visto": false

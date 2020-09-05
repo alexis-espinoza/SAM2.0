@@ -1,5 +1,5 @@
 from acc_datos import Gestor_de_series
-from modelos import Serie
+from modelos import Serie, Pelicula
 from os import system
 import time
 import pyperclip
@@ -68,12 +68,31 @@ class Coordinador_de_series():
             data_actual["series"].append(nueva_serie.obj_to_dicc())
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_in')
+            self.actualizar_bitacora('insert',['anine',nueva_serie.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
     #-----------------------------------------------------------------#
     def insertar_pelicula(self):
+        system('cls')
+        print('\nNuevo registro de tipo (pelicula) presione [Intro] para omitir algún campo')
+        nueva_pelicula = Pelicula()
+        nueva_pelicula.set_nombre(input("\nDigite el nombre de la nueva pelicula: "))
+        reacciones = str(input('Digite un valor para las reacciones: '))
+        nueva_pelicula.set_reacciones(reacciones if reacciones!='' else None)
+        nueva_pelicula.set_manga_visto(True if str(input('Manga visto[s/n]: ')).lower()=='s' else False)
+        
+        if(nueva_pelicula.get_nombre()!=''):
+            data_actual = Gestor_de_series().obtener_registros()
+            peliculas = Gestor_de_series().obtener_peliculas()
+            list(map(lambda Pelicula: Pelicula.set_indice(Pelicula.get_indice()+1), peliculas))
+            peliculas.append(nueva_pelicula)
+            data_actual["peliculas"] = list(map(lambda Pelicula: Pelicula.obj_to_dicc(),sorted(peliculas))) #sorted(list_peliculas)
+            Gestor_de_series().guardar_cambios(data_actual)
+            self.alertas.mostrar_mensaje('ok_in')
+            self.actualizar_bitacora('insert',['película',nueva_pelicula.get_nombre()])
+        else:
+            self.alertas.mostrar_mensaje('no_conf')
 
-         pass
          #-----------------------------------------------------------------#
     def insertar_manga(self):
 
@@ -91,11 +110,12 @@ class Coordinador_de_series():
         pelicula_a_actualizar.set_manga_visto(True if manga=='s' else pelicula_a_actualizar.get_manga_visto())
         
         data_actual = Gestor_de_series().obtener_registros()
-        pelicula_sin_cambios = Serie(data_actual["peliculas"][pelicula_a_actualizar.get_posicion()-1])
+        pelicula_sin_cambios = Serie(data_actual["peliculas"][pelicula_a_actualizar.get_indice()-1])
         if(pelicula_sin_cambios!= pelicula_a_actualizar):
-            data_actual["series"][serie_a_actualizar.get_posicion()-1] = pelicula_a_actualizar.obj_to_dicc()
+            data_actual["series"][serie_a_actualizar.get_indice()-1] = pelicula_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_up')
+            self.actualizar_bitacora('up_dt',[pelicula_a_actualizar.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
 
@@ -119,6 +139,7 @@ class Coordinador_de_series():
             data_actual["series"][serie_a_actualizar.get_posicion()-1] = serie_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_up')
+            self.actualizar_bitacora('up_dt',[serie_a_actualizar.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
 
@@ -126,6 +147,7 @@ class Coordinador_de_series():
     def cambiar_estado(self,serie_a_actualizar):
         system('cls')
         print(serie_a_actualizar.mostrar_det())
+        estado_anterior = serie_a_actualizar.get_estado()
         opcion_estado = str(input('\nSeleccione el nuevo estado para la serie:\n1)-Finalizada\n2)-En proceso\n3)-En espera\nDigite una opción: '))
         nuevo_estado = self.dicc_estados.get(opcion_estado,'NA')
         if(serie_a_actualizar.get_estado()==nuevo_estado or nuevo_estado == 'NA'):
@@ -137,6 +159,7 @@ class Coordinador_de_series():
             data_actual["series"][serie_a_actualizar.get_posicion()-1]=serie_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_up')
+            self.actualizar_bitacora('up_st',[serie_a_actualizar.get_nombre(),estado_anterior,nuevo_estado])
     
     #-----------------------------------------------------------------#
     def agregar_dia_emision(self,serie_a_actualizar):
@@ -150,16 +173,17 @@ class Coordinador_de_series():
             data_actual["series"][serie_a_actualizar.get_posicion()-1]=serie_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_in')
+            self.actualizar_bitacora('up_em',[serie_a_actualizar.get_dia_emision(), serie_a_actualizar.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
     
     #-----------------------------------------------------------------#
-    def cambiar_posicion(self, la_serie_a_desplazar):
+    def cambiar_posicion(self, serie_a_desplazar):
         try:
             system('cls')
-            print(la_serie_a_desplazar.mostrar_det())
+            print(serie_a_desplazar.mostrar_det())
             lista_de_series = Gestor_de_series().obtener_series()
-            posicion_actual = la_serie_a_desplazar.get_posicion()-1
+            posicion_actual = serie_a_desplazar.get_posicion()-1
             nueva_posicion = int(input('\n¿Digite la nueva posisición de la serie?: '))-1
             temporal = lista_de_series[nueva_posicion]
             lista_de_series[nueva_posicion] = lista_de_series[posicion_actual]
@@ -171,6 +195,7 @@ class Coordinador_de_series():
             data_actual = Gestor_de_series().obtener_registros()
             data_actual["series"] = list(map(lambda Serie: Serie.obj_to_dicc(),sorted(lista_de_series)))
             Gestor_de_series().guardar_cambios(data_actual)
+            self.actualizar_bitacora('up_ps',[serie_a_desplazar.get_nombre(),posicion_actual+1,nueva_posicion+1])
         except Exception:
             self.alertas.mostrar_mensaje('no_ok')
     
@@ -323,12 +348,20 @@ class Coordinador_de_series():
         system('cls')                  
         #Coordinador_de_series().actualizar_bitacora([])
     
-    def actualizar_bitacora(self, ls_cambios={}):
+    def actualizar_bitacora(self, tipo_log, cambios):
+        cambios=cambios+(['']*2)
+        dicc_cambios = {
+        'insert': f'Inserción del registro de tipo{[cambios[0]]}: {cambios[1]}',
+        'up_st': f'Modificación de estado del registro: {cambios[0]} de [{cambios[1]}] a [{cambios[2]}]',
+        'up_dt': f'Modificación de datos del registro: {cambios[0]}',
+        'up_em': f'Modificación del dia de emision a [{cambios[0]}] para el registro: {cambios[1]}',
+        'up_ps': f'Desplazamiento del registro: {cambios[0]} del puesto [{cambios[1]}] al puesto [{cambios[2]}]'
+        }
         lista_de_logs = Gestor_de_series().obtener_logs()
-        nuevo_log = '[10/06/18] <-> Inserción del registro de tipo [prueba]: Prueba.\n\n'
+        nuevo_log = f'[{time.strftime("%d/%m/%y")}] <-> {dicc_cambios.get(tipo_log)}\n'
         lista_de_logs.append(nuevo_log)
         Gestor_de_series().actualizar_logs(lista_de_logs)
-        
+
 
 class Coordinador_de_alertas():
     def __init__(self):
