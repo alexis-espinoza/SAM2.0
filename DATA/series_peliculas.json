@@ -2,17 +2,8 @@
    "series": [
       {
          "posicion": 1,
-         "nombre": "Zero no tsukaima",
-         "estado": "finalizada",
-         "dia_emision": null,
-         "manga_visto": false,
-         "generos": [],
-         "peliculas": []
-      },
-      {
-         "posicion": 2,
          "nombre": "Plastic Memories",
-         "estado": "finalizada",
+         "estado": "en proceso",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [
@@ -23,7 +14,7 @@
          "peliculas": []
       },
       {
-         "posicion": 3,
+         "posicion": 2,
          "nombre": "Toradora",
          "estado": "finalizada",
          "dia_emision": null,
@@ -35,12 +26,24 @@
          "peliculas": []
       },
       {
-         "posicion": 4,
+         "posicion": 3,
          "nombre": "Clannad",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
+         "peliculas": []
+      },
+      {
+         "posicion": 4,
+         "nombre": "Zero no tsukaima",
+         "estado": "finalizada",
+         "dia_emision": null,
+         "manga_visto": true,
+         "generos": [
+            "romance",
+            "escoleres"
+         ],
          "peliculas": []
       },
       {
@@ -56,7 +59,7 @@
          "posicion": 6,
          "nombre": "Seto no Hanayome",
          "estado": "finalizada",
-         "dia_emision": null,
+         "dia_emision": "Domingo",
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -83,7 +86,7 @@
          "posicion": 9,
          "nombre": "Chuunibyou demo Koi ga Shitai!",
          "estado": "finalizada",
-         "dia_emision": null,
+         "dia_emision": "Martes",
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -2733,6 +2736,15 @@
             "qa",
             "prueba"
          ],
+         "peliculas": []
+      },
+      {
+         "posicion": 302,
+         "nombre": "prueba insercion",
+         "estado": "finalizada",
+         "dia_emision": null,
+         "manga_visto": true,
+         "generos": [],
          "peliculas": []
       }
    ],

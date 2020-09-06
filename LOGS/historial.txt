@@ -560,3 +560,18 @@
 [05/09/20] <-> Inserción del registro de tipo ['manga']: The goods lie
 [05/09/20] <-> Inserción del registro de tipo ['manga']: Wolf children
 [05/09/20] <-> Modificación de datos del registro: Niños lobo
+[06/09/20] <-> Modificación de estado del registro: Zero no tsukaima de [finalizada] a [en proceso]
+[06/09/20] <-> Desplazamiento del registro: Zero no tsukaima del puesto [1] al puesto [26]
+[06/09/20] <-> Modificación de datos del registro: Zero no tsukaima
+[06/09/20] <-> Modificación del dia de emision [Domingo] para el registro: Zero no tsukaima
+[06/09/20] <-> Modificación de datos del registro: Zero no tsukaima
+[06/09/20] <-> Modificación del dia de emision [Domingo] para el registro: Seto no Hanayome
+[06/09/20] <-> Modificación del dia de emision [Martes] para el registro: Chuunibyou demo Koi ga Shitai!
+[06/09/20] <-> Desplazamiento del registro: Zero no tsukaima del puesto [5] al puesto [1]
+[06/09/20] <-> Desplazamiento del registro: Plastic Memories del puesto [2] al puesto [1]
+[06/09/20] <-> Desplazamiento del registro: Plastic Memories del puesto [1] al puesto [1]
+[06/09/20] <-> Modificación de estado del registro: Zero no tsukaima de [en proceso] a [finalizada]
+[06/09/20] <-> Desplazamiento del registro: Zero no tsukaima del puesto [2] al puesto [1]
+[06/09/20] <-> Desplazamiento del registro: Plastic Memories del puesto [2] al puesto [1]
+[06/09/20] <-> Inserción del registro de tipo anine: prueba insercion
+[06/09/20] <-> Desplazamiento del registro: Zero no tsukaima del puesto [2] al puesto [4]

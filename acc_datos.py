@@ -1,6 +1,7 @@
 import json
 from modelos import Serie, Pelicula, Manga
 #from logica import Coordinador_de_alertas as alertas
+import os
 from os import getcwd, system
 
 
@@ -8,7 +9,7 @@ class Gestor_de_series:
 
     def obtener_avance_diario(self):
         try:
-            system.startfile(str(getcwd())+'\\DATA\\proceso en series vistas.txt')
+            os.startfile(str(getcwd())+'\\DATA\\proceso en series vistas.txt')
             system('cls')
         except Exception:
             return
@@ -72,4 +73,10 @@ class Gestor_de_series:
                 archivo_de_logs.writelines(lista_de_logs)    
         except Exception:
             return
-            #alertas().mostrar_mensaje('no_ok')
+
+    def guardar_lista(self,lista_de_registros):
+        try:
+            with open(str(getcwd())+'\\DATA\\lista de series vistas.txt','w') as archivo_de_series_vistas:
+                archivo_de_series_vistas.writelines(lista_de_registros)    
+        except Exception:
+            return

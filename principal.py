@@ -1,6 +1,10 @@
 
 import os
+import json
+import time
+import pyperclip
 from os import system
+from os import getcwd, system
 from logica import Coordinador_de_series 
 from logica import Coordinador_de_alertas as alertas
 
@@ -8,7 +12,7 @@ class Principal:
 
     def menu(self):
         while True:
-           # try:
+            try:
                 print(Coordinador_de_series().generar_dashboard())
                 principal=Principal()
                 opciones = '''0)- Getión de proceso\n1)- Agregar nuevo\n2)- Mostrar lista\n3)- Filtrar lista\n4)- Seleccionar serie\n5)- Seleccionar película\n6)- Seleccionar manga\n7)- Consultar bitácora\n8)- Cerrar\nDigite una opción: '''
@@ -19,8 +23,8 @@ class Principal:
                     '6': principal.seleccionar_manga,'7': principal.consultar_bitacora,'8': principal.cerrar_sistema}
                 system('cls')
                 dicc_menu.get(opcion_seleccionada)()
-            #except Exception:
-               #alertas().mostrar_mensaje('def')
+            except Exception:
+               alertas().mostrar_mensaje('def')
 
     def abrir_diario(self):
             Coordinador_de_series().mostrar_diario()
@@ -37,7 +41,7 @@ class Principal:
     #-----------------------------------------------------------------#
     def listar_registros(self):
         print(Coordinador_de_series().listar_series_del_dia())
-        opcion_seleccionada = str(input(f'{"-"*10}Opciones de listado{"-"*10}\n1)-Listar series\n2)-Listar series en proceso\n3)-Listar series en espera\n4)-Listar series por rango\n5)-Listar por dia de emisión\n6)-Listar peliculas\n7)-Listar mangas\nSeleccione una opción: '))
+        opcion_seleccionada = str(input(f'\n{"-"*10}Opciones de listado{"-"*10}\n1)-Listar series\n2)-Listar series en proceso\n3)-Listar series en espera\n4)-Listar series por rango\n5)-Listar por dia de emisión\n6)-Listar peliculas\n7)-Listar mangas\nSeleccione una opción: '))
         coordinador = Coordinador_de_series()
         dicc_listados = {'1': coordinador.listar_series,'2': coordinador.listar_series_en_proceso,'3': coordinador.listar_series_en_espera,
         '4': coordinador.listar_series_por_rango,'6': coordinador.listar_peliculas,'5':coordinador.listar_series_por_emision, '7':coordinador.listar_mangas}
@@ -94,6 +98,7 @@ class Principal:
         '3': coordinador.actualizar_serie,
         '4': coordinador.agregar_dia_emision}
         opcion_modificar=dicc_actualizaciones.get(opcion_cambio, lambda serie:  'NA')(la_serie_a_modficar)
+        print()
         if(opcion_modificar=="NA"):
             alertas().mostrar_mensaje('no_val')
 
@@ -121,6 +126,7 @@ class Principal:
             se_actualiza = str(input('\n¿Desea actualizar el registro[s/n]?: '))
             if(se_actualiza.lower()!='s'):
                 system('cls')
+    
                 return
             Coordinador_de_series().actualizar_manga(manga_seleccionado)
     #-----------------------------------------------------------------#}

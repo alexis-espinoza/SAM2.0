@@ -1,18 +1,21 @@
-[1]-Zero no tsukaima
-[2]-Plastic Memories
-[3]-Toradora
-[4]-Clannad
-[5]-Grisaia _C
-[6]-Kotoura-san
-[7]-Seto no Hanayome
-[8]-Sakurasau no pet na kanojo
-[9]-Itazura na Kiss
-[10]-Chuunibyou demo Koi ga Shitai!
+
+[[SERIES]]
+
+[1]-Plastic Memories
+[2]-Toradora
+[3]-Clannad
+[4]-Zero no tsukaima
+[5]-Grisaia
+[6]-Seto no Hanayome
+[7]-Sakurasau no pet na kanojo
+[8]-Itazura na Kiss
+[9]-Chuunibyou demo Koi ga Shitai!
+[10]-Tsuki ga Kirei
 [11]-Sukitte Iinayo
 [12]-Darling in the franxx
-[13]-Re:Zero kara Hajimeru Isekai Seikatsu...
+[13]-Re:Zero kara Hajimeru Isekai Seikatsu
 [14]-Shigatsu Wa Kimi no Uso
-[15]-Tsuki ga Kirei
+[15]-Kotoura
 [16]-Tasogare Otome x Amnesia
 [17]-Nazo no Kanojo X
 [18]-Papa no Iukoto o Kikinasai!
@@ -21,7 +24,7 @@
 [21]-Kyoukai no kanata
 [22]-Inu x Boku SS
 [23]-Charlotte
-[24]-Tada-kun wa Koi wo Shinai
+[24]-Tada
 [25]-Koi Kaze
 [26]-Momokuri
 [27]-No game no life
@@ -32,10 +35,10 @@
 [32]-Junketu no Maria
 [33]-Rakudai kishi no cavalry
 [34]-Nogizaka Haruka No Himitsu
-[35]-Sword Art Online (SAO)...
+[35]-Sword Art Online (SAO)
 [36]-Absolute Duo
 [37]-Full metal panic
-[38]-Nanatsu No Taizai _C
+[38]-Nanatsu No Taizai
 [39]-(Oreimo) Ore no Imoto ga Konna ni Kawaii Wake ga Nai
 [40]-Golden time
 [41]-Nisekoi
@@ -43,19 +46,19 @@
 [43]-Infinite Stratos
 [44]-Sousei no Onmyouji
 [45]-Sora no otoshimono
-[46]-Trinity Seven _C
+[46]-Trinity Seven
 [47]-Rokudenashi Majutsu Koushi to Akashic Records
-[48]-Tonari no Kaibutsu-kun
-[49]-Fairy Tail _C
+[48]-Tonari no Kaibutsu
+[49]-Fairy Tail
 [50]-Eromanga Sensei
 [51]-Mayo Chiki!
-[52]-Yamada-kun to 7-nin no majo
+[52]-Yamada
 [53]-Boku wa Tomodachi ga Sukunai
-[54]-Isekai Wa Smartphone To Tomo Ni _C
+[54]-Isekai Wa Smartphone To Tomo Ni
 [55]-To Love Ru
 [56]-Kill la kill
-[57]-Karakai jouzu no takagi-san
-[58]-To aru majutsu no index _C
+[57]-Karakai jouzu no takagi
+[58]-To aru majutsu no index
 [59]-Mikakunin de Shinkoukei
 [60]-Kodomo no Jikan
 [61]-Ore, twintails ni narimasu
@@ -77,18 +80,18 @@
 [77]-(Yuushibu) Yusha ni Narenakatta Ore wa Shibushibu Shushoku o Ketsui Shimashita
 [78]-Astarotte no Omocha!
 [79]-Tamako Market
-[80]-(OniAi) Onii-chan Dakedo Ai Sae Areba Kankeinai yo ne
+[80]-(OniAi) Onii
 [81]-Tenshi no 3P!
 [82]-Hoshizora e Kakaru Hashi
 [83]-(Noucome) Ore no Nonai Sentakushi ga, Gakuen Love Come o Zenryoku de Jama Shiteiru
 [84]-Blend S
-[85]-Boku No Hero Academia _C
-[86]-Shingeki No Kyojin _C
+[85]-Boku No Hero Academia
+[86]-Shingeki No Kyojin
 [87]-(AnoHana) Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai
-[88]-(DANMACHI) Dungeon ni Deai o Motomeru no wa Machigatteiru Daro Ka _C
+[88]-(DANMACHI) Dungeon ni Deai o Motomeru no wa Machigatteiru Daro Ka
 [89]-Koi to Senkyo to Chocolate
 [90]-Death note
-[91]-Kobayashi-san chi no maid dragon _C
+[91]-Kobayashi
 [92]-Gabriel dropOut
 [93]-One puch man
 [94]-KissXsis
@@ -97,54 +100,54 @@
 [97]-Imouto sae Ireba Ii
 [98]-Clockwork Planet
 [99]-Netoge no yome wa onnanoko ja nai to omotta (video juegos)
-[100]-Okusama ga Seitokaichou _C
+[100]-Okusama ga Seitokaichou
 [101]-Mayoi neko overrun
 [102]-Kanokon
-[103]-Mangaka-san to Assistant-san to
+[103]-Mangaka
 [104]-Ranma y 1/2
 [105]-Inuyasha
 [106]-Boku no kanojo ga majime sugiru shojo bitch na ken
-[107]-Dragon ball _C
+[107]-Dragon ball
 [108]-Sakura card captor
-[109]-Digimon _C
-[110]-Gochuumon wa usagi desu ka? _C
-[111]-(Oregairu) Yahari ore no seishun love come wa machigatteiru...
-[112]-(Saekano) Saenai Heroine no Sodatekata _C
+[109]-Digimon
+[110]-Gochuumon wa usagi desu ka?
+[111]-(Oregairu) Yahari ore no seishun love come wa machigatteiru
+[112]-(Saekano) Saenai Heroine no Sodatekata
 [113]-Noragami
-[114]-Tengen Toppa Gurren-Lagann
-[115]-Haiyore! Nyaruko-san
-[116]-Yuragi-sou no Yuuna-san
+[114]-Tengen Toppa Gurren
+[115]-Haiyore! Nyaruko
+[116]-Yuragi
 [117]-Hidan no Aria
 [118]-Mirai Nikki
 [119]-Akame ga Kill!
 [120]-High Score Girl
 [121]-Dimension W
-[122]-Evangelion _C
+[122]-Evangelion
 [123]-Island
-[124]-Chio-chan no Tsuugakuro
-[125]-Jashin-chan Dropkick
+[124]-Chio
+[125]-Jashin
 [126]-Hentai Ouji to Warawanai Neko
 [127]-Aho Girl
 [128]-(Konobi) Kono Bijutsubu ni wa Mondai ga Aru!
 [129]-(Oreshura) Ore no Kanojo to Osananajimi ga Shuraba Sugiru
 [130]-Gamers!
-[131]-Gekkan Shoujo Nozaki-kun
-[132]-Frame Arms Girl _C
+[131]-Gekkan Shoujo Nozaki
+[132]-Frame Arms Girl
 [133]-(ImoCho) Saikin imouto yousaSaikin, Imouto no Yousu ga Chotto Okashiinda ga
-[134]-Shokugeki no Souma...
+[134]-Shokugeki no Souma
 [135]-Kokoro Connect
 [136]-Daitoshokan no Hitsujikai
 [137]-Ore ga Suki nano wa Imouto dakedo Imouto ja Nai
 [138]-Irozuku sekai no ashita kara
 [139]-Kishuku Gakkou no Juliet
-[140]-Beelzebub-jou no Okinimesu Mama
+[140]-Beelzebub
 [141]-Uchi no Maid ga Uzasugiru!
-[142]-Goblin Slayer _C
+[142]-Goblin Slayer
 [143]-Ulysses: Jeanne d'Arc to Renkin no Kishi
 [144]-Tokyo Ravens
-[145]-Seitokai Yakuindomo _C
+[145]-Seitokai Yakuindomo
 [146]-Monster Musume no Iru Nichijou
-[147]-Iya na Kao sare nagara Opantsu Misete Moraitai _C
+[147]-Iya na Kao sare nagara Opantsu Misete Moraitai
 [148]-(SukaSuka) Shuumatsu Nani Shitemasu ka? Isogashi desu ka? Sukutte Morate Li desu ka?
 [149]-Acchi Kocchi
 [150]-Omamori Himari
@@ -161,14 +164,14 @@
 [161]-Final Approach
 [162]-Dakara Boku wa, H ga Dekinai
 [163]-kyou no Asuka Show
-[164]-Aki-Sora
-[165]-Inou-Battle wa Nichijou-kei no Naka De
+[164]-Aki
+[165]-Inou
 [166]-Seiren
 [167]-Tsugumomo
-[168]-Ueno-san wa Bukiyou
-[169]-Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen
+[168]-Ueno
+[169]-Kaguya
 [170]-Watashi ni Tenshi ga Maiorita!
-[171]-Net-Juu Susume
+[171]-Net
 [172]-True Tears
 [173]-Konohana Kitan
 [174]-Blood Lad
@@ -180,8 +183,8 @@
 [180]-Mob Psycho 100
 [181]-Suzuka
 [182]-Nande Koko ni Sensei ga!
-[183]-Nobunaga-sensei no Osanazuma
-[184]-Midara na Ao-chan wa Benkyou ga Dekinai
+[183]-Nobunaga
+[184]-Midara na Ao
 [185]-Joshi Kausei
 [186]-Senryuu Shoujo
 [187]-Ookami Shoujo to Kuro Ouji
@@ -203,17 +206,17 @@
 [203]-Special A
 [204]-Bokura wa Minna Kawaisou
 [205]-Hatsukoi Monster
-[206]-Ookami-san to Shichinin no Nakama-tachi
-[207]-kimetsu no Yaiba _C
+[206]-Ookami
+[207]-kimetsu no Yaiba
 [208]-Onegai Teacher!
-[209]-Chikku Nee-san
+[209]-Chikku Nee
 [210]-Ajimu Kaigan Monogatari
 [211]-Boku Wa Imouto ni Koi wo Suru
 [212]-Kimi ni Iru Machi
 [213]-Kagaku na Yatsura
 [214]-Gosick
-[215]-25-sai no Jyoshikousei
-[216]-EF-A Tale of Memories
+[215]-25
+[216]-EF
 [217]-Kamisama Hajimemashita
 [218]-Okusama wa Joshikousei
 [219]-Futari Ecchi
@@ -224,8 +227,8 @@
 [224]-Mahoutsukai no Yome
 [225]-Danshi Koukousei no Nichijou
 [226]-Urara Meirochou
-[227]-Tonari no Seki-kun
-[228]-Hataraku Maou-sama!
+[227]-Tonari no Seki
+[228]-Hataraku Maou
 [229]-Miru Tights
 [230]-B Gata H Kei
 [231]-Amagami SS
@@ -245,20 +248,20 @@
 [245]-Another
 [246]-Amagi Brilliant Park
 [247]-Gleipnir
-[248]-Houkago Teibou Nisshi...
-[249]-(Hamefura) Otome Game no Hametsu Flag shika Nai Akuyaku Reijou ni Tensei shiteshimatta.. _C
+[248]-Houkago Teibou Nisshi
+[249]-(Hamefura) Otome Game no Hametsu Flag shika Nai Akuyaku Reijou ni Tensei shiteshimatta..
 [250]-Nami yo Kiite kure
 [251]-Kakushigoto
 [252]-Tamayomi
 [253]-Onegai Twins!
-[254]-Arabu Kisetsu no Otome-domo yo
-[255]-Sailor Moon...
+[254]-Arabu Kisetsu no Otome
+[255]-Sailor Moon
 [256]-Rail Wars!
 [257]-Isekai Maou to Shoukan Shoujo no Dorei Majutsu
-[258]-Jibaku Shounen Hanako-kun
+[258]-Jibaku Shounen Hanako
 [259]-(Hensuki) Kawaikereba Hentai demo Suki ni Natte Kuremasu ka?
 [260]-(Nakaimo) Kono Naka ni Hitori, Imouto ga Iru!
-[261]-Sewayaki Kitsune no Senko-san
+[261]-Sewayaki Kitsune no Senko
 [262]-Koe de Oshigoto!
 [263]-Higashi no Eden
 [264]-Another World
@@ -270,78 +273,94 @@
 [270]-Kujibiki <3 Unbalance
 [271]-Hiyokoi
 [272]-Planetarian: Chiisana Hoshi no Yume
-[273]-RahXephon...
+[273]-RahXephon
 [274]-Kimi ga Nozomu Eien
 [275]-Cupid's Chocolates
 [276]-Sekirei
 [277]-Koi wa Ameagari no You ni
 [278]-Hitsugi no Chaika
 [279]-Dagashi Kashi
-[280]-Mondaiji-tachi ga Isekai kara Kuru Sou Desu yo?
-[281]-Kanojo Okarishimasu...
-[282]-Uzaki-chan wa Asobitai!...
-[283]-Monster Musume No Oisha-san...
+[280]-Mondaiji
+[281]-Kanojo Okarishimasu
+[282]-Uzaki
+[283]-Monster Musume No Oisha
 [284]-Norn9: Norn+Nonet
 [285]-Nourin
-[286]-Koi to Producer: EVOLï¿½LOVE...
-[287]-Akagami no Shirayuki-hime...
-[288]-Mahouka Koukou no Rettousei...
+[286]-Koi to Producer: EVOLï¿½LOVE
+[287]-Akagami no Shirayuki
+[288]-Mahouka Koukou no Rettousei
 [289]-Sounan Desu ka?
 [290]-Rescue Me!
-[291]-Sumomomo Momomo...
+[291]-Sumomomo Momomo
 [292]-Aiura
 [293]-One room
-[294]-Mangirl!...
+[294]-Mangirl!
+[295]-one piece
+[296]-Hunter x hunter
+[297]-Bleach
+[298]-Doraemon
+[299]-prueba insert
+[300]-prueba insert2
+[301]-prueba insert anime
+[302]-prueba insercion
 
 [[PELICULAS]]
 
-[1]-Boku no Hero Academia the Movie 2: Heroes:Rising. :o :)
-[2]-Nakitai Watashi wa Neko o Kaburu. :v :/ <3
-[3]-Planetarian: Hoshi no Hito. :'3
-[4]-Higashi no Eden Movie II: Paradise Lost. :/
-[5]-Higashi no Eden Movie I: The King of Eden. :o :3
-[6]-Hello World. :o <3
-[7]-Tenki No Ko (Weathering with You). :) <3
-[8]-Ookami Kodomo no Ame to Yuki (Wolf Children). :3 :/ :)
-[9]-Nerawareta Gakuen. :/ :o :)
-[10]-Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu. :o :v :)
-[11]-Shiki iriori. :/ :( :3
-[12]-Kimi to, Nami ni Noretara (Ride your wave). :3 :( <3
-[13]-Re:Zero kara Hajimeru Isekai Seikatsu - Memory Snow. :v :3
-[14]-Trinity Seven Movie 2: Tenkuu Toshokan to Shinku no Maou. :v :o 7u7
-[15]-Trinity Seven Movie: Eternity Library to Alchemic Girl. :3 :o
-[16]-Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka Movie: Orion no Ya. :v :o
-[17]-Neon genesis evangelion the end of evangelion. :o :/
-[18]-Neon genesis evangelion death and rebirth.
-[19]-Gekijouban Shakugan no Shana.
-[20]-Suzumiya Haruhi no Shoushitsu. :o :3
-[21]-Pokemon the Movie: I Choose You!. :)
-[22]-Toki Wo Kakeru Shoujo. :o :/
-[23]-Boku no Hero Academia the Movie Futari no Hero. :O
-[24]-Nanatsu no Taizai Movie: Tenkuu no Torawarebito. :O :v
-[25]-Kotonoha no Niwa. <3 </3 :|
-[26]-Kokoro ga Sakebitagatterunda. :( :/
-[27]-Seitokai Yakuindomo the Movie. :v :)
-[28]-Bungaku Shoujo. :o <3
-[29]-Gekijoban Tengen Toppa Guren Ragan Guren Hen. :)
-[30]-Gekijoban Tengen Toppa Guren Ragan Ragan Hen. :o :v <3
-[31]-Zutto Mae kara Suki deshita Kokuhaku Jikkou Iinkai. :) :D <3
-[32]-Suki ni Naru Sono Shunkan wo Kokuhaku Jikkou Iinkai. :) </3
-[33]-Hotarubi no Mori e. :D <3 </3
-[34]-To Aru Majutsu no Index Endymion no Kiseki. :)
-[35]-Yousoku 5 Centimeter. </3
-[36]-Chuunibyou demo Koi ga Shitai! Movie Take On Me. :v :3 <3
-[37]-Gochuumon Usagi Desu Ka Dear my sister. :3
-[38]-Uchiage Hanabi?, Shita Kara Miru Ka Yoko Kara Miru Ka? (Fireworks). <3
-[39]-Sora no otoshimono final eien no watashi no torikago.
-[40]-Sora no otoshimono: tokei jikake no angeloid.
-[41]-Kimi No Na Wa (Your name). :v <3
-[42]-Kyoukai no kanata I'll Be Here Mirai-hen. :) <3
-[43]-Tamako love history. :) :D <3
-[44]-Sword Art Online Ordinal Scale. :D :) <3
-[45]-Koe no Katachi. :( :v
-[46]-AnoHana la pelicula.
-[47]-Sakura card captors.
-[48]-Sakura card captors: La carta sellada.
-[49]-Date A Live Movie: Mayuri Judgment.
-[50]-No game no life zero. :) :v :3 <3 </3
+[1]-prueba insert peli
+[2]-prueba2
+[3]-prueba
+[4]-Boku no Hero Academia the Movie 2: Heroes:Rising.
+[5]-Nakitai Watashi wa Neko o Kaburu.
+[6]-Planetarian: Hoshi no Hito.
+[7]-Higashi no Eden Movie II: Paradise Lost.
+[8]-Higashi no Eden Movie I: The King of Eden.
+[9]-Hello World.
+[10]-Tenki No Ko (Weathering with You).
+[11]-Ookami Kodomo no Ame to Yuki (Wolf Children).
+[12]-Nerawareta Gakuen.
+[13]-Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu.
+[14]-Shiki iriori.
+[15]-Kimi to, Nami ni Noretara (Ride your wave).
+[16]-Re:Zero kara Hajimeru Isekai Seikatsu - Memory Snow.
+[17]-Trinity Seven Movie 2: Tenkuu Toshokan to Shinku no Maou.
+[18]-Trinity Seven Movie: Eternity Library to Alchemic Girl.
+[19]-Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka Movie: Orion no Ya.
+[20]-Neon genesis evangelion the end of evangelion.
+[21]-Neon genesis evangelion death and rebirth.
+[22]-Gekijouban Shakugan no Shana.
+[23]-Suzumiya Haruhi no Shoushitsu.
+[24]-Pokemon the Movie: I Choose You!.
+[25]-Toki Wo Kakeru Shoujo.
+[26]-Boku no Hero Academia the Movie Futari no Hero.
+[27]-Nanatsu no Taizai Movie: Tenkuu no Torawarebito.
+[28]-Kotonoha no Niwa.
+[29]-Kokoro ga Sakebitagatterunda.
+[30]-Seitokai Yakuindomo the Movie.
+[31]-Bungaku Shoujo.
+[32]-Gekijoban Tengen Toppa Guren Ragan Guren Hen.
+[33]-Gekijoban Tengen Toppa Guren Ragan Ragan Hen.
+[34]-Zutto Mae kara Suki deshita Kokuhaku Jikkou Iinkai.
+[35]-Suki ni Naru Sono Shunkan wo Kokuhaku Jikkou Iinkai.
+[36]-Hotarubi no Mori e.
+[37]-To Aru Majutsu no Index Endymion no Kiseki.
+[38]-Yousoku 5 Centimeter.
+[39]-Chuunibyou demo Koi ga Shitai! Movie Take On Me.
+[40]-Gochuumon Usagi Desu Ka Dear my sister.
+[41]-Uchiage Hanabi?, Shita Kara Miru Ka Yoko Kara Miru Ka? (Fireworks).
+[42]-Sora no otoshimono final eien no watashi no torikago.
+[43]-Sora no otoshimono: tokei jikake no angeloid.
+[44]-Kimi No Na Wa (Your name).
+[45]-Kyoukai no kanata I'll Be Here Mirai.
+[46]-Tamako love history.
+[47]-Sword Art Online Ordinal Scale.
+[48]-Koe no Katachi.
+[49]-AnoHana la pelicula.
+[50]-Sakura card captors.
+[51]-Sakura card captors: La carta sellada.
+[52]-Date A Live Movie: Mayuri Judgment.
+[53]-No game no life zero.
+
+[[MANGAS]]
+
+[1]-The goods lie
+[2]-Niños lobo
