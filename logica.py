@@ -163,7 +163,7 @@ class Coordinador_de_series():
 
     #-----------------------------------------------------------------#     
     def actualizar_serie(self,serie_a_actualizar):
-        #system('cls')
+        system('cls')
         print(serie_a_actualizar.mostrar_det())
         print('\nPresione [enter] para dejar los valores sin cambios')
         nombre = str(input('Digite el nuevo nombre: '))
@@ -187,7 +187,7 @@ class Coordinador_de_series():
 
     #-----------------------------------------------------------------#
     def cambiar_estado(self,serie_a_actualizar):
-        #system('cls')
+        system('cls')
         print(serie_a_actualizar.mostrar_det())
         estado_anterior = serie_a_actualizar.get_estado()
         opcion_estado = str(input('\nSeleccione el nuevo estado para la serie:\n1)-Finalizada\n2)-En proceso\n3)-En espera\nDigite una opción: '))
@@ -205,6 +205,7 @@ class Coordinador_de_series():
     
     #-----------------------------------------------------------------#
     def agregar_dia_emision(self,serie_a_actualizar):
+        system('cls')
         print(serie_a_actualizar.mostrar_det())
         indice_dia = str(input('\n'+self.listar_opciones_de_emision(serie_a_actualizar))) #Invoca a una funcion que muestra las opciones de dias
         if(indice_dia in self.dias_validos):

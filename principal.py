@@ -98,7 +98,7 @@ class Principal:
         '3': coordinador.actualizar_serie,
         '4': coordinador.agregar_dia_emision}
         opcion_modificar=dicc_actualizaciones.get(opcion_cambio, lambda serie:  'NA')(la_serie_a_modficar)
-        print()
+        #print()
         if(opcion_modificar=="NA"):
             alertas().mostrar_mensaje('no_val')
 
