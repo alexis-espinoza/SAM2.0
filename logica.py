@@ -360,6 +360,7 @@ class Coordinador_de_series():
 
     #-----------------------------------------------------------------#
     def listar_series_por_emision(self):
+        print()
         lista_de_registros =Gestor_de_series().obtener_series()
         registros_en_dia_actual=''
         salida=''
@@ -367,10 +368,10 @@ class Coordinador_de_series():
         for dia in list(self.dicc_dias.keys()):
             for registro_actual in lista_de_registros:                                   
                 if (registro_actual.get_dia_emision() == self.dicc_dias.get(dia)):
-                    registros_en_dia_actual+=registro_actual.mostrar_min()
+                    registros_en_dia_actual+=registro_actual.mostrar_min().strip('\n')+'\n'
                     registros_en_emision+=1
             if(registros_en_dia_actual!=''):
-                    salida+='\n'+self.dicc_dias.get(dia)+':\n'+registros_en_dia_actual+'\n'
+                    salida+=self.dicc_dias.get(dia)+':\n'+registros_en_dia_actual+'\n'
                     registros_en_dia_actual=''
         if(salida!=''):
                 conteo='Cantidad de registros [en emisión]: '+str(registros_en_emision)

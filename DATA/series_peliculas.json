@@ -112,7 +112,7 @@
          "posicion": 13,
          "nombre": "Re:Zero kara Hajimeru Isekai Seikatsu",
          "estado": "en proceso",
-         "dia_emision": null,
+         "dia_emision": "Miercoles",
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -310,7 +310,7 @@
          "posicion": 35,
          "nombre": "Sword Art Online (SAO)",
          "estado": "en proceso",
-         "dia_emision": null,
+         "dia_emision": "Sabado",
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -994,7 +994,7 @@
          "posicion": 111,
          "nombre": "(Oregairu) Yahari ore no seishun love come wa machigatteiru",
          "estado": "en proceso",
-         "dia_emision": null,
+         "dia_emision": "Jueves",
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -1201,7 +1201,7 @@
          "posicion": 134,
          "nombre": "Shokugeki no Souma",
          "estado": "en proceso",
-         "dia_emision": null,
+         "dia_emision": "Viernes",
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -2227,7 +2227,7 @@
          "posicion": 248,
          "nombre": "Houkago Teibou Nisshi",
          "estado": "en proceso",
-         "dia_emision": null,
+         "dia_emision": "Martes",
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -2524,7 +2524,7 @@
          "posicion": 281,
          "nombre": "Kanojo Okarishimasu",
          "estado": "en proceso",
-         "dia_emision": null,
+         "dia_emision": "Viernes",
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -2533,7 +2533,7 @@
          "posicion": 282,
          "nombre": "Uzaki",
          "estado": "finalizada",
-         "dia_emision": null,
+         "dia_emision": "Viernes",
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -2542,7 +2542,7 @@
          "posicion": 283,
          "nombre": "Monster Musume No Oisha",
          "estado": "finalizada",
-         "dia_emision": null,
+         "dia_emision": "Domingo",
          "manga_visto": false,
          "generos": [],
          "peliculas": []
@@ -2569,7 +2569,7 @@
          "posicion": 286,
          "nombre": "Koi to Producer: EVOL�LOVE",
          "estado": "en proceso",
-         "dia_emision": null,
+         "dia_emision": "Miercoles",
          "manga_visto": false,
          "generos": [],
          "peliculas": []
