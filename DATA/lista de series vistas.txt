@@ -1,21 +1,21 @@
 
 [[SERIES]]
 
-[1]-Plastic Memories
-[2]-Toradora
-[3]-Clannad
-[4]-Zero no tsukaima
+[1]-Zero no tsukaima
+[2]-Plastic Memories
+[3]-Toradora
+[4]-Clannad
 [5]-Grisaia
-[6]-Seto no Hanayome
-[7]-Sakurasau no pet na kanojo
-[8]-Itazura na Kiss
-[9]-Chuunibyou demo Koi ga Shitai!
-[10]-Tsuki ga Kirei
+[6]-Kotoura
+[7]-Seto no Hanayome
+[8]-Sakurasau no pet na kanojo
+[9]-Itazura na Kiss
+[10]-Chuunibyou demo Koi ga Shitai!
 [11]-Sukitte Iinayo
 [12]-Darling in the franxx
 [13]-Re:Zero kara Hajimeru Isekai Seikatsu
 [14]-Shigatsu Wa Kimi no Uso
-[15]-Kotoura
+[15]-Tsuki ga Kirei
 [16]-Tasogare Otome x Amnesia
 [17]-Nazo no Kanojo X
 [18]-Papa no Iukoto o Kikinasai!
@@ -295,72 +295,56 @@
 [292]-Aiura
 [293]-One room
 [294]-Mangirl!
-[295]-one piece
-[296]-Hunter x hunter
-[297]-Bleach
-[298]-Doraemon
-[299]-prueba insert
-[300]-prueba insert2
-[301]-prueba insert anime
-[302]-prueba insercion
 
 [[PELICULAS]]
 
-[1]-prueba insert peli
-[2]-prueba2
-[3]-prueba
-[4]-Boku no Hero Academia the Movie 2: Heroes:Rising.
-[5]-Nakitai Watashi wa Neko o Kaburu.
-[6]-Planetarian: Hoshi no Hito.
-[7]-Higashi no Eden Movie II: Paradise Lost.
-[8]-Higashi no Eden Movie I: The King of Eden.
-[9]-Hello World.
-[10]-Tenki No Ko (Weathering with You).
-[11]-Ookami Kodomo no Ame to Yuki (Wolf Children).
-[12]-Nerawareta Gakuen.
-[13]-Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu.
-[14]-Shiki iriori.
-[15]-Kimi to, Nami ni Noretara (Ride your wave).
-[16]-Re:Zero kara Hajimeru Isekai Seikatsu - Memory Snow.
-[17]-Trinity Seven Movie 2: Tenkuu Toshokan to Shinku no Maou.
-[18]-Trinity Seven Movie: Eternity Library to Alchemic Girl.
-[19]-Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka Movie: Orion no Ya.
-[20]-Neon genesis evangelion the end of evangelion.
-[21]-Neon genesis evangelion death and rebirth.
-[22]-Gekijouban Shakugan no Shana.
-[23]-Suzumiya Haruhi no Shoushitsu.
-[24]-Pokemon the Movie: I Choose You!.
-[25]-Toki Wo Kakeru Shoujo.
-[26]-Boku no Hero Academia the Movie Futari no Hero.
-[27]-Nanatsu no Taizai Movie: Tenkuu no Torawarebito.
-[28]-Kotonoha no Niwa.
-[29]-Kokoro ga Sakebitagatterunda.
-[30]-Seitokai Yakuindomo the Movie.
-[31]-Bungaku Shoujo.
-[32]-Gekijoban Tengen Toppa Guren Ragan Guren Hen.
-[33]-Gekijoban Tengen Toppa Guren Ragan Ragan Hen.
-[34]-Zutto Mae kara Suki deshita Kokuhaku Jikkou Iinkai.
-[35]-Suki ni Naru Sono Shunkan wo Kokuhaku Jikkou Iinkai.
-[36]-Hotarubi no Mori e.
-[37]-To Aru Majutsu no Index Endymion no Kiseki.
-[38]-Yousoku 5 Centimeter.
-[39]-Chuunibyou demo Koi ga Shitai! Movie Take On Me.
-[40]-Gochuumon Usagi Desu Ka Dear my sister.
-[41]-Uchiage Hanabi?, Shita Kara Miru Ka Yoko Kara Miru Ka? (Fireworks).
-[42]-Sora no otoshimono final eien no watashi no torikago.
-[43]-Sora no otoshimono: tokei jikake no angeloid.
-[44]-Kimi No Na Wa (Your name).
-[45]-Kyoukai no kanata I'll Be Here Mirai.
-[46]-Tamako love history.
-[47]-Sword Art Online Ordinal Scale.
-[48]-Koe no Katachi.
-[49]-AnoHana la pelicula.
-[50]-Sakura card captors.
-[51]-Sakura card captors: La carta sellada.
-[52]-Date A Live Movie: Mayuri Judgment.
-[53]-No game no life zero.
-
-[[MANGAS]]
-
-[1]-The goods lie
-[2]-Niños lobo
+[1]-Boku no Hero Academia the Movie 2: Heroes:Rising.
+[2]-Nakitai Watashi wa Neko o Kaburu.
+[3]-Planetarian: Hoshi no Hito.
+[4]-Higashi no Eden Movie II: Paradise Lost.
+[5]-Higashi no Eden Movie I: The King of Eden.
+[6]-Hello World.
+[7]-Tenki No Ko (Weathering with You).
+[8]-Ookami Kodomo no Ame to Yuki (Wolf Children).
+[9]-Nerawareta Gakuen.
+[10]-Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu.
+[11]-Shiki iriori.
+[12]-Kimi to, Nami ni Noretara (Ride your wave).
+[13]-Re:Zero kara Hajimeru Isekai Seikatsu .
+[14]-Trinity Seven Movie 2: Tenkuu Toshokan to Shinku no Maou.
+[15]-Trinity Seven Movie: Eternity Library to Alchemic Girl.
+[16]-Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka Movie: Orion no Ya.
+[17]-Neon genesis evangelion the end of evangelion.
+[18]-Neon genesis evangelion death and rebirth.
+[19]-Gekijouban Shakugan no Shana.
+[20]-Suzumiya Haruhi no Shoushitsu.
+[21]-Pokemon the Movie: I Choose You!.
+[22]-Toki Wo Kakeru Shoujo.
+[23]-Boku no Hero Academia the Movie Futari no Hero.
+[24]-Nanatsu no Taizai Movie: Tenkuu no Torawarebito.
+[25]-Kotonoha no Niwa.
+[26]-Kokoro ga Sakebitagatterunda.
+[27]-Seitokai Yakuindomo the Movie.
+[28]-Bungaku Shoujo.
+[29]-Gekijoban Tengen Toppa Guren Ragan Guren Hen.
+[30]-Gekijoban Tengen Toppa Guren Ragan Ragan Hen.
+[31]-Zutto Mae kara Suki deshita Kokuhaku Jikkou Iinkai.
+[32]-Suki ni Naru Sono Shunkan wo Kokuhaku Jikkou Iinkai.
+[33]-Hotarubi no Mori e.
+[34]-To Aru Majutsu no Index Endymion no Kiseki.
+[35]-Yousoku 5 Centimeter.
+[36]-Chuunibyou demo Koi ga Shitai! Movie Take On Me.
+[37]-Gochuumon Usagi Desu Ka Dear my sister.
+[38]-Uchiage Hanabi?, Shita Kara Miru Ka Yoko Kara Miru Ka? (Fireworks).
+[39]-Sora no otoshimono final eien no watashi no torikago.
+[40]-Sora no otoshimono: tokei jikake no angeloid.
+[41]-Kimi No Na Wa (Your name).
+[42]-Kyoukai no kanata I'll Be Here Mirai.
+[43]-Tamako love history.
+[44]-Sword Art Online Ordinal Scale.
+[45]-Koe no Katachi.
+[46]-AnoHana la pelicula.
+[47]-Sakura card captors.
+[48]-Sakura card captors: La carta sellada.
+[49]-Date A Live Movie: Mayuri Judgment.
+[50]-No game no life zero.

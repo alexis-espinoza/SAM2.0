@@ -226,16 +226,18 @@ class Coordinador_de_series():
             print(serie_a_desplazar.mostrar_det())
             lista_de_series = Gestor_de_series().obtener_series()
             posicion_actual = serie_a_desplazar.get_posicion()-1
-            nueva_posicion = int(input('\n¿Digite la nueva posisición de la serie?: '))-1
-            temporal = lista_de_series[nueva_posicion]
-            lista_de_series[nueva_posicion] = lista_de_series[posicion_actual]
-            pos_act =  lista_de_series[nueva_posicion].get_posicion()
-            lista_de_series[nueva_posicion].set_posicion(temporal.get_posicion())
-            lista_de_series[posicion_actual] = temporal
-            lista_de_series[posicion_actual].set_posicion(pos_act)
+            nueva_posicion = int(input('\n¿Digite la nueva posición de la serie?: '))-1
+            if(nueva_posicion==posicion_actual):
+                  self.alertas.mostrar_mensaje('no_conf')
+                  return
+            serie_deplazada = lista_de_series[posicion_actual]
+            lista_de_series.remove(lista_de_series[posicion_actual])
+            lista_de_series.insert(nueva_posicion,serie_deplazada)
             #Se obtienen los datos originales y se cambia el bloque de series por una lista [ordenada y parseada a diccionadrios]
+            for i in range(len(lista_de_series)):
+                lista_de_series[i].set_posicion(i+1)
             data_actual = Gestor_de_series().obtener_registros()
-            data_actual["series"] = list(map(lambda Serie: Serie.obj_to_dicc(),sorted(lista_de_series)))
+            data_actual["series"] = list(map(lambda Serie: Serie.obj_to_dicc(),lista_de_series))
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_up')
             self.actualizar_bitacora('up_ps',[serie_a_desplazar.get_nombre(),posicion_actual+1,nueva_posicion+1])

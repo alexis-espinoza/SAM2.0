@@ -1,1142 +1,575 @@
- _____          ________________  
-|FECHA|	       |ACCIÓN REALIZADA|
-'''''''	       ''''''''''''''''''
+ _____         ________________
+|FECHA|       |ACCIÓN REALIZADA|
+'''''''       ''''''''''''''''''
 [09/06/18] <-> Inserción del registro de tipo [película]: Sora no Otoshimono: Tokei Jikake no Angeloid.
-
 [10/06/18] <-> Inserción del registro de tipo [película]: Sora no Otoshimono Final Eien No Watashi No Torikago.
-
 [10/06/18] <-> Modificación de estado del registro: Sora no otoshimono de [en proceso] a [finalizado].
-
 [10/06/18] <-> Desplazamiento en el ranking del registro: Sora no otoshimono del puesto [92] al puesto [21].
-
 [10/06/18] <-> Inserción del registro de tipo [anime]: Junketu no Maria.
-
 [12/06/18] <-> Modificación de estado del registro: Isekai Wa Smartphone To Tomo Ni de [finalizado] a [en espera].
-
 [14/06/18] <-> Modificación de estado del registro: Sakura card captor de [en proceso] a [finalizado].
-
 [16/06/18] <-> Inserción del registro de tipo [anime]: (Saekano) Saenai Heroine no Sodatekata.
-
 [17/06/18] <-> Modificación de estado del registro: Junketu no Maria de [en proceso] a [finalizado].
-
 [17/06/18] <-> Desplazamiento en el ranking del registro: Junketu no Maria del puesto [93] al puesto [17].
-
 [17/06/18] <-> Modificación de estado del registro: (Saekano) Saenai Heroine no Sodatekata de [en proceso] a [finalizado].
-
 [18/06/18] <-> Modificación de estado del registro: Digimon de [en proceso] a [finalizado].
-
 [19/06/18] <-> Inserción del registro de tipo [anime]: Infinite Stratos.
-
 [24/06/18] <-> Inserción del registro de tipo [anime]: Noragami.
-
 [30/06/18] <-> Desplazamiento en el ranking del registro: (Oreimo) Ore no Imoto ga Konna ni Kawaii Wake ga Nai del puesto [28] al puesto [20].
-
 [02/07/18] <-> Modificación de estado del registro: Nanatsu No Taizai de [en proceso] a [finalizado].
-
 [03/07/18] <-> Modificación de estado del registro: Gochuumon wa usagi desu ka de [finalizado] a [en espera].
-
 [04/07/18] <-> Desplazamiento en el ranking del registro: Rokudenashi Majutsu Koushi to Akashic Records del puesto [77] al puesto [25].
-
 [06/07/18] <-> Inserción del registro de tipo [película]: Uchiage Hanabi?, Shita Kara Miru Ka Yoko Kara Miru Ka? (Fireworks) <3.
-
 [06/07/18] <-> Desplazamiento en el ranking del registro: Sword Art Online (SAO) del puesto [5] al puesto [12].
-
 [07/07/18] <-> Modificación de estado del registro: Infinite Stratos de [en proceso] a [finalizado].
-
 [07/07/18] <-> Desplazamiento en el ranking del registro: Infinite Stratos del puesto [95] al puesto [23].
-
 [07/07/18] <-> Modificación de estado del registro: Noragami de [en proceso] a [finalizado].
-
 [07/07/18] <-> Modificación de estado del registro: Kampfer de [en proceso] a [finalizado].
-
 [07/07/18] <-> Modificación de estado del registro: High School DxD de [en proceso] a [finalizado].
-
 [07/07/18] <-> Desplazamiento en el ranking del registro: High School DxD del puesto [49] al puesto [42].
-
 [08/07/18] <-> Modificación de estado del registro: Darling in the franxx de [en proceso] a [finalizado].
-
 [08/07/18] <-> Desplazamiento en el ranking del registro: Darling in the franxx del puesto [92] al puesto [11].
-
 [09/07/18] <-> Inserción del registro de tipo [anime]: Tonari no Kaibutsu-kun.
-
 [10/07/18] <-> Modificación de estado del registro: Tonari no Kaibutsu-kun de [en proceso] a [finalizado].
-
 [10/07/18] <-> Desplazamiento en el ranking del registro: Tonari no Kaibutsu-kun del puesto [97] al puesto [29].
-
 [12/07/18] <-> Modificación de estado del registro: Karakai jouzu no takagi-san de [finalizado] a [en espera].
-
 [12/07/18] <-> Modificación de estado del registro: Masamune Kun no revenge de [finalizado] a [en espera].
-
 [13/07/18] <-> Inserción del registro de tipo [película]: Gochuumon Usagi Desu K Dear my sister :3.
-
 [13/07/18] <-> Desplazamiento en el ranking del registro: Golden time del puesto [28] al puesto [22].
-
 [13/07/18] <-> Desplazamiento en el ranking del registro: Sousei no Onmyouji del puesto [23] al puesto [25].
-
 [13/07/18] <-> Modificación de estado del registro: Gochuumon wa usagi desu ka de [en espera] a [finalizado].
-
 [13/07/18] <-> Modificación de estado del registro: Shinmai Maou No Testament de [en espera] a [finalizado].
-
 [14/07/18] <-> Inserción del registro de tipo [anime]: Itsudatte Bokura no Koi wa 10 cm Datta.
-
 [14/07/18] <-> Desplazamiento en el ranking del registro: Itsudatte Bokura no Koi wa 10 cm Datta del puesto [98] al puesto [13].
-
 [14/07/18] <-> Desplazamiento en el ranking del registro: Papa no Iukoto o Kikinasai! del puesto [66] al puesto [36].
-
 [14/07/18] <-> Modificación de estado del registro: Grisaia de [finalizado] a [en espera].
-
 [18/07/18] <-> Modificación de estado del registro: Re: zero de [finalizado] a [en proceso].
-
 [20/07/18] <-> Modificación de estado del registro: Trinity Seven de [finalizado] a [en espera].
-
 [20/07/18] <-> Modificación de estado del registro: Full metal panic de [en proceso] a [finalizado].
-
 [20/07/18] <-> Modificación de estado del registro: Re: zero de [en proceso] a [finalizado].
-
 [20/07/18] <-> Modificación de estado del registro: Chuunibyou demo Koi ga Shitai! de [finalizado] a [en proceso].
-
 [22/07/18] <-> Desplazamiento en el ranking del registro: Nanatsu No Taizai del puesto [8] al puesto [11].
-
 [22/07/18] <-> Desplazamiento en el ranking del registro: Sword Art Online (SAO) del puesto [14] al puesto [25].
-
 [22/07/18] <-> Inserción del registro de tipo [anime]: Tengen Toppa Gurren-Lagann.
-
 [22/07/18] <-> Inserción del registro de tipo [película]: Chuunibyou demo Koi ga Shitai! Movie Take On Me :v :3 <3.
-
 [22/07/18] <-> Modificación de estado del registro: Chuunibyou demo Koi ga Shitai! de [en proceso] a [finalizado].
-
 [22/07/18] <-> Desplazamiento en el ranking del registro: Chuunibyou demo Koi ga Shitai! del puesto [39] al puesto [11].
-
 [22/07/18] <-> Modificación de estado del registro: Karakai jouzu no takagi-san de [en espera] a [finalizado].
-
 [25/07/18] <-> Inserción del registro de tipo [película]: Yousoku 5 Centimeter </3.
-
 [25/07/18] <-> Modificación de estado del registro: Sword Art Online (SAO) de [en espera] a [en proceso].
-
 [27/07/18] <-> Desplazamiento en el ranking del registro: Sword Art Online (SAO) del puesto [26] al puesto [21].
-
 [27/07/18] <-> Modificación de estado del registro: Sword Art Online (SAO) de [en proceso] a [finalizado].
-
 [29/07/18] <-> Inserción del registro de tipo [anime]: Ryuuou no Oshigoto!.
-
 [29/07/18] <-> Inserción del registro de tipo [anime]: Haiyore! Nyaruko-san.
-
 [29/07/18] <-> Inserción del registro de tipo [anime]: Yuragi-sou no Yuuna-san.
-
 [29/07/18] <-> Desplazamiento en el ranking del registro: Ryuuou no Oshigoto! del puesto [100] al puesto [26].
-
 [29/07/18] <-> Modificación de estado del registro: Digimon de [finalizado] a [en espera].
-
 [29/07/18] <-> Modificación de estado del registro: Re: zero de [finalizado] a [en espera].
-
 [30/07/18] <-> Inserción del registro de tipo [película]: To Aru Majutsu no Index Endymion no Kiseki :).
-
 [30/07/18] <-> Modificación de estado del registro: To aru majutsu no index de [en proceso] a [en espera].
-
 [30/07/18] <-> Desplazamiento en el ranking del registro: To aru majutsu no index del puesto [95] al puesto [44].
-
 [31/07/18] <-> Inserción del registro de tipo [anime]: Hidan no Aria.
-
 [31/07/18] <-> Modificación de estado del registro: Haiyore! Nyaruko-san de [en proceso] a [finalizado].
-
 [31/07/18] <-> Inserción del registro de tipo [anime]: Mirai Nikki.
-
 [02/08/18] <-> Modificación de estado del registro: Hidan no Aria de [en proceso] a [finalizado].
-
 [02/08/18] <-> Inserción del registro de tipo [anime]: Kotoura-san.
-
 [04/08/18] <-> Modificación de estado del registro: Kotoura-san de [en proceso] a [finalizado].
-
 [04/08/18] <-> Desplazamiento en el ranking del registro: No game no life del puesto [7] al puesto [13].
-
 [04/08/18] <-> Desplazamiento en el ranking del registro: Kotoura-san del puesto [105] al puesto [7].
-
 [04/08/18] <-> Inserción del registro de tipo [película]: Hotarubi no Mori e :D <3 </3.
-
 [05/08/18] <-> Inserción del registro de tipo [anime]: Akame ga Kill!.
-
 [06/08/18] <-> Modificación de estado del registro: Mirai Nikki de [en proceso] a [finalizado].
-
 [06/08/18] <-> Inserción del registro de tipo [anime]: High Score Girl.
-
 [06/08/18] <-> Inserción del registro de tipo [anime]: Dimension W.
-
 [08/08/18] <-> Inserción del registro de tipo [película]: Suki ni Naru Sono Shunkan wo. Kokuhaku Jikkou Iinkai.
-
 [08/08/18] <-> Inserción del registro de tipo [película]: Zutto Mae kara Suki deshita. Kokuhaku Jikkou Iinkai.
-
 [08/08/18] <-> Modificación de estado del registro: Dimension W de [en proceso] a [finalizado].
-
 [08/08/18] <-> Inserción del registro de tipo [anime]: Shigatsu Wa Kimi no Uso.
-
 [10/08/18] <-> Inserción del registro de tipo [anime]: Evangelion.
-
 [11/08/18] <-> Modificación de estado del registro: Akame ga Kill! de [en proceso] a [finalizado].
-
 [12/08/18] <-> Modificación de estado del registro: Shigatsu Wa Kimi no Uso de [en proceso] a [finalizado].
-
 [12/08/18] <-> Desplazamiento en el ranking del registro: Shigatsu Wa Kimi no Uso del puesto [109] al puesto [12].
-
 [12/08/18] <-> Inserción del registro de tipo [anime]: Island.
-
 [12/08/18] <-> Inserción del registro de tipo [anime]: Chio-chan no Tsuugakuro.
-
 [23/08/18] <-> Inserción del registro de tipo [anime]: Jashin-chan Dropkick.
-
 [23/08/18] <-> Inserción del registro de tipo [anime]: Hentai Ouji to Warawanai Neko.
-
 [27/08/18] <-> Inserción del registro de tipo [anime]: AHO GIRL.
-
 [27/08/18] <-> Modificación de estado del registro: Aho Girl de [en proceso] a [finalizado].
-
 [28/08/18] <-> Inserción del registro de tipo [película]: Gekijoban Tengen Toppa Guren Ragan Ragan Hen :o :v <3.
-
 [28/08/18] <-> Inserción del registro de tipo [película]: Gekijoban Tengen Toppa Guren Ragan Guren Hen :).
-
 [28/08/18] <-> Modificación de estado del registro: Tengen Toppa Gurren-Lagann de [en proceso] a [finalizado].
-
 [28/08/18] <-> Modificación de estado del registro: Okusama ga Seitokaichou de [finalizado] a [en espera].
-
 [31/08/18] <-> Inserción del registro de tipo [anime]: (Konobi)Kono Bijutsubu ni wa Mondai ga Aru!.
-
 [31/08/18] <-> Modificación de estado del registro: Hentai Ouji to Warawanai Neko de [en proceso] a [finalizado].
-
 [08/09/18] <-> Modificación de estado del registro: (Konobi)Kono Bijutsubu ni wa Mondai ga Aru! de [en proceso] a [finalizado].
-
 [08/09/18] <-> Inserción del registro de tipo [anime]: (Oreshura) Ore no Kanojo to Osananajimi ga Shuraba Sugiru.
-
 [09/09/18] <-> Inserción del registro de tipo [anime]: Gamers!.
-
 [09/09/18] <-> Modificación de estado del registro: Gamers! de [en proceso] a [finalizado].
-
 [10/09/18] <-> Inserción del registro de tipo [anime]: Gekkan Shoujo Nozaki-kun.
-
 [10/09/18] <-> Modificación de estado del registro: (Oreshura) Ore no Kanojo to Osananajimi ga Shuraba Sugiru de [en proceso] a [finalizado].
-
 [10/09/18] <-> Modificación de estado del registro: Gekkan Shoujo Nozaki-kun de [en proceso] a [finalizado].
-
 [10/09/18] <-> Inserción del registro de tipo [anime]: Frame Arms Girl.
-
 [10/09/18] <-> Inserción del registro de tipo [anime]: (ImoCho) Saikin imouto yousaSaikin, Imouto no Yousu ga Chotto Okashiinda ga.
-
 [19/09/18] <-> Modificación de estado del registro: (ImoCho) Saikin imouto yousaSaikin, Imouto no Yousu ga Chotto Okashiinda ga de [en proceso] a [finalizado].
-
 [19/09/18] <-> Inserción del registro de tipo [anime]: Shokugeki no Souma.
-
 [19/09/18] <-> Inserción del registro de tipo [anime]: Kokoro Connect.
-
 [21/09/18] <-> Modificación de estado del registro: Jashin-chan Dropkick de [en proceso] a [finalizado].
-
 [21/09/18] <-> Modificación de estado del registro: Island de [en proceso] a [finalizado].
-
 [22/09/18] <-> Modificación de estado del registro: Frame Arms Girl de [en proceso] a [finalizado].
-
 [22/09/18] <-> Inserción del registro de tipo [anime]: Daitoshokan no Hitsujikai.
-
 [23/09/18] <-> Modificación de estado del registro: Chio-chan no Tsuugakuro de [en proceso] a [finalizado].
-
 [30/09/18] <-> Modificación de estado del registro: Daitoshokan no Hitsujikai de [en proceso] a [finalizado].
-
 [30/09/18] <-> Modificación de estado del registro: Koi to Uso de [finalizado] a [en espera].
-
 [30/09/18] <-> Modificación de estado del registro: Nanatsu No Taizai de [finalizado] a [en espera].
-
 [30/09/18] <-> Modificación de estado del registro: Sword Art Online (SAO) de [finalizado] a [en espera].
-
 [01/10/18] <-> Modificación de estado del registro: High Score Girl de [en proceso] a [en espera].
-
 [01/10/18] <-> Modificación de estado del registro: Yuragi-sou no Yuuna-san de [en proceso] a [en espera].
-
 [01/10/18] <-> Modificación de estado del registro: Boku No Hero Academia de [en proceso] a [en espera].
-
 [01/10/18] <-> Inserción del registro de tipo [anime]: Itazura na Kiss.
-
 [06/10/18] <-> Modificación de estado del registro: Itazura na Kiss de [en proceso] a [finalizado].
-
 [06/10/18] <-> Desplazamiento en el ranking del registro: Itazura na Kiss del puesto [125] al puesto [10].
-
 [06/10/18] <-> Modificación de estado del registro: Kokoro Connect de [en proceso] a [finalizado].
-
 [10/10/18] <-> Inserción del registro de tipo [anime]: Nazo no Kanojo X.
-
 [10/10/18] <-> Inserción del registro de tipo [anime]: Inu x Boku SS.
-
 [10/10/18] <-> Modificación de estado del registro: Yuragi-sou no Yuuna-san de [en espera] a [finalizado].
-
 [12/10/18] <-> Modificación de estado del registro: Inu x Boku SS de [en proceso] a [finalizado].
-
 [12/10/18] <-> Desplazamiento en el ranking del registro: Inu x Boku SS del puesto [127] al puesto [21].
-
 [12/10/18] <-> Desplazamiento en el ranking del registro: Papa no Iukoto o Kikinasai! del puesto [42] al puesto [22].
-
 [12/10/18] <-> Inserción del registro de tipo [anime]: Ore ga Suki nano wa Imouto dakedo Imouto ja Nai.
-
 [12/10/18] <-> Inserción del registro de tipo [anime]: Irozuku sekai no ashita kara.
-
 [12/10/18] <-> Inserción del registro de tipo [anime]: Kishuku Gakkou no Juliet.
-
 [12/10/18] <-> Inserción del registro de tipo [anime]: Beelzebub-jou no Okinimesu Mama.
-
 [12/10/18] <-> Inserción del registro de tipo [anime]: Uchi no Maid ga Uzasugiru!.
-
 [12/10/18] <-> Inserción del registro de tipo [anime]: Goblin Slayer.
-
 [12/10/18] <-> Inserción del registro de tipo [anime]: Ulysses: Jeanne d'Arc to Renkin no Kishi.
-
 [12/10/18] <-> Modificación de estado del registro: Sword Art Online (SAO) de [en espera] a [en proceso].
-
 [12/10/18] <-> Modificación de estado del registro: To aru majutsu no index de [en espera] a [en proceso].
-
 [12/10/18] <-> Inserción del registro de tipo [anime]: Tokyo Ravens.
-
 [14/10/18] <-> Desplazamiento en el ranking del registro: Tokyo Ravens del puesto [135] al puesto [134].
-
 [14/10/18] <-> Desplazamiento en el ranking del registro: Tokyo Ravens del puesto [134] al puesto [135].
-
 [16/10/18] <-> Modificación de estado del registro: Tokyo Ravens de [en proceso] a [finalizado].
-
 [18/10/18] <-> Inserción del registro de tipo [anime]: Absolute Duo.
-
 [19/10/18] <-> Inserción del registro de tipo [anime]: Seitokai Yakuindomo.
-
 [20/10/18] <-> Modificación de estado del registro: Absolute Duo de [en proceso] a [finalizado].
-
 [20/10/18] <-> Desplazamiento en el ranking del registro: Absolute Duo del puesto [136] al puesto [14].
-
 [20/10/18] <-> Desplazamiento en el ranking del registro: Nanatsu No Taizai del puesto [15] al puesto [28].
-
 [27/10/18] <-> Inserción del registro de tipo [anime]: Monster Musume no Iru Nichijou.
-
 [03/11/18] <-> Inserción del registro de tipo [anime]: Iya na Kao sare nagara Opantsu Misete Moraitai.
-
 [08/11/18] <-> Inserción del registro de tipo [anime]: (SukaSuka)Shuumatsu Nani Shitemasu ka? Isogashi desu ka? Sukutte Morate Li desu ka?.
-
 [09/11/18] <-> Inserción del registro de tipo [anime]: Acchi Kocchi.
-
 [13/11/18] <-> Modificación de estado del registro: Acchi Kocchi de [en proceso] a [finalizado].
-
 [13/11/18] <-> Modificación de estado del registro: Shokugeki no Souma de [en proceso] a [finalizado].
-
 [13/11/18] <-> Modificación de estado del registro: Sword Art Online (SAO) de [en proceso] a [en espera].
-
 [13/11/18] <-> Modificación de estado del registro: To aru majutsu no index de [en proceso] a [en espera].
-
 [16/11/18] <-> Inserción del registro de tipo [anime]: Omamori Himari.
-
 [17/11/18] <-> Inserción del registro de tipo [anime]: School Days.
-
 [17/11/18] <-> Inserción del registro de tipo [anime]: Sabagebu!.
-
 [18/11/18] <-> Modificación de estado del registro: Omamori Himari de [en proceso] a [finalizado].
-
 [19/11/18] <-> Inserción del registro de tipo [anime]: Ladies vs Butlers!.
-
 [26/11/18] <-> Modificación de estado del registro: Ladies vs Butlers! de [en proceso] a [finalizado].
-
 [26/11/18] <-> Modificación de estado del registro: Sabagebu! de [en proceso] a [finalizado].
-
 [26/11/18] <-> Inserción del registro de tipo [anime]: Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e.
-
 [01/12/18] <-> Modificación de estado del registro: Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e de [en proceso] a [finalizado].
-
 [03/12/18] <-> Inserción del registro de tipo [anime]: Rosario + Vampire.
-
 [06/12/18] <-> Inserción del registro de tipo [anime]: MM!.
-
 [06/12/18] <-> Inserción del registro de tipo [película]: Bungaku Shouju :o <3.
-
 [06/12/18] <-> Inserción del registro de tipo [anime]: Bungaku Shoujo.
-
 [10/12/18] <-> Modificación de estado del registro: Rosario + Vampire de [en proceso] a [finalizado].
-
 [10/12/18] <-> Modificación de estado del registro: Masamune Kun no revenge de [en espera] a [finalizado].
-
 [14/12/18] <-> Modificación de estado del registro: MM! de [en proceso] a [finalizado].
-
 [14/12/18] <-> Inserción del registro de tipo [anime]: Busou Shoujo Machiavellism.
-
 [17/12/18] <-> Inserción del registro de tipo [anime]: Lucky Star.
-
 [19/12/18] <-> Inserción del registro de tipo [película]: Seitokai Yakuindomo the Movie :v :).
-
 [19/12/18] <-> Modificación de estado del registro: Seitokai Yakuindomo de [en proceso] a [finalizado].
-
 [19/12/18] <-> Modificación de estado del registro: Busou Shoujo Machiavellism de [en proceso] a [finalizado].
-
 [19/12/18] <-> Inserción del registro de tipo [anime]: Witch Craft Works.
-
 [23/12/18] <-> Modificación de estado del registro: Kishuku Gakkou no Juliet de [en proceso] a [finalizado].
-
 [23/12/18] <-> Modificación de estado del registro: Uchi no Maid ga Uzasugiru! de [en proceso] a [finalizado].
-
 [23/12/18] <-> Modificación de estado del registro: Ore ga Suki nano wa Imouto dakedo Imouto ja Nai de [en proceso] a [finalizado].
-
 [25/12/18] <-> Modificación de estado del registro: Witch Craft Works de [en proceso] a [finalizado].
-
 [25/12/18] <-> Inserción del registro de tipo [anime]: Final Approach.
-
 [27/12/18] <-> Modificación de estado del registro: Lucky Star de [en proceso] a [finalizado].
-
 [27/12/18] <-> Inserción del registro de tipo [anime]: Dakara Boku wa, H ga Dekinai.
-
 [27/12/18] <-> Modificación de estado del registro: Final Approach de [en proceso] a [finalizado].
-
 [28/12/18] <-> Inserción del registro de tipo [anime]: Tsuki ga Kirei.
-
 [30/12/18] <-> Inserción del registro de tipo [anime]: kyou no Asuka Show.
-
 [30/12/18] <-> Modificación de estado del registro: Tsuki ga Kirei de [en proceso] a [finalizado].
-
 [30/12/18] <-> Desplazamiento en el ranking del registro: Tsuki ga Kirei del puesto [155] al puesto [14].
-
 [31/12/18] <-> Inserción del registro de tipo [anime]: Aki-Sora.
-
 [31/12/18] <-> Inserción del registro de tipo [anime]: Dakara Boku wa, H ga Dekinai.
-
 [31/12/18] <-> Inserción del registro de tipo [anime]: Inou-Battle wa Nichijou-kei no Naka De.
-
 [31/12/18] <-> Inserción del registro de tipo [anime]: Tasogare Otome x Amnesia.
-
 [31/12/18] <-> Desplazamiento en el ranking del registro: Absolute Duo del puesto [15] al puesto [27].
-
 [31/12/18] <-> Desplazamiento en el ranking del registro: Tasogare Otome x Amnesia del puesto [158] al puesto [15].
-
 [01/01/19] <-> Inserción del registro de tipo [película]: Kokoro ga Sakebitagatterunda :( :/.
-
 [09/01/19] <-> Modificación de estado del registro: Beelzebub-jou no Okinimesu Mama de [en proceso] a [finalizado].
-
 [09/01/19] <-> Modificación de estado del registro: Dakara Boku wa, H ga Dekinai de [en proceso] a [finalizado].
-
 [10/01/19] <-> Modificación de estado del registro: Goblin Slayer de [en proceso] a [finalizado].
-
 [11/01/19] <-> Inserción del registro de tipo [anime]: Seiren.
-
 [12/01/19] <-> Modificación de estado del registro: Irozuku sekai no ashita kara de [en proceso] a [finalizado].
-
 [12/01/19] <-> Inserción del registro de tipo [anime]: Tsugumomo.
-
 [14/01/19] <-> Modificación de estado del registro: Seiren de [en proceso] a [finalizado].
-
 [17/01/19] <-> Modificación de estado del registro: Tsugumomo de [en proceso] a [finalizado].
-
 [20/01/19] <-> Inserción del registro de tipo [anime]: Ueno-san wa Bukiyou.
-
 [20/01/19] <-> Modificación de estado del registro: Koi to Uso de [en espera] a [finalizado].
-
 [20/01/19] <-> Modificación de estado del registro: Eromanga Sensei de [en espera] a [finalizado].
-
 [21/01/19] <-> Inserción del registro de tipo [anime]: Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen.
-
 [21/01/19] <-> Inserción del registro de tipo [anime]: Watashi ni Tenshi ga Maiorita!.
-
 [27/01/19] <-> Modificación de estado del registro: Ulysses: Jeanne d'Arc to Renkin no Kishi de [en proceso] a [finalizado].
-
 [03/02/19] <-> Inserción del registro de tipo [anime]: Net-Juu Susume.
-
 [03/02/19] <-> Inserción del registro de tipo [anime]: True Tears.
-
 [04/02/19] <-> Inserción del registro de tipo [anime]: Konohana Kitan.
-
 [09/02/19] <-> Modificación de estado del registro: Konohana Kitan de [en proceso] a [finalizado].
-
 [09/02/19] <-> Modificación de estado del registro: True Tears de [en proceso] a [finalizado].
-
 [13/02/19] <-> Inserción del registro de tipo [anime]: Blood Lad.
-
 [16/02/19] <-> Modificación de estado del registro: Blood Lad de [en proceso] a [finalizado].
-
 [23/02/19] <-> Modificación de estado del registro: Kobayashi-san chi no maid dragon de [finalizado] a [en espera].
-
 [09/03/19] <-> Modificación de estado del registro: One puch man de [finalizado] a [en espera].
-
 [10/03/19] <-> Modificación de estado del registro: Seitokai Yakuindomo de [finalizado] a [en espera].
-
 [10/03/19] <-> Modificación de estado del registro: Ore ga Suki nano wa Imouto dakedo Imouto ja Nai de [finalizado] a [en espera].
-
 [11/03/19] <-> Inserción del registro de tipo [anime]: Domestic na Kanojo.
-
 [12/03/19] <-> Inserción del registro de tipo [anime]: High school Of The Dead.
-
 [15/03/19] <-> Inserción del registro de tipo [anime]: Watamote.
-
 [16/03/19] <-> Inserción del registro de tipo [película]: Kotonoha no Niwa. <3 :|.
-
 [18/03/19] <-> Inserción del registro de tipo [anime]: Ano Natsu de Matteru.
-
 [19/03/19] <-> Inserción del registro de tipo [película]: Nanatsu no Taizai Movie: Tenkuu no Torawarebito. :O :v.
-
 [23/03/19] <-> Inserción del registro de tipo [anime]: Koi Kaze.
-
 [25/03/19] <-> Modificación de estado del registro: Watamote de [en proceso] a [finalizado].
-
 [26/03/19] <-> Modificación de estado del registro: Ueno-san wa Bukiyou de [en proceso] a [finalizado].
-
 [26/03/19] <-> Modificación de estado del registro: Nanatsu No Taizai de [en espera] a [finalizado].
-
 [26/03/19] <-> Modificación de estado del registro: (Saekano) Saenai Heroine no Sodatekata de [finalizado] a [en espera].
-
 [29/03/19] <-> Modificación de estado del registro: Koi Kaze de [en proceso] a [finalizado].
-
 [29/03/19] <-> Inserción del registro de tipo [película]: Boku no Hero Academia the Movie Futari no Hero. :O.
-
 [29/03/19] <-> Desplazamiento en el ranking del registro: Papa no Iukoto o Kikinasai! del puesto [23] al puesto [16].
-
 [29/03/19] <-> Desplazamiento en el ranking del registro: KONO SUBARASHII SEKAI NI SHUKUFUKU WO del puesto [17] al puesto [23].
-
 [29/03/19] <-> Desplazamiento en el ranking del registro: Itsudatte Bokura no Koi wa 10 cm Datta del puesto [18] al puesto [21].
-
 [29/03/19] <-> Desplazamiento en el ranking del registro: Inu x Boku SS del puesto [22] al puesto [20].
-
 [29/03/19] <-> Desplazamiento en el ranking del registro: Koi Kaze del puesto [173] al puesto [21].
-
 [30/03/19] <-> Modificación de estado del registro: High school Of The Dead de [en proceso] a [finalizado].
-
 [05/04/19] <-> Modificación de estado del registro: Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen de [en proceso] a [finalizado].
-
 [05/04/19] <-> Modificación de estado del registro: Watashi ni Tenshi ga Maiorita! de [en proceso] a [finalizado].
-
 [05/04/19] <-> Modificación de estado del registro: Domestic na Kanojo de [en proceso] a [finalizado].
-
 [07/04/19] <-> Inserción del registro de tipo [anime]: Suzumiya Haruhi no Yuutsu.
-
 [12/04/19] <-> Modificación de estado del registro: Ano Natsu de Matteru de [en proceso] a [finalizado].
-
 [26/04/19] <-> Inserción del registro de tipo [película]: Toki Wo Kakeru Shoujo. :o :/.
-
 [03/05/19] <-> Modificación de estado del registro: Date a Live de [en espera] a [finalizado].
-
 [03/05/19] <-> Inserción del registro de tipo [anime]: Mob Psycho 100.
-
 [08/05/19] <-> Modificación de estado del registro: Ore ga Suki nano wa Imouto dakedo Imouto ja Nai de [en espera] a [en proceso].
-
 [08/05/19] <-> Modificación de estado del registro: High Score Girl de [en espera] a [en proceso].
-
 [10/05/19] <-> Inserción del registro de tipo [anime]: Suzuka.
-
 [10/05/19] <-> Inserción del registro de tipo [anime]: Nande Koko ni Sensei ga!.
-
 [10/05/19] <-> Inserción del registro de tipo [anime]: Nobunaga-sensei no Osanazuma .
-
 [11/05/19] <-> Modificación de estado del registro: High Score Girl de [en proceso] a [finalizado].
-
 [11/05/19] <-> Inserción del registro de tipo [anime]: Midara na Ao-chan wa Benkyou ga Dekinai.
-
 [12/05/19] <-> Inserción del registro de tipo [anime]: Joshi Kausei.
-
 [12/05/19] <-> Inserción del registro de tipo [anime]: Senryuu Shoujo.
-
 [12/05/19] <-> Inserción del registro de tipo [película]: Pokemon the Movie: I Choose You! :).
-
 [14/05/19] <-> Modificación de estado del registro: Ore ga Suki nano wa Imouto dakedo Imouto ja Nai de [en proceso] a [finalizado].
-
 [04/06/19] <-> Modificación de estado del registro: To aru majutsu no index de [en espera] a [finalizado].
-
 [04/06/19] <-> Inserción del registro de tipo [película]: Suzumiya Haruhi no Shoushitsu. :o :3.
-
 [04/06/19] <-> Inserción del registro de tipo [película]: Gekijouban Shakugan no Shana.
-
 [18/06/19] <-> Desplazamiento en el ranking del registro: Re: zero del puesto [6] al puesto [8].
-
 [18/06/19] <-> Desplazamiento en el ranking del registro: Re: zero del puesto [8] al puesto [11].
-
 [18/06/19] <-> Desplazamiento en el ranking del registro: Chuunibyou demo Koi ga Shitai! del puesto [12] al puesto [10].
-
 [18/06/19] <-> Desplazamiento en el ranking del registro: No game no life del puesto [17] al puesto [21].
-
 [18/06/19] <-> Desplazamiento en el ranking del registro: Kaichou wa Maid Sama del puesto [46] al puesto [17].
-
 [24/06/19] <-> Modificación de estado del registro: Suzuka de [en proceso] a [finalizado].
-
 [25/06/19] <-> Inserción del registro de tipo [anime]: Ookami Shoujo to Kuro Ouji.
-
 [25/06/19] <-> Inserción del registro de tipo [anime]: Egao no Daika.
-
 [28/06/19] <-> Modificación de estado del registro: Joshi Kausei de [en proceso] a [finalizado].
-
 [28/06/19] <-> Modificación de estado del registro: Nande Koko ni Sensei ga! de [en proceso] a [finalizado].
-
 [28/06/19] <-> Modificación de estado del registro: Midara na Ao-chan wa Benkyou ga Dekinai de [en proceso] a [finalizado].
-
 [30/06/19] <-> Modificación de estado del registro: Senryuu Shoujo de [en proceso] a [finalizado].
-
 [30/06/19] <-> Modificación de estado del registro: Nobunaga-sensei no Osanazuma de [en proceso] a [finalizado].
-
 [03/07/19] <-> Inserción del registro de tipo [anime]: Kaze no Stigma.
-
 [06/07/19] <-> Inserción del registro de tipo [película]: NEON GENESIS EVANGELION DEATH AND REBIRTH..
-
 [06/07/19] <-> Inserción del registro de tipo [película]: NEON GENESIS EVANGELION THE END OF EVANGELION. :o :/.
-
 [06/07/19] <-> Modificación de estado del registro: Evangelion de [en proceso] a [en espera].
-
 [06/07/19] <-> Modificación de estado del registro: Karakai jouzu no takagi-san de [finalizado] a [en espera].
-
 [06/07/19] <-> Modificación de estado del registro: (DANMACHI) Dungeon ni Deai o Motomeru no wa Machigatteiru Daro Ka de [finalizado] a [en espera].
-
 [10/07/19] <-> Desplazamiento en el ranking del registro: Nazo no Kanojo X del puesto [131] al puesto [16].
-
 [10/07/19] <-> Desplazamiento en el ranking del registro: Charlotte del puesto [19] al puesto [21].
-
 [15/08/19] <-> Inserción del registro de tipo [anime]: Just Because!.
-
 [15/08/19] <-> Inserción del registro de tipo [anime]: Amnesia.
-
 [09/09/19] <-> Modificación de estado del registro: Amnesia de [en proceso] a [finalizado].
-
 [09/09/19] <-> Modificación de estado del registro: Just Because! de [en proceso] a [finalizado].
-
 [17/09/19] <-> Inserción del registro de tipo [anime]: Elfen Lied.
-
 [19/09/19] <-> Inserción del registro de tipo [anime]: Danchigai.
-
 [21/09/19] <-> Inserción del registro de tipo [anime]: Kage Kara Mamoru.
-
 [21/09/19] <-> Inserción del registro de tipo [anime]: Beatless.
-
 [21/09/19] <-> Modificación de estado del registro: Karakai jouzu no takagi-san de [en espera] a [en proceso].
-
 [21/09/19] <-> Modificación de estado del registro: (DANMACHI) Dungeon ni Deai o Motomeru no wa Machigatteiru Daro Ka de [en espera] a [en proceso].
-
 [21/09/19] <-> Modificación de estado del registro: One puch man de [en espera] a [en proceso].
-
 [22/09/19] <-> Modificación de estado del registro: One puch man de [en proceso] a [finalizado].
-
 [23/09/19] <-> Modificación de estado del registro: Karakai jouzu no takagi-san de [en proceso] a [finalizado].
-
 [26/09/19] <-> Modificación de estado del registro: Kage Kara Mamoru de [en proceso] a [finalizado].
-
 [26/09/19] <-> Inserción del registro de tipo [anime]: Tada-kun wa Koi wo Shinai.
-
 [27/09/19] <-> Inserción del registro de tipo [anime]: Fortune Arterial: Akai Yakusoku.
-
 [29/09/19] <-> Inserción del registro de tipo [película]: Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka Movie: Orion no Ya. :v :o.
-
 [07/10/19] <-> Modificación de estado del registro: Tada-kun wa Koi wo Shinai de [en proceso] a [finalizado].
-
 [07/10/19] <-> Desplazamiento en el ranking del registro: Tada-kun wa Koi wo Shinai del puesto [191] al puesto [21].
-
 [07/10/19] <-> Desplazamiento en el ranking del registro: Sousei no Onmyouji del puesto [40] al puesto [39].
-
 [08/10/19] <-> Modificación de estado del registro: Fortune Arterial: Akai Yakusoku de [en proceso] a [finalizado].
-
 [09/10/19] <-> Inserción del registro de tipo [anime]: Campione!.
-
 [10/10/19] <-> Inserción del registro de tipo [anime]: Fuuka.
-
 [12/10/19] <-> Modificación de estado del registro: Fuuka de [en proceso] a [finalizado].
-
 [12/10/19] <-> Modificación de estado del registro: Kono Subarashii Sekai Ni Shukufuku Wo de [finalizado] a [en espera].
-
 [12/10/19] <-> Modificación de estado del registro: High Score Girl de [finalizado] a [en espera].
-
 [12/10/19] <-> Modificación de estado del registro: Shokugeki no Souma de [finalizado] a [en espera].
-
 [12/10/19] <-> Inserción del registro de tipo [anime]: Bokura ga Ita.
-
 [12/10/19] <-> Modificación de estado del registro: Fortune Arterial: Akai Yakusoku de [en proceso] a [finalizado].
-
 [13/10/19] <-> Inserción del registro de tipo [anime]: Momokuri.
-
 [13/10/19] <-> Modificación de estado del registro: Momokuri de [en proceso] a [finalizado].
-
 [13/10/19] <-> Desplazamiento en el ranking del registro: Momokuri del puesto [196] al puesto [24].
-
 [13/10/19] <-> Inserción del registro de tipo [anime]: Ao Haru Ride.
-
 [14/10/19] <-> Inserción del registro de tipo [anime]: Kimi ni Todoke .
-
 [20/10/19] <-> Modificación de estado del registro: Elfen Lied de [en proceso] a [finalizado].
-
 [27/10/19] <-> Inserción del registro de tipo [anime]: Nozo x Kimi.
-
 [27/10/19] <-> Modificación de estado del registro: Bokura ga Ita de [en proceso] a [finalizado].
-
 [27/10/19] <-> Inserción del registro de tipo [anime]: Sukitte Iinayo.
-
 [27/10/19] <-> Inserción del registro de tipo [anime]: Special A.
-
 [28/10/19] <-> Modificación de estado del registro: Yuragi-sou no Yuuna-san de [finalizado] a [en proceso].
-
 [08/11/19] <-> Modificación de estado del registro: Sukitte Iinayo de [en proceso] a [finalizado].
-
 [08/11/19] <-> Desplazamiento en el ranking del registro: Sukitte Iinayo del puesto [200] al puesto [11].
-
 [08/11/19] <-> Modificación de estado del registro: Yuragi-sou no Yuuna-san de [en proceso] a [finalizado].
-
 [10/11/19] <-> Modificación de estado del registro: Ao Haru Ride de [en proceso] a [finalizado].
-
 [10/11/19] <-> Inserción del registro de tipo [anime]: Bokura wa Minna Kawaisou.
-
 [11/11/19] <-> Inserción del registro de tipo [anime]: Hatsukoi Monster.
-
 [11/11/19] <-> Inserción del registro de tipo [anime]: Ookami-san to Shichinin no Nakama-tachi.
-
 [14/11/19] <-> Modificación de estado del registro: Bokura wa Minna Kawaisou de [en proceso] a [finalizado].
-
 [19/11/19] <-> Modificación de estado del registro: Ookami-san to Shichinin no Nakama-tachi de [en proceso] a [finalizado].
-
 [19/11/19] <-> Inserción del registro de tipo [anime]: kimetsu no Yaiba.
-
 [20/11/19] <-> Modificación de estado del registro: Hatsukoi Monster de [en proceso] a [finalizado].
-
 [21/11/19] <-> Inserción del registro de tipo [anime]: Onegai Teache!.
-
 [23/11/19] <-> Modificación de estado del registro: Onegai Teacher! de [en proceso] a [finalizado].
-
 [23/11/19] <-> Inserción del registro de tipo [anime]: Chikku Nee-san.
-
 [24/11/19] <-> Modificación de estado del registro: Campione! de [en proceso] a [finalizado].
-
 [24/11/19] <-> Inserción del registro de tipo [anime]: Ajimu Kaigan Monogatari.
-
 [25/11/19] <-> Modificación de estado del registro: Ajimu Kaigan Monogatari de [en proceso] a [finalizado].
-
 [25/11/19] <-> Modificación de estado del registro: Nanatsu No Taizai de [finalizado] a [en espera].
-
 [25/11/19] <-> Modificación de estado del registro: To aru majutsu no index de [finalizado] a [en espera].
-
 [28/11/19] <-> Inserción del registro de tipo [anime]: Boku Wa Imouto ni Koi wo Suru.
-
 [02/12/19] <-> Inserción del registro de tipo [anime]: Kimi ni Iru Machi.
-
 [04/12/19] <-> Inserción del registro de tipo [anime]: Kagaku na Yatsura.
-
 [07/12/19] <-> Modificación de estado del registro: Suzumiya Haruhi no Yuutsu de [en proceso] a [finalizado].
-
 [08/12/19] <-> Modificación de estado del registro: Kimi ni Todoke de [en proceso] a [finalizado].
-
 [08/12/19] <-> Modificación de estado del registro: High Score Girl de [en espera] a [en proceso].
-
 [09/12/19] <-> Modificación de estado del registro: Frame Arms Girl de [finalizado] a [en espera].
-
 [09/12/19] <-> Modificación de estado del registro: Tsugumomo de [finalizado] a [en espera].
-
 [09/12/19] <-> Modificación de estado del registro: Nande Koko ni Sensei ga! de [finalizado] a [en espera].
-
 [09/12/19] <-> Modificación de estado del registro: Goblin Slayer de [finalizado] a [en espera].
-
 [09/12/19] <-> Modificación de estado del registro: One puch man de [finalizado] a [en espera].
-
 [09/12/19] <-> Modificación de estado del registro: Gochuumon wa usagi desu ka de [finalizado] a [en espera].
-
 [09/12/19] <-> Modificación de estado del registro: Watashi ni Tenshi ga Maiorita! de [finalizado] a [en espera].
-
 [09/12/19] <-> Modificación de estado del registro: Watashi ni Tenshi ga Maiorita! de [en espera] a [en proceso].
-
 [09/12/19] <-> Modificación de estado del registro: Watashi ni Tenshi ga Maiorita! de [en proceso] a [finalizado].
-
 [09/12/19] <-> Modificación de estado del registro: One puch man de [en espera] a [en proceso].
-
 [09/12/19] <-> Modificación de estado del registro: (DANMACHI) Dungeon ni Deai o Motomeru no wa Machigatteiru Daro Ka de [en proceso] a [en espera].
-
 [09/12/19] <-> Modificación de estado del registro: One puch man de [en proceso] a [finalizado].
-
 [12/12/19] <-> Modificación de estado del registro: Special A de [en proceso] a [finalizado].
-
 [13/12/19] <-> Inserción del registro de tipo [anime]: Gosick.
-
 [17/12/19] <-> Modificación de estado del registro: Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen de [finalizado] a [en espera].
-
 [18/12/19] <-> Inserción del registro de tipo [anime]: 25-sai no Jyoshikousei.
-
 [19/12/19] <-> Modificación de estado del registro: sai no Jyoshikousei de [en proceso] a [finalizado].
-
 [20/12/19] <-> Modificación de estado del registro: Mob Psycho 100 de [en proceso] a [finalizado].
-
 [20/12/19] <-> Modificación de estado del registro: kimetsu no Yaiba de [en proceso] a [en espera].
-
 [20/12/19] <-> Modificación de estado del registro: Gosick de [en proceso] a [finalizado].
-
 [23/12/19] <-> Modificación de estado del registro: Kimi ni Iru Machi de [en proceso] a [finalizado].
-
 [23/12/19] <-> Inserción del registro de tipo [película]: Trinity Seven Movie: Eternity Library to Alchemic Girl. :3 :o.
-
 [23/12/19] <-> Inserción del registro de tipo [película]: Trinity Seven Movie 2: Tenkuu Toshokan to Shinku no Maou. :v :o 7u7.
-
 [28/12/19] <-> Inserción del registro de tipo [anime]: EF-A Tale of Memories.
-
 [28/12/19] <-> Modificación de estado del registro: Beatless de [en proceso] a [finalizado].
-
 [30/12/19] <-> Inserción del registro de tipo [anime]: Kamisama Hajimemashita.
-
 [02/01/20] <-> Modificación de estado del registro: (Oregairu) Yahari ore no seishun love come wa machigatteiru de [finalizado] a [en espera].
-
 [02/01/20] <-> Modificación de estado del registro: High Score Girl de [en proceso] a [finalizado].
-
 [02/01/20] <-> Inserción del registro de tipo [anime]: Okusama wa Joshikousei.
-
 [02/01/20] <-> Inserción del registro de tipo [anime]: Futari Ecchi.
-
 [02/01/20] <-> Modificación de estado del registro: Nande Koko ni Sensei ga! de [en espera] a [finalizado].
-
 [03/01/20] <-> Modificación de estado del registro: Futari Ecchi de [en proceso] a [finalizado].
-
 [04/01/20] <-> Modificación de estado del registro: Okusama wa Joshikousei de [en proceso] a [finalizado].
-
 [05/01/20] <-> Inserción del registro de tipo [anime]: Wotaku ni Koi wa Muzukashii.
-
 [05/01/20] <-> Inserción del registro de tipo [anime]: Getsuyoubi no Tawawa.
-
 [05/01/20] <-> Inserción del registro de tipo [anime]: Iketeru Futari.
-
 [07/01/20] <-> Modificación de estado del registro: Iketeru Futari de [en proceso] a [finalizado].
-
 [07/01/20] <-> Modificación de estado del registro: Getsuyoubi no Tawawa de [en proceso] a [finalizado].
-
 [07/01/20] <-> Modificación de estado del registro: Wotaku ni Koi wa Muzukashii de [en proceso] a [finalizado].
-
 [08/01/20] <-> Inserción del registro de tipo [anime]: Danna ga Nani wo Itteiru ka Wakaranai Ken.
-
 [08/01/20] <-> Inserción del registro de tipo [anime]: Mahoutsukai no Yome.
-
 [10/01/20] <-> Modificación de estado del registro: Danna ga Nani wo Itteiru ka Wakaranai Ken de [en proceso] a [finalizado].
-
 [13/01/20] <-> Inserción del registro de tipo [anime]: Danshi Koukousei no Nichijou.
-
 [16/01/20] <-> Inserción del registro de tipo [anime]: Nogizaka Haruka No Himitsu.
-
 [18/01/20] <-> Inserción del registro de tipo [anime]: Urara Meirochou.
-
 [18/01/20] <-> Inserción del registro de tipo [anime]: Tonari no Seki-kun.
-
 [19/01/20] <-> Inserción del registro de tipo [anime]: Hataraku Maou-sama!.
-
 [25/01/20] <-> Modificación de estado del registro: Hataraku Maou-sama! de [en proceso] a [finalizado].
-
 [25/01/20] <-> Modificación de estado del registro: Urara Meirochou de [en proceso] a [finalizado].
-
 [30/01/20] <-> Modificación de estado del registro: Iya na Kao sare nagara Opantsu Misete Moraitai de [finalizado] a [en espera].
-
 [30/01/20] <-> Inserción del registro de tipo [anime]: Miru Tights.
-
 [30/01/20] <-> Inserción del registro de tipo [anime]: B Gata H Kei.
-
 [06/02/20] <-> Modificación de estado del registro: Miru Tights de [en proceso] a [finalizado].
-
 [06/02/20] <-> Modificación de estado del registro: Tonari no Seki-kun de [en proceso] a [finalizado].
-
 [07/02/20] <-> Modificación de estado del registro: B Gata H Kei de [en proceso] a [finalizado].
-
 [07/02/20] <-> Modificación de estado del registro: Boku No Hero Academia de [en espera] a [en proceso].
-
 [07/02/20] <-> Inserción del registro de tipo [anime]: Amagami SS.
-
 [09/02/20] <-> Modificación de estado del registro: Shokugeki no Souma de [en espera] a [en proceso].
-
 [10/02/20] <-> Modificación de estado del registro: Nogizaka Haruka No Himitsu de [en proceso] a [finalizado].
-
 [10/02/20] <-> Desplazamiento en el ranking del registro: Nogizaka Haruka No Himitsu del puesto [224] al puesto [33].
-
 [12/02/20] <-> Inserción del registro de tipo [anime]: Akkun to Kanojo.
-
 [12/02/20] <-> Inserción del registro de tipo [anime]: Oneechan ga Kita.
-
 [12/02/20] <-> Inserción del registro de tipo [anime]: Ichiban Ushiro no Daimaou.
-
 [13/02/20] <-> Modificación de estado del registro: EF-A Tale of Memories de [en proceso] a [finalizado].
-
 [13/02/20] <-> Modificación de estado del registro: Shokugeki no Souma de [en proceso] a [en espera].
-
 [14/02/20] <-> Modificación de estado del registro: Kamisama Hajimemashita de [en proceso] a [finalizado].
-
 [15/02/20] <-> Inserción del registro de tipo [anime]: Denpa Onna to Seishun Otoko.
-
 [15/02/20] <-> Inserción del registro de tipo [anime]: Kamisama no Memo chou.
-
 [15/02/20] <-> Modificación de estado del registro: Oneechan ga Kita de [en proceso] a [finalizado].
-
 [15/02/20] <-> Modificación de estado del registro: Dragon ball de [en proceso] a [en espera].
-
 [15/02/20] <-> Modificación de estado del registro: Fairy Tail de [en proceso] a [en espera].
-
 [16/02/20] <-> Inserción del registro de tipo [anime]: Soul Link.
-
 [20/02/20] <-> Modificación de estado del registro: Akkun to Kanojo de [en proceso] a [finalizado].
-
 [23/02/20] <-> Modificación de estado del registro: Denpa Onna to Seishun Otoko de [en proceso] a [finalizado].
-
 [23/02/20] <-> Modificación de estado del registro: Ichiban Ushiro no Daimaou de [en proceso] a [finalizado].
-
 [25/02/20] <-> Inserción del registro de tipo [anime]: Osake wa Fuufu Natte Kara.
-
 [26/02/20] <-> Modificación de estado del registro: Re: zero de [en espera] a [en proceso].
-
 [27/02/20] <-> Modificación de estado del registro: Mahoutsukai no Yome de [en proceso] a [finalizado].
-
 [27/02/20] <-> Inserción del registro de tipo [película]: Re:Zero kara Hajimeru Isekai Seikatsu - Memory Snow. :v :3.
-
 [27/02/20] <-> Inserción del registro de tipo [anime]: Ane Log: Moyako Neesan no Tomaranai Monologue.
-
 [02/03/20] <-> Modificación de estado del registro: Ane Log: Moyako Neesan no Tomaranai Monologue de [en proceso] a [finalizado].
-
 [02/03/20] <-> Modificación de estado del registro: Osake wa Fuufu Natte Kara de [en proceso] a [finalizado].
-
 [03/03/20] <-> Inserción del registro de tipo [película]: Kimi to, Nami ni Noretara (Ride your wave). :3 :( <3.
-
 [05/03/20] <-> Inserción del registro de tipo [anime]: Sankarea.
-
 [05/03/20] <-> Inserción del registro de tipo [anime]: Kyokou Suiri.
-
 [07/03/20] <-> Inserción del registro de tipo [anime]: Murenase! Seton Gakuen.
-
 [08/03/20] <-> Inserción del registro de tipo [anime]: School Rumble.
-
 [11/03/20] <-> Modificación de estado del registro: Sankarea de [en proceso] a [finalizado].
-
 [11/03/20] <-> Inserción del registro de tipo [anime]: ID:Invaded.
-
 [14/03/20] <-> Modificación de estado del registro: Soul Link de [en proceso] a [finalizado].
-
 [15/03/20] <-> Modificación de estado del registro: Kamisama no Memo chou de [en proceso] a [finalizado].
-
 [15/03/20] <-> Inserción del registro de tipo [película]: Shiki iriori. :/ :( :3.
-
 [18/03/20] <-> Inserción del registro de tipo [anime]: Another.
-
 [22/03/20] <-> Modificación de estado del registro: Danshi Koukousei no Nichijou de [en proceso] a [finalizado].
-
 [23/03/20] <-> Modificación de estado del registro: Murenase! Seton Gakuen de [en proceso] a [finalizado].
-
 [25/03/20] <-> Inserción del registro de tipo [película]: Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu. :o :v :).
-
 [25/03/20] <-> Modificación de estado del registro: Kono Subarashii Sekai Ni Shukufuku Wo de [en espera] a [finalizado].
-
 [26/03/20] <-> Inserción del registro de tipo [anime]: Amagi Brilliant Park.
-
 [26/03/20] <-> Modificación de estado del registro: Jashin-chan Dropkick de [finalizado] a [en espera].
-
 [28/03/20] <-> Modificación de estado del registro: Another de [en proceso] a [finalizado].
-
 [28/03/20] <-> Modificación de estado del registro: Kyokou Suiri de [en proceso] a [finalizado].
-
 [29/03/20] <-> Inserción del registro de tipo [película]: Nerawareta Gakuen. :/ :o :).
-
 [29/03/20] <-> Modificación de estado del registro: ID:Invaded de [en proceso] a [finalizado].
-
 [04/04/20] <-> Modificación de estado del registro: Amagami SS de [en proceso] a [finalizado].
-
 [07/04/20] <-> Inserción del registro de tipo [película]: Ookami Kodomo no Ame to Yuki (Wolf Children). :3 :/ :).
-
 [08/04/20] <-> Modificación de estado del registro: Sword Art Online (SAO) de [en espera] a [en proceso].
-
 [11/04/20] <-> Modificación de estado del registro: Sword Art Online (SAO) de [en proceso] a [en espera].
-
 [13/04/20] <-> Modificación de estado del registro: Tsugumomo de [en espera] a [en proceso].
-
 [13/04/20] <-> Modificación de estado del registro: Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen de [en espera] a [en proceso].
-
 [13/04/20] <-> Modificación de estado del registro: Boku No Hero Academia de [en proceso] a [en espera].
-
 [13/04/20] <-> Inserción del registro de tipo [anime]: Gleipnir.
-
 [13/04/20] <-> Inserción del registro de tipo [anime]: Houkago Teibou Nisshi.
-
 [13/04/20] <-> Inserción del registro de tipo [anime]: Otome Game no Hametsu Flag shika Nai Akuyaku Reijou ni Tensei shiteshimatta....
-
 [13/04/20] <-> Inserción del registro de tipo [anime]: Nami yo Kiitekure.
-
 [13/04/20] <-> Inserción del registro de tipo [anime]: Kakushigoto.
-
 [13/04/20] <-> Inserción del registro de tipo [anime]: Tamayomi.
-
 [19/04/20] <-> Inserción del registro de tipo [anime]: Onegai Twins!.
-
 [20/04/20] <-> Inserción del registro de tipo [anime]: Arabu Kisetsu no Otome-domo yo.
-
 [26/04/20] <-> Modificación de estado del registro: Amagi Brilliant Park de [en proceso] a [finalizado].
-
 [26/04/20] <-> Inserción del registro de tipo [anime]: Sailor Moon.
-
 [04/05/20] <-> Modificación de estado del registro: Jashin-chan Dropkick de [en espera] a [finalizado].
-
 [06/05/20] <-> Modificación de estado del registro: Arabu Kisetsu no Otome-domo yo de [en proceso] a [finalizado].
-
 [06/05/20] <-> Inserción del registro de tipo [anime]: Rail Wars!.
-
 [06/05/20] <-> Inserción del registro de tipo [anime]: Isekai Maou to Shoukan Shoujo no Dorei Majutsu.
-
 [06/05/20] <-> Modificación de estado del registro: Re: zero de [en proceso] a [en espera].
-
 [09/05/20] <-> Modificación de estado del registro: Isekai Maou to Shoukan Shoujo no Dorei Majutsu de [en proceso] a [finalizado].
-
 [09/05/20] <-> Inserción del registro de tipo [anime]: Jibaku Shounen Hanako-kun.
-
 [10/05/20] <-> Modificación de estado del registro: Rail Wars! de [en proceso] a [finalizado].
-
 [10/05/20] <-> Modificación de estado del registro: Jibaku Shounen Hanako-kun de [en proceso] a [finalizado].
-
 [10/05/20] <-> Modificación de estado del registro: Onegai Twins! de [en proceso] a [finalizado].
-
 [12/05/20] <-> Inserción del registro de tipo [anime]: (Hensuki) Kawaikereba Hentai demo Suki ni Natte Kuremasu ka?.
-
 [16/05/20] <-> Inserción del registro de tipo [anime]: (Nakaimo) Kono Naka ni Hitori, Imouto ga Iru!.
-
 [16/05/20] <-> Inserción del registro de tipo [anime]: Sewayaki Kitsune no Senko-san.
-
 [16/05/20] <-> Modificación de estado del registro: (Hensuki) Kawaikereba Hentai demo Suki ni Natte Kuremasu ka? de [en proceso] a [finalizado].
-
 [17/05/20] <-> Modificación de estado del registro: School Rumble de [en proceso] a [finalizado].
-
 [18/05/20] <-> Inserción del registro de tipo [anime]: Koe de Oshigoto!.
-
 [19/05/20] <-> Modificación de estado del registro: Koe de Oshigoto! de [en proceso] a [finalizado].
-
 [20/05/20] <-> Modificación de estado del registro: Sewayaki Kitsune no Senko-san de [en proceso] a [finalizado].
-
 [20/05/20] <-> Inserción del registro de tipo [anime]: Higashi no Eden.
-
 [21/05/20] <-> Modificación de estado del registro: (Nakaimo) Kono Naka ni Hitori, Imouto ga Iru! de [en proceso] a [finalizado].
-
 [21/05/20] <-> Inserción del registro de tipo [película]: Tenki No Ko (Weathering with You). :) <3.
-
 [23/05/20] <-> Inserción del registro de tipo [película]: Hello World. :o <3.
-
 [23/05/20] <-> Inserción del registro de tipo [anime]: Another World.
-
 [23/05/20] <-> Inserción del registro de tipo [anime]: Nichijou.
-
 [23/05/20] <-> Inserción del registro de tipo [anime]: Kareshi Kanojo no Jijou.
-
 [23/05/20] <-> Inserción del registro de tipo [anime]: Btooom!.
-
 [25/05/20] <-> Modificación de estado del registro: Btooom! de [en proceso] a [finalizado].
-
 [30/05/20] <-> Modificación de estado del registro: Higashi no Eden de [en proceso] a [finalizado].
-
 [30/05/20] <-> Inserción del registro de tipo [película]: Higashi no Eden Movie I: The King of Eden. :o :3.
-
 [31/05/20] <-> Inserción del registro de tipo [anime]: Cyclops Shoujo Saipu.
-
 [31/05/20] <-> Inserción del registro de tipo [anime]: Girlfriend (Kari).
-
 [31/05/20] <-> Modificación de estado del registro: Girlfriend (Kari) de [finalizado] a [en proceso].
-
 [01/06/20] <-> Inserción del registro de tipo [anime]: Kujibiki <3 Unbalance.
-
 [01/06/20] <-> Inserción del registro de tipo [anime]: Code:Realize: Sousei no Himegimi.
-
 [02/06/20] <-> Inserción del registro de tipo [anime]: Hiyokoi.
-
 [06/06/20] <-> Modificación de estado del registro: Nichijou de [en proceso] a [finalizado].
-
 [07/06/20] <-> Modificación de estado del registro: Code:Realize: Sousei no Himegimi de [en proceso] a [finalizado].
-
 [07/06/20] <-> Desplazamiento en el ranking del registro: Code:Realize: Sousei no Himegimi del puesto [270] al puesto [20].
-
 [07/06/20] <-> Modificación de estado del registro: Kareshi Kanojo no Jijou de [en proceso] a [finalizado].
-
 [07/06/20] <-> Inserción del registro de tipo [anime]: Planetarian: Chiisana Hoshi no Yume.
-
 [09/06/20] <-> Inserción del registro de tipo [anime]: RahXephon.
-
 [13/06/20] <-> Inserción del registro de tipo [película]: Higashi no Eden Movie II: Paradise Lost. :/.
-
 [13/06/20] <-> Inserción del registro de tipo [película]: Planetarian: Hoshi no Hito. :'3.
-
 [13/06/20] <-> Modificación de estado del registro: Planetarian: Chiisana Hoshi no Yume de [en proceso] a [finalizado].
-
 [13/06/20] <-> Inserción del registro de tipo [anime]: Kimi ga Nozomu Eien.
-
 [13/06/20] <-> Modificación de estado del registro: Kujibiki <3 Unbalance de [en proceso] a [finalizado].
-
 [14/06/20] <-> Modificación de estado del registro: Girlfriend (Kari) de [en proceso] a [finalizado].
-
 [15/06/20] <-> Inserción del registro de tipo [anime]: Cupid's Chocolates.
-
 [17/06/20] <-> Modificación de estado del registro: Tamayomi de [en proceso] a [finalizado].
-
 [18/06/20] <-> Modificación de estado del registro: Kakushigoto de [en proceso] a [finalizado].
-
 [19/06/20] <-> Modificación de estado del registro: Kakushigoto de [finalizado] a [en proceso].
-
 [19/06/20] <-> Modificación de estado del registro: Kakushigoto de [en proceso] a [finalizado].
-
 [20/06/20] <-> Inserción del registro de tipo [anime]: Sekirei.
-
 [20/06/20] <-> Modificación de estado del registro: (Hamefura) Otome Game no Hametsu Flag shika Nai Akuyaku Reijou ni Tensei shiteshimatta de [en proceso] a [en espera].
-
 [21/06/20] <-> Modificación de estado del registro: Tsugumomo de [en proceso] a [finalizado].
-
 [21/06/20] <-> Modificación de estado del registro: Nami yo Kiite kure de [en proceso] a [finalizado].
-
 [21/06/20] <-> Inserción del registro de tipo [anime]: Koi wa Ameagari no You ni.
-
 [21/06/20] <-> Inserción del registro de tipo [anime]: Hitsugi no Chaika.
-
 [27/06/20] <-> Modificación de estado del registro: Koi wa Ameagari no You ni de [en proceso] a [finalizado].
-
 [27/06/20] <-> Modificación de estado del registro: Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen de [en proceso] a [finalizado].
-
 [28/06/20] <-> Inserción del registro de tipo [película]: Nakitai Watashi wa Neko o Kaburu. :v :/ <3.
-
 [28/06/20] <-> Modificación de estado del registro: Gleipnir de [en proceso] a [finalizado].
-
 [28/06/20] <-> Modificación de estado del registro: Houkago Teibou Nisshi de [en proceso] a [en espera].
-
 [28/06/20] <-> Inserción del registro de tipo [anime]: Mondaiji-tachi ga Isekai kara Kuru Sou Desu yo?.
-
 [28/06/20] <-> Inserción del registro de tipo [anime]: Dagashi Kashi.
-
 [28/06/20] <-> Desplazamiento en el ranking del registro: Dagashi Kashi del puesto [280] al puesto [279].
-
 [04/07/20] <-> Modificación de estado del registro: Houkago Teibou Nisshi de [en espera] a [en proceso].
-
 [04/07/20] <-> Modificación de estado del registro: Re:Zero kara Hajimeru Isekai Seikatsu de [en espera] a [en proceso].
-
 [04/07/20] <-> Modificación de estado del registro: (Oregairu) Yahari ore no seishun love come wa machigatteiru de [en espera] a [en proceso].
-
 [04/07/20] <-> Modificación de estado del registro: Shokugeki no Souma de [en espera] a [en proceso].
-
 [04/07/20] <-> Modificación de estado del registro: Sword Art Online (SAO) de [en espera] a [en proceso].
-
 [04/07/20] <-> Inserción del registro de tipo [anime]: Kanojo Okarishimasu.
-
 [04/07/20] <-> Inserción del registro de tipo [anime]: Uzaki-chan wa Asobitai!.
-
 [04/07/20] <-> Inserción del registro de tipo [anime]: Monster Musume No Oisha-san.
-
 [04/07/20] <-> Modificación de estado del registro: Cupid's Chocolates de [en proceso] a [finalizado].
-
 [05/07/20] <-> Modificación de estado del registro: Kimi ga Nozomu Eien de [en proceso] a [finalizado].
-
 [05/07/20] <-> Modificación de estado del registro: Mondaiji-tachi ga Isekai kara Kuru Sou Desu yo? de [en proceso] a [finalizado].
-
 [08/07/20] <-> Modificación de estado del registro: Dagashi Kashi de [en proceso] a [finalizado].
-
 [12/07/20] <-> Modificación de estado del registro: Hitsugi no Chaika de [en proceso] a [finalizado].
-
 [12/07/20] <-> Inserción del registro de tipo [anime]: Norn9: Norn+Nonet.
-
 [16/07/20] <-> Inserción del registro de tipo [película]: Boku no Hero Academia the Movie 2: Heroes:Rising. :o :).
-
 [19/07/20] <-> Modificación de estado del registro: Norn9: Norn+Nonet de [en proceso] a [finalizado].
-
 [19/07/20] <-> Inserción del registro de tipo [anime]: Nourin.
-
 [23/07/20] <-> Modificación de estado del registro: Sekirei de [en proceso] a [finalizado].
-
 [29/07/20] <-> Modificación de estado del registro: Nourin de [en proceso] a [finalizado].
-
 [30/07/20] <-> Inserción del registro de tipo [anime]: Koi to Producer: EVOL×LOVE.
-
 [02/08/20] <-> Inserción del registro de tipo [anime]: Akagami no Shirayuki-hime.
-
 [02/08/20] <-> Inserción del registro de tipo [anime]: Mahouka Koukou no Rettousei.
-
 [08/08/20] <-> Inserción del registro de tipo [anime]: Sounan Desu ka?.
-
 [09/08/20] <-> Inserción del registro de tipo [anime]: Rescue Me!.
-
 [09/08/20] <-> Modificación de estado del registro: Sounan Desu ka? de [en proceso] a [finalizado].
-
 [09/08/20] <-> Inserción del registro de tipo [anime]: Sumomomo Momomo.
-
 [11/08/20] <-> Inserción del registro de tipo [anime]: Aiura.
-
 [13/08/20] <-> Modificación de estado del registro: Aiura de [en proceso] a [finalizado].
-
 [13/08/20] <-> Inserción del registro de tipo [anime]: One room.
-
 [23/08/20] <-> Modificación de estado del registro: One room de [en proceso] a [finalizado].
-
 [29/08/20] <-> Inserción del registro de tipo [anime]: Mangirl!
+[16/09/20] <-> Desplazamiento del registro: Kotoura del puesto [6] al puesto [2]
+[16/09/20] <-> Desplazamiento del registro: Kotoura del puesto [2] al puesto [6]

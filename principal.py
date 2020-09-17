@@ -15,12 +15,12 @@ class Principal:
             try:
                 print(Coordinador_de_series().generar_dashboard())
                 principal=Principal()
-                opciones = '''0)- Getión de proceso\n1)- Agregar nuevo\n2)- Mostrar lista\n3)- Filtrar lista\n4)- Seleccionar serie\n5)- Seleccionar película\n6)- Seleccionar manga\n7)- Consultar bitácora\n8)- Cerrar\nDigite una opción: '''
+                opciones = '''0)- Getión de proceso\n1)- Agregar nuevo\n2)- Mostrar lista\n3)- Filtrar lista\n4)- Seleccionar serie\n5)- Seleccionar película\n6)- Seleccionar manga\n7)- Consultar bitácora\nDigite una opción: '''
                 opcion_seleccionada = str(input(opciones)) 
                 dicc_menu = {
                     '0': principal.abrir_diario,'1': principal.agregar_registro,'2': principal.listar_registros,
                     '3': principal.filtrar_lista,'4': principal.seleccionar_serie,'5': principal.seleccionar_pelicula,
-                    '6': principal.seleccionar_manga,'7': principal.consultar_bitacora,'8': principal.cerrar_sistema}
+                    '6': principal.seleccionar_manga,'7': principal.consultar_bitacora}
                 system('cls')
                 dicc_menu.get(opcion_seleccionada)()
             except Exception:
@@ -136,10 +136,6 @@ class Principal:
         busqueda = str(input('Ingrese un parámetro de búsqueda: '))
         Coordinador_de_series().consultar_bitacora(busqueda)
 
-
-    #-----------------------------------------------------------------#}
-    def cerrar_sistema(self):
-         exit()
 
 #if __name__ == '__menu__'
 Principal().menu()
