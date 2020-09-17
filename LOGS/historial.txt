@@ -571,5 +571,19 @@
 [13/08/20] <-> Inserción del registro de tipo [anime]: One room.
 [23/08/20] <-> Modificación de estado del registro: One room de [en proceso] a [finalizado].
 [29/08/20] <-> Inserción del registro de tipo [anime]: Mangirl!
-[16/09/20] <-> Desplazamiento del registro: Kotoura del puesto [6] al puesto [2]
-[16/09/20] <-> Desplazamiento del registro: Kotoura del puesto [2] al puesto [6]
+[06/09/20] <-> Modificación del dia de emision [Martes] para el registro: Houkago Teibou Nisshi
+[06/09/20] <-> Modificación del dia de emision [Miercoles] para el registro: Re:Zero kara Hajimeru Isekai Seikatsu
+[06/09/20] <-> Modificación del dia de emision [Miercoles] para el registro: Koi to Producer: EVOLï¿½LOVE
+[06/09/20] <-> Modificación del dia de emision [Jueves] para el registro: (Oregairu) Yahari ore no seishun love come wa machigatteiru
+[06/09/20] <-> Modificación del dia de emision [Viernes] para el registro: Shokugeki no Souma
+[06/09/20] <-> Modificación del dia de emision [Viernes] para el registro: Uzaki
+[06/09/20] <-> Modificación del dia de emision [Viernes] para el registro: Kanojo Okarishimasu
+[06/09/20] <-> Modificación del dia de emision [Sabado] para el registro: Sword Art Online (SAO)
+[06/09/20] <-> Modificación del dia de emision [Domingo] para el registro: Monster Musume No Oisha
+[06/09/20] <-> Modificación de datos del registro: Uzaki-chan wa Asobitai!
+[06/09/20] <-> Modificación de datos del registro: Koi to Producer: EVOLxLOVE
+[06/09/20] <-> Modificación de estado del registro: Mangirl! de [en proceso] a [finalizada]
+[06/09/20] <-> Modificación de estado del registro: One room de [finalizada] a [en espera]
+[09/09/20] <-> Inserción del registro de tipo manga: Isshuukan Friends
+[10/09/20] <-> Modificación de estado del registro: Akagami no Shirayuki de [en proceso] a [finalizada]
+[10/09/20] <-> Desplazamiento del registro: Akagami no Shirayuki del puesto [287] al puesto [26]

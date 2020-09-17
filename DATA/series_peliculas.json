@@ -47,7 +47,7 @@
       },
       {
          "posicion": 6,
-         "nombre": "Kotoura",
+         "nombre": "Kotoura-san",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -209,7 +209,7 @@
       },
       {
          "posicion": 24,
-         "nombre": "Tada",
+         "nombre": "Tada-kun wa Koi wo Shinai",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -227,7 +227,7 @@
       },
       {
          "posicion": 26,
-         "nombre": "Momokuri",
+         "nombre": "Akagami no Shirayuki-hime",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -425,7 +425,7 @@
       },
       {
          "posicion": 48,
-         "nombre": "Tonari no Kaibutsu",
+         "nombre": "Tonari no Kaibutsu-kun",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -461,7 +461,7 @@
       },
       {
          "posicion": 52,
-         "nombre": "Yamada",
+         "nombre": "Yamada-kun to 7-nin no majo",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -812,7 +812,7 @@
       },
       {
          "posicion": 91,
-         "nombre": "Kobayashi",
+         "nombre": "Kobayashi-san chi no maid dragon",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -857,7 +857,7 @@
       },
       {
          "posicion": 96,
-         "nombre": "Omiai Aite wa Oshiego,Tsuyokina,Mondaiji",
+         "nombre": "Omiai Aite wa Oshiego,Tsuyokina, Mondaiji",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -920,7 +920,7 @@
       },
       {
          "posicion": 103,
-         "nombre": "Mangaka",
+         "nombre": "Mangaka-san to Assistant-san to",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -1019,7 +1019,7 @@
       },
       {
          "posicion": 114,
-         "nombre": "Tengen Toppa Gurren",
+         "nombre": "Tengen Toppa Gurren-Lagann",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -1109,7 +1109,7 @@
       },
       {
          "posicion": 124,
-         "nombre": "Chio",
+         "nombre": "Chio-chan no Tsuugakuro",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -1118,7 +1118,7 @@
       },
       {
          "posicion": 125,
-         "nombre": "Jashin",
+         "nombre": "Jashin-chan Dropkick",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -1253,7 +1253,7 @@
       },
       {
          "posicion": 140,
-         "nombre": "Beelzebub",
+         "nombre": "Beelzebub-jou no Okinimesu Mama",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -1469,7 +1469,7 @@
       },
       {
          "posicion": 164,
-         "nombre": "Aki",
+         "nombre": "Aki-Sora",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -1478,7 +1478,7 @@
       },
       {
          "posicion": 165,
-         "nombre": "Inou",
+         "nombre": "Inou-Battle wa Nichijou-kei no Naka De",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -1505,7 +1505,7 @@
       },
       {
          "posicion": 168,
-         "nombre": "Ueno",
+         "nombre": "Ueno-san wa Bukiyou",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -1514,7 +1514,7 @@
       },
       {
          "posicion": 169,
-         "nombre": "Kaguya",
+         "nombre": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -1532,7 +1532,7 @@
       },
       {
          "posicion": 171,
-         "nombre": "Net",
+         "nombre": "Net-Juu Susume",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -1640,7 +1640,7 @@
       },
       {
          "posicion": 183,
-         "nombre": "Nobunaga",
+         "nombre": "Nobunaga-sensei no Osanazuma",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -1649,7 +1649,7 @@
       },
       {
          "posicion": 184,
-         "nombre": "Midara na Ao",
+         "nombre": "Midara na Ao-chan wa Benkyou ga Dekinai",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -1847,7 +1847,7 @@
       },
       {
          "posicion": 206,
-         "nombre": "Ookami",
+         "nombre": "Ookami-san to Shichinin no Nakama-tachi",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -1874,7 +1874,7 @@
       },
       {
          "posicion": 209,
-         "nombre": "Chikku Nee",
+         "nombre": "Chikku Nee-san",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -1928,7 +1928,7 @@
       },
       {
          "posicion": 215,
-         "nombre": "25",
+         "nombre": "25-Sai no Jyoshikousei",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -1937,7 +1937,7 @@
       },
       {
          "posicion": 216,
-         "nombre": "EF",
+         "nombre": "EF-A Tale of Memories",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -2036,7 +2036,7 @@
       },
       {
          "posicion": 227,
-         "nombre": "Tonari no Seki",
+         "nombre": "Tonari no Seki-kun",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -2045,7 +2045,7 @@
       },
       {
          "posicion": 228,
-         "nombre": "Hataraku Maou",
+         "nombre": "Hataraku Maou-sama",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -2513,7 +2513,7 @@
       },
       {
          "posicion": 280,
-         "nombre": "Mondaiji",
+         "nombre": "Mondaiji-tachi ga Isekai kara Kuru Sou Desu yo?",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -2531,8 +2531,8 @@
       },
       {
          "posicion": 282,
-         "nombre": "Uzaki",
-         "estado": "finalizada",
+         "nombre": "Uzaki-chan wa Asobitai!",
+         "estado": "en proceso",
          "dia_emision": "Viernes",
          "manga_visto": false,
          "generos": [],
@@ -2541,7 +2541,7 @@
       {
          "posicion": 283,
          "nombre": "Monster Musume No Oisha",
-         "estado": "finalizada",
+         "estado": "en proceso",
          "dia_emision": "Domingo",
          "manga_visto": false,
          "generos": [],
@@ -2567,7 +2567,7 @@
       },
       {
          "posicion": 286,
-         "nombre": "Koi to Producer: EVOL�LOVE",
+         "nombre": "Koi to Producer: EVOLxLOVE",
          "estado": "en proceso",
          "dia_emision": "Miercoles",
          "manga_visto": false,
@@ -2576,7 +2576,7 @@
       },
       {
          "posicion": 287,
-         "nombre": "Akagami no Shirayuki",
+         "nombre": "Momokuri",
          "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
@@ -2631,7 +2631,7 @@
       {
          "posicion": 293,
          "nombre": "One room",
-         "estado": "finalizada",
+         "estado": "en espera",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -2640,7 +2640,7 @@
       {
          "posicion": 294,
          "nombre": "Mangirl!",
-         "estado": "en proceso",
+         "estado": "finalizada",
          "dia_emision": null,
          "manga_visto": false,
          "generos": [],
@@ -2949,5 +2949,17 @@
          "manga_visto": false
       }
    ],
-   "mangas": []
+   "mangas": [
+      {
+         "indice": 1,
+         "nombre": "Isshuukan Friends",
+         "generos": [
+            "Comedia",
+            "romance",
+            "drama",
+            "escolar",
+            "recuentos de la vida"
+         ]
+      }
+   ]
 }
