@@ -107,7 +107,7 @@ class Coordinador_de_series():
         system('cls')
         print('\nNuevo registro de tipo (manga) presione [Intro] para omitir algún campo')
         nuevo_manga = Manga()
-        nuevo_manga.set_nombre(input("\nDigite el nombre de la nueva serie: "))
+        nuevo_manga.set_nombre(input("\nDigite el nombre del nuevo manga: "))
         nuevo_manga.set_generos(self.agregar_generos())
         if(nuevo_manga.get_nombre()!=''):
             data_actual = Gestor_de_series().obtener_registros()
@@ -211,6 +211,7 @@ class Coordinador_de_series():
         if(indice_dia in self.dias_validos):
             dia_emision =  list(self.dicc_dias.values())[int(indice_dia)-1]
             serie_a_actualizar.set_dia_emision(dia_emision)
+            serie_a_actualizar.set_estado('en proceso')
             data_actual = Gestor_de_series().obtener_registros()
             data_actual["series"][serie_a_actualizar.get_posicion()-1]=serie_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)

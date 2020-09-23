@@ -12,8 +12,8 @@
       {
          "posicion": 2,
          "nombre": "Plastic Memories",
-         "estado": "finalizada",
-         "dia_emision": null,
+         "estado": "en proceso",
+         "dia_emision": "Martes",
          "manga_visto": false,
          "generos": [],
          "peliculas": []

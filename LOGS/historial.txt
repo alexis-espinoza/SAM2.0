@@ -587,3 +587,4 @@
 [09/09/20] <-> Inserción del registro de tipo manga: Isshuukan Friends
 [10/09/20] <-> Modificación de estado del registro: Akagami no Shirayuki de [en proceso] a [finalizada]
 [10/09/20] <-> Desplazamiento del registro: Akagami no Shirayuki del puesto [287] al puesto [26]
+[22/09/20] <-> Modificación del dia de emision [Martes] para el registro: Plastic Memories
