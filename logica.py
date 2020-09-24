@@ -65,8 +65,9 @@ class Coordinador_de_series():
         nueva_serie.set_nombre(input("\nDigite el nombre de la nueva serie: "))
         opcion_estado = str(input('Seleccione el nuevo estado para la serie:\n1)-Finalizada\n2)-En proceso\n3)-En espera\nDigite una opción: '))
         nueva_serie.set_estado(self.dicc_estados.get(opcion_estado,'en proceso'))
-        indice_dia = str(input(self.listar_opciones_de_emision(nueva_serie)))
-        nueva_serie.set_dia_emision(list(self.dicc_dias.values())[(int(indice_dia)-1)] if indice_dia in self.dias_validos else None)
+        if(nueva_serie.get_estado()=='en proceso'):
+            indice_dia = str(input(self.listar_opciones_de_emision(nueva_serie)))
+            nueva_serie.set_dia_emision(list(self.dicc_dias.values())[(int(indice_dia)-1)] if indice_dia in self.dias_validos else None)
         nueva_serie.set_manga_visto(True if str(input('Manga visto[s/n]: ')).lower()=='s' else False)
         nueva_serie.set_generos(self.agregar_generos())
         nueva_serie.set_peliculas(self.agregar_peliculas())

@@ -2645,6 +2645,24 @@
          "manga_visto": false,
          "generos": [],
          "peliculas": []
+      },
+      {
+         "posicion": 295,
+         "nombre": "prueba",
+         "estado": "en proceso",
+         "dia_emision": null,
+         "manga_visto": false,
+         "generos": [],
+         "peliculas": []
+      },
+      {
+         "posicion": 296,
+         "nombre": "prueba 2",
+         "estado": "en espera",
+         "dia_emision": null,
+         "manga_visto": false,
+         "generos": [],
+         "peliculas": []
       }
    ],
    "peliculas": [
