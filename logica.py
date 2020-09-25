@@ -9,7 +9,7 @@ import pyperclip
 class Coordinador_de_series():
 
     def __init__(self):
-         self.dicc_dias = {'Monday':'Lunes', 'Tuesday':'Martes', 'Wednesday':'Miercoles', 'Thursday':'Jueves','Friday':'Viernes', 'Saturday':'Sabado', 'Sunday':'Domingo'}
+         self.dicc_dias = {'Monday':'lunes', 'Tuesday':'martes', 'Wednesday':'miercoles', 'Thursday':'jueves','Friday':'viernes', 'Saturday':'sabado', 'Sunday':'domingo'}
          self.dias_validos=['1','2','3','4','5','6','7']
          self.dicc_estados = {'1':'finalizada','2':'en proceso','3':'en espera'}
          self.alertas = Coordinador_de_alertas()
