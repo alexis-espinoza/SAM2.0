@@ -354,7 +354,7 @@ class Coordinador_de_series():
         lista_de_registros = Gestor_de_series().obtener_series()
         dia_de_hoy=time.strftime("%A",time.localtime())
         series_del_dia=''
-        encabezado='\nSeries en emisión hoy ['+self.dicc_dias.get(dia_de_hoy)+']\n'
+        encabezado='\nSeries en emisión hoy ['+self.dicc_dias.get(dia_de_hoy).capitalize()+']\n'
         for registro_actual in lista_de_registros:
             if (registro_actual.get_dia_emision() == self.dicc_dias.get(dia_de_hoy)):
                 series_del_dia+=registro_actual.mostrar_min()
@@ -375,7 +375,7 @@ class Coordinador_de_series():
                     registros_en_dia_actual+=registro_actual.mostrar_min().strip('\n')+'\n'
                     registros_en_emision+=1
             if(registros_en_dia_actual!=''):
-                    salida+=self.dicc_dias.get(dia)+':\n'+registros_en_dia_actual+'\n'
+                    salida+=self.dicc_dias.get(dia).capitalize()+':\n'+registros_en_dia_actual+'\n'
                     registros_en_dia_actual=''
         if(salida!=''):
                 conteo='Cantidad de registros [en emisión]: '+str(registros_en_emision)
