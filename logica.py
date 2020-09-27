@@ -23,6 +23,11 @@ class Coordinador_de_series():
         Gestor_de_series().obtener_avance_diario()
 
 #-----------------------------------------------------------------#
+    def copiar_nombre_del_indice(self,registro_actual):
+            text=registro_actual.get_posicion()
+            pyperclip.copy(text) 
+
+#-----------------------------------------------------------------#
     def copiar_nombre_del_registro(self,registro_actual):
             text=registro_actual.get_nombre()
             pyperclip.copy(text)  # now the clipboard content will be string "abc"
@@ -276,8 +281,10 @@ class Coordinador_de_series():
 
     #-----------------------------------------------------------------#
     def filtrar_series(self, nombre_a_buscar):
-        return list(filter(lambda Serie: Serie.get_nombre().lower().find(nombre_a_buscar)!=-1 and nombre_a_buscar!='', Gestor_de_series().obtener_series()))
-
+        lista_de_resultados = list(filter(lambda Serie: Serie.get_nombre().lower().find(nombre_a_buscar)!=-1 and nombre_a_buscar!='', Gestor_de_series().obtener_series()))
+        if(len(lista_de_resultados)==1):
+            self.copiar_nombre_del_indice(lista_de_resultados[0])
+        return lista_de_resultados
     #-----------------------------------------------------------------#
     def obtener_serie(self, indice):
         try:
