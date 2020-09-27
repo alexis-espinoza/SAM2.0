@@ -41,10 +41,13 @@ class Coordinador_de_series():
     def agregar_peliculas(self):
         list_peliculas=[]
         pelicula='ninguno'
+        #lista_blanca=[0,1,2,3,4,5,6,7,8,9]
         while(pelicula!=''):
             pelicula = str(input('Ingrese un indice de pelicula o [Intro] para finalizar: '))
-            if(pelicula!=''):
-                list_peliculas.append(pelicula)
+            try:
+                list_peliculas.append(int(pelicula))
+            except Exception:
+              None
         return list_peliculas
 
 #-----------------------------------------------------------------#
@@ -99,6 +102,7 @@ class Coordinador_de_series():
             data_actual["peliculas"] = list(map(lambda Pelicula: Pelicula.obj_to_dicc(),sorted(peliculas))) #sorted(list_peliculas)
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_in')
+            self.organizar_series_peliculas()
             self.actualizar_bitacora('insert',['película',nueva_pelicula.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
@@ -340,14 +344,27 @@ class Coordinador_de_series():
 
     #-----------------------------------------------------------------#
     def listar_peliculas_por_indice(self, lista_indices):
+        
         try:
-            return list(filter(lambda Pelicula: str(Pelicula.get_indice()) in lista_indices, Gestor_de_series().obtener_peliculas()))
+            return list(filter(lambda Pelicula: Pelicula.get_indice() in lista_indices, Gestor_de_series().obtener_peliculas()))
         except Exception:
             return ''
 
     #-----------------------------------------------------------------# 
     def listar_mangas(self):
         return (Gestor_de_series().obtener_mangas(), False)
+        
+    #-----------------------------------------------------------------# 
+    def organizar_series_peliculas(self):
+        lista_de_series = Gestor_de_series().obtener_series()
+        for serie in lista_de_series:
+            nueva_lista_indice_peliculas = []
+            for indice_pelicula in serie.get_peliculas():
+                nueva_lista_indice_peliculas.append(indice_pelicula+1)
+                serie.set_peliculas(nueva_lista_indice_peliculas)
+        data_actual = Gestor_de_series().obtener_registros()
+        data_actual["series"] = list(map(lambda Serie: Serie.obj_to_dicc(),lista_de_series))
+        Gestor_de_series().guardar_cambios(data_actual)
 
     #-----------------------------------------------------------------#
     def listar_series_del_dia(self):
