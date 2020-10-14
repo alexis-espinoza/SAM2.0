@@ -43,6 +43,13 @@ class Coordinador_de_series():
         return list_generos
 
 #-----------------------------------------------------------------#
+    def filtrar_generos(self, genero, serie):
+        for genero_actual in serie.get_generos():
+            if(genero_actual.find(genero)!=-1):
+                return True
+        return False
+
+#-----------------------------------------------------------------#
     def agregar_peliculas(self):
         list_peliculas=[]
         pelicula='ninguno'
@@ -281,7 +288,7 @@ class Coordinador_de_series():
 
     #-----------------------------------------------------------------#
     def filtrar_series(self, nombre_a_buscar):
-        lista_de_resultados = list(filter(lambda Serie: Serie.get_nombre().lower().find(nombre_a_buscar)!=-1 and nombre_a_buscar!='', Gestor_de_series().obtener_series()))
+        lista_de_resultados = list(filter(lambda Serie: (Serie.get_nombre().lower().find(nombre_a_buscar)!=-1 and nombre_a_buscar!='') or self.filtrar_generos(nombre_a_buscar,Serie), Gestor_de_series().obtener_series()))
         if(len(lista_de_resultados)==1):
             self.copiar_nombre_del_indice(lista_de_resultados[0])
         return lista_de_resultados
