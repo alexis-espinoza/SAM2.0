@@ -93,7 +93,7 @@ class Coordinador_de_series():
             data_actual["series"].append(nueva_serie.obj_to_dicc())
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_in')
-            self.actualizar_bitacora('insert',['anine',nueva_serie.get_nombre()])
+            self.actualizar_bitacora('insert',['anime',nueva_serie.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
     #-----------------------------------------------------------------#
@@ -441,7 +441,7 @@ class Coordinador_de_series():
     def actualizar_bitacora(self, tipo_log, cambios):
         cambios=cambios+(['']*2)#Se agregan 2 campos extra para los casos donde solo viaja un parámetro
         dicc_cambios = {
-        'insert': f'Inserción del registro de tipo {cambios[0]}: {cambios[1]}',
+        'insert': f'Inserción del registro de tipo [{cambios[0]}]: {cambios[1]}',
         'up_st': f'Modificación de estado del registro: {cambios[0]} de [{cambios[1]}] a [{cambios[2]}]',
         'up_dt': f'Modificación de datos del registro: {cambios[0]}',
         'up_em': f'Modificación del dia de emision [{cambios[0]}] para el registro: {cambios[1]}',
