@@ -23,8 +23,8 @@ class Coordinador_de_series():
         Gestor_de_series().obtener_avance_diario()
 
 #-----------------------------------------------------------------#
-    def copiar_nombre_del_indice(self,registro_actual):
-            text=registro_actual.get_posicion()
+    def copiar_indice_del_registro(self,registro_actual):
+            text=registro_actual.get_indice()
             pyperclip.copy(text) 
 
 #-----------------------------------------------------------------#
@@ -44,6 +44,7 @@ class Coordinador_de_series():
 
 #-----------------------------------------------------------------#
     def filtrar_generos(self, genero, serie):
+        
         for genero_actual in serie.get_generos():
             if(genero_actual.find(genero)!=-1):
                 return True
@@ -89,7 +90,7 @@ class Coordinador_de_series():
         if(nueva_serie.get_nombre()!=''):
             data_actual = Gestor_de_series().obtener_registros()
             posicion = len(Gestor_de_series().obtener_series())+1
-            nueva_serie.set_posicion(posicion)
+            nueva_serie.set_indice(posicion)
             data_actual["series"].append(nueva_serie.obj_to_dicc())
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_in')
@@ -193,9 +194,9 @@ class Coordinador_de_series():
         serie_a_actualizar.set_manga_visto(True if manga=='s' else serie_a_actualizar.get_manga_visto())
 
         data_actual = Gestor_de_series().obtener_registros()
-        serie_sin_cambios = Serie(data_actual["series"][serie_a_actualizar.get_posicion()-1])
+        serie_sin_cambios = Serie(data_actual["series"][serie_a_actualizar.get_indice()-1])
         if(serie_sin_cambios!= serie_a_actualizar):
-            data_actual["series"][serie_a_actualizar.get_posicion()-1] = serie_a_actualizar.obj_to_dicc()
+            data_actual["series"][serie_a_actualizar.get_indice()-1] = serie_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_up')
             self.actualizar_bitacora('up_dt',[serie_a_actualizar.get_nombre()])
@@ -215,7 +216,7 @@ class Coordinador_de_series():
             serie_a_actualizar.set_dia_emision(None) #Se setea el dia de emision
             serie_a_actualizar.set_estado(nuevo_estado)
             data_actual = Gestor_de_series().obtener_registros()
-            data_actual["series"][serie_a_actualizar.get_posicion()-1]=serie_a_actualizar.obj_to_dicc()
+            data_actual["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_up')
             self.actualizar_bitacora('up_st',[serie_a_actualizar.get_nombre(),estado_anterior,nuevo_estado])
@@ -230,7 +231,7 @@ class Coordinador_de_series():
             serie_a_actualizar.set_dia_emision(dia_emision)
             serie_a_actualizar.set_estado('en proceso')
             data_actual = Gestor_de_series().obtener_registros()
-            data_actual["series"][serie_a_actualizar.get_posicion()-1]=serie_a_actualizar.obj_to_dicc()
+            data_actual["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_in')
             self.actualizar_bitacora('up_em',[serie_a_actualizar.get_dia_emision(), serie_a_actualizar.get_nombre()])
@@ -243,9 +244,9 @@ class Coordinador_de_series():
             system('cls')
             print(serie_a_desplazar.mostrar_det())
             lista_de_series = Gestor_de_series().obtener_series()
-            posicion_actual = serie_a_desplazar.get_posicion()-1
+            posicion_actual = serie_a_desplazar.get_indice()-1
             nueva_posicion = int(input('\n¿Digite la nueva posición de la serie?: '))-1
-            if(nueva_posicion==posicion_actual):
+            if(nueva_posicion==posicion_actual or nueva_posicion>len(lista_de_series)-1):
                   self.alertas.mostrar_mensaje('no_conf')
                   return
             serie_deplazada = lista_de_series[posicion_actual]
@@ -253,7 +254,7 @@ class Coordinador_de_series():
             lista_de_series.insert(nueva_posicion,serie_deplazada)
             #Se obtienen los datos originales y se cambia el bloque de series por una lista [ordenada y parseada a diccionadrios]
             for i in range(len(lista_de_series)):
-                lista_de_series[i].set_posicion(i+1)
+                lista_de_series[i].set_indice(i+1)
             data_actual = Gestor_de_series().obtener_registros()
             data_actual["series"] = list(map(lambda Serie: Serie.obj_to_dicc(),lista_de_series))
             Gestor_de_series().guardar_cambios(data_actual)
@@ -286,12 +287,19 @@ class Coordinador_de_series():
 
         return f' {separador_uno}\n{informe}\n {separador_dos}'
 
-    #-----------------------------------------------------------------#
+    #-----------------------------------------------------------------# self.filtrar_generos(nombre_a_buscar,Serie)
     def filtrar_series(self, nombre_a_buscar):
-        lista_de_resultados = list(filter(lambda Serie: (Serie.get_nombre().lower().find(nombre_a_buscar)!=-1 and nombre_a_buscar!='') or self.filtrar_generos(nombre_a_buscar,Serie), Gestor_de_series().obtener_series()))
+        lista_de_resultados = list(filter(lambda Serie: (Serie.get_nombre().lower().find(nombre_a_buscar)!=-1 and nombre_a_buscar!=''), 
+        Gestor_de_series().obtener_series()+Gestor_de_series().obtener_peliculas()+Gestor_de_series().obtener_mangas()))
+        
+
         if(len(lista_de_resultados)==1):
-            self.copiar_nombre_del_indice(lista_de_resultados[0])
-        return lista_de_resultados
+            self.copiar_indice_del_registro(lista_de_resultados[0])
+        #print(dict(zip(list(map(lambda key: key.get_indice(),lista_de_resultados)),lista_de_resultados)))  #lista_de_resultados)
+        return dict(zip(list(map(lambda key: key.get_indice(),lista_de_resultados)),lista_de_resultados))#lista_de_resultados
+   
+
+
     #-----------------------------------------------------------------#
     def obtener_serie(self, indice):
         try:
@@ -346,8 +354,17 @@ class Coordinador_de_series():
                 f=final
                 final=inicio
                 inicio=f
-            print()
-            return (list(filter(lambda Serie: Serie.get_posicion()>=inicio and Serie.get_posicion()<=final, Gestor_de_series().obtener_series())), False)
+            #print()
+            return (list(filter(lambda Serie: Serie.get_indice()>=inicio and Serie.get_indice()<=final, Gestor_de_series().obtener_series())), False)
+        except Exception:
+            self.alertas.mostrar_mensaje('def')
+            return False
+    #-----------------------------------------------------------------#
+    def listar_series_por_genero(self):
+        try:
+            system('cls')
+            genero = str(input('\nIndique el género de anime que desea listar: ' ))
+            return (list(filter(lambda Serie: (self.filtrar_generos(genero,Serie) and genero!=''), Gestor_de_series().obtener_series())), f'género {genero}')
         except Exception:
             self.alertas.mostrar_mensaje('def')
             return False
@@ -358,7 +375,6 @@ class Coordinador_de_series():
 
     #-----------------------------------------------------------------#
     def listar_peliculas_por_indice(self, lista_indices):
-        
         try:
             return list(filter(lambda Pelicula: Pelicula.get_indice() in lista_indices, Gestor_de_series().obtener_peliculas()))
         except Exception:
@@ -460,14 +476,7 @@ class Coordinador_de_series():
         for seccion in list(todos_los_registros.keys()):
             lista_de_registros.append(f'\n[[{seccion.upper()}]]\n\n')
             for registro in todos_los_registros[seccion]:
-                datos = list(registro)
-                linea = ''
-                if(datos[0]=='posicion'):
-                    linea = f'[{registro["posicion"]}]-'
-                else:
-                    linea = f'[{registro["indice"]}]-'
-                linea+=f'{registro["nombre"]}\n'
-                lista_de_registros.append(linea)
+                lista_de_registros.append(f'[{registro["indice"]}]-{registro["nombre"]}\n')
                 Gestor_de_series().guardar_lista(lista_de_registros)
 
 

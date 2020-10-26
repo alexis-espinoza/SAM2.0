@@ -1,9 +1,9 @@
 
 class Serie:
 
-    def __init__(self, serie_db={"posicion": "","nombre": "","estado": "","dia_emision": None,"manga_visto": False,"generos": [],"peliculas": []}):
+    def __init__(self, serie_db={"indice": "","nombre": "","estado": "","dia_emision": None,"manga_visto": False,"generos": [],"peliculas": []}):
 
-        self.posicion = serie_db["posicion"]
+        self.indice = serie_db["indice"]
         self.nombre = serie_db["nombre"]
         self.estado =  serie_db["estado"]
         self.dia_emision = serie_db["dia_emision"]
@@ -14,17 +14,17 @@ class Serie:
     
 
     def mostrar_det(self):
-        datos_generales = f'\n{"•"*12}Serie{"•"*12}\n\nPosicion: {self.get_posicion()}\nNombre: {self.get_nombre()}\nEstado: {self.get_estado()}'
+        datos_generales = f'\n{"•"*12}Serie{"•"*12}\n\nPosición: {self.get_indice()}\nNombre: {self.get_nombre()}\nEstado: {self.get_estado()}'
         dia_emision = '' if self.get_dia_emision()==None else f'\nEmisión: {self.get_dia_emision()}'
         manga = f'\nManga: no leído/no aplica' if self.get_manga_visto() == False else f'\nManga: leído'
         generos = '' if len(self.get_generos())==0 else f'\nGéneros: {", ".join(self.get_generos())}'
         return datos_generales+manga+dia_emision+generos
         
     def __gt__(self, Serie):
-        return self.posicion > Serie.posicion
+        return self.indice > Serie.indice
 
     def __ne__(self, Serie):
-        return bool(self.posicion != Serie.posicion 
+        return bool(self.indice != Serie.indice 
         or self.nombre != Serie.nombre 
         or self.estado != Serie.estado 
         or self.dia_emision != Serie.dia_emision 
@@ -34,11 +34,11 @@ class Serie:
 
 
     def mostrar_min(self):
-        return f'\n[{self.get_posicion()}]-{self.get_nombre()}'
+        return f'\n[{self.get_indice()}]-{self.get_nombre()}'
 
     def obj_to_dicc(self):
         return {
-         "posicion": self.get_posicion(),
+         "indice": self.get_indice(),
          "nombre": self.get_nombre(),
          "estado": self.get_estado(),
          "dia_emision": self.get_dia_emision(),
@@ -47,11 +47,11 @@ class Serie:
          "peliculas": self.get_peliculas()
       }
     
-    def set_posicion(self, posicion):
-        self.posicion = posicion
+    def set_indice(self, indice):
+        self.indice = indice
     
-    def get_posicion(self):
-        return self.posicion
+    def get_indice(self):
+        return self.indice
 
     def set_nombre(self, nombre):
         self.nombre = nombre
