@@ -46,7 +46,7 @@ class Coordinador_de_series():
     def filtrar_generos(self, genero, serie):
         
         for genero_actual in serie.get_generos():
-            if(genero_actual.find(genero)!=-1):
+            if(genero_actual.lower().find(genero.lower())!=-1):
                 return True
         return False
 
@@ -140,9 +140,8 @@ class Coordinador_de_series():
      
      #-----------------------------------------------------------------#
     def actualizar_pelicula(self, pelicula_a_actualizar):
-        system('cls')
-        print(pelicula_a_actualizar.mostrar_det())
-        nombre = str(input('\nDigite el nuevo nombre: '))
+        print('\nPresione [enter] para dejar los valores sin cambios')
+        nombre = str(input('Digite el nuevo nombre: '))
         pelicula_a_actualizar.set_nombre(nombre if nombre!='' else pelicula_a_actualizar.get_nombre())
         reacciones = str(input('Digite el nuevo valor para las reacciones: '))
         pelicula_a_actualizar.set_reacciones(reacciones if reacciones!='' else pelicula_a_actualizar.get_reacciones())
@@ -161,8 +160,6 @@ class Coordinador_de_series():
 
      #-----------------------------------------------------------------#  
     def actualizar_manga(self, manga_a_actualizar):
-        system('cls')
-        print(manga_a_actualizar.mostrar_det())
         print('\nPresione [enter] para dejar los valores sin cambios')
         nombre = str(input('Digite el nuevo nombre: '))
         manga_a_actualizar.set_nombre(nombre if nombre!='' else manga_a_actualizar.get_nombre())

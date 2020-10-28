@@ -63,7 +63,7 @@ class Principal:
 
     #-----------------------------------------------------------------#
     def filtrar_lista(self):
-        nombre_a_buscar = str(input('\n¿Digite el nombre (completo o parcial) del registro [anime-pelicula-manga] ?: '))
+        nombre_a_buscar = str(input('\n¿Digite el nombre (completo o parcial) del registro [anime-pelicula-manga]?: '))
         registros_coincidentes = Coordinador_de_series().filtrar_series(nombre_a_buscar.lower())
         
         if(len(list(registros_coincidentes.values()))>0):
@@ -125,31 +125,30 @@ class Principal:
     #-----------------------------------------------------------------#}
     def seleccionar_pelicula(self,indice_seleccionado=None):
         indice = indice_seleccionado if indice_seleccionado!=None else int(input('\n¿Digite el indice de la pelicula?: '))
-        #indice = int(input('\n¿Digite el indice de la pelicula?: '))
         system('cls')
         pelicula_seleccionada = Coordinador_de_series().obtener_pelicula(indice)
         if(pelicula_seleccionada):
             print(pelicula_seleccionada.mostrar_det())
             se_actualiza = str(input('\n¿Desea actualizar el registro[s/n]?: '))
-            if(se_actualiza.lower()!='s'):
-                system('cls')
-                return
-            Coordinador_de_series().actualizar_pelicula(pelicula_seleccionada)
-
+            system('cls')
+            if(se_actualiza.lower()=='s'):      
+                print('\n'+pelicula_seleccionada.mostrar_det())
+                Coordinador_de_series().actualizar_pelicula(pelicula_seleccionada)
+            return
     #-----------------------------------------------------------------#}
-    def  seleccionar_manga(self,indice_seleccionado=None):
-        indice = indice_seleccionado if indice_seleccionado!=None else int(input('\n¿Digite el indice de la serie?: '))
+    def seleccionar_manga(self,indice_seleccionado=None):
+        indice = indice_seleccionado if indice_seleccionado!=None else int(input('\n¿Digite el indice del manga?: '))
         #indice = int(input('\n¿Digite el indice del manga?: '))
         system('cls')
         manga_seleccionado = Coordinador_de_series().obtener_manga(indice)
         if(manga_seleccionado):
             print(manga_seleccionado.mostrar_det())
             se_actualiza = str(input('\n¿Desea actualizar el registro[s/n]?: '))
-            if(se_actualiza.lower()!='s'):
-                system('cls')
-    
-                return
-            Coordinador_de_series().actualizar_manga(manga_seleccionado)
+            system('cls')
+            if(se_actualiza.lower()=='s'):                 
+                print('\n'+manga_seleccionado.mostrar_det())
+                Coordinador_de_series().actualizar_manga(manga_seleccionado)
+            return
     #-----------------------------------------------------------------#}
     def consultar_bitacora(self):
         
