@@ -29,7 +29,7 @@ class Coordinador_de_series():
 
 #-----------------------------------------------------------------#
     def confirmar_accion(self):
-        confirmacion = str(input('\Digite 1 para confirmar: '))
+        confirmacion = str(input('\nDigite 1 para confirmar: '))
         if confirmacion == '1':
             return True
         else:
@@ -96,7 +96,7 @@ class Coordinador_de_series():
         nueva_serie.set_manga_visto(True if str(input('Manga visto[s/n]: ')).lower()=='s' else False)
         nueva_serie.set_generos(self.agregar_generos())
         nueva_serie.set_peliculas(self.agregar_peliculas())
-        if(nueva_serie.get_nombre()!=''):
+        if(nueva_serie.get_nombre()!='' and self.confirmar_accion()):
             data_actual = Gestor_de_series().obtener_registros()
             posicion = len(Gestor_de_series().obtener_series())+1
             nueva_serie.set_indice(posicion)
@@ -116,7 +116,7 @@ class Coordinador_de_series():
         nueva_pelicula.set_reacciones(reacciones if reacciones!='' else None)
         nueva_pelicula.set_manga_visto(True if str(input('Manga visto[s/n]: ')).lower()=='s' else False)
         
-        if(nueva_pelicula.get_nombre()!=''):
+        if(nueva_pelicula.get_nombre()!='' and self.confirmar_accion()):
             data_actual = Gestor_de_series().obtener_registros()
             peliculas = Gestor_de_series().obtener_peliculas()
             list(map(lambda Pelicula: Pelicula.set_indice(Pelicula.get_indice()+1), peliculas))
@@ -136,7 +136,7 @@ class Coordinador_de_series():
         nuevo_manga = Manga()
         nuevo_manga.set_nombre(input("\nDigite el nombre del nuevo manga: "))
         nuevo_manga.set_generos(self.agregar_generos())
-        if(nuevo_manga.get_nombre()!=''):
+        if(nuevo_manga.get_nombre()!='' and self.confirmar_accion()):
             data_actual = Gestor_de_series().obtener_registros()
             indice = len(Gestor_de_series().obtener_mangas())+1
             nuevo_manga.set_indice(indice)
@@ -392,10 +392,6 @@ class Coordinador_de_series():
         lista_de_mangas = Gestor_de_series().obtener_mangas() + list(filter(lambda Serie: Serie.manga_visto == True , Gestor_de_series().obtener_series())) + list(filter(lambda Pelicula: Pelicula.manga_visto == True , Gestor_de_series().obtener_peliculas()))
         for i in range(len(lista_de_mangas)):
             lista_de_mangas[i].set_indice(i+1)
-            '''if(str(type( lista_de_mangas[i]))=="<class 'modelos.Serie'>"):
-                lista_de_mangas[i].set_nombre(f'{lista_de_mangas[i].get_nombre()} -> | A |')
-            elif(str(type( lista_de_mangas[i]))=="<class 'modelos.Pelicula'>"):
-                lista_de_mangas[i].set_nombre(f'{lista_de_mangas[i].get_nombre()} -> | P |')'''
         return (lista_de_mangas, False)#'mA-> Orig. Anime | P-> Orig. Película'
 
 
