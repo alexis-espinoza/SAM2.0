@@ -275,7 +275,7 @@ class Coordinador_de_series():
         todos_los_registros = Gestor_de_series().obtener_registros()
         series= len(todos_los_registros["series"])
         peliculas = len(todos_los_registros["peliculas"])
-        mangas = len(todos_los_registros["mangas"])
+        mangas = len(self.listar_mangas()[0])
         en_proceso=len(self.listar_series_en_proceso()[0])
         en_espera=len(self.listar_series_en_espera()[0])
         en_emision=len(list(filter(lambda Serie: Serie.get_dia_emision()!=None, Gestor_de_series().obtener_series())))
@@ -389,7 +389,16 @@ class Coordinador_de_series():
 
     #-----------------------------------------------------------------# 
     def listar_mangas(self):
-        return (Gestor_de_series().obtener_mangas(), False)
+        lista_de_mangas = Gestor_de_series().obtener_mangas() + list(filter(lambda Serie: Serie.manga_visto == True , Gestor_de_series().obtener_series())) + list(filter(lambda Pelicula: Pelicula.manga_visto == True , Gestor_de_series().obtener_peliculas()))
+        for i in range(len(lista_de_mangas)):
+            lista_de_mangas[i].set_indice(i+1)
+            '''if(str(type( lista_de_mangas[i]))=="<class 'modelos.Serie'>"):
+                lista_de_mangas[i].set_nombre(f'{lista_de_mangas[i].get_nombre()} -> | A |')
+            elif(str(type( lista_de_mangas[i]))=="<class 'modelos.Pelicula'>"):
+                lista_de_mangas[i].set_nombre(f'{lista_de_mangas[i].get_nombre()} -> | P |')'''
+        return (lista_de_mangas, False)#'mA-> Orig. Anime | P-> Orig. Película'
+
+
         
     #-----------------------------------------------------------------# 
     def organizar_series_peliculas(self):
