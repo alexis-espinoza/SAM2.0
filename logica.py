@@ -28,6 +28,15 @@ class Coordinador_de_series():
             pyperclip.copy(text) 
 
 #-----------------------------------------------------------------#
+    def confirmar_accion(self):
+        confirmacion = str(input('\Digite 1 para confirmar: '))
+        if confirmacion == '1':
+            return True
+        else:
+            self.alertas.mostrar_mensaje('no_ok')
+            return
+
+#-----------------------------------------------------------------#
     def copiar_nombre_del_registro(self,registro_actual):
             text=registro_actual.get_nombre()
             pyperclip.copy(text)  # now the clipboard content will be string "abc"
@@ -150,7 +159,7 @@ class Coordinador_de_series():
         
         data_actual = Gestor_de_series().obtener_registros()
         pelicula_sin_cambios = Pelicula(data_actual["peliculas"][pelicula_a_actualizar.get_indice()-1])
-        if(pelicula_sin_cambios!= pelicula_a_actualizar):
+        if(pelicula_sin_cambios!= pelicula_a_actualizar and self.confirmar_accion()):
             data_actual["peliculas"][pelicula_a_actualizar.get_indice()-1] = pelicula_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_up')
@@ -167,7 +176,7 @@ class Coordinador_de_series():
         manga_a_actualizar.set_generos(generos if len(generos)!=0 else manga_a_actualizar.get_generos())
         data_actual = Gestor_de_series().obtener_registros()
         manga_sin_cambios = Manga(data_actual["mangas"][manga_a_actualizar.get_indice()-1])
-        if(manga_sin_cambios!= manga_a_actualizar):
+        if(manga_sin_cambios!= manga_a_actualizar and self.confirmar_accion()):
             data_actual["mangas"][manga_a_actualizar.get_indice()-1] = manga_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_up')
@@ -192,7 +201,7 @@ class Coordinador_de_series():
 
         data_actual = Gestor_de_series().obtener_registros()
         serie_sin_cambios = Serie(data_actual["series"][serie_a_actualizar.get_indice()-1])
-        if(serie_sin_cambios!= serie_a_actualizar):
+        if(serie_sin_cambios!= serie_a_actualizar and self.confirmar_accion()):
             data_actual["series"][serie_a_actualizar.get_indice()-1] = serie_a_actualizar.obj_to_dicc()
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_up')
@@ -210,20 +219,21 @@ class Coordinador_de_series():
         if(serie_a_actualizar.get_estado()==nuevo_estado or nuevo_estado == 'NA'):
             self.alertas.mostrar_mensaje('no_conf')
         else:
-            serie_a_actualizar.set_dia_emision(None) #Se setea el dia de emision
-            serie_a_actualizar.set_estado(nuevo_estado)
-            data_actual = Gestor_de_series().obtener_registros()
-            data_actual["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.obj_to_dicc()
-            Gestor_de_series().guardar_cambios(data_actual)
-            self.alertas.mostrar_mensaje('ok_up')
-            self.actualizar_bitacora('up_st',[serie_a_actualizar.get_nombre(),estado_anterior,nuevo_estado])
+            if(self.confirmar_accion()):
+                serie_a_actualizar.set_dia_emision(None) #Se setea el dia de emision
+                serie_a_actualizar.set_estado(nuevo_estado)
+                data_actual = Gestor_de_series().obtener_registros()
+                data_actual["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.obj_to_dicc()
+                Gestor_de_series().guardar_cambios(data_actual)
+                self.alertas.mostrar_mensaje('ok_up')
+                self.actualizar_bitacora('up_st',[serie_a_actualizar.get_nombre(),estado_anterior,nuevo_estado])
     
     #-----------------------------------------------------------------#
     def agregar_dia_emision(self,serie_a_actualizar):
         system('cls')
         print(serie_a_actualizar.mostrar_det())
         indice_dia = str(input('\n'+self.listar_opciones_de_emision(serie_a_actualizar))) #Invoca a una funcion que muestra las opciones de dias
-        if(indice_dia in self.dias_validos):
+        if(indice_dia in self.dias_validos and self.confirmar_accion()):
             dia_emision =  list(self.dicc_dias.values())[int(indice_dia)-1]
             serie_a_actualizar.set_dia_emision(dia_emision)
             serie_a_actualizar.set_estado('en proceso')
@@ -243,7 +253,7 @@ class Coordinador_de_series():
             lista_de_series = Gestor_de_series().obtener_series()
             posicion_actual = serie_a_desplazar.get_indice()-1
             nueva_posicion = int(input('\n¿Digite la nueva posición de la serie?: '))-1
-            if(nueva_posicion==posicion_actual or nueva_posicion>len(lista_de_series)-1):
+            if(nueva_posicion==posicion_actual or nueva_posicion not in range(len(lista_de_series)) or not self.confirmar_accion()):
                   self.alertas.mostrar_mensaje('no_conf')
                   return
             serie_deplazada = lista_de_series[posicion_actual]
