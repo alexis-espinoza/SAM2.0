@@ -37,6 +37,16 @@ class Coordinador_de_series():
             return
 
 #-----------------------------------------------------------------#
+    def validar_mangas(self, el_nuevo_registro):
+        lista_mangas_vigentes = list(filter(lambda Manga: Manga.get_nombre()!=el_nuevo_registro.get_nombre(), Gestor_de_series().obtener_mangas()))
+        for i in range(len(lista_mangas_vigentes)):
+            lista_mangas_vigentes[i].set_indice(i+1)
+        data_actual = Gestor_de_series().obtener_registros()
+        data_actual["mangas"] = list(map(lambda Manga: Manga.obj_to_dicc(),lista_mangas_vigentes))
+        Gestor_de_series().guardar_cambios(data_actual)
+     
+
+#-----------------------------------------------------------------#
     def copiar_nombre_del_registro(self,registro_actual):
             text=registro_actual.get_nombre()
             pyperclip.copy(text)  # now the clipboard content will be string "abc"
@@ -102,6 +112,7 @@ class Coordinador_de_series():
             nueva_serie.set_indice(posicion)
             data_actual["series"].append(nueva_serie.obj_to_dicc())
             Gestor_de_series().guardar_cambios(data_actual)
+            self.validar_mangas(nueva_serie)
             self.alertas.mostrar_mensaje('ok_in')
             self.actualizar_bitacora('insert',['anime',nueva_serie.get_nombre()])
         else:
@@ -123,8 +134,9 @@ class Coordinador_de_series():
             peliculas.append(nueva_pelicula)
             data_actual["peliculas"] = list(map(lambda Pelicula: Pelicula.obj_to_dicc(),sorted(peliculas))) #sorted(list_peliculas)
             Gestor_de_series().guardar_cambios(data_actual)
-            self.alertas.mostrar_mensaje('ok_in')
+            self.validar_mangas(nueva_pelicula)
             self.organizar_series_peliculas()
+            self.alertas.mostrar_mensaje('ok_in')
             self.actualizar_bitacora('insert',['película',nueva_pelicula.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
@@ -299,13 +311,10 @@ class Coordinador_de_series():
         lista_de_resultados = list(filter(lambda Serie: (Serie.get_nombre().lower().find(nombre_a_buscar)!=-1 and nombre_a_buscar!=''), 
         Gestor_de_series().obtener_series()+Gestor_de_series().obtener_peliculas()+Gestor_de_series().obtener_mangas()))
         
-
+        #print(dict(zip(list(map(lambda key: key.get_indice(),lista_de_resultados)),lista_de_resultados)))  #lista_de_resultados)
         if(len(lista_de_resultados)==1):
             self.copiar_indice_del_registro(lista_de_resultados[0])
-        #print(dict(zip(list(map(lambda key: key.get_indice(),lista_de_resultados)),lista_de_resultados)))  #lista_de_resultados)
         return dict(zip(list(map(lambda key: key.get_indice(),lista_de_resultados)),lista_de_resultados))#lista_de_resultados
-   
-
 
     #-----------------------------------------------------------------#
     def obtener_serie(self, indice):
@@ -328,11 +337,12 @@ class Coordinador_de_series():
             self.alertas.mostrar_mensaje('no_sel')
             return False
 
-        #-----------------------------------------------------------------#    
+    #-----------------------------------------------------------------#    
     def obtener_manga(self, indice):
         try:
                 print()
                 lista_de_mangas = Gestor_de_series().obtener_mangas()
+                self.copiar_nombre_del_registro(lista_de_mangas[indice-1])
                 return lista_de_mangas[indice-1]
         except Exception:
             self.alertas.mostrar_mensaje('no_sel')
