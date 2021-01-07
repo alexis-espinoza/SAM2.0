@@ -208,8 +208,9 @@ class Coordinador_de_series():
         serie_a_actualizar.set_generos(generos if len(generos)!=0 else serie_a_actualizar.get_generos())
         peliculas=self.agregar_peliculas()
         serie_a_actualizar.set_peliculas(peliculas if len(peliculas)!=0 else serie_a_actualizar.get_peliculas())
-        manga = str(input('Manga visto[s/n]: ')).lower()
-        serie_a_actualizar.set_manga_visto(True if manga=='s' else serie_a_actualizar.get_manga_visto())
+        manga_visto = str(input('Manga visto[s/n]: ')).lower()
+        dicc_manga_ops={'s':True, 'n':False}
+        serie_a_actualizar.set_manga_visto(dicc_manga_ops.get(manga_visto, serie_a_actualizar.get_manga_visto()))
 
         data_actual = Gestor_de_series().obtener_registros()
         serie_sin_cambios = Serie(data_actual["series"][serie_a_actualizar.get_indice()-1])
@@ -271,6 +272,7 @@ class Coordinador_de_series():
             serie_deplazada = lista_de_series[posicion_actual]
             lista_de_series.remove(lista_de_series[posicion_actual])
             lista_de_series.insert(nueva_posicion,serie_deplazada)
+            serie_a_desplazar.set_indice(nueva_posicion+1)
             #Se obtienen los datos originales y se cambia el bloque de series por una lista [ordenada y parseada a diccionadrios]
             for i in range(len(lista_de_series)):
                 lista_de_series[i].set_indice(i+1)

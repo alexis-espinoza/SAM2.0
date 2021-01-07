@@ -91,7 +91,6 @@ class Principal:
     #-----------------------------------------------------------------#
     def seleccionar_serie(self,indice_seleccionado=None):
         indice = indice_seleccionado if indice_seleccionado!=None else int(input('\n¿Digite el indice de la serie?: '))
-        #indice = int(input('\n¿Digite el indice de la serie?: '))
         system('cls')
         serie_seleccionada = Coordinador_de_series().obtener_serie(indice)
         if(serie_seleccionada):
@@ -103,8 +102,9 @@ class Principal:
             self.actualizar_serie(serie_seleccionada)
     
     #-----------------------------------------------------------------# 
-    def actualizar_serie(self,la_serie_a_modficar):
-        se_actualiza = str(input('\n¿Desea actualizar el registro[s/n]?: '))
+    def actualizar_serie(self,la_serie_a_modficar, actualiza=None):
+        
+        se_actualiza = actualiza if actualiza!=None else str(input('\n¿Desea actualizar el registro[s/n]?: '))
         system('cls')
         if(se_actualiza.lower()!='s'):
             return
@@ -117,9 +117,11 @@ class Principal:
         '3': coordinador.actualizar_serie,
         '4': coordinador.agregar_dia_emision}
         opcion_modificar=dicc_actualizaciones.get(opcion_cambio, lambda serie:  'NA')(la_serie_a_modficar)
-        #print()
         if(opcion_modificar=="NA"):
-            alertas().mostrar_mensaje('no_val')
+            alertas().mostrar_mensaje('def')
+        else:
+            time.sleep(1)
+            self.actualizar_serie(la_serie_a_modficar,'s')
 
     
     #-----------------------------------------------------------------#}
@@ -138,7 +140,6 @@ class Principal:
     #-----------------------------------------------------------------#}
     def seleccionar_manga(self,indice_seleccionado=None):
         indice = indice_seleccionado if indice_seleccionado!=None else int(input('\n¿Digite el indice del manga?: '))
-        #indice = int(input('\n¿Digite el indice del manga?: '))
         system('cls')
         manga_seleccionado = Coordinador_de_series().obtener_manga(indice)
         if(manga_seleccionado):
