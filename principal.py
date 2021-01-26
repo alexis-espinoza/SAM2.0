@@ -7,12 +7,13 @@ from os import system
 from os import getcwd, system
 from logica import Coordinador_de_series 
 from logica import Coordinador_de_alertas as alertas
+from modelos import Serie, Pelicula, Manga
 
 class Principal:
 
     def menu(self):
         while True:
-            try:
+            #try:
                 print(Coordinador_de_series().generar_dashboard())
                 principal=Principal()
                 opciones = '''0)- Getión de proceso\n1)- Agregar nuevo\n2)- Mostrar lista\n3)- Filtrar lista\n4)- Seleccionar serie\n5)- Seleccionar película\n6)- Seleccionar manga\n7)- Consultar bitácora\nDigite una opción: '''
@@ -23,8 +24,8 @@ class Principal:
                     '6': principal.seleccionar_manga,'7': principal.consultar_bitacora}
                 system('cls')
                 dicc_menu.get(opcion_seleccionada)()
-            except Exception:
-               alertas().mostrar_mensaje('def')
+            #except Exception:
+               #alertas().mostrar_mensaje('def')
 
     def abrir_diario(self):
             Coordinador_de_series().mostrar_diario()
@@ -79,11 +80,11 @@ class Principal:
         system('cls')
         registro_seleccionado = registros_coincidentes.get(indice,None)
         print(registro_seleccionado)
-        if(str(type(registro_seleccionado))=="<class 'modelos.Serie'>"):
+        if(isinstance(registro_seleccionado, Serie)):
             self.seleccionar_serie(indice)
-        elif(str(type(registro_seleccionado))=="<class 'modelos.Pelicula'>"):
+        elif(isinstance(registro_seleccionado, Pelicula)):
             self.seleccionar_pelicula(indice)
-        elif(str(type(registro_seleccionado))=="<class 'modelos.Manga'>"):
+        elif(isinstance(registro_seleccionado, Manga)):
             self.seleccionar_manga(indice)
         else:
             alertas().mostrar_mensaje('no_val')

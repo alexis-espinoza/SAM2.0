@@ -3,7 +3,7 @@ from modelos import Serie, Pelicula, Manga
 from os import system
 import time
 import pyperclip
-#from logica import Coordinador_de_alertas as alertas
+
 
 
 class Coordinador_de_series():
@@ -474,12 +474,12 @@ class Coordinador_de_series():
         if(len(registros_de_bitacora)==0):
             self.alertas.mostrar_mensaje('no_ext')
             return
-        cerrar_bitacora = str(input('\nPresione [Intro] para salir de la bitácora'))
+        input('\nPresione [Intro] para salir de la bitácora')#Evita el cierre automático de la bitácora
         system('cls')                  
         #Coordinador_de_series().actualizar_bitacora([])
     
     def actualizar_bitacora(self, tipo_log, cambios):
-        cambios=cambios+(['']*2)#Se agregan 2 campos extra para los casos donde solo viaja un parámetro
+        cambios=cambios+(['']*2)#Se agregan 2 campos extra vacíos para los casos donde solo viaja un parámetro
         dicc_cambios = {
         'insert': f'Inserción del registro de tipo [{cambios[0]}]: {cambios[1]}',
         'up_st': f'Modificación de estado del registro: {cambios[0]} de [{cambios[1]}] a [{cambios[2]}]',
