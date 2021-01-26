@@ -487,24 +487,8 @@ class Coordinador_de_series():
         'up_em': f'Modificación del dia de emision [{cambios[0]}] para el registro: {cambios[1]}',
         'up_ps': f'Desplazamiento del registro: {cambios[0]} del puesto [{cambios[1]}] al puesto [{cambios[2]}]'
         }
-        lista_de_logs = Gestor_de_series().obtener_logs()
         nuevo_log = f'[{time.strftime("%d/%m/%y")}] <-> {dicc_cambios.get(tipo_log)}\n'
-        lista_de_logs.append(nuevo_log)
-        self.generar_lista()
-        Gestor_de_series().actualizar_logs(lista_de_logs)
-
-    
-    def generar_lista(self):
-        todos_los_registros = Gestor_de_series().obtener_registros()
-        lista_de_registros=[]
-        for seccion in list(todos_los_registros.keys()):
-            lista_de_registros.append(f'\n[[{seccion.upper()}]]\n\n')
-            for registro in todos_los_registros[seccion]:
-                lista_de_registros.append(f'[{registro["indice"]}]-{registro["nombre"]}\n')
-                Gestor_de_series().guardar_lista(lista_de_registros)
-
-
-
+        Gestor_de_series().actualizar_logs(nuevo_log)
 
 class Coordinador_de_alertas:
     def __init__(self):

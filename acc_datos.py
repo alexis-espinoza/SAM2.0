@@ -16,7 +16,7 @@ class Gestor_de_series:
            #alertas().mostrar_mensaje('no_ok')
 
     def obtener_registros(self):
-        lista_series = []
+      
         with open(str(getcwd())+'\\DATA\\series_peliculas.json') as archivo:
             data_json = json.load(archivo)       
         return data_json
@@ -67,10 +67,10 @@ class Gestor_de_series:
 
     def actualizar_logs(self, lista_de_logs):
         try:
-            with open(str(getcwd())+'\\LOGS\\historial.txt','w') as archivo_de_logs:
-                encabezado =" _____         ________________\n|FECHA|       |ACCIÓN REALIZADA|\n'''''''       ''''''''''''''''''\n"
-                archivo_de_logs.write(encabezado)
-                archivo_de_logs.writelines(lista_de_logs)    
+            with open(str(getcwd())+'\\LOGS\\historial.txt','a') as archivo_de_logs:
+                #encabezado =" _____         ________________\n|FECHA|       |ACCIÓN REALIZADA|\n'''''''       ''''''''''''''''''\n"
+                #archivo_de_logs.write(encabezado)
+                archivo_de_logs.write(lista_de_logs)    
         except Exception:
             return
 
