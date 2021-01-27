@@ -13,7 +13,7 @@ class Gestor_de_series:
             system('cls')
         except Exception:
             return
-           #alertas().mostrar_mensaje('no_ok')
+  
 
     def obtener_registros(self):
       
@@ -32,12 +32,12 @@ class Gestor_de_series:
 
     
     def obtener_peliculas(self):
-        lista_pelicuas = []
+        lista_peliculas = []
         with open(str(getcwd())+'\\DATA\\series_peliculas.json') as archivo:
             data_json = json.load(archivo)
             for pelicula_actual in data_json["peliculas"]:
-                lista_pelicuas.append(Pelicula(pelicula_actual))
-        return lista_pelicuas
+                lista_peliculas.append(Pelicula(pelicula_actual))
+        return lista_peliculas
 
 
     def obtener_mangas(self):
@@ -62,14 +62,12 @@ class Gestor_de_series:
             return list_registros_log[3:]
         except Exception:
             return
-                   # alertas().mostrar_mensaje('no_ok')   
+
 
 
     def actualizar_logs(self, lista_de_logs):
         try:
             with open(str(getcwd())+'\\LOGS\\historial.txt','a') as archivo_de_logs:
-                #encabezado =" _____         ________________\n|FECHA|       |ACCIÓN REALIZADA|\n'''''''       ''''''''''''''''''\n"
-                #archivo_de_logs.write(encabezado)
                 archivo_de_logs.write(lista_de_logs)    
         except Exception:
             return
