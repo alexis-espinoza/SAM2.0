@@ -42,7 +42,7 @@ class Coordinador_de_series():
         for i in range(len(lista_mangas_vigentes)):
             lista_mangas_vigentes[i].set_indice(i+1)
         data_actual = Gestor_de_series().obtener_registros()
-        data_actual["mangas"] = list(map(lambda Manga: Manga.obj_to_dicc(),lista_mangas_vigentes))
+        data_actual["mangas"] = list(map(lambda Manga: Manga.__dict__,lista_mangas_vigentes))
         Gestor_de_series().guardar_cambios(data_actual)
      
 
@@ -110,7 +110,7 @@ class Coordinador_de_series():
             data_actual = Gestor_de_series().obtener_registros()
             posicion = len(Gestor_de_series().obtener_series())+1
             nueva_serie.set_indice(posicion)
-            data_actual["series"].append(nueva_serie.obj_to_dicc())
+            data_actual["series"].append(nueva_serie.__dict__)
             Gestor_de_series().guardar_cambios(data_actual)
             self.validar_mangas(nueva_serie)
             self.alertas.mostrar_mensaje('ok_in')
@@ -132,7 +132,7 @@ class Coordinador_de_series():
             peliculas = Gestor_de_series().obtener_peliculas()
             list(map(lambda Pelicula: Pelicula.set_indice(Pelicula.get_indice()+1), peliculas))
             peliculas.append(nueva_pelicula)
-            data_actual["peliculas"] = list(map(lambda Pelicula: Pelicula.obj_to_dicc(),sorted(peliculas))) #sorted(list_peliculas)
+            data_actual["peliculas"] = list(map(lambda Pelicula: Pelicula.__dict__,sorted(peliculas))) #sorted(list_peliculas)
             Gestor_de_series().guardar_cambios(data_actual)
             self.validar_mangas(nueva_pelicula)
             self.organizar_series_peliculas()
@@ -152,7 +152,7 @@ class Coordinador_de_series():
             data_actual = Gestor_de_series().obtener_registros()
             indice = len(Gestor_de_series().obtener_mangas())+1
             nuevo_manga.set_indice(indice)
-            data_actual["mangas"].append(nuevo_manga.obj_to_dicc())
+            data_actual["mangas"].append(nuevo_manga.__dict__)
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_in')
             self.actualizar_bitacora('insert',['manga',nuevo_manga.get_nombre()])
@@ -172,7 +172,7 @@ class Coordinador_de_series():
         data_actual = Gestor_de_series().obtener_registros()
         pelicula_sin_cambios = Pelicula(data_actual["peliculas"][pelicula_a_actualizar.get_indice()-1])
         if(pelicula_sin_cambios!= pelicula_a_actualizar and self.confirmar_accion()):
-            data_actual["peliculas"][pelicula_a_actualizar.get_indice()-1] = pelicula_a_actualizar.obj_to_dicc()
+            data_actual["peliculas"][pelicula_a_actualizar.get_indice()-1] = pelicula_a_actualizar.__dict__
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_up')
             self.actualizar_bitacora('up_dt',[pelicula_a_actualizar.get_nombre()])
@@ -189,7 +189,7 @@ class Coordinador_de_series():
         data_actual = Gestor_de_series().obtener_registros()
         manga_sin_cambios = Manga(data_actual["mangas"][manga_a_actualizar.get_indice()-1])
         if(manga_sin_cambios!= manga_a_actualizar and self.confirmar_accion()):
-            data_actual["mangas"][manga_a_actualizar.get_indice()-1] = manga_a_actualizar.obj_to_dicc()
+            data_actual["mangas"][manga_a_actualizar.get_indice()-1] = manga_a_actualizar.__dict__
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_up')
             self.actualizar_bitacora('up_dt',[manga_a_actualizar.get_nombre()])
@@ -215,7 +215,7 @@ class Coordinador_de_series():
         data_actual = Gestor_de_series().obtener_registros()
         serie_sin_cambios = Serie(data_actual["series"][serie_a_actualizar.get_indice()-1])
         if(serie_sin_cambios!= serie_a_actualizar and self.confirmar_accion()):
-            data_actual["series"][serie_a_actualizar.get_indice()-1] = serie_a_actualizar.obj_to_dicc()
+            data_actual["series"][serie_a_actualizar.get_indice()-1] = serie_a_actualizar.__dict__
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_up')
             self.actualizar_bitacora('up_dt',[serie_a_actualizar.get_nombre()])
@@ -236,7 +236,7 @@ class Coordinador_de_series():
                 serie_a_actualizar.set_dia_emision(None) #Se setea el dia de emision
                 serie_a_actualizar.set_estado(nuevo_estado)
                 data_actual = Gestor_de_series().obtener_registros()
-                data_actual["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.obj_to_dicc()
+                data_actual["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.__dict__
                 Gestor_de_series().guardar_cambios(data_actual)
                 self.alertas.mostrar_mensaje('ok_up')
                 self.actualizar_bitacora('up_st',[serie_a_actualizar.get_nombre(),estado_anterior,nuevo_estado])
@@ -251,7 +251,7 @@ class Coordinador_de_series():
             serie_a_actualizar.set_dia_emision(dia_emision)
             serie_a_actualizar.set_estado('en proceso')
             data_actual = Gestor_de_series().obtener_registros()
-            data_actual["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.obj_to_dicc()
+            data_actual["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.__dict__()
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_in')
             self.actualizar_bitacora('up_em',[serie_a_actualizar.get_dia_emision(), serie_a_actualizar.get_nombre()])
@@ -277,7 +277,7 @@ class Coordinador_de_series():
             for i in range(len(lista_de_series)):
                 lista_de_series[i].set_indice(i+1)
             data_actual = Gestor_de_series().obtener_registros()
-            data_actual["series"] = list(map(lambda Serie: Serie.obj_to_dicc(),lista_de_series))
+            data_actual["series"] = list(map(lambda Serie: Serie.__dict__,lista_de_series))
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_up')
             self.actualizar_bitacora('up_ps',[serie_a_desplazar.get_nombre(),posicion_actual+1,nueva_posicion+1])
@@ -417,7 +417,7 @@ class Coordinador_de_series():
                 nueva_lista_indice_peliculas.append(indice_pelicula+1)
                 serie.set_peliculas(nueva_lista_indice_peliculas)
         data_actual = Gestor_de_series().obtener_registros()
-        data_actual["series"] = list(map(lambda Serie: Serie.obj_to_dicc(),lista_de_series))
+        data_actual["series"] = list(map(lambda Serie: Serie.__dict__,lista_de_series))
         Gestor_de_series().guardar_cambios(data_actual)
 
     #-----------------------------------------------------------------#
