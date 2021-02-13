@@ -110,7 +110,7 @@ class Principal:
         if(se_actualiza.lower()!='s'):
             return
         print(la_serie_a_modficar.mostrar_det())
-        opcion_cambio=str(input(f'\n{"-"*5}Opciones de actualización{"-"*5}\n1)-Cambiar estado\n2)-Cambiar posicion\n3)-Modificar serie\n4)-Agregar dia emision\nSeleccione: '))
+        opcion_cambio=str(input(f'\n{"-"*5}Opciones de actualización{"-"*5}\n1)-Cambiar estado\n2)-Cambiar posición\n3)-Modificar serie\n4)-Agregar día emisión\nSeleccione: '))
         coordinador = Coordinador_de_series()
         dicc_actualizaciones = {
         '1': coordinador.cambiar_estado,

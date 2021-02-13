@@ -251,7 +251,7 @@ class Coordinador_de_series():
             serie_a_actualizar.set_dia_emision(dia_emision)
             serie_a_actualizar.set_estado('en proceso')
             data_actual = Gestor_de_series().obtener_registros()
-            data_actual["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.__dict__()
+            data_actual["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.__dict__
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_in')
             self.actualizar_bitacora('up_em',[serie_a_actualizar.get_dia_emision(), serie_a_actualizar.get_nombre()])
@@ -476,9 +476,19 @@ class Coordinador_de_series():
             return
         input('\nPresione [Intro] para salir de la bitácora')#Evita el cierre automático de la bitácora
         system('cls')                  
-        #Coordinador_de_series().actualizar_bitacora([])
     
+    def actualizar_lista_de_vistos(self):
+        lista_de_vistos=[]
+        todos_los_registros = Gestor_de_series().obtener_registros()
+        for tipo in todos_los_registros.keys():
+            lista_de_vistos.append(f'\n\n[[{tipo.upper()}]]\n')
+            for registro in todos_los_registros[tipo]:
+                lista_de_vistos.append(f'\n[{registro["indice"]}]-{registro["nombre"]}')
+        Gestor_de_series().guardar_lista(lista_de_vistos)
+         
+
     def actualizar_bitacora(self, tipo_log, cambios):
+      
         cambios=cambios+(['']*2)#Se agregan 2 campos extra vacíos para los casos donde solo viaja un parámetro
         dicc_cambios = {
         'insert': f'Inserción del registro de tipo [{cambios[0]}]: {cambios[1]}',
@@ -489,6 +499,10 @@ class Coordinador_de_series():
         }
         nuevo_log = f'[{time.strftime("%d/%m/%y")}] <-> {dicc_cambios.get(tipo_log)}\n'
         Gestor_de_series().actualizar_logs(nuevo_log)
+        if(tipo_log != 'up_st' and tipo_log != 'up_em'):
+            self.actualizar_lista_de_vistos()
+        
+        
 
 class Coordinador_de_alertas:
     def __init__(self):

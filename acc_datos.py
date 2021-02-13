@@ -73,8 +73,8 @@ class Gestor_de_series:
             return
 
     def guardar_lista(self,lista_de_registros):
-        try:
+        #try:
             with open(str(getcwd())+'\\LOGS\\lista de series vistas.txt','w') as archivo_de_series_vistas:
                 archivo_de_series_vistas.writelines(lista_de_registros)    
-        except Exception:
-            return
+        #except Exception:
+           # return
