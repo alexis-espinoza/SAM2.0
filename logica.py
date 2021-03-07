@@ -464,9 +464,9 @@ class Coordinador_de_series():
             busqueda = str(input('Ingrese un parámetro de búsqueda: '))
             print()
             registros_de_bitacora = list(filter(lambda linea: linea.lower().find(busqueda.lower())!=-1 and busqueda!='', logs_del_sistema))
-            registro_actual = 0
             total_de_registros=len(registros_de_bitacora)
-            formato = 'Mostrando [{0}] de [{1}] registros, mostrar más [Intro] | nueva búsqueda [1]: '
+            registro_actual = 0
+            formato = 'Mostrando [{0}] de [{1}] registros, mostrar más [Intro] | detener [1]: '
             while(registro_actual<total_de_registros):        
                 if((registro_actual%10)==0 and registro_actual!=0):           
                     mas_datos = input(formato.format(registro_actual,total_de_registros))
@@ -476,7 +476,8 @@ class Coordinador_de_series():
                     print('')#Se salta un línea
                 print(registros_de_bitacora[registro_actual])
                 registro_actual+=1
-            self.alertas.mostrar_mensaje('no_ext') if len(registros_de_bitacora)==0 else True
+
+            self.alertas.mostrar_mensaje('no_ext') if total_de_registros==0 else True
             continuar=input('\nDigite [1] para realizar una nueva búsqueda [Intro] para salir: ')#Condición para nueva búqueda
             if(continuar!='1'):
                 nueva_busqueda=False
