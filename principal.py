@@ -153,10 +153,7 @@ class Principal:
             return
     #-----------------------------------------------------------------#}
     def consultar_bitacora(self):
-        
-        print('\nBúsqueda en bitácora (ej. de entradas válidas ["26/04/20" - "96" - "Zero" - "en espera"])')
-        busqueda = str(input('Ingrese un parámetro de búsqueda: '))
-        Coordinador_de_series().consultar_bitacora(busqueda)
+        Coordinador_de_series().consultar_bitacora()
 
 
 #if __name__ == '__menu__'

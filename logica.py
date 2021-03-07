@@ -456,26 +456,31 @@ class Coordinador_de_series():
             return 
     
 
-    def consultar_bitacora(self, busqueda):
-        print()
-        registros_de_bitacora = list(filter(lambda linea: linea.lower().find(busqueda.lower())!=-1 and busqueda!='', Gestor_de_series().obtener_logs()))
-        registro_actual = 0
-        total_de_registros=len(registros_de_bitacora)
-        formato = 'Mostrando [{0}] de [{1}] registros, ¿mostrar más? [s/n]: '
-        while(registro_actual<total_de_registros):        
-            if((registro_actual%10)==0 and registro_actual!=0):           
-                mas_datos = input(formato.format(registro_actual,total_de_registros))
-                if(mas_datos != 's'):
-                    system('cls')
-                    return                
-                print('')#Se salta un línea
-            print(registros_de_bitacora[registro_actual])
-            registro_actual+=1
-        if(len(registros_de_bitacora)==0):
-            self.alertas.mostrar_mensaje('no_ext')
-            return
-        input('\nPresione [Intro] para salir de la bitácora')#Evita el cierre automático de la bitácora
-        system('cls')                  
+    def consultar_bitacora(self):
+        logs_del_sistema = Gestor_de_series().obtener_logs()
+        nueva_busqueda=True
+        while(nueva_busqueda==True):
+            print('\nBúsqueda en bitácora (ej. de entradas válidas ["26/04/20" - "96" - "Zero" - "en espera"])')
+            busqueda = str(input('Ingrese un parámetro de búsqueda: '))
+            print()
+            registros_de_bitacora = list(filter(lambda linea: linea.lower().find(busqueda.lower())!=-1 and busqueda!='', logs_del_sistema))
+            registro_actual = 0
+            total_de_registros=len(registros_de_bitacora)
+            formato = 'Mostrando [{0}] de [{1}] registros, mostrar más [Intro] | nueva búsqueda [1]: '
+            while(registro_actual<total_de_registros):        
+                if((registro_actual%10)==0 and registro_actual!=0):           
+                    mas_datos = input(formato.format(registro_actual,total_de_registros))
+                    if(mas_datos == '1' or mas_datos.lower()=='n'):
+                        system('cls')
+                        break
+                    print('')#Se salta un línea
+                print(registros_de_bitacora[registro_actual])
+                registro_actual+=1
+            self.alertas.mostrar_mensaje('no_ext') if len(registros_de_bitacora)==0 else True
+            continuar=input('\nDigite [1] para realizar una nueva búsqueda [Intro] para salir: ')#Condición para nueva búqueda
+            if(continuar!='1'):
+                nueva_busqueda=False
+            system('cls')                  
     
     def actualizar_lista_de_vistos(self):
         lista_de_vistos=[]
