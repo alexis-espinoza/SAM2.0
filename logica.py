@@ -34,17 +34,39 @@ class Coordinador_de_series():
             return True
         else:
             self.alertas.mostrar_mensaje('no_ok')
-            return
+            return False
 
 #-----------------------------------------------------------------#
     def validar_mangas(self, el_nuevo_registro):
-        lista_mangas_vigentes = list(filter(lambda Manga: Manga.get_nombre()!=el_nuevo_registro.get_nombre(), Gestor_de_series().obtener_mangas()))
+        #3print()
+        '''lista_mangas_vigentes = list(filter(lambda Manga: Manga.get_nombre()!=el_nuevo_registro.get_nombre(), Gestor_de_series().obtener_mangas()))
         for i in range(len(lista_mangas_vigentes)):
             lista_mangas_vigentes[i].set_indice(i+1)
         data_actual = Gestor_de_series().obtener_registros()
         data_actual["mangas"] = list(map(lambda Manga: Manga.__dict__,lista_mangas_vigentes))
         Gestor_de_series().guardar_cambios(data_actual)
-     
+        '''
+        try:
+            el_manga_existente = None
+            flag_existe=False
+            lista_mangas_vigentes = Gestor_de_series().obtener_mangas()
+            for manga in lista_mangas_vigentes:
+                if(manga.get_nombre()==el_nuevo_registro.get_nombre()):
+                    flag_existe=True
+                    el_manga_existente=manga
+                    el_nuevo_registro.set_manga_visto(True)
+                    el_nuevo_registro.set_generos(manga.get_generos()) if manga.get_generos()!=[] else True
+                    break
+        except Exception:
+            pass
+        finally:
+            if (flag_existe):
+                lista_mangas_vigentes.remove(el_manga_existente)
+                for i in range(len(lista_mangas_vigentes)):
+                        lista_mangas_vigentes[i].set_indice(i+1)
+                data_actual = Gestor_de_series().obtener_registros()
+                data_actual["mangas"] = list(map(lambda Manga: Manga.__dict__,lista_mangas_vigentes))
+                Gestor_de_series().guardar_cambios(data_actual)
 
 #-----------------------------------------------------------------#
     def copiar_nombre_del_registro(self,registro_actual):
@@ -106,13 +128,13 @@ class Coordinador_de_series():
         nueva_serie.set_manga_visto(True if str(input('Manga visto[s/n]: ')).lower()=='s' else False)
         nueva_serie.set_generos(self.agregar_generos())
         nueva_serie.set_peliculas(self.agregar_peliculas())
-        if(nueva_serie.get_nombre()!='' and self.confirmar_accion()):
+        if(nueva_serie.get_nombre()!='' and self.confirmar_accion()):            
+            self.validar_mangas(nueva_serie)
             data_actual = Gestor_de_series().obtener_registros()
-            posicion = len(Gestor_de_series().obtener_series())+1
+            posicion = len(data_actual["series"])+1
             nueva_serie.set_indice(posicion)
             data_actual["series"].append(nueva_serie.__dict__)
             Gestor_de_series().guardar_cambios(data_actual)
-            self.validar_mangas(nueva_serie)
             self.alertas.mostrar_mensaje('ok_in')
             self.actualizar_bitacora('insert',['anime',nueva_serie.get_nombre()])
         else:
@@ -128,13 +150,13 @@ class Coordinador_de_series():
         nueva_pelicula.set_manga_visto(True if str(input('Manga visto[s/n]: ')).lower()=='s' else False)
         
         if(nueva_pelicula.get_nombre()!='' and self.confirmar_accion()):
+            self.validar_mangas(nueva_pelicula)
             data_actual = Gestor_de_series().obtener_registros()
             peliculas = Gestor_de_series().obtener_peliculas()
             list(map(lambda Pelicula: Pelicula.set_indice(Pelicula.get_indice()+1), peliculas))
             peliculas.append(nueva_pelicula)
             data_actual["peliculas"] = list(map(lambda Pelicula: Pelicula.__dict__,sorted(peliculas))) #sorted(list_peliculas)
             Gestor_de_series().guardar_cambios(data_actual)
-            self.validar_mangas(nueva_pelicula)
             self.organizar_series_peliculas()
             self.alertas.mostrar_mensaje('ok_in')
             self.actualizar_bitacora('insert',['película',nueva_pelicula.get_nombre()])
@@ -150,7 +172,7 @@ class Coordinador_de_series():
         nuevo_manga.set_generos(self.agregar_generos())
         if(nuevo_manga.get_nombre()!='' and self.confirmar_accion()):
             data_actual = Gestor_de_series().obtener_registros()
-            indice = len(Gestor_de_series().obtener_mangas())+1
+            indice = len(data_actual["mangas"])+1
             nuevo_manga.set_indice(indice)
             data_actual["mangas"].append(nuevo_manga.__dict__)
             Gestor_de_series().guardar_cambios(data_actual)
@@ -312,8 +334,6 @@ class Coordinador_de_series():
     def filtrar_series(self, nombre_a_buscar):
         lista_de_resultados = list(filter(lambda Serie: (Serie.get_nombre().lower().find(nombre_a_buscar)!=-1 and nombre_a_buscar!=''), 
         Gestor_de_series().obtener_series()+Gestor_de_series().obtener_peliculas()+Gestor_de_series().obtener_mangas()))
-        
-        #print(dict(zip(list(map(lambda key: key.get_indice(),lista_de_resultados)),lista_de_resultados)))  #lista_de_resultados)
         if(len(lista_de_resultados)==1):
             self.copiar_indice_del_registro(lista_de_resultados[0])
         return dict(zip(list(map(lambda key: key.get_indice(),lista_de_resultados)),lista_de_resultados))#lista_de_resultados

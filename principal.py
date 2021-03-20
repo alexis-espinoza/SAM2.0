@@ -122,7 +122,7 @@ class Principal:
             alertas().mostrar_mensaje('def')
         else:
             time.sleep(1)
-            self.actualizar_serie(la_serie_a_modficar,'s')
+            self.actualizar_serie(coordinador.obtener_serie(la_serie_a_modficar.get_indice()),'s')
 
     
     #-----------------------------------------------------------------#}
