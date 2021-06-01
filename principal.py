@@ -13,7 +13,7 @@ class Principal:
 
     def menu(self):
         while True:
-            try:
+            #try:
                 print(Coordinador_de_series().generar_dashboard())
                 principal=Principal()
                 opciones = '''0)- Getión de proceso\n1)- Agregar nuevo\n2)- Mostrar lista\n3)- Filtrar lista\n4)- Seleccionar serie\n5)- Seleccionar película\n6)- Seleccionar manga\n7)- Consultar bitácora\nDigite una opción: '''
@@ -24,8 +24,8 @@ class Principal:
                     '6': principal.seleccionar_manga,'7': principal.consultar_bitacora}
                 system('cls')
                 dicc_menu.get(opcion_seleccionada)()
-            except Exception:
-               alertas().mostrar_mensaje('def')
+            #except Exception:
+               #alertas().mostrar_mensaje('def')
     #-----------------------------------------------------------------#
     def abrir_diario(self):
             Coordinador_de_series().mostrar_diario()

@@ -397,7 +397,8 @@ class Coordinador_de_series():
                 final=inicio
                 inicio=f
             list_por_rango = list(filter(lambda Serie: Serie.get_indice()>=inicio and Serie.get_indice()<=final, Gestor_de_series().obtener_series()))
-            return {'registros':list_por_rango, 'resumen':''}
+            resumen = self.fc_registros.format( f'rango {inicio} al {final}', len(list_por_rango),'')
+            return {'registros':list_por_rango, 'resumen':resumen}
         except Exception:
             self.alertas.mostrar_mensaje('def')
             return False
