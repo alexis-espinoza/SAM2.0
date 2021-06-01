@@ -26,11 +26,10 @@ class Principal:
                 dicc_menu.get(opcion_seleccionada)()
             except Exception:
                alertas().mostrar_mensaje('def')
-
+    #-----------------------------------------------------------------#
     def abrir_diario(self):
             Coordinador_de_series().mostrar_diario()
-
-
+    #-----------------------------------------------------------------#
     def agregar_registro(self):
         opcion_ingreso =  str(input(f'\n{"-"*10}Opciones de registro{"-"*10}\n1)-Anime\n2)-Pelicula\n3)-Manga\nSeleccione una opción: '))
         coordinador = Coordinador_de_series()
@@ -38,29 +37,26 @@ class Principal:
         opcion_agregar=dicc_inserciones.get(opcion_ingreso, lambda:  'NA')()
         if(opcion_agregar=='NA'):
             alertas().mostrar_mensaje('no_val')
-
     #-----------------------------------------------------------------#
     def listar_registros(self):
         print(Coordinador_de_series().listar_series_del_dia())
-        opcion_seleccionada = str(input(f'\n{"-"*10}Opciones de listado{"-"*10}\n1)-Listar series\n2)-Listar series en proceso\n3)-Listar series en espera\n4)-Listar series por rango\n5)-Listar por dia de emisión\n6)-Listar por género\n7)-Listar peliculas\n8)-Listar mangas\nSeleccione una opción: '))
+        opcion_seleccionada = str(input(f'{"-"*10}Opciones de listado{"-"*10}\n1)-Listar series\n2)-Listar series en proceso\n3)-Listar series en espera\n4)-Listar series por rango\n5)-Listar por dia de emisión\n6)-Listar por género\n7)-Listar peliculas\n8)-Listar mangas\nSeleccione una opción: '))
         coordinador = Coordinador_de_series()
         dicc_listados = {'1': coordinador.listar_series,'2': coordinador.listar_series_en_proceso,'3': coordinador.listar_series_en_espera,
         '4': coordinador.listar_series_por_rango,'5':coordinador.listar_series_por_emision,
         '6':coordinador.listar_series_por_genero,'7': coordinador.listar_peliculas,'8':coordinador.listar_mangas}
-        registros = dicc_listados.get(opcion_seleccionada,  lambda: alertas().mostrar_mensaje('no_val'))()
-        if(str(type(registros)) == "<class 'tuple'>"):
-            system('cls')
-            if(len(registros[0])==0):
-                alertas().mostrar_mensaje('no_ext')
-                return
-            for registro in registros[0]:
-                print(registro.mostrar_min())
-            if(registros[1]):
-                print(f'\nCantidad de registros [{registros[1]}]: {len(registros[0])}')
-        if(str(type(registros)) == "<class 'str'>"):
-            system('cls')
-            print(Coordinador_de_series().listar_series_por_emision())
-             
+        resultado_consulta = dicc_listados.get(opcion_seleccionada,  lambda: alertas().mostrar_mensaje('no_val'))()
+        system('cls')
+        if(len(resultado_consulta["registros"])==0):#Valida que hayan datos que mostrar
+            alertas().mostrar_mensaje('no_ext')
+            return
+        sep = '' if(opcion_seleccionada=='5') else '\n'
+        for registro in resultado_consulta["registros"]:
+            if(str(type(registro)) != "<class 'str'>"):#Si es un objeto
+                print(sep+registro.mostrar_min())
+            else: #Si es un string
+                print('\n'+registro)
+        print(resultado_consulta["resumen"])#Linea con contador de registros
 
     #-----------------------------------------------------------------#
     def filtrar_lista(self):

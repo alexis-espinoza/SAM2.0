@@ -34,7 +34,7 @@ class Serie:
 
 
     def mostrar_min(self):
-        return f'\n[{self.get_indice()}]-{self.get_nombre()}'
+        return f'[{self.get_indice()}]-{self.get_nombre()}'
 
 
     def set_indice(self, indice):
@@ -88,12 +88,12 @@ class Pelicula:
         self.manga_visto= pelicula_db["manga_visto"]
 
     def mostrar_min(self):
-        return f'\n[{self.get_indice()}]-{self.get_nombre()}'
+        return f'[{self.get_indice()}]-{self.get_nombre()}'
 
     def mostrar_det(self): 
         manga = '' if self.get_manga_visto() == False else f'\nManga: leído'
         reacciones = '' if self.get_reacciones() == None else f'\nReacciones: {self.get_reacciones()}'
-        salida=f'{"♦"*12}Película{"♦"*12}\n\nIndice: {self.get_indice()}\nNombre: {self.get_nombre()}'
+        salida=f'\n{"♦"*12}Película{"♦"*12}\n\nIndice: {self.get_indice()}\nNombre: {self.get_nombre()}'
         salida+=reacciones
         salida+=manga
         return salida
@@ -140,10 +140,10 @@ class Manga:
         self.generos = manga_db["generos"]
 
     def mostrar_min(self):
-        return f'\n[{self.get_indice()}]-{self.get_nombre()}'
+        return f'[{self.get_indice()}]-{self.get_nombre()}'
 
     def mostrar_det(self):
-        datos_generales = f'{"»"*12}Manga{"«"*12}\n\nIndice: {self.get_indice()}\nNombre: {self.get_nombre()}'
+        datos_generales = f'\n{"»"*12}Manga{"«"*12}\n\nIndice: {self.get_indice()}\nNombre: {self.get_nombre()}'
         generos = '' if len(self.get_generos())==0 else f'\nGéneros: {", ".join(self.get_generos())}'
         return datos_generales+generos
    
