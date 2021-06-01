@@ -450,7 +450,7 @@ class Coordinador_de_series():
         lista_de_registros = Gestor_de_series().obtener_series()
         dia_de_hoy=time.strftime("%A",time.localtime())
         series_del_dia=''
-        encabezado='\nSeries en emisión hoy ['+self.dicc_dias.get(dia_de_hoy).capitalize()+']\n'
+        encabezado='\nSeries en emisión hoy ['+self.dicc_dias.get(dia_de_hoy).capitalize()+']\n\n'
         for registro_actual in lista_de_registros:
             if (registro_actual.get_dia_emision() == self.dicc_dias.get(dia_de_hoy)):
                 series_del_dia+=registro_actual.mostrar_min()+'\n'
