@@ -13,7 +13,7 @@ class Principal:
 
     def menu(self):
         while True:
-            #try:
+            try:
                 print(Coordinador_de_series().generar_dashboard())
                 principal=Principal()
                 opciones = '''0)- Getión de proceso\n1)- Agregar nuevo\n2)- Mostrar lista\n3)- Filtrar lista\n4)- Seleccionar serie\n5)- Seleccionar película\n6)- Seleccionar manga\n7)- Consultar bitácora\nDigite una opción: '''
@@ -24,8 +24,8 @@ class Principal:
                     '6': principal.seleccionar_manga,'7': principal.consultar_bitacora}
                 system('cls')
                 dicc_menu.get(opcion_seleccionada)()
-            #except Exception:
-               #alertas().mostrar_mensaje('def')
+            except Exception:
+               alertas().mostrar_mensaje('def')
     #-----------------------------------------------------------------#
     def abrir_diario(self):
             Coordinador_de_series().mostrar_diario()
@@ -64,8 +64,8 @@ class Principal:
         registros_coincidentes = Coordinador_de_series().filtrar_series(nombre_a_buscar.lower())
         
         if(len(list(registros_coincidentes.values()))>0):
-            for serie in list(registros_coincidentes.values()):
-                print(serie.mostrar_min())
+            for registro in list(registros_coincidentes.values()):
+                print('\n'+registro.mostrar_min())
             print(f'\n{"-"*75}\nSi desea seleccionar un registro de la lista prosiga, sino presione [Intro]\n↓{" "*36}↓{" "*36}↓')
             self.seleccionar_registro(registros_coincidentes)
         else:
@@ -95,7 +95,7 @@ class Principal:
             if(len(serie_seleccionada.get_peliculas())>0):
                 print('\n♦♦Peliculas♦♦:')
                 for pelicula in Coordinador_de_series().listar_peliculas_por_indice(serie_seleccionada.get_peliculas()):
-                    print(pelicula.mostrar_min())
+                    print('\n'+pelicula.mostrar_min())
             self.actualizar_serie(serie_seleccionada)
     
     #-----------------------------------------------------------------# 

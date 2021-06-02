@@ -376,7 +376,7 @@ class Coordinador_de_series():
     #-----------------------------------------------------------------#
     def listar_series_en_proceso(self):        
         list_en_proceso = list(filter(lambda Serie: Serie.get_estado()=='en proceso' and Serie.get_dia_emision()==None, Gestor_de_series().obtener_series()))
-        resumen = self.fc_registros.format('en proceso',len(list_en_proceso),f' + {[self.c_en_emision]} <<en emisión>')
+        resumen = self.fc_registros.format('en proceso',len(list_en_proceso),f' + {[self.c_en_emision]} <<en emisión>>>S')
         return {'registros':list_en_proceso, 'resumen':resumen}
   
     #-----------------------------------------------------------------#
