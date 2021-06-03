@@ -62,17 +62,22 @@ class Principal:
     def filtrar_lista(self):
         nombre_a_buscar = str(input('\n¿Digite el nombre (completo o parcial) del registro [anime-pelicula-manga]?: '))
         registros_coincidentes = Coordinador_de_series().filtrar_series(nombre_a_buscar.lower())
+        cant_reg_coincidentes = len(list(registros_coincidentes.values()))#cantidad de registros que devuelve la consulta
         
-        if(len(list(registros_coincidentes.values()))>0):
+        if(cant_reg_coincidentes==1):#Cuando hay una sola concidencia
+                indice_unico_registro = list(registros_coincidentes.keys())[0]
+                time.sleep(0.25)
+                self.seleccionar_registro(registros_coincidentes,indice_unico_registro)#dict registros, indice qumd, espera
+        elif(cant_reg_coincidentes>1):#Cuando varios coinciden
             for registro in list(registros_coincidentes.values()):
                 print('\n'+registro.mostrar_min())
             print(f'\n{"-"*75}\nSi desea seleccionar un registro de la lista prosiga, sino presione [Intro]\n↓{" "*36}↓{" "*36}↓')
             self.seleccionar_registro(registros_coincidentes)
-        else:
+        else:#Si NO hay concidencias
             alertas().mostrar_mensaje('no_ext')
 #-----------------------------------------------------------------#
-    def seleccionar_registro(self,registros_coincidentes):
-        indice = int(input('\nDigite el indice del registro [anime-pelicula-manga]: '))
+    def seleccionar_registro(self,registros_coincidentes,indice_seleccionado=None):
+        indice = indice_seleccionado if indice_seleccionado!=None else int(input('\nDigite el indice del registro [anime-pelicula-manga]:'))
         system('cls')
         registro_seleccionado = registros_coincidentes.get(indice,None)
         print(registro_seleccionado)
@@ -99,8 +104,7 @@ class Principal:
             self.actualizar_serie(serie_seleccionada)
     
     #-----------------------------------------------------------------# 
-    def actualizar_serie(self,la_serie_a_modficar, actualiza=None):
-        
+    def actualizar_serie(self,la_serie_a_modficar, actualiza=None): 
         se_actualiza = actualiza if actualiza!=None else str(input('\n¿Desea actualizar el registro[s/n]?: '))
         system('cls')
         if(se_actualiza.lower()!='s'):
