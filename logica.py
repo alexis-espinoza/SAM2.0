@@ -376,7 +376,8 @@ class Coordinador_de_series():
     #-----------------------------------------------------------------#
     def listar_series_en_proceso(self):        
         list_en_proceso = list(filter(lambda Serie: Serie.get_estado()=='en proceso' and Serie.get_dia_emision()==None, Gestor_de_series().obtener_series()))
-        resumen = self.fc_registros.format('en proceso',len(list_en_proceso),f' + {[self.c_en_emision]} <<en emisión>>>')
+        emision = f' + {[self.c_en_emision]} <<en emisión>>>' if self.c_en_emision != 0 else ''
+        resumen = self.fc_registros.format('en proceso',len(list_en_proceso), emision)#{[self.c_en_emision]} <<en emisión>>>')
         return {'registros':list_en_proceso, 'resumen':resumen}
   
     #-----------------------------------------------------------------#
@@ -480,7 +481,7 @@ class Coordinador_de_series():
         logs_del_sistema = Gestor_de_series().obtener_logs()
         nueva_busqueda=True
         while(nueva_busqueda==True):
-            print('\nBúsqueda en bitácora (ej. de entradas válidas ["26/04/20" - "96" - "Zero" - "en espera"])')
+            print('\nBúsqueda en bitácora (ej. de entradas válidas ["26/04/2020" - "96" - "Zero" - "en espera"])')
             busqueda = str(input('Ingrese un parámetro de búsqueda: '))
             print()
             registros_de_bitacora = list(filter(lambda linea: linea.lower().find(busqueda.lower())!=-1 and busqueda!='', logs_del_sistema))
@@ -523,7 +524,7 @@ class Coordinador_de_series():
         'up_em': f'Modificación del dia de emision [{cambios[0]}] para el registro: {cambios[1]}',
         'up_ps': f'Desplazamiento del registro: {cambios[0]} del puesto [{cambios[1]}] al puesto [{cambios[2]}]'
         }
-        nuevo_log = f'[{time.strftime("%d/%m/%y")}] <-> {dicc_cambios.get(tipo_log)}\n'
+        nuevo_log = f'[{time.strftime("%d/%m/%Y")}] <-> {dicc_cambios.get(tipo_log)}\n'
         Gestor_de_series().actualizar_logs(nuevo_log)
         if(tipo_log != 'up_st' and tipo_log != 'up_em'):
             self.actualizar_lista_de_vistos()
