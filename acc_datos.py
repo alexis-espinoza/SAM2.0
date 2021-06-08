@@ -65,16 +65,16 @@ class Gestor_de_series:
 
 
 
-    def actualizar_logs(self, lista_de_logs):
+    def actualizar_logs(self, nuevo_registro_de_log):
         try:
             with open(str(getcwd())+'\\LOGS\\historial.txt','a') as archivo_de_logs:
-                archivo_de_logs.write(lista_de_logs)    
+                archivo_de_logs.write(nuevo_registro_de_log)    
         except Exception:
             return
 
     def guardar_lista(self,lista_de_registros):
-        #try:
+        try:
             with open(str(getcwd())+'\\LOGS\\lista de series vistas.txt','w') as archivo_de_series_vistas:
                 archivo_de_series_vistas.writelines(lista_de_registros)    
-        #except Exception:
-           # return
+        except Exception:
+            return
