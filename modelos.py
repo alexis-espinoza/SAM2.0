@@ -1,7 +1,7 @@
 
 class Serie:
 
-    def __init__(self, serie_db={"indice": "","nombre": "","estado": "","dia_emision": None,"manga_visto": False,"generos": [],"peliculas": []}):
+    def __init__(self, serie_db={"indice": "","nombre": "","estado": "","dia_emision": None,"manga_visto": False,"generos": []}):#,"peliculas": []}):
 
         self.indice = serie_db["indice"]
         self.nombre = serie_db["nombre"]
@@ -9,7 +9,7 @@ class Serie:
         self.dia_emision = serie_db["dia_emision"]
         self.manga_visto= serie_db["manga_visto"]
         self.generos = serie_db["generos"]
-        self.peliculas = serie_db["peliculas"]
+        #self.peliculas = serie_db["peliculas"]
 
     
 
@@ -29,8 +29,8 @@ class Serie:
         or self.estado != Serie.estado 
         or self.dia_emision != Serie.dia_emision 
         or self.manga_visto != Serie.manga_visto 
-        or self.generos != Serie.generos 
-        or self.peliculas != Serie.peliculas)
+        or self.generos != Serie.generos)
+        #or self.peliculas != Serie.peliculas)
 
 
     def mostrar_min(self):
@@ -67,12 +67,6 @@ class Serie:
     def get_generos(self):
         return self.generos
 
-    def set_peliculas(self, peliculas):
-        self.peliculas = peliculas
-    
-    def get_peliculas(self):
-        return self.peliculas
-    
     def set_manga_visto(self, manga_visto):
         self.manga_visto = manga_visto
     
@@ -81,11 +75,13 @@ class Serie:
 
 class Pelicula:
 
-    def __init__(self, pelicula_db={"indice": 1,"nombre": "","reacciones": None,"manga_visto": False}):
+    def __init__(self, pelicula_db={"id_serie":None,"indice": 1,"nombre": "","reacciones": None,"manga_visto": False}):
+        self.id_serie = pelicula_db["id_serie"]
         self.indice = pelicula_db["indice"]
         self.nombre = pelicula_db["nombre"]
         self.reacciones =  pelicula_db["reacciones"]
         self.manga_visto= pelicula_db["manga_visto"]
+        
 
     def mostrar_min(self):
         return f'[{self.get_indice()}]-{self.get_nombre()}'
@@ -105,7 +101,8 @@ class Pelicula:
         return bool(self.indice != Pelicula.indice 
         or self.nombre != Pelicula.nombre 
         or self.reacciones != Pelicula.reacciones
-        or self.manga_visto != Pelicula.manga_visto )
+        or self.manga_visto != Pelicula.manga_visto
+        or self.id_serie != Pelicula.id_serie)
             
 
     def set_indice(self, indice):
@@ -131,6 +128,13 @@ class Pelicula:
     
     def get_manga_visto(self):
         return self.manga_visto
+
+    def set_id_serie(self, id_serie):
+        self.id_serie = id_serie
+    
+    def get_id_serie(self):
+        return self.id_serie
+    
 
 class Manga:
     

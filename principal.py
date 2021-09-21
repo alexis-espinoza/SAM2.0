@@ -13,7 +13,7 @@ class Principal:
 
     def menu(self):
         while True:
-            try:
+            #try:
                 print(Coordinador_de_series().generar_dashboard())
                 principal=Principal()
                 opciones = '''0)- Getión de proceso\n1)- Agregar nuevo\n2)- Mostrar lista\n3)- Filtrar lista\n4)- Seleccionar serie\n5)- Seleccionar película\n6)- Seleccionar manga\n7)- Consultar bitácora\nDigite una opción: '''
@@ -24,8 +24,8 @@ class Principal:
                     '6': principal.seleccionar_manga,'7': principal.consultar_bitacora}
                 system('cls')
                 dicc_menu.get(opcion_seleccionada)()
-            except Exception:
-               alertas().mostrar_mensaje('def')
+            #except Exception:
+               #alertas().mostrar_mensaje('def')
     #-----------------------------------------------------------------#
     def abrir_diario(self):
             Coordinador_de_series().mostrar_diario()
@@ -47,16 +47,16 @@ class Principal:
         '6':coordinador.listar_series_por_genero,'7': coordinador.listar_peliculas,'8':coordinador.listar_mangas}
         resultado_consulta = dicc_listados.get(opcion_seleccionada,  lambda: alertas().mostrar_mensaje('no_val'))()
         system('cls')
-        if(len(resultado_consulta["registros"])==0):#Valida que hayan datos que mostrar
+        if(len(resultado_consulta)==0):#Valida que hayan datos que mostrar
             alertas().mostrar_mensaje('no_ext')
             return
         sep = '' if(opcion_seleccionada=='5') else '\n'
-        for registro in resultado_consulta["registros"]:
+        for registro in resultado_consulta:#["registros"]:
             if(str(type(registro)) != "<class 'str'>"):#Si es un objeto
                 print(sep+registro.mostrar_min())
             else: #Si es un string
                 print('\n'+registro)
-        print(resultado_consulta["resumen"])#Linea con contador de registros
+        #print(resultado_consulta["resumen"])#Linea con contador de registros
 
     #-----------------------------------------------------------------#
     def filtrar_lista(self):
@@ -75,6 +75,7 @@ class Principal:
             self.seleccionar_registro(registros_coincidentes)
         else:#Si NO hay concidencias
             alertas().mostrar_mensaje('no_ext')
+            #self.filtrar_lista()
 #-----------------------------------------------------------------#
     def seleccionar_registro(self,registros_coincidentes,indice_seleccionado=None):
         indice = indice_seleccionado if indice_seleccionado!=None else int(input('\nDigite el indice del registro [anime-pelicula-manga]:'))
@@ -97,9 +98,10 @@ class Principal:
         serie_seleccionada = Coordinador_de_series().obtener_serie(indice)
         if(serie_seleccionada):
             print(serie_seleccionada.mostrar_det())
-            if(len(serie_seleccionada.get_peliculas())>0):
+            peliculas_asociadas = Coordinador_de_series().listar_peliculas_por_id_serie(serie_seleccionada.get_indice())
+            if(len(peliculas_asociadas)>0):
                 print('\n♦♦Peliculas♦♦:')
-                for pelicula in Coordinador_de_series().listar_peliculas_por_indice(serie_seleccionada.get_peliculas()):
+                for pelicula in peliculas_asociadas:
                     print('\n'+pelicula.mostrar_min())
             self.actualizar_serie(serie_seleccionada)
     
@@ -110,6 +112,11 @@ class Principal:
         if(se_actualiza.lower()!='s'):
             return
         print(la_serie_a_modficar.mostrar_det())
+        peliculas_asociadas = Coordinador_de_series().listar_peliculas_por_id_serie(la_serie_a_modficar.get_indice())
+        if(len(peliculas_asociadas)>0):
+            print('\n♦♦Peliculas♦♦:')
+            for pelicula in peliculas_asociadas:
+                print('\n'+pelicula.mostrar_min())
         opcion_cambio=str(input(f'\n{"-"*5}Opciones de actualización{"-"*5}\n1)-Cambiar estado\n2)-Cambiar posición\n3)-Modificar serie\n4)-Agregar día emisión\nSeleccione: '))
         coordinador = Coordinador_de_series()
         dicc_actualizaciones = {
@@ -130,12 +137,17 @@ class Principal:
         indice = indice_seleccionado if indice_seleccionado!=None else int(input('\n¿Digite el indice de la pelicula?: '))
         system('cls')
         pelicula_seleccionada = Coordinador_de_series().obtener_pelicula(indice)
+        
         if(pelicula_seleccionada):
             print(pelicula_seleccionada.mostrar_det())
+            if(pelicula_seleccionada.get_id_serie()!= None):
+                print('ID serie: '+ Coordinador_de_series().obtener_serie(pelicula_seleccionada.get_id_serie()).mostrar_min())  
             se_actualiza = str(input('\n¿Desea actualizar el registro[s/n]?: '))
             system('cls')
-            if(se_actualiza.lower()=='s'):      
+            if(se_actualiza.lower()=='s'):    
                 print('\n'+pelicula_seleccionada.mostrar_det())
+                if(pelicula_seleccionada.get_id_serie()!= None):
+                    print('ID serie: '+ Coordinador_de_series().obtener_serie(pelicula_seleccionada.get_id_serie()).mostrar_min()) 
                 Coordinador_de_series().actualizar_pelicula(pelicula_seleccionada)
             return
     #-----------------------------------------------------------------#}
