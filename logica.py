@@ -24,8 +24,8 @@ class Coordinador_de_series():
         self.generar_dashboard()
 
 #-----------------------------------------------------------------#    
-    def listar_registos(self):
-        return Gestor_de_series.obtener_registros()
+    """def listar_registos(self):
+        return Gestor_de_series.obtener_registros()"""
 
 #-----------------------------------------------------------------#
     def mostrar_diario(self):
@@ -93,7 +93,7 @@ class Coordinador_de_series():
 
 #-----------------------------------------------------------------#
     def agregar_peliculas(self, leer=True, lista_indices=[], la_serie=None):
-        if(leer):
+        if(leer): #Pre registro
             list_peliculas=[]
             indice_pelicula='ninguno'
             indices_validos = list(map(lambda Pelicula: Pelicula.get_indice(), self.listar_peliculas()))
@@ -106,7 +106,7 @@ class Coordinador_de_series():
                 except Exception as e:
                     print('¡Relación no agregada!')
             return list_peliculas
-        else:
+        else:#Guardar y dejar en firme
                 peliculas = Gestor_de_series().obtener_peliculas()
                 for Pelicula in peliculas:
                     if(Pelicula.get_indice() in lista_indices):
@@ -352,7 +352,7 @@ class Coordinador_de_series():
         return f' {separador_uno}\n{informe}\n {separador_dos}'
 
     #-----------------------------------------------------------------# 
-    def filtrar_series(self, nombre_a_buscar):
+    def filtrar_series(self, nombre_a_buscar):#Filtra SERIES-PELICULAS-MANGAS
         lista_de_resultados = list(filter(lambda Serie: (Serie.get_nombre().lower().find(nombre_a_buscar)!=-1 and nombre_a_buscar!=''), 
         Gestor_de_series().obtener_series()+Gestor_de_series().obtener_peliculas()+Gestor_de_series().obtener_mangas()))
         if(len(lista_de_resultados)==1):
@@ -451,7 +451,6 @@ class Coordinador_de_series():
             """
     
     def listar_peliculas_por_id_serie(self, el_id_serie):
-    
             return list(filter(lambda Pelicula: Pelicula.get_id_serie()==el_id_serie, Gestor_de_series().obtener_peliculas()))
   
 
