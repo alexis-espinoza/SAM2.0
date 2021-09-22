@@ -115,7 +115,6 @@ class Coordinador_de_series():
                 data_actual["peliculas"] = list(map(lambda Pelicula: Pelicula.__dict__,peliculas))
                 Gestor_de_series().guardar_cambios(data_actual)
 
-           
 #-----------------------------------------------------------------#
     def listar_opciones_de_emision(self,la_serie):
         text_emision= f'¿Día de emisión de la serie [{la_serie.get_nombre()}]?'
@@ -157,14 +156,15 @@ class Coordinador_de_series():
     def insertar_pelicula(self):
         system('cls')
         print('\nNuevo registro de tipo (pelicula) presione [Intro] para omitir algún campo')
+        opc_id_series = dict(zip(list(map(lambda key: str(key.get_indice()),self.listar_series())),list(range(1, len(self.listar_series())))))
+        opc_id_series['0']=None
+        opc_id_series['']=None
+
         nueva_pelicula = Pelicula()
         nueva_pelicula.set_nombre(input("\nDigite el nombre de la nueva pelicula: "))
         reacciones = str(input('Digite un valor para las reacciones: '))
         nueva_pelicula.set_reacciones(reacciones if reacciones!='' else None)
         nueva_pelicula.set_manga_visto(True if str(input('Manga visto[s/n]: ')).lower()=='s' else False)
-        opc_id_series = dict(zip(list(map(lambda key: str(key.get_indice()),self.listar_series())),list(range(1, len(self.listar_series())))))
-        opc_id_series['0']=None
-        opc_id_series['']=None
         id_serie = str(input('Digite el id serie [0 = ninguno]: '))
         nueva_pelicula.set_id_serie(opc_id_series[id_serie] if opc_id_series.get(id_serie,'NA')!='NA' else opc_id_series[''])
         
@@ -205,6 +205,7 @@ class Coordinador_de_series():
         opc_id_series = dict(zip(list(map(lambda key: str(key.get_indice()),self.listar_series())),list(range(1, len(self.listar_series())))))
         opc_id_series['0']=None
         opc_id_series['']=pelicula_a_actualizar.get_id_serie() 
+
         nombre = str(input('Digite el nuevo nombre: '))
         pelicula_a_actualizar.set_nombre(nombre if nombre!='' else pelicula_a_actualizar.get_nombre())
         id_serie = str(input('Digite el nuevo id serie [0 = eliminar]: '))
@@ -332,8 +333,8 @@ class Coordinador_de_series():
     #-----------------------------------------------------------------#
     def generar_dashboard(self):
         todos_los_registros = Gestor_de_series().obtener_registros()
-        self.c_series= len(todos_los_registros)#["series"])
-        self.c_peliculas = len(todos_los_registros)#["peliculas"])
+        self.c_series= len(self.listar_series())
+        self.c_peliculas = len(self.listar_peliculas())#["peliculas"])
         self.c_mangas = len(self.listar_mangas())#['registros'])
         self.c_en_espera=len(self.listar_series_en_espera())#['registros'])
         self.c_en_emision=len(list(filter(lambda Serie: Serie.get_dia_emision()!=None, Gestor_de_series().obtener_series())))
@@ -342,13 +343,10 @@ class Coordinador_de_series():
         separador_uno = ''
         separador_dos = ''
         #animes    |   #peliculas
-        if(self.c_series > 999 or self.c_peliculas > 99): #Por si siguiera creciendo
-            separador_uno = '_'*76
-            separador_dos = '‾'*76
-        else:
-            separador_uno = '_'*112
-            separador_dos = '‾'*112
-        formato = '|Total de series registradas: [{0}]  /  Total de películas registradas: [{1}]  /  Total de mangas registrados: [{2}]|\n|\t\tFinalizadas: [{3}]  /  En proceso: [{4}]  /  En espera: [{5}]  /  En emison: [{6}]\t\t\t |'
+        sp = ' '*2 if(self.c_series > 999 or self.c_peliculas > 99 or self.c_mangas > 9) else ' ' #Por si siguiera creciendo
+        separador_uno = '_'*113
+        separador_dos = '‾'*113
+        formato = '|Total de series registradas: [{0}]  /  Total de películas registradas: [{1}]  /  Total de mangas registrados: [{2}]|\n|\t\tFinalizadas: [{3}]  /  En proceso: [{4}]  /  En espera: [{5}]  /  En emison: [{6}]\t\t\t'+sp+'|'
         informe = formato.format(self.c_series, self.c_peliculas, self.c_mangas, self.c_finalizadas, self.c_en_proceso, self.c_en_espera, self.c_en_emision)
 
         return f' {separador_uno}\n{informe}\n {separador_dos}'
