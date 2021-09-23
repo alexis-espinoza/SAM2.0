@@ -106,11 +106,12 @@ class Coordinador_de_series():
                 except Exception as e:
                     print('¡Relación no agregada!')
             return list_peliculas
-        else:#Guardar y dejar en firme
+        else:#Guardardo y dejar en firme
                 peliculas = Gestor_de_series().obtener_peliculas()
                 for Pelicula in peliculas:
                     if(Pelicula.get_indice() in lista_indices):
                         Pelicula.set_id_serie(la_serie.get_indice())
+                        self.actualizar_bitacora('up_dt',[Pelicula.get_nombre()])
                 data_actual = Gestor_de_series().obtener_registros()
                 data_actual["peliculas"] = list(map(lambda Pelicula: Pelicula.__dict__,peliculas))
                 Gestor_de_series().guardar_cambios(data_actual)
