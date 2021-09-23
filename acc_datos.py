@@ -49,16 +49,6 @@ class Gestor_de_series:
         return lista_mangas
 
 
-    """def modificar_serie(self, Serie):
-        pass
-
-    def modificar_pelicula(self, Pelicula):
-        pass
-
-    def modificar_manga(self, Manga):
-        pass"""
-    
-
     def guardar_cambios(self, dicc_datos):
         with open(str(getcwd())+'\\DATA\\series_peliculas.json','w') as archivo:
             json.dump(dicc_datos, archivo, indent=3, ensure_ascii=False)
