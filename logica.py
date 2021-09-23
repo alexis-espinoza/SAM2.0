@@ -156,10 +156,9 @@ class Coordinador_de_series():
     def insertar_pelicula(self):
         system('cls')
         print('\nNuevo registro de tipo (pelicula) presione [Intro] para omitir algún campo')
-        opc_id_series = dict(zip(list(map(lambda key: str(key.get_indice()),self.listar_series())),list(range(1, len(self.listar_series())))))
+        opc_id_series = dict(zip(list(map(lambda key: str(key.get_indice()),self.listar_series())),list(range(1, len(self.listar_series())+1))))
         opc_id_series['0']=None
         opc_id_series['']=None
-
         nueva_pelicula = Pelicula()
         nueva_pelicula.set_nombre(input("\nDigite el nombre de la nueva pelicula: "))
         reacciones = str(input('Digite un valor para las reacciones: '))
@@ -202,22 +201,22 @@ class Coordinador_de_series():
      #-----------------------------------------------------------------#
     def actualizar_pelicula(self, pelicula_a_actualizar):
         print('\nPresione [enter] para dejar los valores sin cambios')
-        opc_id_series = dict(zip(list(map(lambda key: str(key.get_indice()),self.listar_series())),list(range(1, len(self.listar_series())))))
+        opc_id_series = dict(zip(list(map(lambda key: str(key.get_indice()),self.listar_series())),list(range(1, len(self.listar_series())+1))))
         opc_id_series['0']=None
         opc_id_series['']=pelicula_a_actualizar.get_id_serie() 
 
         nombre = str(input('Digite el nuevo nombre: '))
-        pelicula_a_actualizar.set_nombre(nombre if nombre!='' else pelicula_a_actualizar.get_nombre())
-        id_serie = str(input('Digite el nuevo id serie [0 = eliminar]: '))
-        pelicula_a_actualizar.set_id_serie(opc_id_series[id_serie] if opc_id_series.get(id_serie,'NA')!='NA' else opc_id_series[''])
+        pelicula_a_actualizar.set_nombre(nombre if nombre!='' else pelicula_a_actualizar.get_nombre())        
         reacciones = str(input('Digite el nuevo valor para las reacciones: '))
         pelicula_a_actualizar.set_reacciones(reacciones if reacciones!='' else pelicula_a_actualizar.get_reacciones())
         manga = str(input('Manga visto[s/n]: ')).lower()
         pelicula_a_actualizar.set_manga_visto(True if manga=='s' else pelicula_a_actualizar.get_manga_visto())
-        
+        id_serie = str(input('Digite el nuevo id serie [0 = eliminar]: '))
+        pelicula_a_actualizar.set_id_serie(opc_id_series[id_serie] if opc_id_series.get(id_serie,'NA')!='NA' else opc_id_series[''])
         data_actual = Gestor_de_series().obtener_registros()
         pelicula_sin_cambios = Pelicula(data_actual["peliculas"][pelicula_a_actualizar.get_indice()-1])
-        if(pelicula_sin_cambios!= pelicula_a_actualizar and self.confirmar_accion()):
+
+        if(pelicula_sin_cambios!=pelicula_a_actualizar and self.confirmar_accion()):
             data_actual["peliculas"][pelicula_a_actualizar.get_indice()-1] = pelicula_a_actualizar.__dict__
             Gestor_de_series().guardar_cambios(data_actual)
             self.alertas.mostrar_mensaje('ok_up')
@@ -392,20 +391,18 @@ class Coordinador_de_series():
     #-----------------------------------------------------------------#
     def listar_series(self):
         list_series = Gestor_de_series().obtener_series()
-        return list_series #{'registros':list_series, 'resumen':''}
+        return list_series 
     
     #-----------------------------------------------------------------#
     def listar_series_en_proceso(self):        
         list_en_proceso = list(filter(lambda Serie: Serie.get_estado()=='en proceso' and Serie.get_dia_emision()==None, Gestor_de_series().obtener_series()))
         emision = f' + {[self.c_en_emision]} <<en emisión>>>' if self.c_en_emision != 0 else ''
-        resumen = self.fc_registros.format('en proceso',len(list_en_proceso), emision)#{[self.c_en_emision]} <<en emisión>>>')
-        return list_en_proceso #{'registros':list_en_proceso, 'resumen':resumen}
+        return list_en_proceso 
   
     #-----------------------------------------------------------------#
     def listar_series_en_espera(self):        
         list_en_espera = list(filter(lambda Serie: Serie.get_estado()=='en espera', Gestor_de_series().obtener_series()))
-        resumen = self.fc_registros.format('en espera',len(list_en_espera),'')
-        return list_en_espera #{'registros':list_en_espera, 'resumen':resumen}
+        return list_en_espera
     
     #-----------------------------------------------------------------#
     def listar_series_por_rango(self):
@@ -419,8 +416,7 @@ class Coordinador_de_series():
                 final=inicio
                 inicio=f
             list_por_rango = list(filter(lambda Serie: Serie.get_indice()>=inicio and Serie.get_indice()<=final, Gestor_de_series().obtener_series()))
-            resumen = self.fc_registros.format( f'rango {inicio} al {final}', len(list_por_rango),'')
-            return list_por_rango #{'registros':list_por_rango, 'resumen':resumen}
+            return list_por_rango 
         except Exception:
             self.alertas.mostrar_mensaje('def')
             return False
@@ -430,8 +426,7 @@ class Coordinador_de_series():
             system('cls')
             genero = str(input('\nIndique el género de anime que desea listar: ' ))
             list_por_genero = list(filter(lambda Serie: (self.filtrar_generos(genero,Serie) and genero!=''), Gestor_de_series().obtener_series()))
-            resumen = self.fc_registros.format( f'género {genero}',len(list_por_genero),'')
-            return list_por_genero #{'registros':list_por_genero, 'resumen':resumen}
+            return list_por_genero 
         except Exception:
             self.alertas.mostrar_mensaje('def')
             return False
@@ -439,16 +434,8 @@ class Coordinador_de_series():
     #-----------------------------------------------------------------#
     def listar_peliculas(self):
         return  Gestor_de_series().obtener_peliculas()
-        """list_de_peliculas = Gestor_de_series().obtener_peliculas()
-        return {'registros':list_de_peliculas, 'resumen':''}"""
 
     #-----------------------------------------------------------------#
-    """def listar_peliculas_por_indice(self, lista_indices):
-        try:
-            return list(filter(lambda Pelicula: Pelicula.get_indice() in lista_indices, Gestor_de_series().obtener_peliculas()))
-        except Exception:
-            return ''
-            """
     
     def listar_peliculas_por_id_serie(self, el_id_serie):
             return list(filter(lambda Pelicula: Pelicula.get_id_serie()==el_id_serie, Gestor_de_series().obtener_peliculas()))
@@ -459,20 +446,8 @@ class Coordinador_de_series():
         list_de_mangas = Gestor_de_series().obtener_mangas() + list(filter(lambda Serie: Serie.get_manga_visto() == True , Gestor_de_series().obtener_series())) + list(filter(lambda Pelicula: Pelicula.get_manga_visto() == True , Gestor_de_series().obtener_peliculas()))
         for i in range(len(list_de_mangas)):
             list_de_mangas[i].set_indice(i+1)
-        #return (lista_de_mangas, False)#'mA-> Orig. Anime | P-> Orig. Película'
-        return list_de_mangas #{'registros':list_de_mangas, 'resumen':''}
+        return list_de_mangas 
 
-    #-----------------------------------------------------------------# 
-    """def organizar_series_peliculas(self):
-        lista_de_series = Gestor_de_series().obtener_series()
-        for serie in lista_de_series:
-            nueva_lista_indice_peliculas = []
-            for indice_pelicula in serie.get_peliculas():
-                nueva_lista_indice_peliculas.append(indice_pelicula+1)
-                serie.set_peliculas(nueva_lista_indice_peliculas)
-        data_actual = Gestor_de_series().obtener_registros()
-        data_actual["series"] = list(map(lambda Serie: Serie.__dict__,lista_de_series))
-        Gestor_de_series().guardar_cambios(data_actual)"""
 
     #-----------------------------------------------------------------#
     def listar_series_del_dia(self):
@@ -500,8 +475,7 @@ class Coordinador_de_series():
                         list_por_emision.append(dia_it.capitalize())
                     list_por_emision.append(registro_actual)
                     cont_emision+=1
-        resumen = self.fc_registros.format('en emisión',cont_emision,'')
-        return list_por_emision #{'registros':list_por_emision, 'resumen':resumen}
+        return list_por_emision 
 
     #-----------------------------------------------------------------#
     def consultar_bitacora(self):
