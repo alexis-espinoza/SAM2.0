@@ -77,7 +77,9 @@ class Principal:
             self.seleccionar_registro(registros_coincidentes)
         else:#Si NO hay concidencias
             alertas().mostrar_mensaje('no_ext')
-            #self.filtrar_lista()
+            time.sleep(1) 
+            system('cls')
+            self.filtrar_lista()
 #-----------------------------------------------------------------#
     def seleccionar_registro(self,registros_coincidentes,indice_seleccionado=None):
         indice = indice_seleccionado if indice_seleccionado!=None else int(input('\nDigite el indice del registro [anime-pelicula-manga]:'))

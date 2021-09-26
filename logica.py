@@ -20,7 +20,6 @@ class Coordinador_de_series():
         self.c_en_emision = None
         self.c_en_proceso = None
         self.c_finalizadas = None
-        self.fc_registros = '\nCantidad de registros [{0}]: {1}{2}' #formato cantidad de registros
         self.generar_dashboard()
 
 #-----------------------------------------------------------------#    
@@ -353,7 +352,8 @@ class Coordinador_de_series():
 
     #-----------------------------------------------------------------# 
     def filtrar_series(self, nombre_a_buscar):#Filtra SERIES-PELICULAS-MANGAS
-        lista_de_resultados = list(filter(lambda Serie: (Serie.get_nombre().lower().find(nombre_a_buscar)!=-1 and nombre_a_buscar!=''), 
+        if(nombre_a_buscar==''): return
+        lista_de_resultados = list(filter(lambda Serie: (Serie.get_nombre().lower().find(nombre_a_buscar)!=-1), 
         Gestor_de_series().obtener_series()+Gestor_de_series().obtener_peliculas()+Gestor_de_series().obtener_mangas()))
         if(len(lista_de_resultados)==1):
             self.copiar_indice_del_registro(lista_de_resultados[0])
