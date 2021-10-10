@@ -354,27 +354,26 @@ class Coordinador_de_series():
     #-----------------------------------------------------------------#
     def mostar_vistos_x_genero(self):
         series = self.listar_series()
+        total = len(series)
         dicc_generos = {}
         for serie in  series:
-            for genero in serie.get_generos():
-                if(genero.lower() not in dicc_generos.keys()):
-                    dicc_generos[genero.lower()] = 1
-                else:
-                    dicc_generos[genero.lower()]+=1
-        dicc_generos_sort = sorted(dicc_generos.items(), key=operator.itemgetter(1), reverse=True)
-        total = len(series)
-        cont = 0
-        str = ""
+            for genero in serie.get_generos():#Agrega nuevo género o suma a existentes
+                dicc_generos[genero.lower()] = 1 if(genero.lower() not in dicc_generos.keys()) else dicc_generos[genero.lower()]+1
+        generos_x_porcentaje = sorted(dicc_generos.items(), key=operator.itemgetter(1), reverse=True) #Se ordenan los datos    
+        resultados = lambda lista_datos, x: [lista_datos[i:i+x] for i in range(0, len(lista_datos), x)] #Se subdividen
         print("\n Porcentaje de vistas por género:\n")
-        for  genero in dicc_generos_sort:
-            porcentaje = math.ceil(genero[1]*100/total)
-            if(cont<5):
-                str= str+ f" {genero[0].capitalize()[0:12]}: {porcentaje}%".ljust(22)
-                cont+=1
-            else:
-                print(str,'\n')
-                str=""
-                cont=0
+        for grupo in resultados(generos_x_porcentaje,4):
+            salida = ''
+            for genero in grupo: #Se da formato a la salida del reporte
+                porcentaje = math.ceil(genero[1]*100/total)
+                sep = ' |' if (grupo.index(genero)==3) else ''
+                salida += f" | {genero[0].capitalize()[0:12]}:".ljust(16) + f"{porcentaje}%".ljust(4).rjust(5)
+                salida += f'{genero[1]}{sep}'.rjust(5)
+            print(" |","‾"*99,"|")
+            print(salida)
+            print(" ","‾"*100," ") if (resultados(generos_x_porcentaje,4).index(grupo) == len(resultados(generos_x_porcentaje,4))-1) else True
+            
+
     #-----------------------------------------------------------------# 
     def filtrar_series(self, nombre_a_buscar):#Filtra SERIES-PELICULAS-MANGAS
         if(nombre_a_buscar==''): return
