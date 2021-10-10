@@ -9,7 +9,7 @@ class Serie:
         self.dia_emision = serie_db["dia_emision"]
         self.manga_visto= serie_db["manga_visto"]
         self.generos = serie_db["generos"]
-        #self.peliculas = serie_db["peliculas"]
+  
 
     
 
@@ -17,7 +17,7 @@ class Serie:
         datos_generales = f'\n{"•"*12}Serie{"•"*12}\n\nPosición: {self.get_indice()}\nNombre: {self.get_nombre()}\nEstado: {self.get_estado()}'
         dia_emision = '' if self.get_dia_emision()==None else f'\nEmisión: {self.get_dia_emision()}'
         manga = f'\nManga: no leído/no aplica' if self.get_manga_visto() == False else f'\nManga: leído'
-        generos = '' if len(self.get_generos())==0 else f'\nGéneros: {", ".join(self.get_generos())}'
+        generos = '' if len(self.get_generos())==0 else f'\nGéneros: {", ".join(self.get_generos()).lower()}'
         return datos_generales+manga+dia_emision+generos
         
     def __gt__(self, Serie):
@@ -148,7 +148,7 @@ class Manga:
 
     def mostrar_det(self):
         datos_generales = f'\n{"»"*12}Manga{"«"*12}\n\nIndice: {self.get_indice()}\nNombre: {self.get_nombre()}'
-        generos = '' if len(self.get_generos())==0 else f'\nGéneros: {", ".join(self.get_generos())}'
+        generos = '' if len(self.get_generos())==0 else f'\nGéneros: {", ".join(self.get_generos()).lower()}'
         return datos_generales+generos
    
 
