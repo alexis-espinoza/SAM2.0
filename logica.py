@@ -3,7 +3,8 @@ from modelos import Serie, Pelicula, Manga
 from os import system
 import time
 import pyperclip
-
+import operator
+import math
 
 
 class Coordinador_de_series():
@@ -25,6 +26,27 @@ class Coordinador_de_series():
 #-----------------------------------------------------------------#    
     """def listar_registos(self):
         return Gestor_de_series.obtener_registros()"""
+
+  #-----------------------------------------------------------------#
+    def generar_dashboard(self):
+        todos_los_registros = Gestor_de_series().obtener_registros()
+        self.c_series= len(self.listar_series())
+        self.c_peliculas = len(self.listar_peliculas())#["peliculas"])
+        self.c_mangas = len(self.listar_mangas())#['registros'])
+        self.c_en_espera=len(self.listar_series_en_espera())#['registros'])
+        self.c_en_emision=len(list(filter(lambda Serie: Serie.get_dia_emision()!=None, Gestor_de_series().obtener_series())))
+        self.c_en_proceso=len(self.listar_series_en_proceso())+self.c_en_emision#['registros'])+self.c_en_emision
+        self.c_finalizadas=len(list(filter(lambda Serie: Serie.get_estado()=='finalizada', Gestor_de_series().obtener_series())))
+        separador_uno = ''
+        separador_dos = ''
+        #animes    |   #peliculas
+        sp = ' '*2 if(self.c_series > 999 or self.c_peliculas > 99 or self.c_mangas > 9) else ' ' #Por si siguiera creciendo
+        separador_uno = '_'*113
+        separador_dos = '‾'*113
+        formato = '|Total de series registradas: [{0}]  /  Total de películas registradas: [{1}]  /  Total de mangas registrados: [{2}]|\n|\t\tFinalizadas: [{3}]  /  En proceso: [{4}]  /  En espera: [{5}]  /  En emison: [{6}]\t\t\t'+sp+'|'
+        informe = formato.format(self.c_series, self.c_peliculas, self.c_mangas, self.c_finalizadas, self.c_en_proceso, self.c_en_espera, self.c_en_emision)
+
+        return f' {separador_uno}\n{informe}\n {separador_dos}'
 
 #-----------------------------------------------------------------#
     def mostrar_diario(self):
@@ -330,26 +352,29 @@ class Coordinador_de_series():
             self.alertas.mostrar_mensaje('no_ok')
     
     #-----------------------------------------------------------------#
-    def generar_dashboard(self):
-        todos_los_registros = Gestor_de_series().obtener_registros()
-        self.c_series= len(self.listar_series())
-        self.c_peliculas = len(self.listar_peliculas())#["peliculas"])
-        self.c_mangas = len(self.listar_mangas())#['registros'])
-        self.c_en_espera=len(self.listar_series_en_espera())#['registros'])
-        self.c_en_emision=len(list(filter(lambda Serie: Serie.get_dia_emision()!=None, Gestor_de_series().obtener_series())))
-        self.c_en_proceso=len(self.listar_series_en_proceso())+self.c_en_emision#['registros'])+self.c_en_emision
-        self.c_finalizadas=len(list(filter(lambda Serie: Serie.get_estado()=='finalizada', Gestor_de_series().obtener_series())))
-        separador_uno = ''
-        separador_dos = ''
-        #animes    |   #peliculas
-        sp = ' '*2 if(self.c_series > 999 or self.c_peliculas > 99 or self.c_mangas > 9) else ' ' #Por si siguiera creciendo
-        separador_uno = '_'*113
-        separador_dos = '‾'*113
-        formato = '|Total de series registradas: [{0}]  /  Total de películas registradas: [{1}]  /  Total de mangas registrados: [{2}]|\n|\t\tFinalizadas: [{3}]  /  En proceso: [{4}]  /  En espera: [{5}]  /  En emison: [{6}]\t\t\t'+sp+'|'
-        informe = formato.format(self.c_series, self.c_peliculas, self.c_mangas, self.c_finalizadas, self.c_en_proceso, self.c_en_espera, self.c_en_emision)
-
-        return f' {separador_uno}\n{informe}\n {separador_dos}'
-
+    def mostar_vistos_x_genero(self):
+        series = self.listar_series()
+        dicc_generos = {}
+        for serie in  series:
+            for genero in serie.get_generos():
+                if(genero.lower() not in dicc_generos.keys()):
+                    dicc_generos[genero.lower()] = 1
+                else:
+                    dicc_generos[genero.lower()]+=1
+        dicc_generos_sort = sorted(dicc_generos.items(), key=operator.itemgetter(1), reverse=True)
+        total = len(series)
+        cont = 0
+        str = ""
+        print("\n Porcentaje de vistas por género:\n")
+        for  genero in dicc_generos_sort:
+            porcentaje = math.ceil(genero[1]*100/total)
+            if(cont<5):
+                str= str+ f" {genero[0].capitalize()[0:12]}: {porcentaje}%".ljust(22)
+                cont+=1
+            else:
+                print(str,'\n')
+                str=""
+                cont=0
     #-----------------------------------------------------------------# 
     def filtrar_series(self, nombre_a_buscar):#Filtra SERIES-PELICULAS-MANGAS
         if(nombre_a_buscar==''): return

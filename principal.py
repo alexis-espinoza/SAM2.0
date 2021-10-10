@@ -16,19 +16,22 @@ class Principal:
             try:
                 print(Coordinador_de_series().generar_dashboard())
                 principal=Principal()
-                opciones = '''0)- Getión de proceso\n1)- Agregar nuevo\n2)- Mostrar lista\n3)- Filtrar lista\n4)- Seleccionar serie\n5)- Seleccionar película\n6)- Seleccionar manga\n7)- Consultar bitácora\nDigite una opción: '''
+                opciones = '''0)- Getión de proceso\n1)- Agregar nuevo\n2)- Mostrar lista\n3)- Filtrar lista\n4)- Seleccionar serie\n5)- Seleccionar película\n6)- Seleccionar manga\n7)- Consultar bitácora\n8)- Vistos x géneros\nDigite una opción: '''
                 opcion_seleccionada = str(input(opciones)) 
                 dicc_menu = {
                     '0': principal.abrir_diario,'1': principal.agregar_registro,'2': principal.listar_registros,
                     '3': principal.filtrar_lista,'4': principal.seleccionar_serie,'5': principal.seleccionar_pelicula,
-                    '6': principal.seleccionar_manga,'7': principal.consultar_bitacora}
+                    '6': principal.seleccionar_manga,'7': principal.consultar_bitacora,'8': principal.ver_vistos_x_genero}
                 system('cls')
                 dicc_menu.get(opcion_seleccionada)()
             except Exception:
-               alertas().mostrar_mensaje('def')
+                alertas().mostrar_mensaje('def')
     #-----------------------------------------------------------------#
     def abrir_diario(self):
             Coordinador_de_series().mostrar_diario()
+
+    def ver_vistos_x_genero(self):
+        Coordinador_de_series().mostar_vistos_x_genero()
     #-----------------------------------------------------------------#
     def agregar_registro(self):
         opcion_ingreso =  str(input(f'\n{"-"*10}Opciones de registro{"-"*10}\n1)-Anime\n2)-Pelicula\n3)-Manga\nSeleccione una opción: '))
@@ -44,7 +47,8 @@ class Principal:
         coordinador = Coordinador_de_series()
         dicc_listados = {'1': coordinador.listar_series,'2': coordinador.listar_series_en_proceso,'3': coordinador.listar_series_en_espera,
         '4': coordinador.listar_series_por_rango,'5':coordinador.listar_series_por_emision,
-        '6':coordinador.listar_series_por_genero,'7': coordinador.listar_peliculas,'8':coordinador.listar_mangas}
+        '6':coordinador.listar_series_por_genero,'7': coordinador.listar_peliculas,
+        '8':coordinador.listar_mangas}
         system('cls')
         resultado_consulta = dicc_listados.get(opcion_seleccionada,  lambda: alertas().mostrar_mensaje('no_val'))()
         if(len(resultado_consulta)==0):#Valida que hayan datos que mostrar
