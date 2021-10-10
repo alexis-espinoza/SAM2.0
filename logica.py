@@ -371,9 +371,8 @@ class Coordinador_de_series():
                 salida += f'{genero[1]}{sep}'.rjust(5)
             print(" |","‾"*99,"|")
             print(salida)
-            print(" ","‾"*100," ") if (resultados(generos_x_porcentaje,4).index(grupo) == len(resultados(generos_x_porcentaje,4))-1) else True
+            print("  ","‾"*99," ") if (resultados(generos_x_porcentaje,4).index(grupo) == len(resultados(generos_x_porcentaje,4))-1) else True
             
-
     #-----------------------------------------------------------------# 
     def filtrar_series(self, nombre_a_buscar):#Filtra SERIES-PELICULAS-MANGAS
         if(nombre_a_buscar==''): return
