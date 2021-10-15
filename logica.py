@@ -1,6 +1,7 @@
 from acc_datos import Gestor_de_series
 from modelos import Serie, Pelicula, Manga
 from os import system
+from datetime import datetime
 import time
 import pyperclip
 import operator
@@ -29,7 +30,6 @@ class Coordinador_de_series():
 
   #-----------------------------------------------------------------#
     def generar_dashboard(self):
-        todos_los_registros = Gestor_de_series().obtener_registros()
         self.c_series= len(self.listar_series())
         self.c_peliculas = len(self.listar_peliculas())#["peliculas"])
         self.c_mangas = len(self.listar_mangas())#['registros'])
@@ -47,7 +47,13 @@ class Coordinador_de_series():
         informe = formato.format(self.c_series, self.c_peliculas, self.c_mangas, self.c_finalizadas, self.c_en_proceso, self.c_en_espera, self.c_en_emision)
 
         return f' {separador_uno}\n{informe}\n {separador_dos}'
-
+    """""
+    def mask(self, digito):
+        if(digito<=9):
+            return'0'+str(digito)
+        else:
+            return digito
+"""""
 #-----------------------------------------------------------------#
     def mostrar_diario(self):
         Gestor_de_series().obtener_avance_diario()
@@ -355,6 +361,9 @@ class Coordinador_de_series():
     def mostar_vistos_x_genero(self):
         series = self.listar_series()
         total = len(series)
+        if(total==0):
+            self.alertas.mostrar_mensaje('no_ext')
+            return
         dicc_generos = {}
         for serie in  series:
             for genero in serie.get_generos():#Agrega nuevo género o suma a existentes
@@ -505,24 +514,25 @@ class Coordinador_de_series():
     def consultar_bitacora(self):
         logs_del_sistema = Gestor_de_series().obtener_logs()
         nueva_busqueda=True
+        detener = False
         while(nueva_busqueda==True):
             print('\nBúsqueda en bitácora (ej. de entradas válidas ["26/04/2020" - "96" - "Zero" - "en espera"])')
             busqueda = str(input('Ingrese un parámetro de búsqueda: '))
-            print()
+            dia_como_hoy = datetime.today().strftime("%d/%m/")
+            busqueda = dia_como_hoy if(busqueda=='') else busqueda
             registros_de_bitacora = list(filter(lambda linea: linea.lower().find(busqueda.lower())!=-1 and busqueda!='', logs_del_sistema))
-            total_de_registros=len(registros_de_bitacora)
-            registro_actual = 0
-            formato = 'Mostrando [{0}] de [{1}] registros, mostrar más [Intro] | detener [1]: '
-            while(registro_actual<total_de_registros):        
-                if((registro_actual%10)==0 and registro_actual!=0):           
-                    mas_datos = input(formato.format(registro_actual,total_de_registros))
-                    if(mas_datos == '1' or mas_datos.lower()=='n'):
-                        system('cls')
-                        break
-                    print('')#Se salta un línea
-                print(registros_de_bitacora[registro_actual])
-                registro_actual+=1
-            self.alertas.mostrar_mensaje('no_ext') if total_de_registros==0 else True
+            formato = 'Mostrando [{0}] de [{1}] registros, mostrar más [Intro] | detener [0]: '
+            for registro in registros_de_bitacora:
+                if(registros_de_bitacora.index(registro)!=0 and (registros_de_bitacora.index(registro)%10)==0):
+                    mas_datos = input(formato.format(registros_de_bitacora.index(registro),len(registros_de_bitacora)))
+                    detener = True if(mas_datos == '0' or mas_datos.lower()=='n') else print()
+                sep = '\n' if(registros_de_bitacora.index(registro)==0) else ''
+                print(sep+registro)
+                if(detener==True):
+                    detener=False
+                    system('cls')  
+                    break
+            self.alertas.mostrar_mensaje('no_ext') if len(registros_de_bitacora)==0 else True
             continuar=input('\nDigite [1] para realizar una nueva búsqueda [Intro] para salir: ')#Condición para nueva búqueda
             if(continuar!='1'):
                 nueva_busqueda=False

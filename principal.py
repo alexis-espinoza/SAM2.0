@@ -27,7 +27,7 @@ class Principal:
                 system('cls')
                 dicc_menu.get(opcion_seleccionada)()
             except Exception:
-                alertas().mostrar_mensaje('def')
+               alertas().mostrar_mensaje('def')
     #-----------------------------------------------------------------#
     def abrir_diario(self):
             Coordinador_de_series().mostrar_diario()
