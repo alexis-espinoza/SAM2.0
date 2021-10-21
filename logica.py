@@ -1,3 +1,4 @@
+
 from acc_datos import Gestor_de_series
 from modelos import Serie, Pelicula, Manga
 from os import system
@@ -184,7 +185,7 @@ class Coordinador_de_series():
     def insertar_pelicula(self):
         system('cls')
         print('\nNuevo registro de tipo (pelicula) presione [Intro] para omitir algún campo')
-        opc_id_series = dict(zip(list(map(lambda key: str(key.get_indice()),self.listar_series())),list(range(1, len(self.listar_series())+1))))
+        opc_id_series = dict(zip(list(map(lambda key: str(key.get_indice()),self.listar_series())),list(range(1, len(self.listar_series())+1))))#Se cargan todas las opciones de id de series disponibles
         opc_id_series['0']=None
         opc_id_series['']=None
         nueva_pelicula = Pelicula()
@@ -229,7 +230,7 @@ class Coordinador_de_series():
      #-----------------------------------------------------------------#
     def actualizar_pelicula(self, pelicula_a_actualizar):
         print('\nPresione [enter] para dejar los valores sin cambios')
-        opc_id_series = dict(zip(list(map(lambda key: str(key.get_indice()),self.listar_series())),list(range(1, len(self.listar_series())+1))))
+        opc_id_series = dict(zip(list(map(lambda key: str(key.get_indice()),self.listar_series())),list(range(1, len(self.listar_series())+1))))#Se cargan todas las opciones de id de series disponibles
         opc_id_series['0']=None
         opc_id_series['']=pelicula_a_actualizar.get_id_serie() 
 
@@ -347,16 +348,36 @@ class Coordinador_de_series():
             lista_de_series.insert(nueva_posicion,serie_deplazada)
             serie_a_desplazar.set_indice(nueva_posicion+1)
             #Se obtienen los datos originales y se cambia el bloque de series por una lista [ordenada y parseada a diccionadrios]
+            dicc_diferencias = {}
             for i in range(len(lista_de_series)):
+                id_anterior = lista_de_series[i].get_indice()
                 lista_de_series[i].set_indice(i+1)
+                id_actual = lista_de_series[i].get_indice()
+                if(id_anterior!=id_actual):
+                    dicc_diferencias[id_anterior] = id_actual#Se cargan los desfaces en los indices serie_x_pelicula
             data_actual = Gestor_de_series().obtener_registros()
             data_actual["series"] = list(map(lambda Serie: Serie.__dict__,lista_de_series))
             Gestor_de_series().guardar_cambios(data_actual)
+            self.sincronizar_series_peliculas(dicc_diferencias)#///Se actualizan las referencias de las películas_x_series///
             self.alertas.mostrar_mensaje('ok_up')
             self.actualizar_bitacora('up_ps',[serie_a_desplazar.get_nombre(),posicion_actual+1,nueva_posicion+1])
         except Exception:
             self.alertas.mostrar_mensaje('no_ok')
     
+    #-----------------------------------------------------------------#
+    def sincronizar_series_peliculas(self, dicc_diferencias):
+        lista_de_peliculas = Gestor_de_series().obtener_peliculas()
+        for i in  range(len(lista_de_peliculas)):#Recorre la lista original de peliculas
+            valor_id_serie = dicc_diferencias.get(lista_de_peliculas[i].get_id_serie(), 'NA')#Valida si la serie tiene una pelicula asociada
+            if(valor_id_serie != 'NA'):
+                lista_de_peliculas[i].set_id_serie(valor_id_serie)#Cambia la referencia cuando tiene una serie asociada
+        data_actual = Gestor_de_series().obtener_registros()
+        data_actual["peliculas"] = list(map(lambda Pelicula: Pelicula.__dict__,lista_de_peliculas))
+        Gestor_de_series().guardar_cambios(data_actual)
+        '''for dif in dicc_diferencias: #recorre la lista con el el par ordenado (id anterior, id nuevo)
+                if(lista_de_peliculas[i].get_id_serie() == dif[0]):#Si el id_serie(antiguo) está en la lista
+                    lista_de_peliculas[i].set_id_serie(dif[1])#Actualiza al id_serie(nuevo)
+                    break'''
     #-----------------------------------------------------------------#
     def mostar_vistos_x_genero(self):
         series = self.listar_series()
@@ -429,7 +450,7 @@ class Coordinador_de_series():
     #-----------------------------------------------------------------#
     def listar_series_en_proceso(self):        
         list_en_proceso = list(filter(lambda Serie: Serie.get_estado()=='en proceso' and Serie.get_dia_emision()==None, Gestor_de_series().obtener_series()))
-        emision = f' + {[self.c_en_emision]} <<en emisión>>>' if self.c_en_emision != 0 else ''
+        #emision = f' + {[self.c_en_emision]} <<en emisión>>>' if self.c_en_emision != 0 else ''
         return list_en_proceso 
   
     #-----------------------------------------------------------------#
