@@ -26,7 +26,8 @@ class Principal:
                     '6': principal.seleccionar_manga,'7': principal.consultar_bitacora,'8': principal.ver_vistos_x_genero}
                 system('cls')
                 dicc_menu.get(opcion_seleccionada)()
-            except Exception:
+            except Exception as e:
+               #print(e)
                alertas().mostrar_mensaje('def')
     #-----------------------------------------------------------------#
     def abrir_diario(self):
@@ -51,8 +52,8 @@ class Principal:
         '4': coordinador.listar_series_por_rango,'5':coordinador.listar_series_por_emision,
         '6':coordinador.listar_series_por_genero,'7': coordinador.listar_peliculas,
         '8':coordinador.listar_mangas}
-        system('cls')
-        resultado_consulta = dicc_listados.get(opcion_seleccionada,  lambda: alertas().mostrar_mensaje('no_val'))()
+        system('cls')                                                  ####REVISAR ESTE AJUSTE####
+        resultado_consulta = dicc_listados.get(opcion_seleccionada,  lambda: True)()#alertas().mostrar_mensaje('no_val'))()
         if(len(resultado_consulta)==0):#Valida que hayan datos que mostrar
             alertas().mostrar_mensaje('no_ext')
             return

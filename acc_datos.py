@@ -50,8 +50,13 @@ class Gestor_de_series:
 
 
     def guardar_cambios(self, dicc_datos):
-        with open(str(getcwd())+'\\DATA\\series_peliculas.json','w') as archivo:
-            json.dump(dicc_datos, archivo, indent=3, ensure_ascii=False)
+        try:
+            with open(str(getcwd())+'\\DATA\\series_peliculas.json','w') as archivo:
+                json.dump(dicc_datos, archivo, indent=3, ensure_ascii=False)
+            return False
+        except Exception:
+            return True
+            #alertas.mostrar_mensaje("no_ok")
 
 
     def obtener_logs(self):

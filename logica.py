@@ -1,4 +1,4 @@
-
+import copy
 from acc_datos import Gestor_de_series
 from modelos import Serie, Pelicula, Manga
 from os import system
@@ -73,7 +73,18 @@ class Coordinador_de_series():
             self.alertas.mostrar_mensaje('no_ok')
             return False
 
-#-----------------------------------------------------------------#
+    #-----------------------------------------------------------------#
+    
+    def guardar_cambios(self, la_data_actual, la_data_nueva, tipo_msj='NA'):
+        if(Gestor_de_series().guardar_cambios(la_data_nueva)):#Cuando NO actualiza correctamente
+            self.alertas.mostrar_mensaje("no_save")
+            Gestor_de_series().guardar_cambios(la_data_actual)#Se reversa cargando los datos sin cambios
+            time.sleep(0.75) 
+            return #Cortala ejecución para evitar escritura en bitácora
+        else:#Se muestra mensaje de confirmación para inserciones y actualizaciones
+            self.alertas.mostrar_mensaje(tipo_msj) if (tipo_msj!='NA') else None
+
+    #-----------------------------------------------------------------#
     def validar_mangas(self, el_nuevo_registro):
         try:
             el_manga_existente = None
@@ -94,8 +105,9 @@ class Coordinador_de_series():
                 for i in range(len(lista_mangas_vigentes)):
                         lista_mangas_vigentes[i].set_indice(i+1)
                 data_actual = Gestor_de_series().obtener_registros()
-                data_actual["mangas"] = list(map(lambda Manga: Manga.__dict__,lista_mangas_vigentes))
-                Gestor_de_series().guardar_cambios(data_actual)
+                data_nueva = copy.deepcopy(data_actual)
+                data_nueva["mangas"] = list(map(lambda Manga: Manga.__dict__,lista_mangas_vigentes))
+                self.guardar_cambios(data_actual, data_nueva)
 
 #-----------------------------------------------------------------#
     def copiar_nombre_del_registro(self,registro_actual):
@@ -141,8 +153,9 @@ class Coordinador_de_series():
                         Pelicula.set_id_serie(la_serie.get_indice())
                         self.actualizar_bitacora('up_dt',[Pelicula.get_nombre()])
                 data_actual = Gestor_de_series().obtener_registros()
-                data_actual["peliculas"] = list(map(lambda Pelicula: Pelicula.__dict__,peliculas))
-                Gestor_de_series().guardar_cambios(data_actual)
+                data_nueva = copy.deepcopy(data_actual)
+                data_nueva["peliculas"] = list(map(lambda Pelicula: Pelicula.__dict__,peliculas))
+                self.guardar_cambios(data_actual, data_nueva)
 
 #-----------------------------------------------------------------#
     def listar_opciones_de_emision(self,la_serie):
@@ -171,13 +184,13 @@ class Coordinador_de_series():
         if(nueva_serie.get_nombre()!='' and self.confirmar_accion()):            
             self.validar_mangas(nueva_serie)
             data_actual = Gestor_de_series().obtener_registros()
-            posicion = len(data_actual["series"])+1
+            data_nueva = copy.deepcopy(data_actual)            
+            posicion = len(data_nueva["series"])+1
             nueva_serie.set_indice(posicion)
-            data_actual["series"].append(nueva_serie.__dict__)
-            Gestor_de_series().guardar_cambios(data_actual)
+            data_nueva["series"].append(nueva_serie.__dict__)
+            self.guardar_cambios(data_actual, data_nueva,'ok_in')
             if(peliculas!=[]):
                 self.agregar_peliculas(False, peliculas, nueva_serie)
-            self.alertas.mostrar_mensaje('ok_in')
             self.actualizar_bitacora('insert',['anime',nueva_serie.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
@@ -199,12 +212,13 @@ class Coordinador_de_series():
         if(nueva_pelicula.get_nombre()!='' and self.confirmar_accion()):
             self.validar_mangas(nueva_pelicula)
             data_actual = Gestor_de_series().obtener_registros()
+            data_nueva = copy.deepcopy(data_actual)
             peliculas = Gestor_de_series().obtener_peliculas()
             list(map(lambda Pelicula: Pelicula.set_indice(Pelicula.get_indice()+1), peliculas))
             peliculas.append(nueva_pelicula)
-            data_actual["peliculas"] = list(map(lambda Pelicula: Pelicula.__dict__,sorted(peliculas))) #sorted(list_peliculas)
-            Gestor_de_series().guardar_cambios(data_actual)
-            self.alertas.mostrar_mensaje('ok_in')
+            data_nueva["peliculas"] = list(map(lambda Pelicula: Pelicula.__dict__,sorted(peliculas))) #sorted(list_peliculas)
+            self.guardar_cambios(data_actual, data_nueva, 'ok_in')
+            #self.alertas.mostrar_mensaje('ok_in')
             self.actualizar_bitacora('insert',['película',nueva_pelicula.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
@@ -218,11 +232,12 @@ class Coordinador_de_series():
         nuevo_manga.set_generos(self.agregar_generos())
         if(nuevo_manga.get_nombre()!='' and self.confirmar_accion()):
             data_actual = Gestor_de_series().obtener_registros()
-            indice = len(data_actual["mangas"])+1
+            data_nueva = copy.deepcopy(data_actual)
+            indice = len(data_nueva["mangas"])+1
             nuevo_manga.set_indice(indice)
-            data_actual["mangas"].append(nuevo_manga.__dict__)
-            Gestor_de_series().guardar_cambios(data_actual)
-            self.alertas.mostrar_mensaje('ok_in')
+            data_nueva["mangas"].append(nuevo_manga.__dict__)
+            self.guardar_cambios(data_actual, data_nueva, 'ok_in')
+            #self.alertas.mostrar_mensaje('ok_in')
             self.actualizar_bitacora('insert',['manga',nuevo_manga.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
@@ -246,9 +261,10 @@ class Coordinador_de_series():
         pelicula_sin_cambios = Pelicula(data_actual["peliculas"][pelicula_a_actualizar.get_indice()-1])
 
         if(pelicula_sin_cambios!=pelicula_a_actualizar and self.confirmar_accion()):
-            data_actual["peliculas"][pelicula_a_actualizar.get_indice()-1] = pelicula_a_actualizar.__dict__
-            Gestor_de_series().guardar_cambios(data_actual)
-            self.alertas.mostrar_mensaje('ok_up')
+            data_nueva = copy.deepcopy(data_actual)
+            data_nueva["peliculas"][pelicula_a_actualizar.get_indice()-1] = pelicula_a_actualizar.__dict__
+            self.guardar_cambios(data_actual, data_nueva, 'ok_up')
+            #self.alertas.mostrar_mensaje('ok_up')
             self.actualizar_bitacora('up_dt',[pelicula_a_actualizar.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
@@ -263,9 +279,10 @@ class Coordinador_de_series():
         data_actual = Gestor_de_series().obtener_registros()
         manga_sin_cambios = Manga(data_actual["mangas"][manga_a_actualizar.get_indice()-1])
         if(manga_sin_cambios!= manga_a_actualizar and self.confirmar_accion()):
-            data_actual["mangas"][manga_a_actualizar.get_indice()-1] = manga_a_actualizar.__dict__
-            Gestor_de_series().guardar_cambios(data_actual)
-            self.alertas.mostrar_mensaje('ok_up')
+            data_nueva = copy.deepcopy(data_actual)
+            data_nueva["mangas"][manga_a_actualizar.get_indice()-1] = manga_a_actualizar.__dict__
+            self.guardar_cambios(data_actual, data_nueva, 'ok_up')
+            #self.alertas.mostrar_mensaje('ok_up')
             self.actualizar_bitacora('up_dt',[manga_a_actualizar.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
@@ -287,11 +304,12 @@ class Coordinador_de_series():
         data_actual = Gestor_de_series().obtener_registros()
         serie_sin_cambios = Serie(data_actual["series"][serie_a_actualizar.get_indice()-1])
         if((serie_sin_cambios!= serie_a_actualizar or peliculas!=[]) and self.confirmar_accion()):
-            data_actual["series"][serie_a_actualizar.get_indice()-1] = serie_a_actualizar.__dict__
-            Gestor_de_series().guardar_cambios(data_actual)
+            data_nueva = copy.deepcopy(data_actual)
+            data_nueva["series"][serie_a_actualizar.get_indice()-1] = serie_a_actualizar.__dict__
+            self.guardar_cambios(data_actual, data_nueva, 'ok_up')
             if(peliculas!=[]):
                 self.agregar_peliculas(False, peliculas, serie_a_actualizar)
-            self.alertas.mostrar_mensaje('ok_up')
+            #self.alertas.mostrar_mensaje('ok_up')
             self.actualizar_bitacora('up_dt',[serie_a_actualizar.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
@@ -310,9 +328,10 @@ class Coordinador_de_series():
                 serie_a_actualizar.set_dia_emision(None) #Se setea el dia de emision
                 serie_a_actualizar.set_estado(nuevo_estado)
                 data_actual = Gestor_de_series().obtener_registros()
-                data_actual["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.__dict__
-                Gestor_de_series().guardar_cambios(data_actual)
-                self.alertas.mostrar_mensaje('ok_up')
+                data_nueva  = data_actual
+                data_nueva["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.__dict__
+                self.guardar_cambios(data_actual, data_nueva, 'ok_up')
+                #self.alertas.mostrar_mensaje('ok_up')
                 self.actualizar_bitacora('up_st',[serie_a_actualizar.get_nombre(),estado_anterior,nuevo_estado])
     
     #-----------------------------------------------------------------#
@@ -325,9 +344,10 @@ class Coordinador_de_series():
             serie_a_actualizar.set_dia_emision(dia_emision)
             serie_a_actualizar.set_estado('en proceso')
             data_actual = Gestor_de_series().obtener_registros()
-            data_actual["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.__dict__
-            Gestor_de_series().guardar_cambios(data_actual)
-            self.alertas.mostrar_mensaje('ok_in')
+            data_nueva = copy.deepcopy(data_actual)
+            data_nueva["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.__dict__
+            self.guardar_cambios(data_actual, data_nueva, 'ok_in')
+            #self.alertas.mostrar_mensaje('ok_in')
             self.actualizar_bitacora('up_em',[serie_a_actualizar.get_dia_emision(), serie_a_actualizar.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
@@ -356,10 +376,11 @@ class Coordinador_de_series():
                 if(id_anterior!=id_actual):
                     dicc_diferencias[id_anterior] = id_actual#Se cargan los desfaces en los indices serie_x_pelicula
             data_actual = Gestor_de_series().obtener_registros()
-            data_actual["series"] = list(map(lambda Serie: Serie.__dict__,lista_de_series))
-            Gestor_de_series().guardar_cambios(data_actual)
+            data_nueva = copy.deepcopy(data_actual)
+            data_nueva["series"] = list(map(lambda Serie: Serie.__dict__,lista_de_series))
+            self.guardar_cambios(data_actual, data_nueva, 'ok_up')
             self.sincronizar_series_peliculas(dicc_diferencias)#///Se actualizan las referencias de las películas_x_series///
-            self.alertas.mostrar_mensaje('ok_up')
+            #self.alertas.mostrar_mensaje('ok_up')
             self.actualizar_bitacora('up_ps',[serie_a_desplazar.get_nombre(),posicion_actual+1,nueva_posicion+1])
         except Exception:
             self.alertas.mostrar_mensaje('no_ok')
@@ -372,8 +393,9 @@ class Coordinador_de_series():
             if(valor_id_serie != 'NA'):
                 lista_de_peliculas[i].set_id_serie(valor_id_serie)#Cambia la referencia cuando tiene una serie asociada
         data_actual = Gestor_de_series().obtener_registros()
-        data_actual["peliculas"] = list(map(lambda Pelicula: Pelicula.__dict__,lista_de_peliculas))
-        Gestor_de_series().guardar_cambios(data_actual)
+        data_nueva = copy.deepcopy(data_actual)
+        data_nueva["peliculas"] = list(map(lambda Pelicula: Pelicula.__dict__,lista_de_peliculas))
+        self.guardar_cambios(data_actual, data_nueva)
         '''for dif in dicc_diferencias: #recorre la lista con el el par ordenado (id anterior, id nuevo)
                 if(lista_de_peliculas[i].get_id_serie() == dif[0]):#Si el id_serie(antiguo) está en la lista
                     lista_de_peliculas[i].set_id_serie(dif[1])#Actualiza al id_serie(nuevo)
@@ -597,7 +619,8 @@ class Coordinador_de_alertas:
             'no_ok':'\n¡La operación no fue ejecutada!',
             'no_ext':'\n¡No se encontraron coincidencias!',
             'no_sel':'\n¡No se encontró el registro indicado!',
-            'no_val':'\n¡No seleccionó una opción válida!'
+            'no_val':'\n¡No seleccionó una opción válida!',
+            'no_save':'\n  ¡Se produjo un error en el proceso!\n**Todos los cambios fueron reversados**'
         }
     def mostrar_mensaje(self,codigo_mensaje):
         system('cls')
