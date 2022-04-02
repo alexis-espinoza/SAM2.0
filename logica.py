@@ -325,7 +325,8 @@ class Coordinador_de_series():
             self.alertas.mostrar_mensaje('no_conf')
         else:
             if(self.confirmar_accion()):
-                serie_a_actualizar.set_dia_emision(None) #Se setea el dia de emision
+                if(nuevo_estado != 'en proceso'):
+                    serie_a_actualizar.set_dia_emision(None) #Se setea el dia de emision
                 serie_a_actualizar.set_estado(nuevo_estado)
                 data_actual = Gestor_de_series().obtener_registros()
                 data_nueva  = data_actual
