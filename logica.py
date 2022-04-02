@@ -340,7 +340,7 @@ class Coordinador_de_series():
         system('cls')
         print(serie_a_actualizar.mostrar_det())
         indice_dia = str(input('\n'+self.listar_opciones_de_emision(serie_a_actualizar))) #Invoca a una funcion que muestra las opciones de dias
-        dia_emision =  list(self.dicc_dias.values())[int(indice_dia)-1]
+        dia_emision =  list(self.dicc_dias.values())[int(indice_dia)-1] if indice_dia!='' else None
         if(indice_dia in self.dias_validos and self.confirmar_accion() and serie_a_actualizar.get_dia_emision()!=dia_emision):
             serie_a_actualizar.set_dia_emision(dia_emision)
             estado_anterior = serie_a_actualizar.get_estado()#Se captura el estado actual
