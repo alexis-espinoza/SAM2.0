@@ -339,20 +339,20 @@ class Coordinador_de_series():
         system('cls')
         print(serie_a_actualizar.mostrar_det())
         indice_dia = str(input('\n'+self.listar_opciones_de_emision(serie_a_actualizar))) #Invoca a una funcion que muestra las opciones de dias
-        if(indice_dia in self.dias_validos and self.confirmar_accion()):
-            dia_emision =  list(self.dicc_dias.values())[int(indice_dia)-1]
+        dia_emision =  list(self.dicc_dias.values())[int(indice_dia)-1]
+        if(indice_dia in self.dias_validos and self.confirmar_accion() and serie_a_actualizar.get_dia_emision()!=dia_emision):
             serie_a_actualizar.set_dia_emision(dia_emision)
             estado_anterior = serie_a_actualizar.get_estado()#Se captura el estado actual
             data_actual = Gestor_de_series().obtener_registros()
             data_nueva = copy.deepcopy(data_actual)
-            data_nueva["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.__dict__
-            self.guardar_cambios(data_actual, data_nueva, 'ok_in')
-            self.alertas.mostrar_mensaje('ok_in')
-            self.actualizar_bitacora('up_em',[serie_a_actualizar.get_dia_emision(), serie_a_actualizar.get_nombre()])
             if(serie_a_actualizar.get_estado()!='en proceso'):
                  nuevo_estado = 'en proceso'
                  serie_a_actualizar.set_estado(nuevo_estado)
                  self.actualizar_bitacora('up_st',[serie_a_actualizar.get_nombre(),estado_anterior,nuevo_estado])
+            data_nueva["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.__dict__
+            self.guardar_cambios(data_actual, data_nueva, 'ok_in')
+            #self.alertas.mostrar_mensaje('ok_in')
+            self.actualizar_bitacora('up_em',[serie_a_actualizar.get_dia_emision(), serie_a_actualizar.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
     
