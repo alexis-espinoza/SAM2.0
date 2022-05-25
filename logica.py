@@ -23,29 +23,25 @@ class Coordinador_de_series():
         self.c_en_emision = None
         self.c_en_proceso = None
         self.c_finalizadas = None
-        self.generar_dashboard()
-
-#-----------------------------------------------------------------#    
-    """def listar_registos(self):
-        return Gestor_de_series.obtener_registros()"""
+        #self.generar_dashboard()
 
   #-----------------------------------------------------------------#
     def generar_dashboard(self):
-        self.c_series= len(self.listar_series())
-        self.c_peliculas = len(self.listar_peliculas())#["peliculas"])
-        self.c_mangas = len(self.listar_mangas())#['registros'])        
-        self.c_en_emision=len(list(filter(lambda Serie: Serie.get_dia_emision()!=None, Gestor_de_series().obtener_series())))
-        self.c_en_espera = len(self.listar_series_por_estado(self.dicc_estados.get('3')))#len(self.listar_series_en_espera())#['registros'])
-        self.c_en_proceso = len(self.listar_series_por_estado(self.dicc_estados.get('2'))) #len(self.listar_series_en_proceso())+self.c_en_emision#['registros'])+self.c_en_emision
-        self.c_finalizadas = len(self.listar_series_por_estado(self.dicc_estados.get('1')))#len(list(filter(lambda Serie: Serie.get_estado()=='finalizada', Gestor_de_series().obtener_series())))
+        self.c_series= self.listar_series()
+        self.c_peliculas = self.listar_peliculas()
+        self.c_mangas = self.listar_mangas()           
+        self.c_en_espera = self.listar_series_por_estado(self.dicc_estados.get('3'))
+        self.c_en_proceso = self.listar_series_por_estado(self.dicc_estados.get('2')) 
+        self.c_finalizadas = self.listar_series_por_estado(self.dicc_estados.get('1'))
+        self.c_en_emision= list(filter(lambda Serie: Serie.get_dia_emision()!=None, self.c_series))
         separador_uno = ''
         separador_dos = ''
         #animes    |   #peliculas
-        sp = ' '*2 if(self.c_series > 999 or self.c_peliculas > 99 or self.c_mangas > 9) else ' ' #Por si siguiera creciendo
+        sp = ' '*2 if(len(self.c_series) > 999 or len(self.c_peliculas) > 99 or len(self.c_mangas) > 9) else ' ' #Por si siguiera creciendo
         separador_uno = '_'*113
         separador_dos = '‾'*113
         formato = '|Total de series registradas: [{0}]  /  Total de películas registradas: [{1}]  /  Total de mangas registrados: [{2}]|\n|\t\tFinalizadas: [{3}]  /  En proceso: [{4}]  /  En espera: [{5}]  /  En emison: [{6}]\t\t\t'+sp+'|'
-        informe = formato.format(self.c_series, self.c_peliculas, self.c_mangas, self.c_finalizadas, self.c_en_proceso, self.c_en_espera, self.c_en_emision)
+        informe = formato.format(len(self.c_series), len(self.c_peliculas), len(self.c_mangas), len(self.c_finalizadas), len(self.c_en_proceso), len(self.c_en_espera), len(self.c_en_emision))
 
         return f' {separador_uno}\n{informe}\n {separador_dos}'
     """""
@@ -474,21 +470,23 @@ class Coordinador_de_series():
         list_series = Gestor_de_series().obtener_series()
         return list_series 
     
-    #-----------------------------------------------------------------#
+    #------------------EN ESPERA - EN PROCESO Y FINALIZADAS-----------------------#
     def listar_series_por_estado(self, estado):
         lista_series_por_estado = list(filter(lambda Serie: Serie.get_estado()==estado, Gestor_de_series().obtener_series()))
+        if(estado == 'en proceso'): #Se le quitan los que están en emisión
+            lista_series_por_estado = list(filter(lambda Serie: Serie.get_dia_emision()==None, lista_series_por_estado))
         return lista_series_por_estado 
 
     #-----------------------------------------------------------------#
-    def listar_series_en_proceso(self):        
-        list_en_proceso = list(filter(lambda Serie: Serie.get_estado()=='en proceso' and Serie.get_dia_emision()==None, Gestor_de_series().obtener_series()))
-        #emision = f' + {[self.c_en_emision]} <<en emisión>>>' if self.c_en_emision != 0 else ''
-        return list_en_proceso 
+    #def listar_series_en_proceso(self):        
+     #   list_en_proceso = list(filter(lambda Serie: Serie.get_estado()=='en proceso' and Serie.get_dia_emision()==None, Gestor_de_series().obtener_series()))
+      #  emision = f' + {[self.c_en_emision]} <<en emisión>>>' if self.c_en_emision != 0 else ''
+       # return list_en_proceso 
   
     #-----------------------------------------------------------------#
-    def listar_series_en_espera(self):        
-        list_en_espera = list(filter(lambda Serie: Serie.get_estado()=='en espera', Gestor_de_series().obtener_series()))
-        return list_en_espera
+    #def listar_series_en_espera(self):        
+     #   list_en_espera = list(filter(lambda Serie: Serie.get_estado()=='en espera', Gestor_de_series().obtener_series()))
+      #  return list_en_espera
     
     #-----------------------------------------------------------------#
     def listar_series_por_rango(self):
@@ -504,7 +502,7 @@ class Coordinador_de_series():
             list_por_rango = list(filter(lambda Serie: Serie.get_indice()>=inicio and Serie.get_indice()<=final, Gestor_de_series().obtener_series()))
             return list_por_rango 
         except Exception:
-            self.alertas.mostrar_mensaje('def')
+            #self.alertas.mostrar_mensaje('def')
             return False
     #-----------------------------------------------------------------#
     def listar_series_por_genero(self):
@@ -514,7 +512,7 @@ class Coordinador_de_series():
             list_por_genero = list(filter(lambda Serie: (self.filtrar_generos(genero,Serie) and genero!=''), Gestor_de_series().obtener_series()))
             return list_por_genero 
         except Exception:
-            self.alertas.mostrar_mensaje('def')
+            #self.alertas.mostrar_mensaje('def')
             return False
 
     #-----------------------------------------------------------------#

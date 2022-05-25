@@ -26,8 +26,7 @@ class Principal:
                     '6': principal.seleccionar_manga,'7': principal.consultar_bitacora,'8': principal.ver_vistos_x_genero}
                 system('cls')
                 dicc_menu.get(opcion_seleccionada)()
-            except Exception as e:
-               print(e)
+            except Exception as e:             
                alertas().mostrar_mensaje('def')
     #-----------------------------------------------------------------#
     def abrir_diario(self):
@@ -53,13 +52,13 @@ class Principal:
         '4': coordinador.listar_series_por_rango,'5':coordinador.listar_series_por_emision,
         '6':coordinador.listar_series_por_genero,'7': coordinador.listar_peliculas,
         '8':coordinador.listar_mangas}
-        system('cls')                                                  ####REVISAR ESTE AJUSTE####
+        system('cls')                                                
         resultado_consulta = dicc_listados.get(opcion_seleccionada,  lambda: True)() if opcion_seleccionada not in ['2','3'] else dicc_listados.get(opcion_seleccionada,  lambda: True)
         if(len(resultado_consulta)==0):#Valida que hayan datos que mostrar
             alertas().mostrar_mensaje('no_ext')
             return
         sep = '' if(opcion_seleccionada=='5') else '\n'
-        for registro in resultado_consulta:#["registros"]:
+        for registro in resultado_consulta:
             if(str(type(registro)) != "<class 'str'>"):#Si es un objeto
                 print(sep+registro.mostrar_min())
             else: #Si es un string (para el listado por emsión)
