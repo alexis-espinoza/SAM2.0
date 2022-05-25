@@ -33,11 +33,11 @@ class Coordinador_de_series():
     def generar_dashboard(self):
         self.c_series= len(self.listar_series())
         self.c_peliculas = len(self.listar_peliculas())#["peliculas"])
-        self.c_mangas = len(self.listar_mangas())#['registros'])
-        self.c_en_espera=len(self.listar_series_en_espera())#['registros'])
+        self.c_mangas = len(self.listar_mangas())#['registros'])        
         self.c_en_emision=len(list(filter(lambda Serie: Serie.get_dia_emision()!=None, Gestor_de_series().obtener_series())))
-        self.c_en_proceso=len(self.listar_series_en_proceso())+self.c_en_emision#['registros'])+self.c_en_emision
-        self.c_finalizadas=len(list(filter(lambda Serie: Serie.get_estado()=='finalizada', Gestor_de_series().obtener_series())))
+        self.c_en_espera = len(self.listar_series_por_estado(self.dicc_estados.get('3')))#len(self.listar_series_en_espera())#['registros'])
+        self.c_en_proceso = len(self.listar_series_por_estado(self.dicc_estados.get('2'))) #len(self.listar_series_en_proceso())+self.c_en_emision#['registros'])+self.c_en_emision
+        self.c_finalizadas = len(self.listar_series_por_estado(self.dicc_estados.get('1')))#len(list(filter(lambda Serie: Serie.get_estado()=='finalizada', Gestor_de_series().obtener_series())))
         separador_uno = ''
         separador_dos = ''
         #animes    |   #peliculas
@@ -474,6 +474,11 @@ class Coordinador_de_series():
         list_series = Gestor_de_series().obtener_series()
         return list_series 
     
+    #-----------------------------------------------------------------#
+    def listar_series_por_estado(self, estado):
+        lista_series_por_estado = list(filter(lambda Serie: Serie.get_estado()==estado, Gestor_de_series().obtener_series()))
+        return lista_series_por_estado 
+
     #-----------------------------------------------------------------#
     def listar_series_en_proceso(self):        
         list_en_proceso = list(filter(lambda Serie: Serie.get_estado()=='en proceso' and Serie.get_dia_emision()==None, Gestor_de_series().obtener_series()))
