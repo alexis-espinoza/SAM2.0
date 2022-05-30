@@ -1,6 +1,7 @@
 import copy
 from acc_datos import Gestor_de_series
 from modelos import Serie, Pelicula, Manga
+from bot_insercion import Bot
 from os import system
 from datetime import datetime
 import time
@@ -167,16 +168,24 @@ class Coordinador_de_series():
     def insertar_serie(self):
         system('cls')
         print('\nNuevo registro de tipo (anime) presione [Intro] para omitir algún campo')
-        nueva_serie = Serie()
-        nueva_serie.set_nombre(input("\nDigite el nombre de la nueva serie: "))
-        opcion_estado = str(input('Seleccione el nuevo estado para la serie:\n1)-Finalizada\n2)-En proceso\n3)-En espera\nDigite una opción: '))
-        nueva_serie.set_estado(self.dicc_estados.get(opcion_estado,'en proceso'))
-        if(nueva_serie.get_estado()=='en proceso'):
-            indice_dia = str(input(self.listar_opciones_de_emision(nueva_serie)))
-            nueva_serie.set_dia_emision(list(self.dicc_dias.values())[(int(indice_dia)-1)] if indice_dia in self.dias_validos else None)
-        nueva_serie.set_manga_visto(True if str(input('Manga visto[s/n]: ')).lower()=='s' else False)
-        nueva_serie.set_generos(self.agregar_generos())
-        peliculas = self.agregar_peliculas()
+        nueva_serie = Serie()        
+        nombre = input("\nDigite el nombre de la nueva serie: ")
+        peliculas=[]
+        if(nombre.find('animeflv.net') != -1):
+            system('cls')
+            print('\n¡Obteniendo la información en línea!...')
+            nueva_serie = copy.deepcopy(Bot().obtener_serie(nombre))
+            print(nueva_serie.mostrar_det())
+        elif(nombre.find('animeflv.net') == -1):
+            nueva_serie.set_nombre(nombre)
+            opcion_estado = str(input('Seleccione el nuevo estado para la serie:\n1)-Finalizada\n2)-En proceso\n3)-En espera\nDigite una opción: '))
+            nueva_serie.set_estado(self.dicc_estados.get(opcion_estado,'en proceso'))
+            if(nueva_serie.get_estado()=='en proceso'):
+                indice_dia = str(input(self.listar_opciones_de_emision(nueva_serie)))
+                nueva_serie.set_dia_emision(list(self.dicc_dias.values())[(int(indice_dia)-1)] if indice_dia in self.dias_validos else None)
+            nueva_serie.set_manga_visto(True if str(input('Manga visto[s/n]: ')).lower()=='s' else False)
+            nueva_serie.set_generos(self.agregar_generos())
+            peliculas = self.agregar_peliculas()
         if(nueva_serie.get_nombre()!='' and self.confirmar_accion()):            
             self.validar_mangas(nueva_serie)
             data_actual = Gestor_de_series().obtener_registros()
