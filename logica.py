@@ -177,7 +177,7 @@ class Coordinador_de_series():
             system('cls')
             print('\n¡Obteniendo la información en línea!...')
             nueva_serie = copy.deepcopy(Bot().obtener_serie(nombre))
-            print(nueva_serie.mostrar_det())
+            print(nueva_serie.mostrar_det()) if nueva_serie.get_nombre()!='' else None
         elif(nombre.find('animeflv.net') == -1):
             nueva_serie.set_nombre(nombre)
             opcion_estado = str(input('Seleccione el nuevo estado para la serie:\n1)-Finalizada\n2)-En proceso\n3)-En espera\nDigite una opción: '))
