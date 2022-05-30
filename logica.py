@@ -67,7 +67,7 @@ class Coordinador_de_series():
         if confirmacion == '1':
             return True
         else:
-            self.alertas.mostrar_mensaje('no_ok')
+            #self.alertas.mostrar_mensaje('no_ok')
             return False
 
     #-----------------------------------------------------------------#
@@ -171,7 +171,9 @@ class Coordinador_de_series():
         nueva_serie = Serie()        
         nombre = input("\nDigite el nombre de la nueva serie: ")
         peliculas=[]
+        auto = False
         if(nombre.find('animeflv.net') != -1):
+            auto = True
             system('cls')
             print('\n¡Obteniendo la información en línea!...')
             nueva_serie = copy.deepcopy(Bot().obtener_serie(nombre))
@@ -198,7 +200,7 @@ class Coordinador_de_series():
                 self.agregar_peliculas(False, peliculas, nueva_serie)
             self.actualizar_bitacora('insert',['anime',nueva_serie.get_nombre()])
         else:
-            self.alertas.mostrar_mensaje('no_conf')
+            self.alertas.mostrar_mensaje('no_conf') if not auto else self.alertas.mostrar_mensaje('no_ok')
     #-----------------------------------------------------------------#
     def insertar_pelicula(self):
         system('cls')
