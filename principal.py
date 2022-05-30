@@ -6,6 +6,7 @@ import pyperclip
 import operator
 import math
 from os import system
+from selenium import webdriver
 from os import getcwd, system
 from logica import Coordinador_de_series 
 from logica import Coordinador_de_alertas as alertas

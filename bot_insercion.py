@@ -1,7 +1,6 @@
 
 #options.set_headless()
 #driver.set_window_size(0,500)
-from operator import ge
 from selenium import webdriver
 from modelos import Serie
 import copy 
