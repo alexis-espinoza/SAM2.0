@@ -7,6 +7,9 @@ from os import getcwd, system
 
 class Gestor_de_series:
 
+    def __init__(self) :
+        self.encabezado = "_____         ________________\n|FECHA|       |ACCIÓN REALIZADA|\n'''''''       ''''''''''''''''''\n"
+
     def obtener_avance_diario(self):
         try:
             os.startfile(str(getcwd())+'\\DATA\\proceso en series vistas.txt')
@@ -70,10 +73,19 @@ class Gestor_de_series:
 
 
 
-    def actualizar_logs(self, nuevo_registro_de_log):
+    def agregar_nuevo_log(self, nuevo_registro_de_log):
         try:
             with open(str(getcwd())+'\\LOGS\\historial.txt','a') as archivo_de_logs:
                 archivo_de_logs.write(nuevo_registro_de_log)    
+        except Exception:
+            return
+
+    def actualizar_historial(self, logs_validos):
+        try:
+            with open(str(getcwd())+'\\LOGS\\historial.txt','w') as archivo_de_logs:
+                archivo_de_logs.write(self.encabezado)
+                archivo_de_logs.writelines(logs_validos)
+
         except Exception:
             return
 

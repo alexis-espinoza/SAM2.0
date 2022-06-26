@@ -580,26 +580,44 @@ class Coordinador_de_series():
         while(nueva_busqueda==True):
             print('\nBúsqueda en bitácora (ej. de entradas válidas ["26/04/2020" - "96" - "Zero" - "en espera"])')
             busqueda = str(input('Ingrese un parámetro de búsqueda: '))
-            dia_como_hoy = datetime.today().strftime("%d/%m/")
-            busqueda = dia_como_hoy if(busqueda=='') else busqueda
+            dia_como_hoy = datetime.today().strftime("%d/%m/")+'|' #dia como hoy - tiene numeración por defecto
+            busqueda = dia_como_hoy if(busqueda=='') else busqueda #Se asigna busqueda 'dia como hoy' por defecto
+            reversa = True if(busqueda.find('|')!=-1) else False #bandera para agregar numeración de reversa
+            busqueda = busqueda.replace('|','') if(reversa) else busqueda #Se setea nuevamente el texto de búsqueda
             registros_de_bitacora = list(filter(lambda linea: linea.lower().find(busqueda.lower())!=-1 and busqueda!='', logs_del_sistema))
             formato = 'Mostrando [{0}] de [{1}] registros, mostrar más [Intro] | detener [0]: '
             for registro in registros_de_bitacora:
+                indice_actual = registros_de_bitacora.index(registro)#Se captura el indice actual
                 if(registros_de_bitacora.index(registro)!=0 and (registros_de_bitacora.index(registro)%10)==0):
-                    mas_datos = input(formato.format(registros_de_bitacora.index(registro),len(registros_de_bitacora)))
+                    mas_datos = input(formato.format(indice_actual, len(registros_de_bitacora)))
                     detener = True if(mas_datos == '0' or mas_datos.lower()=='n') else print()
-                sep = '\n' if(registros_de_bitacora.index(registro)==0) else ''
+                sep = '\n' if(indice_actual==0) else ''
+                sep = f'{sep}{indice_actual} - ' if(reversa) else sep #Numeración de reversa según bandera
                 print(sep+registro)
                 if(detener==True):
                     detener=False
                     system('cls')  
                     break
             self.alertas.mostrar_mensaje('no_ext') if len(registros_de_bitacora)==0 else True
-            continuar=input('\nDigite [1] para realizar una nueva búsqueda [Intro] para salir: ')#Condición para nueva búqueda
-            if(continuar!='1'):
+            continuar=input('\nDigite [m] para realizar una nueva búsqueda [Intro] para salir: ')#Condición para nueva búqueda/borrado de log
+            if(continuar!='m'): #Cuando NO es 'm' detiene el ciclo y finaliza la búsqueda
                 nueva_busqueda=False
-            system('cls')                  
+            system('cls')           
+            if(continuar.isdigit()):#Cuando es ún número invoca a la función de borrado de log
+                indice_log = continuar 
+                log_a_eliminar = registros_de_bitacora[int(indice_log)]
+                self.reversar_operacion(log_a_eliminar)
     
+    #-----------------------------------------------------------------#
+    def reversar_operacion(self, log_a_eliminar):
+        logs_del_sistema = Gestor_de_series().obtener_logs()
+        for log in logs_del_sistema:
+            if(log == log_a_eliminar):
+                logs_del_sistema.remove(log)
+                break
+        Gestor_de_series().actualizar_historial(logs_del_sistema)
+        self.alertas.mostrar_mensaje('ok_up')
+
     #-----------------------------------------------------------------#
     def actualizar_lista_de_vistos(self):
         lista_de_vistos=[]
@@ -622,7 +640,7 @@ class Coordinador_de_series():
         'up_ps': f'Desplazamiento del registro: {cambios[0]} del puesto [{cambios[1]}] al puesto [{cambios[2]}]'
         }
         nuevo_log = f'[{time.strftime("%d/%m/%Y")}] <-> {dicc_cambios.get(tipo_log)}\n'
-        Gestor_de_series().actualizar_logs(nuevo_log)
+        Gestor_de_series().agregar_nuevo_log(nuevo_log)
         if(tipo_log != 'up_st' and tipo_log != 'up_em'):
             self.actualizar_lista_de_vistos()
         
