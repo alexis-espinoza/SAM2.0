@@ -618,6 +618,8 @@ class Coordinador_de_series():
         Gestor_de_series().actualizar_historial(logs_del_sistema)
         self.alertas.mostrar_mensaje('ok_up')
 
+        
+    
     #-----------------------------------------------------------------#
     def actualizar_lista_de_vistos(self):
         lista_de_vistos=[]
