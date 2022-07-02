@@ -588,12 +588,12 @@ class Coordinador_de_series():
             formato = 'Mostrando [{0}] de [{1}] registros, mostrar más [Intro] | detener [0]: '
             for registro in registros_de_bitacora:
                 indice_actual = registros_de_bitacora.index(registro)#Se captura el indice actual
-                if(registros_de_bitacora.index(registro)!=0 and (registros_de_bitacora.index(registro)%10)==0):
+                if(registros_de_bitacora.index(registro)!=0 and (registros_de_bitacora.index(registro)%100)==0):
                     mas_datos = input(formato.format(indice_actual, len(registros_de_bitacora)))
                     detener = True if(mas_datos == '0' or mas_datos.lower()=='n') else print()
                 sep = '\n' if(indice_actual==0) else ''
                 sep = f'{sep}{indice_actual} - ' if(reversa) else sep #Numeración de reversa según bandera
-                print(sep+registro)
+                print(sep+self.formatear_registro(registro))        
                 if(detener==True):
                     detener=False
                     system('cls')  
@@ -608,6 +608,35 @@ class Coordinador_de_series():
                 log_a_eliminar = registros_de_bitacora[int(indice_log)]
                 self.reversar_operacion(log_a_eliminar)
     
+
+    #-----------------------------------------------------------------#
+    def formatear_registro(self, registro):
+            #Se sacan y modifican todos los textos NO necesarios del log
+            registro = registro if(registro.find('del registro de ')==-1) else registro.replace('del registro de ','')
+            registro = registro if(registro.find('para el registro')==-1) else registro.replace('para el registro','')
+            registro = registro if(registro.find('del dia de emision')==-1) else registro.replace('del dia de emision','dia emision')            
+            registro = registro if(registro.find('del registro ')==-1) else registro.replace('del registro ','')           
+            registro = registro if(registro.find('de estado del registro')==-1) else registro.replace('de estado del registro','')
+            registro = registro if(registro.find('del registro')==-1) else registro.replace('del registro','')            
+            registro = registro if(registro.find('el registro ')==-1) else registro.replace('el registro ','')
+            registro = registro if(registro.find('en el ranking ')==-1) else registro.replace('en el ranking ','')
+            registro = registro if(registro.find('de [')==-1) else registro.replace('de [','| de [')
+            registro = registro if(registro.find('del p')==-1) else registro.replace('del p','| del p')
+            registro = registro if(registro.find(' :')==-1) else registro.replace(' :',':')
+
+            #Se ajusta para que todos los logs se puedan mostrar en una sola línea
+            arr_registro = registro.split('>')
+            #Evalúa las inserciones / dia emisión / modificacion de datos
+            if(arr_registro[1].find('Inserción') != -1 or arr_registro[1].find('dia emision') != -1 or arr_registro[1].find('de datos') != -1 ):
+                linea = f'{arr_registro[0]}>{arr_registro[1][:97]}'  #Se arma la nueva línea de log a mostrar
+                linea = linea if(linea.find('\n') != -1) else linea+'\n'
+            else: #Evalúa los que tienen parámetros de dia estados y posiciones
+                data = ''.join(arr_registro[1].split(':')[1:])
+                tipo = arr_registro[1].split(':')[0]
+                arr_data = data.split('|')
+                linea = f'{arr_registro[0]}>{tipo}:{arr_data[0][:50]}|{arr_data[1]}' #Se arma la nueva línea de log a mostrar
+            return linea
+            
     #-----------------------------------------------------------------#
     def reversar_operacion(self, log_a_eliminar):
         logs_del_sistema = Gestor_de_series().obtener_logs()
