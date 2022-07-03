@@ -614,7 +614,7 @@ class Coordinador_de_series():
             #Se sacan y modifican todos los textos NO necesarios del log
             registro = registro if(registro.find('del registro de ')==-1) else registro.replace('del registro de ','')
             registro = registro if(registro.find('para el registro')==-1) else registro.replace('para el registro','')
-            registro = registro if(registro.find('del dia de emision')==-1) else registro.replace('del dia de emision','dia emision')            
+            registro = registro if(registro.find('del dia de emision')==-1) else registro.replace('del dia de emision','emision')            
             registro = registro if(registro.find('del registro ')==-1) else registro.replace('del registro ','')           
             registro = registro if(registro.find('de estado del registro')==-1) else registro.replace('de estado del registro','')
             registro = registro if(registro.find('del registro')==-1) else registro.replace('del registro','')            
@@ -627,14 +627,14 @@ class Coordinador_de_series():
             #Se ajusta para que todos los logs se puedan mostrar en una sola línea
             arr_registro = registro.split('>')
             #Evalúa las inserciones / dia emisión / modificacion de datos
-            if(arr_registro[1].find('Inserción') != -1 or arr_registro[1].find('dia emision') != -1 or arr_registro[1].find('de datos') != -1 ):
-                linea = f'{arr_registro[0]}>{arr_registro[1][:97]}'  #Se arma la nueva línea de log a mostrar
+            if(arr_registro[1].find('Inserción') != -1 or arr_registro[1].find('emision') != -1 or arr_registro[1].find('de datos') != -1 ):
+                linea = f'{arr_registro[0]}>{arr_registro[1][:93]}'  #Se arma la nueva línea de log a mostrar
                 linea = linea if(linea.find('\n') != -1) else linea+'\n'
             else: #Evalúa los que tienen parámetros de dia estados y posiciones
                 data = ''.join(arr_registro[1].split(':')[1:])
                 tipo = arr_registro[1].split(':')[0]
                 arr_data = data.split('|')
-                linea = f'{arr_registro[0]}>{tipo}:{arr_data[0][:50]}|{arr_data[1]}' #Se arma la nueva línea de log a mostrar
+                linea = f'{arr_registro[0]}>{tipo}:{arr_data[0][:45]}|{arr_data[1]}' #Se arma la nueva línea de log a mostrar
             return linea
             
     #-----------------------------------------------------------------#
