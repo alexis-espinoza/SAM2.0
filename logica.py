@@ -588,7 +588,7 @@ class Coordinador_de_series():
             formato = 'Mostrando [{0}] de [{1}] registros, mostrar más [Intro] | detener [0]: '
             for registro in registros_de_bitacora:
                 indice_actual = registros_de_bitacora.index(registro)#Se captura el indice actual
-                if(registros_de_bitacora.index(registro)!=0 and (registros_de_bitacora.index(registro)%100)==0):
+                if(registros_de_bitacora.index(registro)!=0 and (registros_de_bitacora.index(registro)%13)==0):
                     mas_datos = input(formato.format(indice_actual, len(registros_de_bitacora)))
                     detener = True if(mas_datos == '0' or mas_datos.lower()=='n') else print()
                 sep = '\n' if(indice_actual==0) else ''
@@ -603,7 +603,7 @@ class Coordinador_de_series():
             if(continuar!='m'): #Cuando NO es 'm' detiene el ciclo y finaliza la búsqueda
                 nueva_busqueda=False
             system('cls')           
-            if(continuar.isdigit()):#Cuando es ún número invoca a la función de borrado de log
+            if(continuar.isdigit() and reversa):#Cuando es ún número invoca a la función de borrado de log
                 indice_log = continuar 
                 log_a_eliminar = registros_de_bitacora[int(indice_log)]
                 self.reversar_operacion(log_a_eliminar)
