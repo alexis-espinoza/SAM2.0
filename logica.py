@@ -172,11 +172,15 @@ class Coordinador_de_series():
         nombre = input("\nDigite el nombre de la nueva serie: ")
         peliculas=[]
         auto = False
+        #Llamado a BD
+        data_actual = Gestor_de_series().obtener_registros()
+        data_nueva = copy.deepcopy(data_actual)            
+        posicion = len(data_nueva["series"])+1
         if(nombre.find('animeflv.net') != -1):
             auto = True
             system('cls')
             print('\n¡Obteniendo la información en línea!...')
-            nueva_serie = copy.deepcopy(Bot().obtener_serie(nombre))
+            nueva_serie = copy.deepcopy(Bot().obtener_serie(nombre, posicion))
             print(nueva_serie.mostrar_det()) if nueva_serie.get_nombre()!='' else None
         elif(nombre.find('animeflv.net') == -1):
             nueva_serie.set_nombre(nombre)
@@ -190,9 +194,7 @@ class Coordinador_de_series():
             peliculas = self.agregar_peliculas()
         if(nueva_serie.get_nombre()!='' and self.confirmar_accion()):            
             self.validar_mangas(nueva_serie)
-            data_actual = Gestor_de_series().obtener_registros()
-            data_nueva = copy.deepcopy(data_actual)            
-            posicion = len(data_nueva["series"])+1
+            #Posicion anterior de llamado a 'BD'
             nueva_serie.set_indice(posicion)
             data_nueva["series"].append(nueva_serie.__dict__)
             self.guardar_cambios(data_actual, data_nueva,'ok_in')

@@ -30,7 +30,7 @@ class Bot():
             dia_emision = self.dicc_dias.get(dia_ingles,None) #Se asigna el día en español
         return dia_emision
 
-    def obtener_serie(self, url_serie):
+    def obtener_serie(self, url_serie, posicion):
         try:
             
             self.driver.get(url_serie)
@@ -39,7 +39,7 @@ class Bot():
             proxima_fecha = self.driver.find_element_by_xpath("//*[@class='Title']//following::h3[1]//following::span[1]") #Se obtiene la proxima fecha de emisión     
             str_fecha = proxima_fecha.text
             serie_automatica = Serie() #Se declara el objeto de tipo 'SERIE'
-            serie_automatica.set_indice('###')
+            serie_automatica.set_indice(posicion) #Se recibe por parámetro desde el flujo principal
             serie_automatica.set_estado('en proceso')
             serie_automatica.set_nombre(nombre.text)
             serie_automatica.set_dia_emision(self.obtener_dia_emision(str_fecha))
