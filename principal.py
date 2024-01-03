@@ -7,7 +7,7 @@ import operator
 import math
 from datetime import datetime
 from os import system
-from selenium import webdriver
+#from selenium import webdriver
 from os import getcwd, system
 from logica import Coordinador_de_series 
 from logica import Coordinador_de_alertas as alertas
@@ -26,7 +26,7 @@ class Principal:
                     '0': principal.abrir_diario,'1': principal.agregar_registro,'2': principal.listar_registros,
                     '3': principal.filtrar_lista,'4': principal.seleccionar_serie,'5': principal.seleccionar_pelicula,
                     '6': principal.seleccionar_manga,'7': principal.consultar_bitacora,'8': principal.ver_vistos_x_genero}
-                system('cls')
+                system('clear')
                 dicc_menu.get(opcion_seleccionada)()
             except Exception as e:             
                alertas().mostrar_mensaje('def')
@@ -54,7 +54,7 @@ class Principal:
         '4': coordinador.listar_series_por_rango,'5':coordinador.listar_series_por_emision,
         '6':coordinador.listar_series_por_genero,'7': coordinador.listar_peliculas,
         '8':coordinador.listar_mangas}
-        system('cls')                                                
+        system('clear')                                                
         resultado_consulta = dicc_listados.get(opcion_seleccionada,  lambda: True)() if opcion_seleccionada not in ['2','3'] else dicc_listados.get(opcion_seleccionada,  lambda: True)
         if(len(resultado_consulta)==0):#Valida que hayan datos que mostrar
             alertas().mostrar_mensaje('no_ext')
@@ -87,12 +87,12 @@ class Principal:
         else:#Si NO hay concidencias
             alertas().mostrar_mensaje('no_ext')
             time.sleep(1) 
-            system('cls')
+            system('clear')
             self.filtrar_lista()
 #-----------------------------------------------------------------#
     def seleccionar_registro(self,registros_coincidentes,indice_seleccionado=None):
         indice = indice_seleccionado if indice_seleccionado!=None else int(input('\nDigite el indice del registro [anime-pelicula-manga]:'))
-        system('cls')
+        system('clear')
         registro_seleccionado = registros_coincidentes.get(indice,None)
         print(registro_seleccionado)
         if(isinstance(registro_seleccionado, Serie)):
@@ -107,7 +107,7 @@ class Principal:
     #-----------------------------------------------------------------#
     def seleccionar_serie(self,indice_seleccionado=None):
         indice = indice_seleccionado if indice_seleccionado!=None else int(input('\n¿Digite el indice de la serie?: '))
-        system('cls')
+        system('clear')
         serie_seleccionada = Coordinador_de_series().obtener_serie(indice)
         if(serie_seleccionada):
             print(serie_seleccionada.mostrar_det())
@@ -121,7 +121,7 @@ class Principal:
     #-----------------------------------------------------------------# 
     def actualizar_serie(self,la_serie_a_modficar, actualiza=None): 
         se_actualiza = actualiza if actualiza!=None else str(input('\n¿Desea actualizar el registro[s/n]?: '))
-        system('cls')
+        system('clear')
         if(se_actualiza.lower()!='s'):
             return
         print(la_serie_a_modficar.mostrar_det())
@@ -148,7 +148,7 @@ class Principal:
     #-----------------------------------------------------------------#}
     def seleccionar_pelicula(self,indice_seleccionado=None):
         indice = indice_seleccionado if indice_seleccionado!=None else int(input('\n¿Digite el indice de la pelicula?: '))
-        system('cls')
+        system('clear')
         pelicula_seleccionada = Coordinador_de_series().obtener_pelicula(indice)
         
         if(pelicula_seleccionada):
@@ -156,7 +156,7 @@ class Principal:
             if(pelicula_seleccionada.get_id_serie()!= None):#Se muestra si está asociada a una serie
                 print('ID serie: '+ Coordinador_de_series().obtener_serie(pelicula_seleccionada.get_id_serie()).mostrar_min())  
             se_actualiza = str(input('\n¿Desea actualizar el registro[s/n]?: '))
-            system('cls')
+            system('clear')
             if(se_actualiza.lower()=='s'): 
                 print(pelicula_seleccionada.mostrar_det())
                 if(pelicula_seleccionada.get_id_serie()!= None):
@@ -168,12 +168,12 @@ class Principal:
     #-----------------------------------------------------------------#}
     def seleccionar_manga(self,indice_seleccionado=None):
         indice = indice_seleccionado if indice_seleccionado!=None else int(input('\n¿Digite el indice del manga?: '))
-        system('cls')
+        system('clear')
         manga_seleccionado = Coordinador_de_series().obtener_manga(indice)
         if(manga_seleccionado):
             print(manga_seleccionado.mostrar_det())
             se_actualiza = str(input('\n¿Desea actualizar el registro[s/n]?: '))
-            system('cls')
+            system('clear')
             if(se_actualiza.lower()=='s'):                 
                 print(manga_seleccionado.mostrar_det())
                 Coordinador_de_series().actualizar_manga(manga_seleccionado)

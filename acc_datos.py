@@ -12,22 +12,22 @@ class Gestor_de_series:
 
     def obtener_avance_diario(self):
         try:
-            os.startfile(str(getcwd())+'\\DATA\\proceso en series vistas.txt')
-            system('cls')
+            os.startfile(str(getcwd())+'/DATA/proceso en series vistas.txt',encoding='latin-1')
+            system('clear')
         except Exception:
             return
   
 
     def obtener_registros(self):
       
-        with open(str(getcwd())+'\\DATA\\series_peliculas.json') as archivo:
+        with open(str(getcwd())+'/DATA/series_peliculas.json',encoding='latin-1') as archivo:
             data_json = json.load(archivo)       
         return data_json
 
 
     def obtener_series(self):
         lista_series = []
-        with open(str(getcwd())+'\\DATA\\series_peliculas.json') as archivo:
+        with open(str(getcwd())+'/DATA/series_peliculas.json',encoding='latin-1') as archivo:
             data_json = json.load(archivo)
             for serie_actual in data_json["series"]:
                 lista_series.append(Serie(serie_actual))        
@@ -36,7 +36,7 @@ class Gestor_de_series:
     
     def obtener_peliculas(self):
         lista_peliculas = []
-        with open(str(getcwd())+'\\DATA\\series_peliculas.json') as archivo:
+        with open(str(getcwd())+'/DATA/series_peliculas.json',encoding='latin-1') as archivo:
             data_json = json.load(archivo)
             for pelicula_actual in data_json["peliculas"]:
                 lista_peliculas.append(Pelicula(pelicula_actual))
@@ -45,7 +45,7 @@ class Gestor_de_series:
 
     def obtener_mangas(self):
         lista_mangas = []
-        with open(str(getcwd())+'\\DATA\\series_peliculas.json') as archivo:
+        with open(str(getcwd())+'/DATA/series_peliculas.json',encoding='latin-1') as archivo:
             data_json = json.load(archivo)
             for manga_actual in data_json["mangas"]:
                 lista_mangas.append(Manga(manga_actual))
@@ -54,7 +54,7 @@ class Gestor_de_series:
 
     def guardar_cambios(self, dicc_datos):
         try:
-            with open(str(getcwd())+'\\DATA\\series_peliculas.json','w') as archivo:
+            with open(str(getcwd())+'/DATA/series_peliculas.json','w',encoding='latin-1') as archivo:
                 json.dump(dicc_datos, archivo, indent=3, ensure_ascii=False)
             return False
         except Exception:
@@ -65,7 +65,7 @@ class Gestor_de_series:
     def obtener_logs(self):
 
         try:
-            with open(str(getcwd())+'\\LOGS\\historial.txt','r') as archivo_de_logs:
+            with open(str(getcwd())+'/LOGS/historial.txt','r',encoding='latin-1') as archivo_de_logs:
 	            list_registros_log =  list(filter(lambda linea: linea!='\n', archivo_de_logs.readlines()))
             return list_registros_log[3:]
         except Exception:
@@ -75,14 +75,14 @@ class Gestor_de_series:
 
     def agregar_nuevo_log(self, nuevo_registro_de_log):
         try:
-            with open(str(getcwd())+'\\LOGS\\historial.txt','a') as archivo_de_logs:
+            with open(str(getcwd())+'/LOGS/historial.txt','a',encoding='latin-1') as archivo_de_logs:
                 archivo_de_logs.write(nuevo_registro_de_log)    
         except Exception:
             return
 
     def actualizar_historial(self, logs_validos):
         try:
-            with open(str(getcwd())+'\\LOGS\\historial.txt','w') as archivo_de_logs:
+            with open(str(getcwd())+'/LOGS/historial.txt','w',encoding='latin-1') as archivo_de_logs:
                 archivo_de_logs.write(self.encabezado)
                 archivo_de_logs.writelines(logs_validos)
 
@@ -91,7 +91,7 @@ class Gestor_de_series:
 
     def guardar_lista(self,lista_de_registros):
         try:
-            with open(str(getcwd())+'\\LOGS\\lista de series vistas.txt','w') as archivo_de_series_vistas:
+            with open(str(getcwd())+'/LOGS/lista de series vistas.txt','w',encoding='latin-1') as archivo_de_series_vistas:
                 archivo_de_series_vistas.writelines(lista_de_registros)    
         except Exception:
             return

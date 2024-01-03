@@ -8,7 +8,8 @@ import time
 import pyperclip
 import operator
 import math
-
+from back_up import DirectoryCompressor
+from back_up import EmailSender
 
 class Coordinador_de_series():
 
@@ -24,8 +25,7 @@ class Coordinador_de_series():
         self.c_en_emision = None
         self.c_en_proceso = None
         self.c_finalizadas = None
-        #self.generar_dashboard()
-
+      
   #-----------------------------------------------------------------#
     def generar_dashboard(self):
         self.c_series= self.listar_series()
@@ -51,7 +51,7 @@ class Coordinador_de_series():
             return'0'+str(digito)
         else:
             return digito
-"""""
+"""
 #-----------------------------------------------------------------#
     def mostrar_diario(self):
         Gestor_de_series().obtener_avance_diario()
@@ -166,7 +166,7 @@ class Coordinador_de_series():
      
     #-----------------------------------------------------------------#
     def insertar_serie(self):
-        system('cls')
+        system('clear')
         print('\nNuevo registro de tipo (anime) presione [Intro] para omitir algún campo')
         nueva_serie = Serie()        
         nombre = input("\nDigite el nombre de la nueva serie: ")
@@ -178,7 +178,7 @@ class Coordinador_de_series():
         posicion = len(data_nueva["series"])+1
         if(nombre.find('animeflv.net') != -1):
             auto = True
-            system('cls')
+            system('clear')
             print('\n¡Obteniendo la información en línea!...')
             nueva_serie = copy.deepcopy(Bot().obtener_serie(nombre, posicion))
             print(nueva_serie.mostrar_det()) if nueva_serie.get_nombre()!='' else None
@@ -205,7 +205,7 @@ class Coordinador_de_series():
             self.alertas.mostrar_mensaje('no_conf') if not auto else self.alertas.mostrar_mensaje('no_ok')
     #-----------------------------------------------------------------#
     def insertar_pelicula(self):
-        system('cls')
+        system('clear')
         print('\nNuevo registro de tipo (pelicula) presione [Intro] para omitir algún campo')
         opc_id_series = dict(zip(list(map(lambda key: str(key.get_indice()),self.listar_series())),list(range(1, len(self.listar_series())+1))))#Se cargan todas las opciones de id de series disponibles
         opc_id_series['0']=None
@@ -234,7 +234,7 @@ class Coordinador_de_series():
 
     #-----------------------------------------------------------------#
     def insertar_manga(self):
-        system('cls')
+        system('clear')
         print('\nNuevo registro de tipo (manga) presione [Intro] para omitir algún campo')
         nuevo_manga = Manga()
         nuevo_manga.set_nombre(input("\nDigite el nombre del nuevo manga: "))
@@ -298,7 +298,7 @@ class Coordinador_de_series():
 
     #-----------------------------------------------------------------#     
     def actualizar_serie(self,serie_a_actualizar):
-        system('cls')
+        system('clear')
         print(serie_a_actualizar.mostrar_det())
         print('\nPresione [enter] para dejar los valores sin cambios')
         nombre = str(input('Digite el nuevo nombre: '))
@@ -325,7 +325,7 @@ class Coordinador_de_series():
 
     #-----------------------------------------------------------------#
     def cambiar_estado(self,serie_a_actualizar):
-        system('cls')
+        system('clear')
         print(serie_a_actualizar.mostrar_det())
         estado_anterior = serie_a_actualizar.get_estado()
         opcion_estado = str(input('\nSeleccione el nuevo estado para la serie:\n1)-Finalizada\n2)-En proceso\n3)-En espera\nDigite una opción: '))
@@ -346,7 +346,7 @@ class Coordinador_de_series():
     
     #-----------------------------------------------------------------#
     def agregar_dia_emision(self,serie_a_actualizar):
-        system('cls')
+        system('clear')
         print(serie_a_actualizar.mostrar_det())
         indice_dia = str(input('\n'+self.listar_opciones_de_emision(serie_a_actualizar))) #Invoca a una funcion que muestra las opciones de dias
         dia_emision =  list(self.dicc_dias.values())[int(indice_dia)-1] if indice_dia!='' else None
@@ -369,7 +369,7 @@ class Coordinador_de_series():
     #-----------------------------------------------------------------#
     def cambiar_posicion(self, serie_a_desplazar):
         try:
-            system('cls')
+            system('clear')
             print(serie_a_desplazar.mostrar_det())
             lista_de_series = Gestor_de_series().obtener_series()
             posicion_actual = serie_a_desplazar.get_indice()-1
@@ -504,7 +504,7 @@ class Coordinador_de_series():
     #-----------------------------------------------------------------#
     def listar_series_por_rango(self):
         try:
-            system('cls')
+            system('clear')
             rango = str(input('\nIndique el rango de series a mostrar con el formato [inicio-final]: ' ))
             inicio = int(rango.split('-')[0])
             final = int(rango.split('-')[1])
@@ -520,7 +520,7 @@ class Coordinador_de_series():
     #-----------------------------------------------------------------#
     def listar_series_por_genero(self):
         try:
-            system('cls')
+            system('clear')
             genero = str(input('\nIndique el género de anime que desea listar: ' ))
             list_por_genero = list(filter(lambda Serie: (self.filtrar_generos(genero,Serie) and genero!=''), Gestor_de_series().obtener_series()))
             return list_por_genero 
@@ -598,13 +598,13 @@ class Coordinador_de_series():
                 print(sep+self.formatear_registro(registro))        
                 if(detener==True):
                     detener=False
-                    system('cls')  
+                    system('clear')  
                     break
             self.alertas.mostrar_mensaje('no_ext') if len(registros_de_bitacora)==0 else True
             continuar=input('\nDigite [m] para realizar una nueva búsqueda [Intro] para salir: ')#Condición para nueva búqueda/borrado de log
             if(continuar!='m'): #Cuando NO es 'm' detiene el ciclo y finaliza la búsqueda
                 nueva_busqueda=False
-            system('cls')           
+            system('clear')           
             if(continuar.isdigit() and reversa):#Cuando es ún número invoca a la función de borrado de log
                 indice_log = continuar 
                 log_a_eliminar = registros_de_bitacora[int(indice_log)]
@@ -676,7 +676,10 @@ class Coordinador_de_series():
         Gestor_de_series().agregar_nuevo_log(nuevo_log)
         if(tipo_log != 'up_st' and tipo_log != 'up_em'):
             self.actualizar_lista_de_vistos()
-        
+            
+            DirectoryCompressor().compress_directory()
+            EmailSender().send_email()
+            
 #-----------------------------------------------------------------#   
 #-----------------------------------------------------------------#
 class Coordinador_de_alertas:
@@ -693,5 +696,5 @@ class Coordinador_de_alertas:
             'no_save':'\n  ¡Se produjo un error en el proceso!\n**Todos los cambios fueron reversados**'
         }
     def mostrar_mensaje(self,codigo_mensaje):
-        system('cls')
+        system('clear')
         print(self.dicc_mensajes.get(codigo_mensaje))

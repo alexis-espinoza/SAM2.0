@@ -1,5 +1,6 @@
 /__pycache__/
 /DATA/
 /LOGS/
+/BACK_UPS/
 *.json
 *.exe
