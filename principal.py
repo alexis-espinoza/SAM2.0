@@ -12,6 +12,7 @@ from os import getcwd, system
 from logica import Coordinador_de_series 
 from logica import Coordinador_de_alertas as alertas
 from modelos import Serie, Pelicula, Manga
+from back_up import DirectoryCompressor,EmailSender
 
 class Principal:
 
@@ -20,19 +21,34 @@ class Principal:
             try:
                 print(Coordinador_de_series().generar_dashboard())
                 principal=Principal()
-                opciones = '''0)- Getión de proceso\n1)- Agregar nuevo\n2)- Mostrar lista\n3)- Filtrar lista\n4)- Seleccionar serie\n5)- Seleccionar película\n6)- Seleccionar manga\n7)- Consultar bitácora\n8)- Vistos x géneros\nDigite una opción: '''
+                opciones = '''0)- Getión de proceso\n1)- Agregar nuevo\n2)- Mostrar lista\n3)- Filtrar lista\n4)- Seleccionar serie\n5)- Seleccionar película\n6)- Seleccionar manga\n7)- Consultar bitácora\n8)- Vistos x géneros\n9)- Salir\nDigite una opción: '''
                 opcion_seleccionada = str(input(opciones)) 
                 dicc_menu = {
                     '0': principal.abrir_diario,'1': principal.agregar_registro,'2': principal.listar_registros,
                     '3': principal.filtrar_lista,'4': principal.seleccionar_serie,'5': principal.seleccionar_pelicula,
-                    '6': principal.seleccionar_manga,'7': principal.consultar_bitacora,'8': principal.ver_vistos_x_genero}
+                    '6': principal.seleccionar_manga,'7': principal.consultar_bitacora,'8': principal.ver_vistos_x_genero, '9': principal.cerrar_sistema}
                 system('clear')
                 dicc_menu.get(opcion_seleccionada)()
             except Exception as e:             
                alertas().mostrar_mensaje('def')
+    #-----------------------------------------------------------------#   
+    def cerrar_sistema(self):
+        coordinador = Coordinador_de_series()
+        alertas().mostrar_mensaje('rp_val')
+        time.sleep(1)
+        #print('actualizacion: ',coordinador.se_actualizo)
+        if(len(coordinador.se_actualizo)>0):
+            alertas().mostrar_mensaje('rp_eje')
+            time.sleep(0.75)
+            coordinador.copy_data()
+            DirectoryCompressor().compress_directory()
+            EmailSender().send_email()
+        system('clear')
+        exit()
+        
     #-----------------------------------------------------------------#
     def abrir_diario(self):
-            Coordinador_de_series().mostrar_diario()
+        Coordinador_de_series().mostrar_diario()
 
     def ver_vistos_x_genero(self):
         Coordinador_de_series().mostar_vistos_x_genero()

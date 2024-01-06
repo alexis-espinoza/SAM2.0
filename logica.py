@@ -8,10 +8,12 @@ import time
 import pyperclip
 import operator
 import math
-from back_up import DirectoryCompressor
-from back_up import EmailSender
+from os import getcwd, system
+import shutil
+
 
 class Coordinador_de_series():
+    se_actualizo = []
 
     def __init__(self):
         self.dicc_dias = {'Monday':'lunes', 'Tuesday':'martes', 'Wednesday':'miercoles', 'Thursday':'jueves','Friday':'viernes', 'Saturday':'sabado', 'Sunday':'domingo'}
@@ -25,7 +27,7 @@ class Coordinador_de_series():
         self.c_en_emision = None
         self.c_en_proceso = None
         self.c_finalizadas = None
-      
+    
   #-----------------------------------------------------------------#
     def generar_dashboard(self):
         self.c_series= self.listar_series()
@@ -45,13 +47,27 @@ class Coordinador_de_series():
         informe = formato.format(len(self.c_series), len(self.c_peliculas), len(self.c_mangas), len(self.c_finalizadas), len(self.c_en_proceso), len(self.c_en_espera), len(self.c_en_emision))
 
         return f' {separador_uno}\n{informe}\n {separador_dos}'
-    """""
+    """
     def mask(self, digito):
         if(digito<=9):
             return'0'+str(digito)
         else:
             return digito
-"""
+    """
+#-----------------------------------------------------------------#     
+    def copy_data(self):
+        try:
+            destination_folder = f'{getcwd()}/BACK_UPS/BACK_UP_DATA'
+            folder_path1 = f'{getcwd()}/DATA'
+            folder_path2 = f'{getcwd()}/LOGS'
+            
+            shutil.copytree(folder_path1,destination_folder,dirs_exist_ok=True)
+            shutil.copytree(folder_path2,destination_folder,dirs_exist_ok=True)
+        
+        except Exception as e:
+            print(f"Error al copiar directorios: {str(e)}")
+            return None
+    
 #-----------------------------------------------------------------#
     def mostrar_diario(self):
         Gestor_de_series().obtener_avance_diario()
@@ -66,12 +82,10 @@ class Coordinador_de_series():
         confirmacion = str(input('\nDigite 1 para confirmar: '))
         if confirmacion == '1':
             return True
-        else:
-            #self.alertas.mostrar_mensaje('no_ok')
+        else:            
             return False
 
     #-----------------------------------------------------------------#
-    
     def guardar_cambios(self, la_data_actual, la_data_nueva, tipo_msj='NA'):
         if(Gestor_de_series().guardar_cambios(la_data_nueva)):#Cuando NO actualiza correctamente
             self.alertas.mostrar_mensaje("no_save")
@@ -79,6 +93,7 @@ class Coordinador_de_series():
             time.sleep(0.75) 
             return #Cortala ejecución para evitar escritura en bitácora
         else:#Se muestra mensaje de confirmación para inserciones y actualizaciones
+            self.se_actualizo.append(1)
             self.alertas.mostrar_mensaje(tipo_msj) if (tipo_msj!='NA') else None
 
     #-----------------------------------------------------------------#
@@ -109,7 +124,7 @@ class Coordinador_de_series():
 #-----------------------------------------------------------------#
     def copiar_nombre_del_registro(self,registro_actual):
             text=registro_actual.get_nombre()
-            pyperclip.copy(text)  # now the clipboard content will be string "abc"
+            pyperclip.copy(text)  
 
 #-----------------------------------------------------------------#
     def agregar_generos(self):
@@ -226,8 +241,7 @@ class Coordinador_de_series():
             list(map(lambda Pelicula: Pelicula.set_indice(Pelicula.get_indice()+1), peliculas))
             peliculas.append(nueva_pelicula)
             data_nueva["peliculas"] = list(map(lambda Pelicula: Pelicula.__dict__,sorted(peliculas))) #sorted(list_peliculas)
-            self.guardar_cambios(data_actual, data_nueva, 'ok_in')
-            #self.alertas.mostrar_mensaje('ok_in')
+            self.guardar_cambios(data_actual, data_nueva, 'ok_in')            
             self.actualizar_bitacora('insert',['película',nueva_pelicula.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
@@ -245,8 +259,7 @@ class Coordinador_de_series():
             indice = len(data_nueva["mangas"])+1
             nuevo_manga.set_indice(indice)
             data_nueva["mangas"].append(nuevo_manga.__dict__)
-            self.guardar_cambios(data_actual, data_nueva, 'ok_in')
-            #self.alertas.mostrar_mensaje('ok_in')
+            self.guardar_cambios(data_actual, data_nueva, 'ok_in')            
             self.actualizar_bitacora('insert',['manga',nuevo_manga.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
@@ -272,8 +285,7 @@ class Coordinador_de_series():
         if(pelicula_sin_cambios!=pelicula_a_actualizar and self.confirmar_accion()):
             data_nueva = copy.deepcopy(data_actual)
             data_nueva["peliculas"][pelicula_a_actualizar.get_indice()-1] = pelicula_a_actualizar.__dict__
-            self.guardar_cambios(data_actual, data_nueva, 'ok_up')
-            #self.alertas.mostrar_mensaje('ok_up')
+            self.guardar_cambios(data_actual, data_nueva, 'ok_up')            
             self.actualizar_bitacora('up_dt',[pelicula_a_actualizar.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
@@ -290,8 +302,7 @@ class Coordinador_de_series():
         if(manga_sin_cambios!= manga_a_actualizar and self.confirmar_accion()):
             data_nueva = copy.deepcopy(data_actual)
             data_nueva["mangas"][manga_a_actualizar.get_indice()-1] = manga_a_actualizar.__dict__
-            self.guardar_cambios(data_actual, data_nueva, 'ok_up')
-            #self.alertas.mostrar_mensaje('ok_up')
+            self.guardar_cambios(data_actual, data_nueva, 'ok_up')            
             self.actualizar_bitacora('up_dt',[manga_a_actualizar.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
@@ -317,8 +328,7 @@ class Coordinador_de_series():
             data_nueva["series"][serie_a_actualizar.get_indice()-1] = serie_a_actualizar.__dict__
             self.guardar_cambios(data_actual, data_nueva, 'ok_up')
             if(peliculas!=[]):
-                self.agregar_peliculas(False, peliculas, serie_a_actualizar)
-            #self.alertas.mostrar_mensaje('ok_up')
+                self.agregar_peliculas(False, peliculas, serie_a_actualizar)            
             self.actualizar_bitacora('up_dt',[serie_a_actualizar.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
@@ -340,8 +350,7 @@ class Coordinador_de_series():
                 data_actual = Gestor_de_series().obtener_registros()
                 data_nueva  = data_actual
                 data_nueva["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.__dict__
-                self.guardar_cambios(data_actual, data_nueva, 'ok_up')
-                #self.alertas.mostrar_mensaje('ok_up')
+                self.guardar_cambios(data_actual, data_nueva, 'ok_up')                
                 self.actualizar_bitacora('up_st',[serie_a_actualizar.get_nombre(),estado_anterior,nuevo_estado])
     
     #-----------------------------------------------------------------#
@@ -360,8 +369,7 @@ class Coordinador_de_series():
                  serie_a_actualizar.set_estado(nuevo_estado)
                  self.actualizar_bitacora('up_st',[serie_a_actualizar.get_nombre(),estado_anterior,nuevo_estado])
             data_nueva["series"][serie_a_actualizar.get_indice()-1]=serie_a_actualizar.__dict__
-            self.guardar_cambios(data_actual, data_nueva, 'ok_in')
-            #self.alertas.mostrar_mensaje('ok_in')
+            self.guardar_cambios(data_actual, data_nueva, 'ok_in')            
             self.actualizar_bitacora('up_em',[serie_a_actualizar.get_dia_emision(), serie_a_actualizar.get_nombre()])
         else:
             self.alertas.mostrar_mensaje('no_conf')
@@ -381,7 +389,7 @@ class Coordinador_de_series():
             lista_de_series.remove(lista_de_series[posicion_actual])
             lista_de_series.insert(nueva_posicion,serie_deplazada)
             serie_a_desplazar.set_indice(nueva_posicion+1)
-            #Se obtienen los datos originales y se cambia el bloque de series por una lista [ordenada y parseada a diccionadrios]
+            #Se obtienen los datos originales y se cambia el bloque de series por una lista [ordenada y parseada a diccionarios]
             dicc_diferencias = {}
             for i in range(len(lista_de_series)):
                 id_anterior = lista_de_series[i].get_indice()
@@ -393,8 +401,7 @@ class Coordinador_de_series():
             data_nueva = copy.deepcopy(data_actual)
             data_nueva["series"] = list(map(lambda Serie: Serie.__dict__,lista_de_series))
             self.guardar_cambios(data_actual, data_nueva, 'ok_up')
-            self.sincronizar_series_peliculas(dicc_diferencias)#///Se actualizan las referencias de las películas_x_series///
-            #self.alertas.mostrar_mensaje('ok_up')
+            self.sincronizar_series_peliculas(dicc_diferencias)#///Se actualizan las referencias de las películas_x_series///            
             self.actualizar_bitacora('up_ps',[serie_a_desplazar.get_nombre(),posicion_actual+1,nueva_posicion+1])
         except Exception:
             self.alertas.mostrar_mensaje('no_ok')
@@ -410,10 +417,7 @@ class Coordinador_de_series():
         data_nueva = copy.deepcopy(data_actual)
         data_nueva["peliculas"] = list(map(lambda Pelicula: Pelicula.__dict__,lista_de_peliculas))
         self.guardar_cambios(data_actual, data_nueva)
-        '''for dif in dicc_diferencias: #recorre la lista con el el par ordenado (id anterior, id nuevo)
-                if(lista_de_peliculas[i].get_id_serie() == dif[0]):#Si el id_serie(antiguo) está en la lista
-                    lista_de_peliculas[i].set_id_serie(dif[1])#Actualiza al id_serie(nuevo)
-                    break'''
+
     #-----------------------------------------------------------------#
     def mostar_vistos_x_genero(self):
         series = self.listar_series()
@@ -488,18 +492,7 @@ class Coordinador_de_series():
         lista_series_por_estado = list(filter(lambda Serie: Serie.get_estado()==estado, Gestor_de_series().obtener_series()))
         if(estado == 'en proceso'): #Se le quitan los que están en emisión
             lista_series_por_estado = list(filter(lambda Serie: Serie.get_dia_emision()==None, lista_series_por_estado))
-        return lista_series_por_estado 
-
-    #-----------------------------------------------------------------#
-    #def listar_series_en_proceso(self):        
-     #   list_en_proceso = list(filter(lambda Serie: Serie.get_estado()=='en proceso' and Serie.get_dia_emision()==None, Gestor_de_series().obtener_series()))
-      #  emision = f' + {[self.c_en_emision]} <<en emisión>>>' if self.c_en_emision != 0 else ''
-       # return list_en_proceso 
-  
-    #-----------------------------------------------------------------#
-    #def listar_series_en_espera(self):        
-     #   list_en_espera = list(filter(lambda Serie: Serie.get_estado()=='en espera', Gestor_de_series().obtener_series()))
-      #  return list_en_espera
+        return lista_series_por_estado    
     
     #-----------------------------------------------------------------#
     def listar_series_por_rango(self):
@@ -514,8 +507,7 @@ class Coordinador_de_series():
                 inicio=f
             list_por_rango = list(filter(lambda Serie: Serie.get_indice()>=inicio and Serie.get_indice()<=final, Gestor_de_series().obtener_series()))
             return list_por_rango 
-        except Exception:
-            #self.alertas.mostrar_mensaje('def')
+        except Exception:            
             return False
     #-----------------------------------------------------------------#
     def listar_series_por_genero(self):
@@ -524,8 +516,7 @@ class Coordinador_de_series():
             genero = str(input('\nIndique el género de anime que desea listar: ' ))
             list_por_genero = list(filter(lambda Serie: (self.filtrar_generos(genero,Serie) and genero!=''), Gestor_de_series().obtener_series()))
             return list_por_genero 
-        except Exception:
-            #self.alertas.mostrar_mensaje('def')
+        except Exception:            
             return False
 
     #-----------------------------------------------------------------#
@@ -648,8 +639,6 @@ class Coordinador_de_series():
                 break
         Gestor_de_series().actualizar_historial(logs_del_sistema)
         self.alertas.mostrar_mensaje('ok_up')
-
-        
     
     #-----------------------------------------------------------------#
     def actualizar_lista_de_vistos(self):
@@ -677,8 +666,6 @@ class Coordinador_de_series():
         if(tipo_log != 'up_st' and tipo_log != 'up_em'):
             self.actualizar_lista_de_vistos()
             
-            DirectoryCompressor().compress_directory()
-            EmailSender().send_email()
             
 #-----------------------------------------------------------------#   
 #-----------------------------------------------------------------#
@@ -693,7 +680,9 @@ class Coordinador_de_alertas:
             'no_ext':'\n¡No se encontraron coincidencias!',
             'no_sel':'\n¡No se encontró el registro indicado!',
             'no_val':'\n¡No seleccionó una opción válida!',
-            'no_save':'\n  ¡Se produjo un error en el proceso!\n**Todos los cambios fueron reversados**'
+            'no_save':'\n  ¡Se produjo un error en el proceso!\n**Todos los cambios fueron reversados**',
+            'rp_val':'\n¡Validando los cambios realizados!',
+            'rp_eje':'\n¡Creando/enviando copia de seguridad!'
         }
     def mostrar_mensaje(self,codigo_mensaje):
         system('clear')

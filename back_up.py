@@ -29,7 +29,7 @@ class DirectoryCompressor:
         Comprime un directorio en un formato especificado y lo guarda en una ubicación de destino.
         """
         try:
-            self.copy_data()            
+            #self.copy_data()            
             #Verifica si el formato seleccionado es válido
             if selected_format in self.format_extensions:
                 zip_filename = os.path.basename(folder_path)
@@ -42,20 +42,7 @@ class DirectoryCompressor:
         except Exception as e:
             print(f"Error al comprimir el directorio: {str(e)}")
             return None
-        
-    def copy_data(self):
-        
-        try:
-            destination_folder = f'{getcwd()}/BACK_UPS/BACK_UP_DATA'
-            folder_path1 = f'{getcwd()}/DATA'
-            folder_path2 = f'{getcwd()}/LOGS'
-            
-            shutil.copytree(folder_path1,destination_folder,dirs_exist_ok=True)
-            shutil.copytree(folder_path2,destination_folder,dirs_exist_ok=True)
-        
-        except Exception as e:
-            print(f"Error al copiar directorios: {str(e)}")
-            return None
+
         
 
 class EmailSender:
