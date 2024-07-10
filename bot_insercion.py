@@ -1,24 +1,24 @@
-
-#options.set_headless()
-#driver.set_window_size(0,500)
-
+#!/usr/bin/python3
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from modelos import Serie
 import os
 from datetime import datetime
-
 
 class Bot():
     def __init__(self) -> None:
        
         self.dicc_dias = {'Monday':'lunes', 'Tuesday':'martes', 'Wednesday':'miercoles', 'Thursday':'jueves','Friday':'viernes', 'Saturday':'sabado', 'Sunday':'domingo'}
+        self.service = Service(executable_path="/usr/bin/chromedriver")
         self.options = webdriver.ChromeOptions()
-        self.options.add_argument('---window-position=0,900')
+        self.options.add_argument("--headless=new")
+        self.options.add_argument('---window-position=0,10')
         self.options.add_argument('--log-level=3')
         self.options.add_experimental_option('excludeSwitches', ['enable-logging'])
-        self.DRIVER = 'chromedriver.exe'
-        self.driver = webdriver.Chrome(self.DRIVER, options=self.options, service_log_path=os.devnull)
-    
+        self.DRIVER = 'chromedriver'
+        self.driver = webdriver.Chrome(self.DRIVER, service = self.service,options=self.options)
+        
     def obtener_dia_emision(self, fecha):
         dia_emision = None
         if(fecha != 'NO VISTO'):#se valida si está en emisión
@@ -34,9 +34,9 @@ class Bot():
         try:
             
             self.driver.get(url_serie)
-            lista_de_generos = self.driver.find_elements_by_xpath("//*[@class='Nvgnrs']//following::a[1]")#Se obtiene el nombre
-            nombre = self.driver.find_element_by_xpath("//*[@class='Title']//following::h1[1]")           #Se obtienen los géneros
-            proxima_fecha = self.driver.find_element_by_xpath("//*[@class='Title']//following::h3[1]//following::span[1]") #Se obtiene la proxima fecha de emisión     
+            lista_de_generos = self.driver.find_elements("xpath","//*[@class='Nvgnrs']//following::a[1]")#Se obtiene el nombre
+            nombre = self.driver.find_element("xpath","//*[@class='Title']//following::h1[1]")           #Se obtienen los géneros
+            proxima_fecha = self.driver.find_element("xpath","//*[@class='Title']//following::h3[1]//following::span[1]") #Se obtiene la proxima fecha de emisión     
             str_fecha = proxima_fecha.text
             serie_automatica = Serie() #Se declara el objeto de tipo 'SERIE'
             serie_automatica.set_indice(posicion) #Se recibe por parámetro desde el flujo principal

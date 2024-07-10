@@ -36,10 +36,9 @@ class Principal:
         coordinador = Coordinador_de_series()
         alertas().mostrar_mensaje('rp_val')
         time.sleep(1)
-        #print('actualizacion: ',coordinador.se_actualizo)
         if(len(coordinador.se_actualizo)>0):
             alertas().mostrar_mensaje('rp_eje')
-            time.sleep(0.75)
+            time.sleep(1)
             coordinador.copy_data()
             DirectoryCompressor().compress_directory()
             EmailSender().send_email()
